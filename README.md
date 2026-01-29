@@ -1,6 +1,6 @@
 # Rails Knowledge Base
 
-A structured collection of knowledge of official documentation, handbooks and references from [Ruby on Rails](https://github.com/rails) and [Hotwire](https://github.com/hotwired) ecosystem, aggregated as git submodules for local reference.
+A structured collection of official documentation, handbooks, and references from [Ruby on Rails](https://github.com/rails) and the [Hotwire](https://github.com/hotwired) ecosystem, aggregated as git submodules for local reference. Useful as an input source of information for AI Agents (e.g. for creating profiles, standards, or skills for [Agent OS 3](https://buildermethods.com/agent-os/concepts)) or just for offline access.
 
 ## Repositories
 
