@@ -248,7 +248,7 @@ a web browser.
 $ cd my_app
 $ bin/rails server
 => Booting Puma
-=> Rails 8.2.0 application starting in development
+=> Rails 8.1.0 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
 * Puma version: 6.4.0 (ruby 3.1.3-p185) ("The Eagle of Durango")
@@ -584,7 +584,7 @@ in a transaction that rolls back when you exit:
 
 ```bash
 $ bin/rails console --sandbox
-Loading development environment in sandbox (Rails 8.2.0)
+Loading development environment in sandbox (Rails 8.1.0)
 Any modifications you make will be rolled back on exit
 my-app(dev):001:0>
 ```
@@ -626,8 +626,8 @@ my-app(dev)> app.response.status
 ```
 
 NOTE: You have to pass the "Host" header with the `app.get` request above,
-because the Rack client used under-the-hood defaults to "www.example.com" if
-"Host" is not specified. You can modify your application to always use `localhost`
+because the Rack client used under-the-hood defaults to "www.example.com" if not
+"Host" is specified. You can modify your application to always use `localhost`
 using a configuration or an initializer.
 
 The reason you can "make requests" like above is because the `app` object is the
@@ -881,7 +881,7 @@ might affect you.
 ```bash
 $ bin/rails about
 About your application's environment
-Rails version             8.2.0
+Rails version             8.1.0
 Ruby version              3.2.0 (x86_64-linux)
 RubyGems version          3.3.7
 Rack version              3.0.8
@@ -968,7 +968,7 @@ $ bin/rails stats
 
 ### `bin/rails time:zones:all`
 
-The `bin/rails time:zones:all` command prints the complete list of time zones
+The`bin/rails time:zones:all` command prints the complete list of time zones
 that Active Support knows about, along with their UTC offsets followed by the
 Rails timezone identifiers.
 
@@ -1018,6 +1018,7 @@ You can remove older compiled assets using `bin/rails assets:clean`. The
 an old asset while the new assets are being built.
 
 If you want to clear `public/assets` completely, you can use `bin/rails assets:clobber`.
+assets:clobber`.
 
 Managing the Database
 ---------------------
@@ -1367,7 +1368,7 @@ Custom Rake Tasks
 -----------------
 
 You may want to create custom rake tasks in your application, to delete old
-records from the database for example. You can do this with the `bin/rails
+records from the database for example. You can do this with the the `bin/rails
 generate task` command. Custom rake tasks have a `.rake` extension and are
 placed in the `lib/tasks` folder in your Rails application. For example:
 

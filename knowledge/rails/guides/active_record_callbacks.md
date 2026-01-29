@@ -934,7 +934,7 @@ This exception indicates that the record was not saved due to the callback's
 interruption.
 
 ```ruby
-Product.create! # => raises an ActiveRecord::RecordNotSaved
+User.create! # => raises an ActiveRecord::RecordNotSaved
 ```
 
 
@@ -1211,7 +1211,7 @@ the transaction.
 
 ### Aliases for `after_commit`
 
-Using the `after_commit` callback only on create, update, or destroy is common.
+Using the `after_commit` callback only on create, update, or delete is common.
 Sometimes you may also want to use a single callback for both `create` and
 `update`. Here are some common aliases for these operations:
 

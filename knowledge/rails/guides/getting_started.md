@@ -72,8 +72,8 @@ TIP: Any commands prefaced with a dollar sign `$` should be run in the terminal.
 
 For this project, you will need:
 
-* Ruby 3.3 or newer
-* Rails 8.2.0 or newer
+* Ruby 3.2 or newer
+* Rails 8.1.0 or newer
 * A code editor
 
 Follow the [Install Ruby on Rails Guide](install_ruby_on_rails.html) if you need
@@ -85,10 +85,10 @@ printed out:
 
 ```bash
 $ rails --version
-Rails 8.2.0
+Rails 8.1.0
 ```
 
-The version shown should be Rails 8.2.0 or higher.
+The version shown should be Rails 8.1.0 or higher.
 
 ### Creating Your First Rails App
 
@@ -190,7 +190,7 @@ your Rails application:
 
 ```bash
 => Booting Puma
-=> Rails 8.2.0 application starting in development
+=> Rails 8.1.0 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
 * Puma version: 6.4.3 (ruby 3.3.5-p100) ("The Eagle of Durango")
@@ -291,7 +291,7 @@ NOTE: As convention we'll state the filepath as a comment on top of each file
 
 ```ruby
 # db/migrate/<timestamp>_create_products.rb
-class CreateProducts < ActiveRecord::Migration[8.2]
+class CreateProducts < ActiveRecord::Migration[8.1]
   def change
     create_table :products do |t|
       t.string :name
@@ -357,7 +357,7 @@ $ bin/rails console
 You will be presented with a prompt like the following:
 
 ```irb
-Loading development environment (Rails 8.2.0)
+Loading development environment (Rails 8.1.0)
 store(dev)>
 ```
 
@@ -366,7 +366,7 @@ printing out the Rails version:
 
 ```irb
 store(dev)> Rails.version
-=> "8.2.0"
+=> "8.1.0"
 ```
 
 It works!
@@ -1714,13 +1714,9 @@ http://localhost:3000/session/new and you'll see the New link on the index page.
 Optionally, you can include a link to this route in the navbar to add a Login
 link if not authenticated.
 
-```erb#5
-<%# app/views/layouts/application.html.erb %>
-<nav>
-  <%= link_to "Home", root_path %>
-  <%= button_to "Log out", session_path, method: :delete if authenticated? %>
-  <%= link_to "Login", new_session_path unless authenticated? %>
-</nav>
+```erb
+<%# app/views/products/index.html.erb %>
+<%= link_to "Login", new_session_path unless authenticated? %>
 ```
 
 You can also update the Edit and Delete links on the
@@ -2071,7 +2067,7 @@ ensure `inventory_count` is never `nil`:
 
 ```ruby
 # db/migrate/<timestamp>_add_inventory_count_to_products.rb
-class AddInventoryCountToProducts < ActiveRecord::Migration[8.2]
+class AddInventoryCountToProducts < ActiveRecord::Migration[8.1]
   def change
     add_column :products, :inventory_count, :integer, default: 0
   end
@@ -2149,7 +2145,7 @@ Next, open the generated migration (`db/migrate/<timestamp>_create_subscribers.r
 
 ```ruby#5-6
 # db/migrate/<timestamp>_create_subscribers.rb
-class CreateSubscribers < ActiveRecord::Migration[8.2]
+class CreateSubscribers < ActiveRecord::Migration[8.1]
   def change
     create_table :subscribers do |t|
       t.belongs_to :product, null: false, foreign_key: true
@@ -2285,11 +2281,7 @@ Then update `app/views/products/show.html.erb` to render this partial after the
 ### In Stock Email Notifications
 
 Action Mailer is a feature of Rails that allows you to send emails. We'll use it
-to notify subscribers when a product is back in stock. Mailers are a lot like Controllers, but for email instead of web pages. While there's no request/response cycle, mailers work in a familiar way:
-
-* loading models from the database
-* applying business logic
-* passing data into templated views that generate the email content
+to notify subscribers when a product is back in stock.
 
 We can generate a mailer with the following command:
 
@@ -2947,119 +2939,16 @@ No warnings found
 
 Learn more about [Securing Rails Applications](security.html)
 
-Continuous Integration with `bin/ci`
+Continuous Integration with GitHub Actions
 ------------------------------------------
 
-Rails applications include a `bin/ci` script that runs all essential checks for
-your app: setup, code style (RuboCop), security audits, and tests. The steps
-are defined in `config/ci.rb` and can be customized for your project.
+Rails apps generate a `.github` folder that includes a prewritten GitHub Actions
+configuration that runs rubocop, brakeman, and our test suite.
 
-This script prints each step as it runs, showing ✅ for success and ❌ for
-failures. If any step fails, `bin/ci` exits with a nonzero status.
-
-To use a CI Provider, point your pipeline to `bin/ci`. This ensures consistent
-checks locally and in CI.
-
-To run it locally, call the script from your command line:
-
-```bash
-$ bin/ci
-Continuous Integration
-Running tests, style checks, and security audits
-
-
-Setup
-bin/setup --skip-server
-
-== Installing dependencies ==
-The Gemfile's dependencies are satisfied
-
-== Preparing database ==
-
-== Removing old logs and tempfiles ==
-
-✅ Setup passed in 2.11s
-
-
-Style: Ruby
-bin/rubocop
-
-Inspecting 25 files
-.........................
-
-25 files inspected, no offenses detected
-
-✅ Style: Ruby passed in 1.17s
-# ...
-✅ Continuous Integration passed in 8.91s
-```
-
-### CI Steps DSL
-
-The file is written in a DSL that makes it straightforward to manage steps, here
-we add another step to check to make sure we don't leave any TODOs behind in
-the code in `config/ci.rb`:
-
-```ruby#6-7
-# config/ci.rb
-CI.run do
-  step "Setup", "bin/setup --skip-server"
-
-  step "Style: Ruby", "bin/rubocop"
-  step "Check: No TODOs",
-        "if grep -r TODO app/; then exit 1; fi"
-  # ...
-end
-```
-
-To test this out, I added a todo comment at the start of a random file, here
-the `ApplicationController`:
-
-```ruby
-# app/controllers/application_controller.rb
-# TODO: Remove this todo
-class ApplicationController < ActionController::Base
-# ...
-```
-
-Now when I run it on the CI:
-
-```bash
-$ bin/ci
-# ...
-Check: No TODOs
-if grep -r TODO app/; then exit 1; fi
-
-app/controllers/application_controller.rb:# TODO: Remove this todo
-
-❌ Check: No TODOs failed in 0.01s
-# ...
-❌ Continuous Integration failed in 9.09s
-```
-
-To verify, remove the comment:
-
-```ruby
-# app/controllers/application_controller.rb
-class ApplicationController < ActionController::Base
-# ...
-```
-
-and `bin/ci` should now pass:
-
-```bash
-$ bin/ci
-# ...
-Check: No TODOs
-if grep -r TODO app/; then exit 1; fi
-
-
-✅ Check: No TODOs passed in 0.01s
-# ...
-✅ Continuous Integration passed in 8.91s
-```
-
-To learn more about the DSL, read the documentation for [ActiveSupport::ContinuousIntegration](https://www.rubydoc.info/github/rails/rails/main/ActiveSupport/ContinuousIntegration).
+When we push our code to a GitHub repository with GitHub Actions enabled, it
+will automatically run these steps and report back success or failure for each.
+This allows us to monitor our code changes for defects and issues and ensure
+consistent quality for our work.
 
 Deploying to Production
 -----------------------

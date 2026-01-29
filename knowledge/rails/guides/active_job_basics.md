@@ -435,7 +435,7 @@ Because this can be quite tricky and many people shouldn't need to worry about i
 by default Solid Queue is configured in a different database as the main app.
 
 However, if you use Solid Queue in the same database as your app, you can make sure you
-don't rely accidentally on transactional integrity with Active Job’s
+don't rely accidentallly on transactional integrity with Active Job’s
 `enqueue_after_transaction_commit` option which can be enabled for individual jobs or
 all jobs through `ApplicationJob`:
 
@@ -1091,7 +1091,8 @@ If you need help figuring out where jobs are coming from, you can enable
 Alternate Queuing Backends
 --------------------------
 
-Active Job has other built-in adapters for multiple queuing backends (Resque, Delayed Job, and others). To get an up-to-date list of the adapters see
+Active Job has other built-in adapters for multiple queuing backends (Sidekiq,
+Resque, Delayed Job, and others). To get an up-to-date list of the adapters see
 the API Documentation for [`ActiveJob::QueueAdapters`][].
 
 [`ActiveJob::QueueAdapters`]:
@@ -1108,7 +1109,7 @@ module YourApp
     # Be sure to have the adapter's gem in your Gemfile
     # and follow the adapter's specific installation
     # and deployment instructions.
-    config.active_job.queue_adapter = :async
+    config.active_job.queue_adapter = :sidekiq
   end
 end
 ```
