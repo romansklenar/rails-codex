@@ -1,0 +1,15 @@
+[submodule "hotwire-native-site"]
+	path = hotwire-native-site
+	url = https://github.com/hotwired/hotwire-native-site
+[submodule "stimulus-site"]
+	path = stimulus-site
+	url = https://github.com/hotwired/stimulus-site
+[submodule "turbo-site"]
+	path = turbo-site
+	url = https://github.com/hotwired/turbo-site
+[submodule "strada-site"]
+	path = strada-site
+	url = https://github.com/hotwired/strada-site
+[submodule "hotwire-site"]
+	path = hotwire-site
+	url = https://github.com/hotwired/hotwire-site
