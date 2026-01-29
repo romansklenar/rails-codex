@@ -1,6 +1,6 @@
 REPOS = rails/rails hotwired/hotwire-native-site hotwired/stimulus-site hotwired/turbo-site hotwired/strada-site hotwired/hotwire-site
 
-.PHONY: help init update fetch pull resources
+.PHONY: help init update fetch pull knowledge clean
 
 help: ## Show available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'
@@ -17,19 +17,24 @@ fetch: ## Fetch updates for all submodules
 pull: ## Pull latest changes for all submodules
 	@git submodule update --remote
 
-resources: ## Copy handbook/reference/overview docs into resources/
-	@rm -rf resources
-	@mkdir -p resources resources/rails resources/hotwire-native resources/stimulus resources/strada resources/turbo
-	@cp -R hotwire-native-site/_source/overview    resources/hotwire-native/overview
-	@cp -R hotwire-native-site/_source/reference   resources/hotwire-native/reference
-	@cp -R stimulus-site/_source/handbook          resources/stimulus/handbook
-	@cp -R stimulus-site/_source/reference         resources/stimulus/reference
-	@cp -R strada-site/_source/handbook            resources/strada/handbook
-	@cp -R strada-site/_source/reference           resources/strada/reference
-	@cp -R turbo-site/_source/handbook             resources/turbo/handbook
-	@cp -R turbo-site/_source/reference            resources/turbo/reference
-	@cp -R rails/guides/source                     resources/rails/guides
+knowledge: clean ## Copy handbook/reference/overview docs into knowledge/
+	@mkdir -p knowledge knowledge/rails knowledge/hotwire-native knowledge/stimulus knowledge/strada knowledge/turbo
+	@cp -R hotwire-native-site/_source/overview    knowledge/hotwire-native/overview
+	@cp -R hotwire-native-site/_source/reference   knowledge/hotwire-native/reference
+	@cp -R stimulus-site/_source/handbook          knowledge/stimulus/handbook
+	@cp -R stimulus-site/_source/reference         knowledge/stimulus/reference
+	@cp -R strada-site/_source/handbook            knowledge/strada/handbook
+	@cp -R strada-site/_source/reference           knowledge/strada/reference
+	@cp -R turbo-site/_source/handbook             knowledge/turbo/handbook
+	@cp -R turbo-site/_source/reference            knowledge/turbo/reference
+	@cp -R rails/guides/source                     knowledge/rails/guides
 	@rm -rf rails/guides/epub
-	@find resources -name "*.json" -delete
-	@find resources -name "*.erb" -delete
-	@echo "Resources copied successfully."
+	@find knowledge -name "*.json" -delete
+	@find knowledge -name "*.erb" -delete
+	@echo "Knowledge extracted successfully."
+
+clean: ## Clean up knowledge directory
+	@find knowledge -name "*.md" -delete
+	@find knowledge -name "*.yaml" -delete
+	@find knowledge -type d -empty -delete
+	@echo "Knowledge directory cleaned."
