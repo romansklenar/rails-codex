@@ -13,3 +13,6 @@
 [submodule "hotwire-site"]
 	path = hotwire-site
 	url = https://github.com/hotwired/hotwire-site
+[submodule "rails"]
+	path = rails
+	url = https://github.com/rails/rails
