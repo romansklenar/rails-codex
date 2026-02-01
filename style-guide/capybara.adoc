@@ -1,0 +1,129 @@
+= Capybara Style Guide
+:idprefix:
+:idseparator: -
+:sectanchors:
+:sectlinks:
+:toc: preamble
+:toclevels: 1
+ifndef::backend-pdf[]
+:toc-title: pass:[<h2>Table of Contents</h2>]
+endif::[]
+:source-highlighter: rouge
+
+== Introduction
+
+[quote, Officer Alex J. Murphy / RoboCop]
+____
+Role models are important.
+____
+
+ifdef::env-github[]
+TIP: You can find a beautiful version of this guide with much improved navigation at https://capybara.rubystyle.guide.
+endif::[]
+
+This Capybara style guide outlines the recommended best practices for real-world programmers to write code that can be maintained by other real-world programmers.
+
+https://github.com/rubocop/rubocop[RuboCop], a static code analyzer (linter) and formatter, has a https://github.com/rubocop/rubocop-capybara[`rubocop-capybara`] extension, provides a way to enforce the rules outlined in this guide.
+
+You can generate a PDF copy of this guide using https://asciidoctor.org/docs/asciidoctor-pdf/[AsciiDoctor PDF], and an HTML copy https://asciidoctor.org/docs/convert-documents/#converting-a-document-to-html[with] https://asciidoctor.org/#installation[AsciiDoctor] using the following commands:
+
+[source,shell]
+----
+# Generates README.pdf
+asciidoctor-pdf -a allow-uri-read README.adoc
+
+# Generates README.html
+asciidoctor README.adoc
+----
+
+[TIP]
+====
+Install the `rouge` gem to get nice syntax highlighting in the generated document.
+
+[source,shell]
+----
+gem install rouge
+----
+====
+
+== A Living Document
+
+This guide is work in progress - trying to fill in the arguments by which the rubocop-capbyara cops were written so that users can understand the tradeoffs on different approaches (whether to configure, enable or disable different cops)  and understand where it's a question of consistency and/or style, or are there other issues at play.
+
+== Using Capybara
+
+=== Use a specific click_link or click_button to surface accessibility issues[[click-link-or-button-specificity]]
+(corresponds to Capybara/ClickLinkOrButtonStyle)
+
+=== But if you do use a generic click then use a consistent method[[click-link-or-button-consistency]]
+(also corresponds to Capybara/ClickLinkOrButtonStyle)
+
+=== Don't set expectations on Capybara `current_path`
+(corresponds to Capybara/CurrentPathExpectation)
+
+=== Don't use deprecated style methods
+(corresponds to Capybara/MatchStyle)
+
+=== Either use of `have_no_*` or use `not_to` consistently for negated expectations[[negation-matcher-consistency]]
+(corresponds to Capybara/NegationMatcher)
+
+=== Be concise: don't use redundant withins[[no-redundant-within-finds]]
+(corresponds to Capybara/RedundantWithinFind)
+
+=== Be specific: Use the most specific action rather than a generic action with parameters.[[specific-action]]
+(corresponds to Capybara/SpecificActions)
+
+=== Be specific: Use the most specific finder rather than a generic finder with parameters[[specific-finder]]
+(corresponds to Capybara/SpecificFinders)
+
+=== Be specific: Use the most specific matcher rather than a generic matcher with parameters[[specific-matcher]]
+(corresponds to Capybara/SpecificMatcher)
+
+=== Don't use visible: false in Capybara finders, instead use a specific visibility symbol[[visibility-matcher-specificity]]
+(corresponds to Capybara/VisibilityMatcher)
+
+== Using Capybara with RSpec
+
+=== Use `have_css` or `have_xpath` instead of `have_selector`[[dont-use-have-selector]]
+(corresponds to Capybara/RSpec/HaveSelector)
+
+=== Prefer using predicate matcher over using predicate method directly[[predicate-matcher-rather-than-method]]
+(corresponds to Capybara/RSpec/PredicateMatcher)
+
+
+== Related Guides
+
+* https://rubystyle.guide[Ruby Style Guide]
+* https://rspec.rubystyle.guide[RSpec Style Guide]
+* https://rails.rubystyle.guide[Rails Style Guide]
+* https://minitest.rubystyle.guide[Minitest Style Guide]
+
+== Contributing
+
+Nothing written in this guide is set in stone.
+Everyone is welcome to contribute, so that we could ultimately create a resource that will be beneficial to the entire Ruby community.
+
+Feel free to open tickets or send pull requests with improvements.
+Thanks in advance for your help!
+
+You can also support the project (and RuboCop) with financial contributions via https://www.patreon.com/bbatsov[Patreon].
+
+=== How to Contribute?
+
+It's easy, just follow the contribution guidelines below:
+
+* https://docs.github.com/en/get-started/quickstart/fork-a-repo[Fork] the https://github.com/rubocop/rspec-style-guide[project] on GitHub
+* Make your feature addition or bug fix in a feature branch
+* Include a http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html[good description] of your changes
+* Push your feature branch to GitHub
+* Send a https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests[Pull Request]
+
+== License
+
+image:https://i.creativecommons.org/l/by/3.0/88x31.png[Creative Commons License]
+This work is licensed under a http://creativecommons.org/licenses/by/3.0/deed.en_US[Creative Commons Attribution 3.0 Unported License]
+
+
+== Credit
+
+TBC!

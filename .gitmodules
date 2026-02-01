@@ -16,3 +16,21 @@
 [submodule "repos/kamal-site"]
 	path = repos/kamal-site
 	url = https://github.com/basecamp/kamal-site
+[submodule "repos/rspec-style-guide"]
+	path = repos/rspec-style-guide
+	url = https://github.com/rubocop/rspec-style-guide
+[submodule "repos/ruby-style-guide"]
+	path = repos/ruby-style-guide
+	url = https://github.com/rubocop/ruby-style-guide
+[submodule "repos/capybara-style-guide"]
+	path = repos/capybara-style-guide
+	url = https://github.com/rubocop/capybara-style-guide
+[submodule "repos/packaging-style-guide"]
+	path = repos/packaging-style-guide
+	url = https://github.com/rubocop/packaging-style-guide
+[submodule "repos/rails-style-guide"]
+	path = repos/rails-style-guide
+	url = https://github.com/rubocop/rails-style-guide
+[submodule "repos/minitest-style-guide"]
+	path = repos/minitest-style-guide
+	url = https://github.com/rubocop/minitest-style-guide

@@ -1,0 +1,710 @@
+= Minitest Style Guide
+:idprefix:
+:idseparator: -
+:sectanchors:
+:sectlinks:
+:toc: preamble
+:toclevels: 1
+ifndef::backend-pdf[]
+:toc-title: pass:[<h2>Table of Contents</h2>]
+endif::[]
+:source-highlighter: rouge
+
+== Introduction
+
+[quote, Officer Alex J. Murphy / RoboCop]
+____
+Role models are important.
+____
+
+ifdef::env-github[]
+TIP: You can find a beautiful version of this guide with much improved navigation at https://minitest.rubystyle.guide.
+endif::[]
+
+This Minitest style guide outlines the recommended best practices for real-world programmers to write code that can be maintained by other real-world programmers.
+
+https://github.com/rubocop/rubocop[RuboCop], a static code analyzer (linter) and formatter, has a https://github.com/rubocop/rubocop-minitest[`rubocop-minitest`] extension, provides a way to enforce the rules outlined in this guide.
+
+You can generate a PDF copy of this guide using https://asciidoctor.org/docs/asciidoctor-pdf/[AsciiDoctor PDF], and an HTML copy https://asciidoctor.org/docs/convert-documents/#converting-a-document-to-html[with] https://asciidoctor.org/#installation[AsciiDoctor] using the following commands:
+
+[source,shell]
+----
+# Generates README.pdf
+asciidoctor-pdf -a allow-uri-read README.adoc
+
+# Generates README.html
+asciidoctor
+----
+
+[TIP]
+====
+Install the `rouge` gem to get nice syntax highlighting in the generated document.
+
+[source,shell]
+----
+gem install rouge
+----
+====
+
+== A Living Document
+
+This guide is a work in progress - existing guidelines are constantly being improved, new guidelines are added, occasionally some guidelines
+would get removed.
+
+== Layout
+
+This section discusses the idiomatic way to structure tests.
+
+NOTE: This section is currently a stub. Contributions welcome!
+
+== Assertions
+
+This section discusses idiomatic usage of the assertions provided by Minitest.
+
+=== Assert Nil [[assert-nil]]
+
+Use `assert_nil` if expecting `nil`.
+
+[source,ruby]
+----
+# bad
+assert_equal(nil, actual)
+
+# good
+assert_nil(actual)
+----
+
+=== Refute Nil [[refute-nil]]
+
+Use `refute_nil` if not expecting `nil`.
+
+[source,ruby]
+----
+# bad
+assert(!actual.nil?)
+refute(actual.nil?)
+
+# good
+refute_nil(actual)
+----
+
+=== Assert Equal Arguments Order[[assert-equal-args-order]]
+
+`assert_equal` should always have expected value as first argument because if the assertion fails the
+error message would say expected "rubocop-minitest" received "rubocop" not the other way around.
+
+NOTE: If you're used to working with RSpec then this in the opposite order.
+
+[source,ruby]
+----
+# bad
+assert_equal(actual, "rubocop-minitest")
+
+# good
+assert_equal("rubocop-minitest", actual)
+----
+
+=== Refute Equal[[refute-equal]]
+
+Use `refute_equal` if `expected` and `actual` should not be same.
+
+[source,ruby]
+----
+# bad
+assert("rubocop-minitest" != actual)
+
+# good
+refute_equal("rubocop-minitest", actual)
+----
+
+=== Assert Same [[assert-same]]
+
+Use `assert_same` instead of `assert` with `equal?`.
+
+NOTE: Use `assert_same` only when there is a need to compare by identity. Otherwise, use `assert_equal`.
+
+[source,ruby]
+----
+# bad
+assert(expected.equal?(actual))
+
+# good
+assert_same(expected, actual)
+----
+
+=== Refute Same [[refute-same]]
+
+Use `refute_same` instead of `refute` with `equal?`.
+
+NOTE: Use `refute_same` only when there is a need to compare by identity. Otherwise, use `refute_equal`.
+
+[source,ruby]
+----
+# bad
+refute(expected.equal?(actual))
+assert(!expected.equal?(actual))
+
+# good
+refute_same(expected, actual)
+----
+
+=== Assert Truthy [[assert-truthy]]
+
+Use `assert` if expecting truthy value.
+
+[source,ruby]
+----
+# bad
+assert_equal(true, actual)
+
+# good
+assert(actual)
+----
+
+=== Refute false [[refute-false]]
+
+Use `refute` if expecting false.
+
+[source,ruby]
+----
+# bad
+assert_equal(false, actual)
+
+# bad
+assert(!something)
+
+# good
+refute(actual)
+----
+
+=== Assert Includes [[assert-includes]]
+
+Use `assert_includes` to assert if the object is included in the collection.
+
+[source,ruby]
+----
+# bad
+assert(collection.include?(object))
+
+# good
+assert_includes(collection, object)
+----
+
+=== Refute Includes [[refute-includes]]
+
+Use `refute_includes` if the object is not included in the collection.
+
+[source,ruby]
+----
+# bad
+refute(collection.include?(object))
+assert(!collection.include?(object))
+
+# good
+refute_includes(collection, object)
+----
+
+=== Assert In Delta [[assert-in-delta]]
+
+Use `assert_in_delta` if comparing `floats`. Assertion passes if the expected value is within the `delta` of `actual` value.
+
+[source,ruby]
+----
+# bad
+assert_equal(Math::PI, actual)
+
+# good
+assert_in_delta(Math::PI, actual, 0.01)
+----
+
+=== Refute In Delta [[refute-in-delta]]
+
+Use `refute_in_delta` if comparing `floats`. Assertion passes if the expected value is NOT within the `delta` of `actual` value.
+
+[source,ruby]
+----
+# bad
+refute_equal(Math::PI, actual)
+
+# good
+refute_in_delta(Math::PI, actual, 0.01)
+----
+
+=== Assert Empty [[assert-empty]]
+
+Use `assert_empty` if expecting object to be empty.
+
+[source,ruby]
+----
+# bad
+assert(object.empty?)
+
+# good
+assert_empty(object)
+----
+
+=== Refute Empty [[refute-empty]]
+
+Use `refute_empty` if expecting object to be not empty.
+
+[source,ruby]
+----
+# bad
+assert(!object.empty?)
+refute(object.empty?)
+
+# good
+refute_empty(object)
+----
+
+=== Assert Operator [[assert-operator]]
+
+Use `assert_operator` if comparing expected and actual object using operator.
+
+[source,ruby]
+----
+# bad
+assert(expected < actual)
+
+# good
+assert_operator(expected, :<, actual)
+----
+
+=== Refute Operator [[refute-operator]]
+
+Use `refute_operator` if expecting expected object is not binary operator of the actual object. Assertion passes if the expected object is not binary operator (example: greater than) the actual object.
+
+[source,ruby]
+----
+# bad
+assert(!(expected > actual))
+refute(expected > actual)
+
+# good
+refute_operator(expected, :>, actual)
+----
+
+=== Assert Output [[assert-output]]
+
+Use `assert_output` to assert the methods output. Assertion passes if the expected output or error are matched or equal to the standard output/error.
+The expected value can be a regex, string or nil.
+
+[source,ruby]
+----
+# bad
+$stdout = StringIO.new
+puts object.method
+$stdout.rewind
+assert_match expected, $stdout.read
+
+# good
+assert_output(expected) { puts object.method }
+----
+
+=== Assert Silent [[assert-silent]]
+
+Use `assert_silent` to assert that nothing was written to stdout and stderr.
+
+[source,ruby]
+----
+# bad
+assert_output('', '') { puts object.do_something }
+
+# good
+assert_silent { puts object.do_something }
+----
+
+=== Assert Path Exists [[assert-path-exists]]
+
+Use `assert_path_exists` if expecting path to exist.
+
+[source,ruby]
+----
+# bad
+assert(File.exist?(path))
+
+# good
+assert_path_exists(path)
+----
+
+=== Refute Path Exists [[refute-path-exists]]
+
+Use `refute_path_exists` if expecting path to not exist.
+
+[source,ruby]
+----
+# bad
+assert(!File.exist?(path))
+refute(File.exist?(path))
+
+# good
+refute_path_exists(path)
+----
+
+=== Assert Match [[assert-match]]
+
+Use `assert_match` if expecting matcher regex to match actual object.
+
+[source,ruby]
+----
+# bad
+assert(pattern.match?(object))
+
+# good
+assert_match(pattern, object)
+----
+
+=== Refute Match [[refute-match]]
+
+Use `refute_match` if expecting matcher regex to not match actual object.
+
+[source,ruby]
+----
+# bad
+assert(!pattern.match?(object))
+refute(pattern.match?(object))
+
+# good
+refute_match(pattern, object)
+----
+
+=== Assert Predicate [[assert-predicate]]
+
+Use `assert_predicate` if expecting to test the predicate on the expected object and on applying predicate returns true.
+The benefit of using the `assert_predicate` over the `assert` or `assert_equal` is the user friendly
+error message when assertion fails.
+
+[source,ruby]
+----
+# bad
+assert expected.zero?     # => Expected false to be truthy
+assert_equal 0, expected  # => Expected: 0 Actual: 2
+
+# good
+assert_predicate expected, :zero? # => Expected 2 to be zero?.
+----
+
+=== Refute Predicate [[refute-predicate]]
+
+Use `refute_predicate` if expecting to test the predicate on the expected object and on applying predicate returns false.
+
+[source,ruby]
+----
+# bad
+assert(!expected.zero?)
+refute(expected.zero?)
+
+# good
+refute_predicate expected, :zero?
+----
+
+=== Assert Responds To Method [[assert-respond-to]]
+
+Use `assert_respond_to` if expecting object to respond to a method.
+
+[source,ruby]
+----
+# bad
+assert(object.respond_to?(some_method))
+
+# good
+assert_respond_to(object, some_method)
+----
+
+=== Refute Responds To Method [[refute-respond-to]]
+
+Use `refute_respond_to` if expecting object to not respond to a method.
+
+[source,ruby]
+----
+# bad
+assert(!object.respond_to?(some_method))
+refute(object.respond_to?(some_method))
+
+# good
+refute_respond_to(object, some_method)
+----
+
+=== Assert Instance Of [[assert-instance-of]]
+
+Prefer `assert_instance_of(class, object)` over `assert(object.instance_of?(class))`.
+
+[source,ruby]
+----
+# bad
+assert('rubocop-minitest'.instance_of?(String))
+
+# good
+assert_instance_of(String, 'rubocop-minitest')
+----
+
+=== Refute Instance Of [[refute-instance-of]]
+
+Prefer `refute_instance_of(class, object)` over `refute(object.instance_of?(class))`.
+
+[source,ruby]
+----
+# bad
+refute('rubocop-minitest'.instance_of?(String))
+
+# good
+refute_instance_of(String, 'rubocop-minitest')
+----
+
+=== Assert Kind Of [[assert-kind-of]]
+
+Prefer `assert_kind_of(class, object)` over `assert(object.kind_of?(class))`.
+
+[source,ruby]
+----
+# bad
+assert('rubocop-minitest'.kind_of?(String))
+
+# good
+assert_kind_of(String, 'rubocop-minitest')
+----
+
+=== Refute Kind Of [[refute-kind-of]]
+
+Prefer `refute_kind_of(class, object)` over `refute(object.kind_of?(class))`.
+
+[source,ruby]
+----
+# bad
+refute('rubocop-minitest'.kind_of?(String))
+
+# good
+refute_kind_of(String, 'rubocop-minitest')
+----
+
+=== Unspecified exception [[unspecified-exception]]
+
+Specify the exception being captured by `assert_raises`. This avoids false-positives
+when the raised exception is not the same users were expected.
+
+[source,ruby]
+----
+# bad
+assert_raises { do_something }
+
+# good
+assert_raises(FooException) { do_something }
+----
+
+== Expectations
+
+This section discusses idiomatic usage of the expectations provided by Minitest.
+
+NOTE: This section is currently a stub. Contributions welcome!
+
+=== Global Expectations [[global-expectations]]
+
+Use `_()` wrapper if using global expectations which are deprecated methods.
+
+[source,ruby]
+----
+# bad
+do_something.must_equal 2
+{ raise_exception }.must_raise TypeError
+
+# good
+_(do_something).must_equal 2
+value(do_something).must_equal 2
+expect(do_something).must_equal 2
+_ { raise_exception }.must_raise TypeError
+----
+
+Check the http://docs.seattlerb.org/minitest/Minitest/Expectations.html[Minitest::Expectations doc] for more information about its usage.
+
+=== Hooks [[hooks]]
+
+If using a module containing `setup` or `teardown` methods, be sure to call `super` in the test class `setup` or
+`teardown`.
+
+[source,ruby]
+----
+# bad
+class TestMeme < Minitest::Test
+  include MyHelper
+
+  def setup
+    do_something
+  end
+
+  def teardown
+    clean_something
+  end
+end
+
+# good
+class TestMeme < Minitest::Test
+  include MyHelper
+
+  def setup
+    super
+    do_something
+  end
+
+  def teardown
+    clean_something
+    super
+  end
+end
+----
+
+=== Hooks Ordering [[hooks-ordering]]
+
+Order hooks in the order in which they will be executed.
+
+[source,ruby]
+----
+# bad
+class SomethingTest < Minitest::Test
+  def teardown; end
+  def setup; end
+end
+
+# good
+class SomethingTest < Minitest::Test
+  def setup; end
+  def teardown; end
+end
+----
+
+=== Extension Hooks [[extension-hooks]]
+
+The `before_*` and `after_*` hooks are meant for libraries that extend minitest.
+They are not meant to be used by test developers.
+
+[source,ruby]
+----
+# bad
+class SomethingTest < Minitest::Test
+  def before_setup; end
+  def before_teardown; end
+  def after_setup; end
+  def after_teardown; end
+end
+
+# good
+class SomethingTest < Minitest::Test
+  def setup; end
+  def teardown; end
+end
+----
+
+=== Skipping Runnable Methods [[skipping-runnable-methods]]
+
+Prefer `skip` over `return` for skipping runnable methods that start with `test_`.
+
+[source,ruby]
+----
+# bad
+def test_something
+  return if condition?
+  assert_equal(42, something)
+end
+
+# good
+def test_something
+  skip if condition?
+  assert_equal(42, something)
+end
+----
+
+== File Naming [[file-naming]]
+
+Use a consistent naming pattern of either a `test_` prefix or a `_test` suffix for filenames of tests.
+
+For a Rails app, follow the `_test` suffix convention, as used by the Rails generators.
+
+For a gem, follow the `test_` prefix convention, as used by the `bundle gem` generator.
+
+== Test Doubles
+
+Minitest includes `minitest/mock`, a simple mock/stub system.
+
+[source,ruby]
+----
+# example
+service = Minitest::Mock.new
+service.expect(:execute, true)
+----
+
+A common alternative is https://github.com/freerange/mocha[Mocha].
+
+[source,ruby]
+----
+# example
+service = mock
+service.expects(:execute).returns(true)
+----
+
+Choose only one to use – avoid mixing both approaches within one project.
+
+== Subclassing Test Cases
+
+Minitest uses Ruby classes, if a Minitest class inherits from another class, it will also inherit its methods
+causing Minitest to run the parent's tests twice.
+
+[source,ruby]
+----
+# bad (unless multiple runs are the intended behavior)
+class ParentTest < Minitest::Test
+  def test_1
+    #... Run twice
+  end
+end
+
+class ChildTest < ParentTest
+  def test_2
+    #...
+  end
+end
+----
+
+In rare cases, we may want to run the tests twice, but in general avoid subclassing test cases.
+
+Note: The `minitest/spec` alternative syntax disable inheritance between test classes and so does not have this behavior.
+
+== Related Guides
+
+* https://rubystyle.guide[Ruby Style Guide]
+* https://rails.rubystyle.guide[Rails Style Guide]
+* https://rspec.rubystyle.guide[RSpec Style Guide]
+
+== Contributing
+
+The guide is still a work in progress - some guidelines are lacking examples, some guidelines don't have examples that illustrate them clearly enough.
+Improving such guidelines is a great (and simple way) to help the Ruby community!
+
+In due time these issues will (hopefully) be addressed - just keep them in mind for now.
+
+Nothing written in this guide is set in stone.
+It's our desire to work together with everyone interested in Ruby coding style, so that we could ultimately create a resource that will be beneficial to the entire Ruby community.
+
+Feel free to open tickets or send pull requests with improvements.
+Thanks in advance for your help!
+
+You can also support the project (and RuboCop) with financial contributions via https://www.patreon.com/bbatsov[Patreon].
+
+=== How to Contribute?
+
+It's easy, just follow the contribution guidelines below:
+
+* https://help.github.com/articles/fork-a-repo[Fork] https://github.com/rubocop/minitest-style-guide[rubocop/minitest-style-guide] on GitHub
+* Make your feature addition or bug fix in a feature branch.
+* Include a http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html[good description] of your changes
+* Push your feature branch to GitHub
+* Send a https://help.github.com/articles/using-pull-requests[Pull Request]
+
+== License
+
+image:https://i.creativecommons.org/l/by/3.0/88x31.png[Creative Commons License] This work is licensed under a http://creativecommons.org/licenses/by/3.0/deed.en_US[Creative Commons Attribution 3.0 Unported License]
+
+== Spread the Word
+
+A community-driven style guide is of little use to a community that doesn't know about its existence.
+Tweet about the guide, share it with your friends and colleagues.
+Every comment, suggestion or opinion we get makes the guide just a little bit better.
+And we want to have the best possible guide, don't we?
