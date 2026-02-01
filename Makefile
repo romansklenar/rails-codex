@@ -1,4 +1,4 @@
-REPOS = rails/rails hotwired/hotwire-native-site hotwired/stimulus-site hotwired/turbo-site hotwired/strada-site hotwired/hotwire-site
+REPOS = rails/rails hotwired/hotwire-native-site hotwired/stimulus-site hotwired/strada-site basecamp/kamal-site
 
 .PHONY: help init update fetch pull knowledge clean
 
@@ -18,7 +18,7 @@ pull: ## Pull latest changes for all submodules
 	@git submodule update --remote
 
 knowledge: clean ## Copy handbook/reference/overview docs into knowledge/
-	@mkdir -p knowledge knowledge/rails knowledge/hotwire-native knowledge/stimulus knowledge/strada knowledge/turbo
+	@mkdir -p knowledge knowledge/rails knowledge/hotwire-native knowledge/stimulus knowledge/strada knowledge/turbo knowledge/kamal
 	@cp -R repos/hotwire-native-site/_source/overview    knowledge/hotwire-native/overview
 	@cp -R repos/hotwire-native-site/_source/reference   knowledge/hotwire-native/reference
 	@cp -R repos/stimulus-site/_source/handbook          knowledge/stimulus/handbook
@@ -27,6 +27,7 @@ knowledge: clean ## Copy handbook/reference/overview docs into knowledge/
 	@cp -R repos/strada-site/_source/reference           knowledge/strada/reference
 	@cp -R repos/turbo-site/_source/handbook             knowledge/turbo/handbook
 	@cp -R repos/turbo-site/_source/reference            knowledge/turbo/reference
+	@cp -R repos/kamal-site/docs                         knowledge/kamal/docs
 	@cp -R repos/rails/guides/source                     knowledge/rails/guides
 	@rm -rf repos/rails/guides/epub
 	@find knowledge -name "*.json" -delete

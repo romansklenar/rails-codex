@@ -13,6 +13,6 @@
 [submodule "repos/strada-site"]
 	path = repos/strada-site
 	url = https://github.com/hotwired/strada-site
-[submodule "repos/hotwire-site"]
-	path = repos/hotwire-site
-	url = https://github.com/hotwired/hotwire-site
+[submodule "repos/kamal-site"]
+	path = repos/kamal-site
+	url = https://github.com/basecamp/kamal-site
