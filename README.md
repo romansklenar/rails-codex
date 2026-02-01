@@ -25,8 +25,7 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 
 ```bash
 git clone <this-repo>
-make init      # Add all repos as git submodules
-make update    # Initialize and checkout submodules
+make # Initialize and fetch all submodules, then extract knowledge and style guides
 ```
 
 ## Usage
@@ -37,6 +36,7 @@ make fetch               # Fetch updates for all submodules
 make pull                # Pull latest changes for all submodules
 make knowledge           # Copy documentation from submodules into knowledge/
 make style-guide         # Copy style guides from submodules into style-guide/
+make clean               # Remove extracted knowledge/ and style-guide/ directories
 ```
 
 ## Using as a Submodule (Sparse Checkout)

@@ -20,6 +20,130 @@ hotwire-native:
     bridge_components:
       description: Technical reference for Bridge Components and their web component functionality
 
+kamal:
+  docs:
+    commands:
+      accessory:
+        description: Manage long-lived accessory services like databases independently from app deployments
+      app:
+        description: Manage running application containers with start, stop, boot, and maintenance mode
+      audit:
+        description: Display the latest commands executed on each server with timestamps
+      build:
+        description: Build Docker images and push them to registry with local and remote builders
+      config:
+        description: Display the merged configuration including all secrets and resolved variables
+      deploy:
+        description: Build and deploy applications to servers with zero-downtime using kamal-proxy
+      details:
+        description: Show details about all running containers across proxy, app, and accessory roles
+      docs:
+        description: Output Kamal configuration documentation for reference
+      help:
+        description: Display help messages and available commands with usage details
+      init:
+        description: Create initial deployment configuration file and secrets template
+      lock:
+        description: Manage deployment locks to prevent concurrent deployments or maintenance
+      proxy:
+        description: Manage kamal-proxy for zero-downtime deployments with reboot and configuration
+      prune:
+        description: Delete unused container images and old stopped containers
+      redeploy:
+        description: Deploy without bootstrapping servers, skipping proxy startup and pruning
+      registry:
+        description: Login and logout of Docker registry locally and on all servers
+      remove:
+        description: Remove app containers, proxy, and accessories from servers with confirmation
+      rollback:
+        description: Rollback to a previous application version using existing container images
+      running-commands-on-servers:
+        description: Execute custom commands in app containers on one or multiple servers
+      secrets:
+        description: Fetch secrets from password managers (1Password, LastPass, Bitwarden, AWS, GCP)
+      server:
+        description: Bootstrap servers with Docker and run custom commands on remote hosts
+      setup:
+        description: Complete setup for fresh hosts including Docker installation and deployment
+      upgrade:
+        description: Upgrade applications from Kamal 1.x to Kamal 2.0 with network changes
+      version:
+        description: Display the version of Kamal currently installed
+      view-all-commands:
+        description: View complete list of all available Kamal commands and options
+    configuration:
+      accessories:
+        description: Configure long-lived services with custom commands, ports, files, and volumes
+      aliases:
+        description: Define shortcuts for frequently used Kamal commands
+      anchors:
+        description: Reuse configuration sections with YAML anchors to avoid repetition
+      booting:
+        description: Control parallel boot limits and wait times for multiple servers
+      builder-examples:
+        description: Examples for configuring builders with remote hosts and multistage caching
+      builders:
+        description: Configure Docker build architecture, drivers, caches, secrets, and arguments
+      cron:
+        description: Set up cron job containers with environment variable propagation
+      docker-registry:
+        description: Configure Docker registries (Docker Hub, AWS ECR, GCP Artifact Registry)
+      environment-variables:
+        description: Set environment variables with secret and clear separation support
+      logging:
+        description: Configure Docker logging drivers and options for containers
+      overview:
+        description: Complete reference for all Kamal configuration options and requirements
+      proxy:
+        description: Configure kamal-proxy with SSL, routing, healthchecks, and buffering
+      roles:
+        description: Define different server types with custom commands, options, and configurations
+      servers:
+        description: Specify servers, roles, and tags for deployments
+      ssh:
+        description: Configure SSH connections including user, port, keys, and proxy settings
+      sshkit:
+        description: Configure SSHKit connection pooling and DNS retry settings
+    hooks:
+      docker-setup:
+        description: Run scripts after Docker installation but before application setup
+      overview:
+        description: Overview of hook lifecycle with available variables and timing
+      post-app-boot:
+        description: Execute scripts after application container boot
+      post-deploy:
+        description: Execute scripts after deployment with runtime duration variable
+      post-proxy-reboot:
+        description: Execute scripts after kamal-proxy container reboot
+      pre-app-boot:
+        description: Execute scripts before application container boot
+      pre-build:
+        description: Execute scripts for pre-build checks like CI verification
+      pre-connect:
+        description: Execute scripts before connecting to servers
+      pre-deploy:
+        description: Execute scripts for final checks before deployment
+      pre-proxy-reboot:
+        description: Execute scripts before kamal-proxy reboot for load balancer coordination
+    installation:
+      dockerized:
+        description: Run Kamal commands in Docker container with limitations
+      index:
+        description: Installation guide for setting up Kamal and initial deployment
+    upgrading:
+      configuration-changes:
+        description: Backward-incompatible configuration changes from Kamal 1 to 2
+      continuing-to-use-traefik:
+        description: Run Traefik as accessory with kamal-proxy for continued support
+      network-changes:
+        description: Docker network changes from bridge to custom kamal network
+      overview:
+        description: Complete upgrade guide from Kamal 1 to 2 with in-place upgrade steps
+      proxy-changes:
+        description: Reasons for replacing Traefik with kamal-proxy in version 2
+      secrets-changes:
+        description: Secrets migration from .env to .kamal/secrets
+
 stimulus:
   handbook:
     00_the_origin_of_stimulus:
@@ -259,5 +383,3 @@ rails:
       description: Release notes for Rails 8.0
     8_1_release_notes:
       description: Release notes for Rails 8.1
-    8_2_release_notes:
-      description: Release notes for Rails 8.2
