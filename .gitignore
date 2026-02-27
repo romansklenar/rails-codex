@@ -10,3 +10,9 @@
 
 # Ignore system files
 .DS_Store
+
+# Ignore local Claude Code config
+.claude/worktrees/*
+.claude/plans/*
+.claude/settings.local.json
+CLAUDE.local.md
