@@ -1,36 +1,36 @@
-[submodule "repos/rails"]
+[submodule ".git-submodules/rails"]
 	path = .git-submodules/rails
 	url = https://github.com/rails/rails
-[submodule "repos/hotwire-native-site"]
+[submodule ".git-submodules/hotwire-native-site"]
 	path = .git-submodules/hotwire-native-site
 	url = https://github.com/hotwired/hotwire-native-site
-[submodule "repos/stimulus-site"]
+[submodule ".git-submodules/stimulus-site"]
 	path = .git-submodules/stimulus-site
 	url = https://github.com/hotwired/stimulus-site
-[submodule "repos/turbo-site"]
+[submodule ".git-submodules/turbo-site"]
 	path = .git-submodules/turbo-site
 	url = https://github.com/hotwired/turbo-site
-[submodule "repos/strada-site"]
+[submodule ".git-submodules/strada-site"]
 	path = .git-submodules/strada-site
 	url = https://github.com/hotwired/strada-site
-[submodule "repos/kamal-site"]
+[submodule ".git-submodules/kamal-site"]
 	path = .git-submodules/kamal-site
 	url = https://github.com/basecamp/kamal-site
-[submodule "repos/rspec-style-guide"]
+[submodule ".git-submodules/rspec-style-guide"]
 	path = .git-submodules/rspec-style-guide
 	url = https://github.com/rubocop/rspec-style-guide
-[submodule "repos/ruby-style-guide"]
+[submodule ".git-submodules/ruby-style-guide"]
 	path = .git-submodules/ruby-style-guide
 	url = https://github.com/rubocop/ruby-style-guide
-[submodule "repos/capybara-style-guide"]
+[submodule ".git-submodules/capybara-style-guide"]
 	path = .git-submodules/capybara-style-guide
 	url = https://github.com/rubocop/capybara-style-guide
-[submodule "repos/packaging-style-guide"]
+[submodule ".git-submodules/packaging-style-guide"]
 	path = .git-submodules/packaging-style-guide
 	url = https://github.com/rubocop/packaging-style-guide
-[submodule "repos/rails-style-guide"]
+[submodule ".git-submodules/rails-style-guide"]
 	path = .git-submodules/rails-style-guide
 	url = https://github.com/rubocop/rails-style-guide
-[submodule "repos/minitest-style-guide"]
+[submodule ".git-submodules/minitest-style-guide"]
 	path = .git-submodules/minitest-style-guide
 	url = https://github.com/rubocop/minitest-style-guide
