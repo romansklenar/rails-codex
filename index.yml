@@ -1,0 +1,402 @@
+references:
+  hotwire-native:
+    overview:
+      01_how_it_works:
+        description: How Hotwire Native renders web content in a native app shell with platform-specific navigation
+      02_basic_navigation:
+        description: How users navigate between screens via intercepted link taps with native animations
+      03_path_configuration:
+        description: Advanced navigation configuration via JSON file for customizing app behavior remotely
+      04_bridge_components:
+        description: Bridge Components for communication between native and web code
+      05_native_screens:
+        description: Integrating fully native Kotlin and Swift screens alongside web content
+    reference:
+      bridge_installation:
+        description: Installing the Hotwire Native Bridge JavaScript library in your web app
+      navigation:
+        description: Reference for navigating between screens using routing and path configuration
+      path_configuration:
+        description: Advanced reference for Path Configuration settings and rules
+      bridge_components:
+        description: Technical reference for Bridge Components and their web component functionality
+
+  kamal:
+    docs:
+      commands:
+        accessory:
+          description: Manage long-lived accessory services like databases independently from app deployments
+        app:
+          description: Manage running application containers with start, stop, boot, and maintenance mode
+        audit:
+          description: Display the latest commands executed on each server with timestamps
+        build:
+          description: Build Docker images and push them to registry with local and remote builders
+        config:
+          description: Display the merged configuration including all secrets and resolved variables
+        deploy:
+          description: Build and deploy applications to servers with zero-downtime using kamal-proxy
+        details:
+          description: Show details about all running containers across proxy, app, and accessory roles
+        docs:
+          description: Output Kamal configuration documentation for reference
+        help:
+          description: Display help messages and available commands with usage details
+        init:
+          description: Create initial deployment configuration file and secrets template
+        lock:
+          description: Manage deployment locks to prevent concurrent deployments or maintenance
+        proxy:
+          description: Manage kamal-proxy for zero-downtime deployments with reboot and configuration
+        prune:
+          description: Delete unused container images and old stopped containers
+        redeploy:
+          description: Deploy without bootstrapping servers, skipping proxy startup and pruning
+        registry:
+          description: Login and logout of Docker registry locally and on all servers
+        remove:
+          description: Remove app containers, proxy, and accessories from servers with confirmation
+        rollback:
+          description: Rollback to a previous application version using existing container images
+        running-commands-on-servers:
+          description: Execute custom commands in app containers on one or multiple servers
+        secrets:
+          description: Fetch secrets from password managers (1Password, LastPass, Bitwarden, AWS, GCP)
+        server:
+          description: Bootstrap servers with Docker and run custom commands on remote hosts
+        setup:
+          description: Complete setup for fresh hosts including Docker installation and deployment
+        upgrade:
+          description: Upgrade applications from Kamal 1.x to Kamal 2.0 with network changes
+        version:
+          description: Display the version of Kamal currently installed
+        view-all-commands:
+          description: View complete list of all available Kamal commands and options
+      configuration:
+        accessories:
+          description: Configure long-lived services with custom commands, ports, files, and volumes
+        aliases:
+          description: Define shortcuts for frequently used Kamal commands
+        anchors:
+          description: Reuse configuration sections with YAML anchors to avoid repetition
+        booting:
+          description: Control parallel boot limits and wait times for multiple servers
+        builder-examples:
+          description: Examples for configuring builders with remote hosts and multistage caching
+        builders:
+          description: Configure Docker build architecture, drivers, caches, secrets, and arguments
+        cron:
+          description: Set up cron job containers with environment variable propagation
+        docker-registry:
+          description: Configure Docker registries (Docker Hub, AWS ECR, GCP Artifact Registry)
+        environment-variables:
+          description: Set environment variables with secret and clear separation support
+        logging:
+          description: Configure Docker logging drivers and options for containers
+        overview:
+          description: Complete reference for all Kamal configuration options and requirements
+        proxy:
+          description: Configure kamal-proxy with SSL, routing, healthchecks, and buffering
+        roles:
+          description: Define different server types with custom commands, options, and configurations
+        servers:
+          description: Specify servers, roles, and tags for deployments
+        ssh:
+          description: Configure SSH connections including user, port, keys, and proxy settings
+        sshkit:
+          description: Configure SSHKit connection pooling and DNS retry settings
+      hooks:
+        docker-setup:
+          description: Run scripts after Docker installation but before application setup
+        overview:
+          description: Overview of hook lifecycle with available variables and timing
+        post-app-boot:
+          description: Execute scripts after application container boot
+        post-deploy:
+          description: Execute scripts after deployment with runtime duration variable
+        post-proxy-reboot:
+          description: Execute scripts after kamal-proxy container reboot
+        pre-app-boot:
+          description: Execute scripts before application container boot
+        pre-build:
+          description: Execute scripts for pre-build checks like CI verification
+        pre-connect:
+          description: Execute scripts before connecting to servers
+        pre-deploy:
+          description: Execute scripts for final checks before deployment
+        pre-proxy-reboot:
+          description: Execute scripts before kamal-proxy reboot for load balancer coordination
+      installation:
+        dockerized:
+          description: Run Kamal commands in Docker container with limitations
+        index:
+          description: Installation guide for setting up Kamal and initial deployment
+      upgrading:
+        configuration-changes:
+          description: Backward-incompatible configuration changes from Kamal 1 to 2
+        continuing-to-use-traefik:
+          description: Run Traefik as accessory with kamal-proxy for continued support
+        network-changes:
+          description: Docker network changes from bridge to custom kamal network
+        overview:
+          description: Complete upgrade guide from Kamal 1 to 2 with in-place upgrade steps
+        proxy-changes:
+          description: Reasons for replacing Traefik with kamal-proxy in version 2
+        secrets-changes:
+          description: Secrets migration from .env to .kamal/secrets
+
+  stimulus:
+    handbook:
+      00_the_origin_of_stimulus:
+        description: Philosophy behind Stimulus and the monolithic architecture approach at Basecamp
+      01_introduction:
+        description: Stimulus as a framework for enhancing server-rendered HTML with modest JavaScript
+      02_hello_stimulus:
+        description: Step-by-step tutorial for building your first Stimulus controller
+      03_building_something_real:
+        description: Practical example building a real controller using the DOM Clipboard API
+      04_designing_for_resilience:
+        description: Progressive enhancement principles for building features that work without JavaScript
+      05_managing_state:
+        description: How Stimulus controllers manage state in the DOM rather than in JavaScript
+      06_working_with_external_resources:
+        description: Handling HTTP requests and timers in Stimulus controllers
+      07_installing_stimulus:
+        description: Installing Stimulus in your application via npm or script tag
+    reference:
+      actions:
+        description: Using actions to handle DOM events in Stimulus controllers
+      controllers:
+        description: The basic organizational unit of Stimulus applications
+      css_classes:
+        description: Using CSS classes to change styles and animations programmatically
+      lifecycle_callbacks:
+        description: Lifecycle callbacks for controller and target connection/disconnection
+      outlets:
+        description: Cross-controller communication and coordination via CSS selectors
+      targets:
+        description: Referencing important DOM elements by name
+      using_typescript:
+        description: Using TypeScript with Stimulus controllers and defining proper types
+      values:
+        description: Reading and writing typed HTML data attributes as controller values
+
+  strada:
+    handbook:
+      01_introduction:
+        description: Strada as a bridge for bidirectional communication between web and native app code
+      02_how_it_works:
+        description: Component-based architecture and message passing between web and native components
+      03_web:
+        description: JavaScript library for creating web components in Strada
+      04_ios:
+        description: Native Strada iOS library for creating native components in hybrid iOS apps
+      05_android:
+        description: Native Strada Android library for creating native components in hybrid Android apps
+      06_installing:
+        description: Installing Strada in your application via script or npm
+    reference:
+      attributes:
+        description: Data attributes that can be applied to Strada bridge elements
+      components:
+        description: Technical reference for Strada bridge components and web component functionality
+      elements:
+        description: BridgeElement class and its methods for accessing bridge-specific data
+
+  turbo:
+    handbook:
+      01_introduction:
+        description: Turbo as a framework for building fast modern web apps without client-side frameworks
+      02_drive:
+        description: Turbo Drive for accelerating page navigation without full page reloads
+      03_page_refreshes:
+        description: Smooth page refresh with morphing and scroll preservation
+      04_frames:
+        description: Turbo Frames for decomposing pages into independent contexts
+      05_streams:
+        description: Turbo Streams for delivering real-time page updates via HTML fragments
+      06_native:
+        description: Using Turbo with native iOS and Android apps via Hotwire Native
+      07_building:
+        description: Best practices for building applications with Turbo's persistent browser process
+      08_installing:
+        description: Installing Turbo in your application
+    reference:
+      attributes:
+        description: Data attributes and meta tags for customizing Turbo behavior
+      drive:
+        description: API reference for Turbo Drive methods and functions
+      events:
+        description: Custom events dispatched by Turbo during navigation and interactions
+      frames:
+        description: Turbo Frame elements and their configuration options
+      streams:
+        description: The Turbo Stream actions and their usage
+
+  rails:
+    guides:
+      action_cable_overview:
+        description: Real-time features with WebSockets using Action Cable
+      action_controller_advanced_topics:
+        description: CSRF protection, HTTP authentication, streaming, exception handling, and log filtering
+      action_controller_overview:
+        description: How controllers work, sessions, cookies, controller callbacks, and the request cycle
+      action_mailbox_basics:
+        description: Receiving and processing inbound emails with Action Mailbox
+      action_mailer_basics:
+        description: Sending emails from your application with Action Mailer
+      action_text_overview:
+        description: Rich text content handling with Action Text
+      action_view_helpers:
+        description: Formatting dates, linking images, sanitizing, and localizing content in views
+      action_view_overview:
+        description: Introduction to Action View and generating HTML for web responses
+      active_job_basics:
+        description: Declaring and executing background jobs with Active Job
+      active_model_basics:
+        description: Plain Ruby objects that integrate with Action Pack without Active Record
+      active_record_basics:
+        description: Active Record models and persistence to the database
+      active_record_callbacks:
+        description: Code that runs on object create, update, destroy lifecycle events
+      active_record_composite_primary_keys:
+        description: Introduction to composite primary keys for database tables
+      active_record_encryption:
+        description: Encrypting database information using Active Record
+      active_record_migrations:
+        description: Evolving database schema over time using Ruby DSL migrations
+      active_record_multiple_databases:
+        description: Using multiple databases in your Rails application
+      active_record_postgresql:
+        description: PostgreSQL-specific usage of Active Record
+      active_record_querying:
+        description: Retrieving data from the database using Active Record query interface
+      active_record_validations:
+        description: Validating object state before saving to the database
+      active_storage_overview:
+        description: Uploading files to cloud storage and attaching them to Active Record models
+      active_support_core_extensions:
+        description: Ruby language extensions and utilities provided by Active Support
+      active_support_instrumentation:
+        description: Instrumentation API for measuring events inside Rails and Ruby code
+      api_app:
+        description: Using Rails for API-only JSON applications
+      api_documentation_guidelines:
+        description: Ruby on Rails API documentation guidelines
+      asset_pipeline:
+        description: Asset management with Propshaft framework
+      association_basics:
+        description: Connections between Active Record models via associations
+      autoloading_and_reloading_constants:
+        description: How autoloading and reloading constants work in Rails
+      caching_with_rails:
+        description: Speeding up your Rails application with caching
+      command_line:
+        description: Command line tools provided by Rails
+      configuring:
+        description: Basic configuration settings for a Rails application
+      contributing_to_ruby_on_rails:
+        description: Getting involved in the ongoing development of Rails
+      debugging_rails_applications:
+        description: Debugging techniques for Rails applications
+      development_dependencies_install:
+        description: Setting up an environment for Ruby on Rails core development
+      engines:
+        description: Creating engines as miniature applications that extend host applications
+      error_reporting:
+        description: Managing errors in Ruby on Rails applications
+      form_helpers:
+        description: Generating form markup with Action View form helpers
+      generators:
+        description: Creating and customizing Rails generators and templates
+      getting_started:
+        description: Installing Rails and creating your first application
+      getting_started_with_devcontainer:
+        description: Creating a new Rails application and working with dev containers
+      i18n:
+        description: Internationalization, translations, date formats, and pluralization
+      initialization:
+        description: Internals of the Rails initialization process
+      install_ruby_on_rails:
+        description: Installing Ruby and Ruby on Rails
+      layouts_and_rendering:
+        description: Layout features, rendering, redirecting, content_for blocks, and partials
+      maintenance_policy:
+        description: Supported Ruby on Rails versions and release schedule
+      plugins:
+        description: Building plugins to extend Rails functionality
+      rails_on_rack:
+        description: Rails integration with Rack and interfacing with Rack components
+      routing:
+        description: URL recognition, dispatching to controllers, and route generation
+      ruby_on_rails_guides_guidelines:
+        description: Ruby on Rails guides guidelines
+      security:
+        description: Common web application security problems and how to avoid them with Rails
+      sign_up_and_settings:
+        description: Adding sign up and settings to the getting started e-commerce application
+      testing:
+        description: Writing tests in Rails, test configuration, and testing approaches
+      threading_and_code_execution:
+        description: Concurrency considerations and tools for Rails applications
+      tuning_performance_for_deployment:
+        description: Performance and concurrency configuration for production deployment
+      upgrading_ruby_on_rails:
+        description: Steps for upgrading applications to a newer version of Rails
+      wishlists:
+        description: Adding wishlists to the getting started e-commerce application
+      working_with_javascript_in_rails:
+        description: Import maps, jsbundling-rails, and working with Turbo in Rails
+      # Release Notes
+      2_2_release_notes:
+        description: Release notes for Rails 2.2
+      2_3_release_notes:
+        description: Release notes for Rails 2.3
+      3_0_release_notes:
+        description: Release notes for Rails 3.0
+      3_1_release_notes:
+        description: Release notes for Rails 3.1
+      3_2_release_notes:
+        description: Release notes for Rails 3.2
+      4_0_release_notes:
+        description: Release notes for Rails 4.0
+      4_1_release_notes:
+        description: Release notes for Rails 4.1
+      4_2_release_notes:
+        description: Release notes for Rails 4.2
+      5_0_release_notes:
+        description: Release notes for Rails 5.0
+      5_1_release_notes:
+        description: Release notes for Rails 5.1
+      5_2_release_notes:
+        description: Release notes for Rails 5.2
+      6_0_release_notes:
+        description: Release notes for Rails 6.0
+      6_1_release_notes:
+        description: Release notes for Rails 6.1
+      7_0_release_notes:
+        description: Release notes for Rails 7.0
+      7_1_release_notes:
+        description: Release notes for Rails 7.1
+      7_2_release_notes:
+        description: Release notes for Rails 7.2
+      8_0_release_notes:
+        description: Release notes for Rails 8.0
+      8_1_release_notes:
+        description: Release notes for Rails 8.1
+
+insights: {}
+
+style-guide:
+  ruby:
+    description: Ruby coding conventions and best practices
+  rails:
+    description: Rails-specific conventions
+  rspec:
+    description: RSpec testing conventions
+  minitest:
+    description: Minitest testing conventions
+  capybara:
+    description: Capybara integration testing conventions
+  packaging:
+    description: Gem packaging conventions

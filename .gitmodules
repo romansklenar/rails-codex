@@ -1,36 +1,36 @@
-[submodule "repos/rails"]
-	path = repos/rails
+[submodule "rails/rails"]
+	path = .git-submodules/rails/rails
 	url = https://github.com/rails/rails
-[submodule "repos/hotwire-native-site"]
-	path = repos/hotwire-native-site
+[submodule "hotwired/hotwire-native-site"]
+	path = .git-submodules/hotwired/hotwire-native-site
 	url = https://github.com/hotwired/hotwire-native-site
-[submodule "repos/stimulus-site"]
-	path = repos/stimulus-site
+[submodule "hotwired/stimulus-site"]
+	path = .git-submodules/hotwired/stimulus-site
 	url = https://github.com/hotwired/stimulus-site
-[submodule "repos/turbo-site"]
-	path = repos/turbo-site
+[submodule "hotwired/turbo-site"]
+	path = .git-submodules/hotwired/turbo-site
 	url = https://github.com/hotwired/turbo-site
-[submodule "repos/strada-site"]
-	path = repos/strada-site
+[submodule "hotwired/strada-site"]
+	path = .git-submodules/hotwired/strada-site
 	url = https://github.com/hotwired/strada-site
-[submodule "repos/kamal-site"]
-	path = repos/kamal-site
+[submodule "basecamp/kamal-site"]
+	path = .git-submodules/basecamp/kamal-site
 	url = https://github.com/basecamp/kamal-site
-[submodule "repos/rspec-style-guide"]
-	path = repos/rspec-style-guide
+[submodule "rubocop/rspec-style-guide"]
+	path = .git-submodules/rubocop/rspec-style-guide
 	url = https://github.com/rubocop/rspec-style-guide
-[submodule "repos/ruby-style-guide"]
-	path = repos/ruby-style-guide
+[submodule "rubocop/ruby-style-guide"]
+	path = .git-submodules/rubocop/ruby-style-guide
 	url = https://github.com/rubocop/ruby-style-guide
-[submodule "repos/capybara-style-guide"]
-	path = repos/capybara-style-guide
+[submodule "rubocop/capybara-style-guide"]
+	path = .git-submodules/rubocop/capybara-style-guide
 	url = https://github.com/rubocop/capybara-style-guide
-[submodule "repos/packaging-style-guide"]
-	path = repos/packaging-style-guide
+[submodule "rubocop/packaging-style-guide"]
+	path = .git-submodules/rubocop/packaging-style-guide
 	url = https://github.com/rubocop/packaging-style-guide
-[submodule "repos/rails-style-guide"]
-	path = repos/rails-style-guide
+[submodule "rubocop/rails-style-guide"]
+	path = .git-submodules/rubocop/rails-style-guide
 	url = https://github.com/rubocop/rails-style-guide
-[submodule "repos/minitest-style-guide"]
-	path = repos/minitest-style-guide
+[submodule "rubocop/minitest-style-guide"]
+	path = .git-submodules/rubocop/minitest-style-guide
 	url = https://github.com/rubocop/minitest-style-guide
