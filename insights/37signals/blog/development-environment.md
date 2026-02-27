@@ -1,8 +1,13 @@
 ---
-title: "Development Environment"
-source: https://dev.37signals.com/the-10x-development-environment/
-description: "Team structure, six-week cycles, async communication, constraints as features"
-tags: [process]
+title: Development Environment
+source:
+  type: blog
+  title: The 10x development environment
+  author: Alberto Fernandez-Capel
+  url: https://dev.37signals.com/the-10x-development-environment/
+  date: '2022-11-29'
+tags:
+- process
 ---
 
 # Development Environment

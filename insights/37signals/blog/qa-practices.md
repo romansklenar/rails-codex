@@ -1,8 +1,14 @@
 ---
-title: "QA Practices"
-source: https://dev.37signals.com/all-about-qa/
-description: "Guided exploration over scripted QA, late involvement, accessibility validation, suggestion-based feedback"
-tags: [process, testing]
+title: QA Practices
+source:
+  type: blog
+  title: All about QA
+  author: Michael Berger and Gabriel Monette
+  url: https://dev.37signals.com/all-about-qa/
+  date: '2024-10-15'
+tags:
+- process
+- testing
 ---
 
 # QA Practices

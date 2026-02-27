@@ -1,8 +1,14 @@
 ---
-title: "CSS Custom Property Variants"
-source: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
-description: "Component variants via CSS custom properties with fallback values"
-tags: [css, components]
+title: CSS Custom Property Variants
+source:
+  type: blog
+  title: Modern CSS patterns in Campfire
+  author: Jason Zimdars
+  url: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
+  date: '2024-04-04'
+tags:
+- css
+- components
 ---
 
 # CSS Custom Property Variants

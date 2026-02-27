@@ -1,8 +1,14 @@
 ---
-title: "Callbacks & CurrentAttributes"
-source: https://dev.37signals.com/globals-callbacks-and-other-sacrileges/
-description: "Callbacks for secondary concerns, CurrentAttributes for request context, Event.suppress"
-tags: [rails, patterns]
+title: Callbacks & CurrentAttributes
+source:
+  type: blog
+  title: Globals, callbacks and other sacrileges
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/globals-callbacks-and-other-sacrileges/
+  date: '2023-07-31'
+tags:
+- rails
+- patterns
 ---
 
 # Callbacks & CurrentAttributes

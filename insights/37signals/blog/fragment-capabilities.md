@@ -1,8 +1,14 @@
 ---
-title: "Capability Predicates"
-source: https://dev.37signals.com/the-rails-delegated-type-pattern/
-description: "Capability predicates on subtypes instead of type-checking"
-tags: [rails, patterns]
+title: Capability Predicates
+source:
+  type: blog
+  title: The Rails Delegated Type Pattern
+  author: Jeffrey Hardy, Kimberly Rhodes, Fernando Olivares
+  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
+  date: '2025-12-19'
+tags:
+- rails
+- patterns
 ---
 
 # Capability Predicates

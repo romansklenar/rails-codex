@@ -1,8 +1,15 @@
 ---
-title: "Action Push Native"
-source: https://dev.37signals.com/introducing-action-push-native/
-description: "Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections"
-tags: [rails, native, push-notifications]
+title: Action Push Native
+source:
+  type: blog
+  title: Introducing Action Push Native
+  author: Jacopo Beschi
+  url: https://dev.37signals.com/introducing-action-push-native/
+  date: '2025-08-18'
+tags:
+- rails
+- native
+- push-notifications
 ---
 
 # Action Push Native

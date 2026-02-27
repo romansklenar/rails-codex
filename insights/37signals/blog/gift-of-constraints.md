@@ -1,8 +1,13 @@
 ---
-title: "The Gift of Constraints"
-source: https://dev.37signals.com/the-gift-of-constraints/
-description: "Fixed time/variable scope, small teams as constraints, good enough over perfect"
-tags: [process]
+title: The Gift of Constraints
+source:
+  type: blog
+  title: The gift of constraints
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/the-gift-of-constraints/
+  date: '2024-09-09'
+tags:
+- process
 ---
 
 # The Gift of Constraints

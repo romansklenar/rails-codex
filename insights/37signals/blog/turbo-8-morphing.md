@@ -1,11 +1,24 @@
 ---
-title: "Turbo 8: Morphing & Page Refreshes"
+title: 'Turbo 8: Morphing & Page Refreshes'
 source:
-  - https://dev.37signals.com/turbo-8-released/
-  - https://dev.37signals.com/page-refreshes-with-morphing-demo/
-  - https://dev.37signals.com/exploring-server-side-diffing-in-turbo/
-description: "Turbo 8 feature overview, morphing vs streams decision guide, why client-side morphing over server-side diffing"
-tags: [hotwire, turbo]
+- type: blog
+  title: Turbo 8 released
+  author: Alberto Fernandez-Capel
+  url: https://dev.37signals.com/turbo-8-released/
+  date: '2024-02-07'
+- type: blog
+  title: Demo of page refreshes with morphing
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/page-refreshes-with-morphing-demo/
+  date: '2023-11-27'
+- type: blog
+  title: Exploring server-side diffing in Turbo
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/exploring-server-side-diffing-in-turbo/
+  date: '2023-10-24'
+tags:
+- hotwire
+- turbo
 ---
 
 # Turbo 8: Morphing & Page Refreshes

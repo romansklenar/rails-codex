@@ -1,8 +1,14 @@
 ---
-title: "Solid Cache"
-source: https://dev.37signals.com/solid-cache/
-description: "SQL-backed cache store with higher capacity and lower infrastructure cost"
-tags: [rails, caching]
+title: Solid Cache
+source:
+  type: blog
+  title: Solid Cache
+  author: Donal McBreen
+  url: https://dev.37signals.com/solid-cache/
+  date: '2023-10-03'
+tags:
+- rails
+- caching
 ---
 
 # Solid Cache

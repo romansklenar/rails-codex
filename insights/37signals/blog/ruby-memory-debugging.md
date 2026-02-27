@@ -1,8 +1,14 @@
 ---
-title: "Ruby Memory Leak Debugging"
-source: https://dev.37signals.com/adventures-hunting-down-ruby-memory-leak/
-description: "Heap dump analysis with rbtrace, ObjectSpace, heapy, sheap for diagnosing Ruby memory leaks"
-tags: [ruby, debugging]
+title: Ruby Memory Leak Debugging
+source:
+  type: blog
+  title: My adventures hunting down a Ruby memory leak
+  author: Jacopo Beschi
+  url: https://dev.37signals.com/adventures-hunting-down-ruby-memory-leak/
+  date: '2024-03-07'
+tags:
+- ruby
+- debugging
 ---
 
 # Ruby Memory Leak Debugging

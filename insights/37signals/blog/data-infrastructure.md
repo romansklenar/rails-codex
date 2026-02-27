@@ -1,11 +1,24 @@
 ---
-title: "Data Infrastructure"
-source: 
-  - https://dev.37signals.com/moving-mountains-of-data-off-s3/
-  - https://dev.37signals.com/running-our-docker-registry-on-prem-with-harbor/
-  - https://dev.37signals.com/pure-storage-monitoring/
-description: "S3 migration, Harbor registry, Pure Storage monitoring — Rails as orchestration layer"
-tags: [infrastructure, devops]
+title: Data Infrastructure
+source:
+- type: blog
+  title: Moving Mountains of Data off S3
+  author: Kimberly Rhodes, Fernando Olivares, Jeremy Daer
+  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
+  date: '2026-01-08'
+- type: blog
+  title: Running our Docker registry on-prem with Harbor
+  author: Farah Schuller
+  url: https://dev.37signals.com/running-our-docker-registry-on-prem-with-harbor/
+  date: '2025-08-24'
+- type: blog
+  title: Monitoring 10 Petabytes of data in Pure Storage
+  author: Victor Bogo
+  url: https://dev.37signals.com/pure-storage-monitoring/
+  date: '2025-01-02'
+tags:
+- infrastructure
+- devops
 ---
 
 # Data Infrastructure

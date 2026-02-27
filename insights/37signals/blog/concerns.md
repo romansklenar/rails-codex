@@ -1,8 +1,14 @@
 ---
-title: "Concerns"
-source: https://dev.37signals.com/good-concerns/
-description: "Semantic test, file location rules, and PORO delegation for Rails concerns"
-tags: [rails, patterns]
+title: Concerns
+source:
+  type: blog
+  title: Good concerns
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/good-concerns/
+  date: '2022-10-10'
+tags:
+- rails
+- patterns
 ---
 
 # Concerns

@@ -1,10 +1,19 @@
 ---
-title: "Mission Control -- Jobs"
+title: Mission Control -- Jobs
 source:
-  - https://dev.37signals.com/mission-control-jobs/
-  - https://dev.37signals.com/mission-control-jobs-v1-0/
-description: "Dashboard for background job monitoring, queue management, bulk retry/discard, recurring tasks"
-tags: [rails, jobs]
+- type: blog
+  title: Mission Control -- Jobs
+  author: Rosa Gutierrez
+  url: https://dev.37signals.com/mission-control-jobs/
+  date: '2024-01-30'
+- type: blog
+  title: Mission Control -- Jobs 1.0 released
+  author: Rosa Gutierrez
+  url: https://dev.37signals.com/mission-control-jobs-v1-0/
+  date: '2024-12-04'
+tags:
+- rails
+- jobs
 ---
 
 # Mission Control -- Jobs

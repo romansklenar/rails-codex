@@ -1,8 +1,14 @@
 ---
-title: "OKLCH Dynamic Opacity"
-source: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
-description: "OKLCH dynamic opacity technique using CSS custom property triplets"
-tags: [css, colors]
+title: OKLCH Dynamic Opacity
+source:
+  type: blog
+  title: Modern CSS patterns in Campfire
+  author: Jason Zimdars
+  url: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
+  date: '2024-04-04'
+tags:
+- css
+- colors
 ---
 
 # OKLCH Dynamic Opacity

@@ -1,8 +1,14 @@
 ---
-title: "Character-Based Breakpoints"
-source: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
-description: "Prefer ch units over pixels for content-responsive media query breakpoints"
-tags: [css, responsive]
+title: Character-Based Breakpoints
+source:
+  type: blog
+  title: Modern CSS patterns in Campfire
+  author: Jason Zimdars
+  url: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
+  date: '2024-04-04'
+tags:
+- css
+- responsive
 ---
 
 # Character-Based Breakpoints

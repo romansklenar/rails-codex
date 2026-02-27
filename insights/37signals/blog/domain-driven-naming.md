@@ -1,8 +1,14 @@
 ---
-title: "Domain-Driven Naming"
-source: https://dev.37signals.com/domain-driven-boldness/
-description: "Bold domain naming, role-based concerns, business language in code"
-tags: [rails, naming]
+title: Domain-Driven Naming
+source:
+  type: blog
+  title: Domain driven boldness
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/domain-driven-boldness/
+  date: '2022-06-13'
+tags:
+- rails
+- naming
 ---
 
 # Domain-Driven Naming

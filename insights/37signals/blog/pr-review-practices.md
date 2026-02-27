@@ -1,8 +1,14 @@
 ---
-title: "PR Review Practices"
-source: https://dev.37signals.com/minding-the-small-stuff-in-pr-reviews/
-description: "Review naming, idiomatic style, and consistency — the middle ground linters can't reach"
-tags: [process, code-review]
+title: PR Review Practices
+source:
+  type: blog
+  title: Minding the small stuff in pull request reviews
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/minding-the-small-stuff-in-pr-reviews/
+  date: '2023-08-30'
+tags:
+- process
+- code-review
 ---
 
 # PR Review Practices

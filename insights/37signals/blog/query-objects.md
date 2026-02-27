@@ -1,8 +1,14 @@
 ---
-title: "Query Objects"
-source: https://dev.37signals.com/active-record-nice-and-blended/
-description: "PORO query wrappers for complex multi-model queries beyond simple scopes"
-tags: [rails, patterns]
+title: Query Objects
+source:
+  type: blog
+  title: Active Record, nice and blended
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/active-record-nice-and-blended/
+  date: '2022-12-16'
+tags:
+- rails
+- patterns
 ---
 
 # Query Objects

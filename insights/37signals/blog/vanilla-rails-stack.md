@@ -1,8 +1,14 @@
 ---
-title: "Vanilla Rails Stack"
-source: https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/
-description: "Minimize dependencies, use what Rails provides"
-tags: [rails, architecture]
+title: Vanilla Rails Stack
+source:
+  type: blog
+  title: A vanilla Rails stack is plenty
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/
+  date: '2024-12-12'
+tags:
+- rails
+- architecture
 ---
 
 # Vanilla Rails Stack

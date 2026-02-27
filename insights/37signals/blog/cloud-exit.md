@@ -1,11 +1,24 @@
 ---
-title: "Cloud Exit"
-source: 
-  - https://dev.37signals.com/bringing-our-apps-back-home/
-  - https://dev.37signals.com/our-cloud-spend-in-2022/
-  - https://dev.37signals.com/37signals-datacenter-overview/
-description: "Cloud-to-on-prem migration strategy, cost analysis, Kamal deployment, datacenter overview"
-tags: [infrastructure, devops]
+title: Cloud Exit
+source:
+- type: blog
+  title: De-cloud and de-k8s -- bringing our apps back home
+  author: Farah Schuller
+  url: https://dev.37signals.com/bringing-our-apps-back-home/
+  date: '2023-03-21'
+- type: blog
+  title: Our cloud spend in 2022
+  author: Fernando Alvarez
+  url: https://dev.37signals.com/our-cloud-spend-in-2022/
+  date: '2023-01-13'
+- type: blog
+  title: 37signals datacenter overview
+  author: Eron Nicholson
+  url: https://dev.37signals.com/37signals-datacenter-overview/
+  date: '2023-08-10'
+tags:
+- infrastructure
+- devops
 ---
 
 # Cloud Exit

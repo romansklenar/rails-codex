@@ -1,10 +1,19 @@
 ---
-title: "Solid Queue"
+title: Solid Queue
 source:
-  - https://dev.37signals.com/introducing-solid-queue/
-  - https://dev.37signals.com/solid-queue-v1-0/
-description: "Database-backed background jobs with FOR UPDATE SKIP LOCKED polling, bulk enqueue, lifecycle hooks, monitoring"
-tags: [rails, jobs]
+- type: blog
+  title: Introducing Solid Queue
+  author: Rosa Gutierrez
+  url: https://dev.37signals.com/introducing-solid-queue/
+  date: '2023-12-18'
+- type: blog
+  title: Solid Queue 1.0 released
+  author: Rosa Gutierrez
+  url: https://dev.37signals.com/solid-queue-v1-0/
+  date: '2024-09-26'
+tags:
+- rails
+- jobs
 ---
 
 # Solid Queue

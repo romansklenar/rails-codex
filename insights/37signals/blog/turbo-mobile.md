@@ -1,8 +1,14 @@
 ---
-title: "Turbo for Mobile"
-source: https://dev.37signals.com/speeding-up-mobile-development-with-turbo/
-description: "Web content in native apps via Turbo-iOS/Android, when web vs native"
-tags: [hotwire, native]
+title: Turbo for Mobile
+source:
+  type: blog
+  title: Speeding up mobile development with Turbo
+  author: Fernando Olivares
+  url: https://dev.37signals.com/speeding-up-mobile-development-with-turbo/
+  date: '2024-02-22'
+tags:
+- hotwire
+- native
 ---
 
 # Turbo for Mobile

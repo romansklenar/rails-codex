@@ -1,8 +1,14 @@
 ---
-title: "Rails Multi-Tenancy"
-source: https://dev.37signals.com/rails-multi-tenancy/
-description: "Tenant isolation, cross-tenant safety, framework integration points for multi-tenant Rails"
-tags: [rails, architecture]
+title: Rails Multi-Tenancy
+source:
+  type: blog
+  title: Rails Multi-Tenancy
+  author: Kimberly Rhodes, Fernando Olivares, Mike Dalessio
+  url: https://dev.37signals.com/rails-multi-tenancy/
+  date: '2026-02-13'
+tags:
+- rails
+- architecture
 ---
 
 # Rails Multi-Tenancy

@@ -1,8 +1,14 @@
 ---
-title: "Mission Control: Operational Middleware"
-source: https://dev.37signals.com/mission-control-web/
-description: "Middleware-based operational control for feature degradation during incidents"
-tags: [rails, operations]
+title: 'Mission Control: Operational Middleware'
+source:
+  type: blog
+  title: Mission Control -- Web
+  author: Lewis Buckley
+  url: https://dev.37signals.com/mission-control-web/
+  date: '2024-05-09'
+tags:
+- rails
+- operations
 ---
 
 # Mission Control: Operational Middleware

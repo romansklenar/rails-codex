@@ -1,8 +1,14 @@
 ---
-title: "Imperative Infrastructure"
-source: https://dev.37signals.com/leaning-imperative/
-description: "Prefer explicit step-by-step infra over declarative state magic, Kamal over K8s"
-tags: [infrastructure, devops]
+title: Imperative Infrastructure
+source:
+  type: blog
+  title: Leaning imperative
+  author: Arman Jindal
+  url: https://dev.37signals.com/leaning-imperative/
+  date: '2023-09-05'
+tags:
+- infrastructure
+- devops
 ---
 
 # Imperative Infrastructure

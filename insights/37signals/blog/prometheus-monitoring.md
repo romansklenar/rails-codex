@@ -1,10 +1,19 @@
 ---
-title: "Prometheus Monitoring for Rails"
-source: 
-  - https://dev.37signals.com/kamal-prometheus/
-  - https://dev.37signals.com/prometheus-metrics-at-37signals/
-description: "Yabeda gems for Rails Prometheus metrics, PID cardinality fix, alerting patterns, OTel collector"
-tags: [monitoring, devops]
+title: Prometheus Monitoring for Rails
+source:
+- type: blog
+  title: Prometheus metrics with Rails and Kamal
+  author: Lewis Buckley
+  url: https://dev.37signals.com/kamal-prometheus/
+  date: '2024-05-23'
+- type: blog
+  title: Prometheus metrics at 37signals
+  author: Victor Bogo
+  url: https://dev.37signals.com/prometheus-metrics-at-37signals/
+  date: '2023-08-14'
+tags:
+- monitoring
+- devops
 ---
 
 # Prometheus Monitoring for Rails

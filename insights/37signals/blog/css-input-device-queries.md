@@ -1,8 +1,14 @@
 ---
-title: "Input Device Media Queries"
-source: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
-description: "Hover/pointer media queries for touch vs mouse adaptation"
-tags: [css, responsive]
+title: Input Device Media Queries
+source:
+  type: blog
+  title: Modern CSS patterns in Campfire
+  author: Jason Zimdars
+  url: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
+  date: '2024-04-04'
+tags:
+- css
+- responsive
 ---
 
 # Input Device Media Queries

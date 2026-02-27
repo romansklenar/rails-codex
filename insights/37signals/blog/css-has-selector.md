@@ -1,8 +1,13 @@
 ---
 title: ":has() Selector for State-Based Styling"
-source: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
-description: ":has() pseudo-class for state-based styling without JavaScript"
-tags: [css]
+source:
+  type: blog
+  title: Modern CSS patterns in Campfire
+  author: Jason Zimdars
+  url: https://dev.37signals.com/modern-css-patterns-and-techniques-in-campfire/
+  date: '2024-04-04'
+tags:
+- css
 ---
 
 # :has() Selector for State-Based Styling

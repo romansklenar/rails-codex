@@ -1,8 +1,14 @@
 ---
-title: "Delegated Types vs View-Based STI"
-source: https://dev.37signals.com/the-rails-delegated-type-pattern/
-description: "Architectural comparison of delegated_type vs view-based STI patterns"
-tags: [rails, architecture]
+title: Delegated Types vs View-Based STI
+source:
+  type: blog
+  title: The Rails Delegated Type Pattern
+  author: Jeffrey Hardy, Kimberly Rhodes, Fernando Olivares
+  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
+  date: '2025-12-19'
+tags:
+- rails
+- architecture
 ---
 
 # Delegated Types vs View-Based STI

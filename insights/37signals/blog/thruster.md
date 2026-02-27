@@ -1,8 +1,14 @@
 ---
-title: "Thruster"
-source: https://dev.37signals.com/thruster-released/
-description: "HTTP/2 proxy wrapping Puma — automatic TLS, asset caching, X-Sendfile, gzip compression"
-tags: [deployment, performance]
+title: Thruster
+source:
+  type: blog
+  title: Thruster is now open source
+  author: Kevin McConnell
+  url: https://dev.37signals.com/thruster-released/
+  date: '2024-03-07'
+tags:
+- deployment
+- performance
 ---
 
 # Thruster

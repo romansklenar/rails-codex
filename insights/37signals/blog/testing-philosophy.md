@@ -1,8 +1,14 @@
 ---
-title: "Testing Philosophy"
-source: https://dev.37signals.com/pending-tests/
-description: "Pragmatic testing with real dependencies, confidence over coverage"
-tags: [testing, process]
+title: Testing Philosophy
+source:
+  type: blog
+  title: Pending tests
+  author: Jorge Manrubia
+  url: https://dev.37signals.com/pending-tests/
+  date: '2023-03-01'
+tags:
+- testing
+- process
 ---
 
 # Testing Philosophy
