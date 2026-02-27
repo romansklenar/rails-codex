@@ -385,7 +385,103 @@ references:
       8_1_release_notes:
         description: Release notes for Rails 8.1
 
-insights: {}
+insights:
+  37signals:
+    blog: # 37signals Dev Blog (https://dev.37signals.com)
+      action-push-native:
+        description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections
+      better-navigation:
+        description: Trusted referrer back navigation, hierarchical safety nets, simpler over clever
+      callbacks-and-current-attributes:
+        description: Callbacks for secondary concerns, CurrentAttributes for request context, Event.suppress
+      card-table-responsive:
+        description: Native mobile adaptation patterns, triage toggle UX, constraint-driven scope
+      cloud-exit:
+        description: Cloud-to-on-prem migration strategy, cost analysis, Kamal deployment, datacenter overview
+      concerns:
+        description: Semantic test, file location rules, and PORO delegation for Rails concerns
+      console-data-protection:
+        description: Active Record Encryption, Console1984 audit logging, mandatory justification for data access
+      css-character-breakpoints:
+        description: Prefer ch units over pixels for content-responsive media query breakpoints
+      css-custom-property-variants:
+        description: Component variants via CSS custom properties with fallback values
+      css-has-selector:
+        description: ":has() pseudo-class for state-based styling without JavaScript"
+      css-input-device-queries:
+        description: Hover/pointer media queries for touch vs mouse adaptation
+      css-oklch-opacity:
+        description: OKLCH dynamic opacity technique using CSS custom property triplets
+      data-infrastructure:
+        description: S3 migration, Harbor registry, Pure Storage monitoring — Rails as orchestration layer
+      delegated-types-comparison:
+        description: Architectural comparison of delegated_type vs view-based STI patterns
+      development-environment:
+        description: Team structure, six-week cycles, async communication, constraints as features
+      domain-driven-naming:
+        description: Bold domain naming, role-based concerns, business language in code
+      faster-pagination:
+        description: Two-query pagination with covering indexes to reduce disk I/O on large datasets
+      fizzy-architecture:
+        description: Per-customer SQLite multi-tenancy experiment — lessons on architectural pivots and operational readiness
+      fractal-code-quality:
+        description: Four qualities at every abstraction level — domain-driven, encapsulated, cohesive, symmetric
+      fragment-capabilities:
+        description: Capability predicates on subtypes instead of type-checking
+      gift-of-constraints:
+        description: Fixed time/variable scope, small teams as constraints, good enough over perfect
+      homographic-spoofing:
+        description: Unicode homograph attack detection for domains and emails via basecamp/homographic_spoofing gem
+      hotwire-minimal-js:
+        description: Layer Stimulus on existing behavior, server-rendered state, minimal client-side JS
+      hotwire-spark:
+        description: Live reloading for Rails dev — morphs HTML, swaps CSS, hot-reloads Stimulus controllers
+      imperative-infrastructure:
+        description: Prefer explicit step-by-step infra over declarative state magic, Kamal over K8s
+      kamal-deployment:
+        description: Kamal 2 container deployment with kamal-proxy, zero-downtime deploys, SSL, multi-app hosting
+      lexxy-rich-text:
+        description: Lexical-based Action Text editor with proper HTML semantics, Markdown support, configurable editor interface
+      mission-control:
+        description: Middleware-based operational control for feature degradation during incidents
+      mission-control-jobs:
+        description: Dashboard for background job monitoring, queue management, bulk retry/discard, recurring tasks
+      pr-review-practices:
+        description: Review naming, idiomatic style, and consistency — the middle ground linters can't reach
+      prometheus-monitoring:
+        description: Yabeda gems for Rails Prometheus metrics, PID cardinality fix, alerting patterns, OTel collector
+      qa-practices:
+        description: Guided exploration over scripted QA, late involvement, accessibility validation, suggestion-based feedback
+      query-objects:
+        description: PORO query wrappers for complex multi-model queries beyond simple scopes
+      radiating-programmer:
+        description: Proactive async communication, non-blocking decisions, push information outward
+      rails-multi-tenancy:
+        description: Tenant isolation, cross-tenant safety, framework integration points for multi-tenant Rails
+      reliable-export-jobs:
+        description: Interruptible long-running jobs with waypoint progress, server affinity, bounded execution
+      ruby-memory-debugging:
+        description: Heap dump analysis with rbtrace, ObjectSpace, heapy, sheap for diagnosing Ruby memory leaks
+      solid-cache:
+        description: SQL-backed cache store with higher capacity and lower infrastructure cost
+      solid-queue:
+        description: Database-backed background jobs with FOR UPDATE SKIP LOCKED polling, bulk enqueue, lifecycle hooks, monitoring
+      testing-philosophy:
+        description: Pragmatic testing with real dependencies, confidence over coverage
+      thruster:
+        description: HTTP/2 proxy wrapping Puma — automatic TLS, asset caching, X-Sendfile, gzip compression
+      turbo-8-morphing:
+        description: Turbo 8 feature overview, morphing vs streams decision guide, why client-side morphing over server-side diffing
+      turbo-mobile:
+        description: Web content in native apps via Turbo-iOS/Android, when web vs native
+      turbo-progressive-enhancement:
+        description: Turbo hierarchy — Drive → Morphing → Frames → Streams — choose simplest
+      upright-synthetic-monitoring:
+        description: Open-source Rails-based synthetic monitoring — Playwright/HTTP/SMTP probes, multi-location
+      vanilla-rails-stack:
+        description: Minimize dependencies, use what Rails provides, nobuild philosophy
+      yjit-performance:
+        description: Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold
 
 style-guide:
   ruby:
