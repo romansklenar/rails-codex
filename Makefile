@@ -2,7 +2,7 @@ REPOS = rails/rails hotwired/hotwire-native-site hotwired/stimulus-site hotwired
 
 .PHONY: help init update fetch pull references clean
 
-all: init references-extract style-guide-extract
+all: init references style-guide
 
 help: ## Show available commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-10s %s\n", $$1, $$2}'
