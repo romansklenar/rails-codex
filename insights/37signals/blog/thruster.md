@@ -1,5 +1,6 @@
 ---
 title: Thruster
+description: "HTTP/2 proxy wrapping Puma — automatic TLS, asset caching, X-Sendfile, gzip compression"
 source:
   type: blog
   title: Thruster is now open source

@@ -1,5 +1,6 @@
 ---
 title: Data Infrastructure
+description: "S3 migration, Harbor registry, Pure Storage monitoring — Rails as orchestration layer"
 source:
 - type: blog
   title: Moving Mountains of Data off S3

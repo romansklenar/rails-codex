@@ -1,5 +1,6 @@
 ---
 title: Solid Queue
+description: "Database-backed background jobs with FOR UPDATE SKIP LOCKED polling, bulk enqueue, lifecycle hooks, monitoring"
 source:
 - type: blog
   title: Introducing Solid Queue

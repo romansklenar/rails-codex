@@ -1,5 +1,6 @@
 ---
 title: Reliable Export Jobs
+description: "Interruptible long-running jobs with waypoint progress, server affinity, bounded execution"
 source:
   type: blog
   title: Making export jobs more reliable

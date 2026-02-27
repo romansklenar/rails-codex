@@ -1,5 +1,6 @@
 ---
 title: The Radiating Programmer
+description: "Proactive async communication, non-blocking decisions, push information outward"
 source:
   type: blog
   title: The radiating programmer

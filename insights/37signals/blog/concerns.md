@@ -1,5 +1,6 @@
 ---
 title: Concerns
+description: "Semantic test, file location rules, and PORO delegation for Rails concerns"
 source:
   type: blog
   title: Good concerns

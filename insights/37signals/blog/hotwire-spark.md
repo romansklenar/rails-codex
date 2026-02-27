@@ -1,5 +1,6 @@
 ---
 title: Hotwire Spark
+description: "Live reloading for Rails dev — morphs HTML, swaps CSS, hot-reloads Stimulus controllers"
 source:
   type: blog
   title: 'Announcing Hotwire Spark: live reloading for Rails applications'

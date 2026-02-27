@@ -1,5 +1,6 @@
 ---
 title: Homographic Spoofing Detection
+description: "Unicode homograph attack detection for domains and emails via basecamp/homographic_spoofing gem"
 source:
   type: blog
   title: 'Homographic Spoofing: a new Ruby toolkit'

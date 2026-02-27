@@ -1,5 +1,6 @@
 ---
 title: Turbo Progressive Enhancement Hierarchy
+description: "Turbo hierarchy — Drive → Morphing → Frames → Streams — choose simplest"
 source:
   type: blog
   title: A happier happy path in Turbo with morphing

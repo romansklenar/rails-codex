@@ -1,5 +1,6 @@
 ---
 title: Input Device Media Queries
+description: "Hover/pointer media queries for touch vs mouse adaptation"
 source:
   type: blog
   title: Modern CSS patterns in Campfire

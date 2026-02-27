@@ -1,5 +1,6 @@
 ---
 title: 'Turbo 8: Morphing & Page Refreshes'
+description: "Turbo 8 feature overview, morphing vs streams decision guide, why client-side morphing over server-side diffing"
 source:
 - type: blog
   title: Turbo 8 released

@@ -1,5 +1,6 @@
 ---
 title: Vanilla Rails Stack
+description: "Minimize dependencies, use what Rails provides, nobuild philosophy"
 source:
   type: blog
   title: A vanilla Rails stack is plenty

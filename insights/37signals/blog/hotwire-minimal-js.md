@@ -1,5 +1,6 @@
 ---
 title: 'Hotwire: Minimal JavaScript'
+description: "Layer Stimulus on existing behavior, server-rendered state, minimal client-side JS"
 source:
   type: blog
   title: Building Basecamp project stacks with Hotwire

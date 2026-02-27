@@ -1,5 +1,6 @@
 ---
 title: CSS Custom Property Variants
+description: "Component variants via CSS custom properties with fallback values"
 source:
   type: blog
   title: Modern CSS patterns in Campfire

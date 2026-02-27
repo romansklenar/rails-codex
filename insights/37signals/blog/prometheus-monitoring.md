@@ -1,5 +1,6 @@
 ---
 title: Prometheus Monitoring for Rails
+description: "Yabeda gems for Rails Prometheus metrics, PID cardinality fix, alerting patterns, OTel collector"
 source:
 - type: blog
   title: Prometheus metrics with Rails and Kamal

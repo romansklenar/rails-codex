@@ -1,5 +1,6 @@
 ---
 title: Cloud Exit
+description: "Cloud-to-on-prem migration strategy, cost analysis, Kamal deployment, datacenter overview"
 source:
 - type: blog
   title: De-cloud and de-k8s -- bringing our apps back home

@@ -1,5 +1,6 @@
 ---
 title: Imperative Infrastructure
+description: "Prefer explicit step-by-step infra over declarative state magic, Kamal over K8s"
 source:
   type: blog
   title: Leaning imperative

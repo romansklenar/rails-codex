@@ -1,5 +1,6 @@
 ---
 title: Mission Control -- Jobs
+description: "Dashboard for background job monitoring, queue management, bulk retry/discard, recurring tasks"
 source:
 - type: blog
   title: Mission Control -- Jobs

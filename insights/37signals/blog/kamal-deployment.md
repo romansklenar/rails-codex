@@ -1,5 +1,6 @@
 ---
 title: Kamal Deployment
+description: "Kamal 2 container deployment with kamal-proxy, zero-downtime deploys, SSL, multi-app hosting"
 source:
   type: blog
   title: Kamal 2.0 released

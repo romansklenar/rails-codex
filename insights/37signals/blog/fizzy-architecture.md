@@ -1,5 +1,6 @@
 ---
 title: Fizzy Architecture Decisions
+description: "Per-customer SQLite multi-tenancy experiment — lessons on architectural pivots and operational readiness"
 source:
   type: blog
   title: Behind the Fizzy Infrastructure

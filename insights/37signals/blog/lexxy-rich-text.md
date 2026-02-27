@@ -1,5 +1,6 @@
 ---
 title: 'Lexxy: Rich Text Editor for Rails'
+description: "Lexical-based Action Text editor with proper HTML semantics, Markdown support, configurable editor interface"
 source:
   type: blog
   title: 'Lexxy: A new rich text editor for Rails'

@@ -1,5 +1,6 @@
 ---
 title: Turbo for Mobile
+description: "Web content in native apps via Turbo-iOS/Android, when web vs native"
 source:
   type: blog
   title: Speeding up mobile development with Turbo

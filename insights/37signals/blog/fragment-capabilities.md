@@ -1,5 +1,6 @@
 ---
 title: Capability Predicates
+description: "Capability predicates on subtypes instead of type-checking"
 source:
   type: blog
   title: The Rails Delegated Type Pattern

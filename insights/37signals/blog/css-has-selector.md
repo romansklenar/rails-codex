@@ -1,5 +1,6 @@
 ---
 title: ":has() Selector for State-Based Styling"
+description: ":has() pseudo-class for state-based styling without JavaScript"
 source:
   type: blog
   title: Modern CSS patterns in Campfire

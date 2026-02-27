@@ -1,5 +1,6 @@
 ---
 title: Query Objects
+description: "PORO query wrappers for complex multi-model queries beyond simple scopes"
 source:
   type: blog
   title: Active Record, nice and blended

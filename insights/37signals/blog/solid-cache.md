@@ -1,5 +1,6 @@
 ---
 title: Solid Cache
+description: "SQL-backed cache store with higher capacity and lower infrastructure cost"
 source:
   type: blog
   title: Solid Cache

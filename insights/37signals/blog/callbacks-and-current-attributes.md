@@ -1,5 +1,6 @@
 ---
 title: Callbacks & CurrentAttributes
+description: "Callbacks for secondary concerns, CurrentAttributes for request context, Event.suppress"
 source:
   type: blog
   title: Globals, callbacks and other sacrileges

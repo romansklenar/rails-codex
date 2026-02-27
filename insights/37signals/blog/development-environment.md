@@ -1,5 +1,6 @@
 ---
 title: Development Environment
+description: "Team structure, six-week cycles, async communication, constraints as features"
 source:
   type: blog
   title: The 10x development environment

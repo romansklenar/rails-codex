@@ -1,5 +1,6 @@
 ---
 title: 'Upright: Synthetic Monitoring'
+description: "Open-source Rails-based synthetic monitoring — Playwright/HTTP/SMTP probes, multi-location"
 source:
   type: blog
   title: 'Introducing Upright: An Open Source Synthetic Monitoring System'

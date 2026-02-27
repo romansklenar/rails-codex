@@ -1,5 +1,6 @@
 ---
 title: Ruby Memory Leak Debugging
+description: "Heap dump analysis with rbtrace, ObjectSpace, heapy, sheap for diagnosing Ruby memory leaks"
 source:
   type: blog
   title: My adventures hunting down a Ruby memory leak

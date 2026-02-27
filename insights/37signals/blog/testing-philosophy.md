@@ -1,5 +1,6 @@
 ---
 title: Testing Philosophy
+description: "Pragmatic testing with real dependencies, confidence over coverage"
 source:
   type: blog
   title: Pending tests

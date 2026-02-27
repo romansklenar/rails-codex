@@ -1,5 +1,6 @@
 ---
 title: PR Review Practices
+description: "Review naming, idiomatic style, and consistency — the middle ground linters can't reach"
 source:
   type: blog
   title: Minding the small stuff in pull request reviews

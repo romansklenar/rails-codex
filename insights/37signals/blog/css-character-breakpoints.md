@@ -1,5 +1,6 @@
 ---
 title: Character-Based Breakpoints
+description: "Prefer ch units over pixels for content-responsive media query breakpoints"
 source:
   type: blog
   title: Modern CSS patterns in Campfire

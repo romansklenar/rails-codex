@@ -1,5 +1,6 @@
 ---
 title: Better Navigation Patterns
+description: "Trusted referrer back navigation, hierarchical safety nets, simpler over clever"
 source:
   type: blog
   title: Better navigation in HEY

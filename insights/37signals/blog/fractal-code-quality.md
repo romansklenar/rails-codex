@@ -1,5 +1,6 @@
 ---
 title: Fractal Code Quality
+description: "Four qualities at every abstraction level — domain-driven, encapsulated, cohesive, symmetric"
 source:
   type: blog
   title: Fractal journeys

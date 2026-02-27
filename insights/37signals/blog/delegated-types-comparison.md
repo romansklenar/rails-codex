@@ -1,5 +1,6 @@
 ---
 title: Delegated Types vs View-Based STI
+description: "Architectural comparison of delegated_type vs view-based STI patterns"
 source:
   type: blog
   title: The Rails Delegated Type Pattern

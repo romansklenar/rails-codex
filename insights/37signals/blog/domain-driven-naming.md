@@ -1,5 +1,6 @@
 ---
 title: Domain-Driven Naming
+description: "Bold domain naming, role-based concerns, business language in code"
 source:
   type: blog
   title: Domain driven boldness

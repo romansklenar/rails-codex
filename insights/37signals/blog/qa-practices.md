@@ -1,5 +1,6 @@
 ---
 title: QA Practices
+description: "Guided exploration over scripted QA, late involvement, accessibility validation, suggestion-based feedback"
 source:
   type: blog
   title: All about QA

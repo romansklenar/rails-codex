@@ -1,5 +1,6 @@
 ---
 title: The Gift of Constraints
+description: "Fixed time/variable scope, small teams as constraints, good enough over perfect"
 source:
   type: blog
   title: The gift of constraints

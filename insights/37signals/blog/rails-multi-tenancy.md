@@ -1,5 +1,6 @@
 ---
 title: Rails Multi-Tenancy
+description: "Tenant isolation, cross-tenant safety, framework integration points for multi-tenant Rails"
 source:
   type: blog
   title: Rails Multi-Tenancy

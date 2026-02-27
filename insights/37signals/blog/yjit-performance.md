@@ -1,5 +1,6 @@
 ---
 title: YJIT Performance
+description: "Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold"
 source:
   type: blog
   title: Basecamp code runs 18% faster with YJIT

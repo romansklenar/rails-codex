@@ -1,5 +1,6 @@
 ---
 title: 'Mission Control: Operational Middleware'
+description: "Middleware-based operational control for feature degradation during incidents"
 source:
   type: blog
   title: Mission Control -- Web

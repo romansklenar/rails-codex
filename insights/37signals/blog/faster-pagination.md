@@ -1,5 +1,6 @@
 ---
 title: Faster Pagination via Index Strategy
+description: "Two-query pagination with covering indexes to reduce disk I/O on large datasets"
 source:
   type: blog
   title: Faster pagination in HEY

@@ -1,5 +1,6 @@
 ---
 title: OKLCH Dynamic Opacity
+description: "OKLCH dynamic opacity technique using CSS custom property triplets"
 source:
   type: blog
   title: Modern CSS patterns in Campfire

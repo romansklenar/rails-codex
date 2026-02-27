@@ -1,5 +1,6 @@
 ---
 title: Action Push Native
+description: "Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections"
 source:
   type: blog
   title: Introducing Action Push Native

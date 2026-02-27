@@ -1,5 +1,6 @@
 ---
 title: 'Card Table Responsive: Native Mobile Adaptation'
+description: "Native mobile adaptation patterns, triage toggle UX, constraint-driven scope"
 source:
   type: blog
   title: Bringing Card Table to the small screen
