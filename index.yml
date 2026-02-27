@@ -400,6 +400,8 @@ insights:
         description: Cloud-to-on-prem migration strategy, cost analysis, Kamal deployment, datacenter overview
       concerns:
         description: Semantic test, file location rules, and PORO delegation for Rails concerns
+      console-data-protection:
+        description: Active Record Encryption, Console1984 audit logging, mandatory justification for data access
       css-character-breakpoints:
         description: Prefer ch units over pixels for content-responsive media query breakpoints
       css-custom-property-variants:
