@@ -2,9 +2,56 @@
 
 A structured collection of official documentation, handbooks, style guides, references, and curated insights from the [Ruby on Rails](https://github.com/rails), [Hotwire](https://github.com/hotwired), and [Kamal](https://github.com/basecamp/kamal-site) ecosystems — plus community [style guides](https://github.com/rubocop) from RuboCop. All official sources are aggregated as git submodules for local reference. Curated insights from blogs, books, talks, and courses complement the official documentation.
 
-Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Agent OS](https://buildermethods.com/agent-os/concepts)) or just for offline access.
+Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Agent OS](https://buildermethods.com/agent-os/concepts)), food for your [Second Brain](https://petermeglis.com/blog/unlock-your-brains-potential-a-beginners-guide-to-obsidian-and-building-a-second-brain/) or just for offline access.
 
-## Submodules
+## Why?
+- **Comprehensive**: Combines official documentation, handbooks, style guides, and curated insights in one place.
+- **Structured**: Clear separation between official references and manually curated insights.
+- **Updatable**: Git submodules allow for easy updates from official sources while maintaining attribution.
+- **Agent-Friendly**: Organized structure and unified index make it easy for AI agents to consume and reference knowledge.
+
+## Structure
+
+```
+├── .git-submodules/              # Upstream git submodules (auto-managed, not materialized in sparse checkout)
+├── insights/                     # Curated knowledge from blogs, books, talks (manually authored)
+|   ├── 37signals/                #   Insights from 37signals blogs, books, talks, podcasts, etc.
+│   ├── architecture/             #   Cross-cutting architecture topics
+│   ├── deployment/               #   Deployment and operations
+│   ├── hotwire/                  #   Cross-project Hotwire topics
+│   ├── kamal/                    #   Kamal-specific insights
+│   ├── performance/              #   Performance optimization
+│   ├── rails/                    #   Rails-specific insights
+│   ├── stimulus/                 #   Stimulus-specific insights
+│   ├── testing/                  #   Testing strategies & patterns
+│   └── turbo/                    #   Turbo-specific insights
+│
+├── references/                   # Official docs (auto-extracted from .git-submodules/)
+│   ├── hotwire-native/
+│   │   ├── overview/             #   How it works, navigation, path config, bridge components, native screens
+│   │   └── reference/            #   Bridge installation, navigation, path config, bridge components
+│   ├── kamal/                    #   Official Kamal documentation (deployment, configuration, CLI reference, etc.)
+│   ├── rails/
+│   │   └── guides/               #   Official Rails guides (models, views, controllers, configuration, testing, etc.)
+│   ├── stimulus/
+│   │   ├── handbook/             #   Origin, introduction, hello stimulus, building, resilience, state, external resources, installing
+│   │   └── reference/            #   Actions, controllers, CSS classes, lifecycle, outlets, targets, TypeScript, values
+│   ├── strada/
+│   │   ├── handbook/             #   Introduction, how it works, web, iOS, Android, installing
+│   │   └── reference/            #   Attributes, components, elements
+│   └── turbo/
+│       ├── handbook/             #   Introduction, drive, page refreshes, frames, streams, native, building, installing
+│       └── reference/            #   Attributes, drive, events, frames, streams
+│
+├── style-guide/                  # Community conventions (auto-extracted)
+├── index.yml                     # Unified index across all sections
+├── Makefile
+└── README.md
+```
+
+### Submodules
+
+Stored as git submodules under `.git-submodules/` to keep the official source repositories separate from the extracted references and insights. Each submodule points to an official upstream repository, allowing for easy updates and attribution.
 
 | Submodule                | Source |
 |--------------------------|---|
@@ -20,6 +67,22 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 | `minitest-style-guide`   | [rubocop/minitest-style-guide](https://github.com/rubocop/minitest-style-guide) |
 | `capybara-style-guide`   | [rubocop/capybara-style-guide](https://github.com/rubocop/capybara-style-guide) |
 | `packaging-style-guide`  | [rubocop/packaging-style-guide](https://github.com/rubocop/packaging-style-guide) |
+
+
+### References
+
+Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory.
+
+### Insights
+
+The `insights/` directory contains curated knowledge extracted from blogs, books, talks, podcasts and courses. Unlike `references/`, this content is manually authored and committed directly.
+
+Each insight file should use YAML frontmatter for metadata. To add a new insight, copy `insights/_template.md` into the appropriate subdirectory.
+
+### Style Guides
+
+Running `make style-guide` extracts community style guides from RuboCop into the `style-guide/` directory.
+
 
 ## Setup
 
@@ -72,79 +135,4 @@ This tells git to only materialize the `references/`, `insights/`, and `style-gu
 
 ```bash
 git submodule update --remote <path>
-```
-
-## References
-
-Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory:
-
-```
-references/
-  hotwire-native/
-    overview/       # How it works, navigation, path config, bridge components, native screens
-    reference/      # Bridge installation, navigation, path config, bridge components
-  stimulus/
-    handbook/       # Origin, introduction, hello stimulus, building, resilience, state, external resources, installing
-    reference/      # Actions, controllers, CSS classes, lifecycle, outlets, targets, TypeScript, values
-  strada/
-    handbook/       # Introduction, how it works, web, iOS, Android, installing
-    reference/      # Attributes, components, elements
-  turbo/
-    handbook/       # Introduction, drive, page refreshes, frames, streams, native, building, installing
-    reference/      # Attributes, drive, events, frames, streams
-  kamal/
-    docs/           # Kamal deployment commands, configuration, hooks, upgrading
-  rails/
-    guides/         # Official Rails guides (models, views, controllers, configuration, testing, etc.)
-```
-
-## Insights
-
-The `insights/` directory contains curated knowledge extracted from blogs, books, talks, and courses. Unlike `references/`, this content is manually authored and committed directly.
-
-Each insight file uses YAML frontmatter for metadata:
-
-```markdown
----
-title: "N+1 Query Prevention Patterns"
-source:
-  type: blog           # blog | book | talk | podcast | course
-  title: "Evil Martians Chronicles"
-  author: "Vladimir Dementyev"
-  url: "https://evilmartians.com/chronicles/..."
-  date: 2024-03-15
-topics: [active-record, performance, queries]
----
-
-Content here...
-```
-
-To add a new insight, copy `insights/_template.md` into the appropriate subdirectory:
-
-```
-insights/
-  rails/              # Rails-specific insights
-  turbo/              # Turbo-specific insights
-  stimulus/           # Stimulus-specific insights
-  strada/             # Strada-specific insights
-  hotwire/            # Cross-project Hotwire topics
-  kamal/              # Kamal-specific insights
-  architecture/       # Cross-cutting architecture topics
-  testing/            # Testing strategies and patterns
-  performance/        # Performance optimization
-  deployment/         # Deployment and operations
-```
-
-## Style Guides
-
-Running `make style-guide` extracts community style guides from RuboCop into the `style-guide/` directory:
-
-```
-style-guide/
-  ruby.adoc         # Ruby coding conventions
-  rails.adoc        # Rails-specific conventions
-  rspec.adoc        # RSpec testing conventions
-  minitest.adoc     # Minitest testing conventions
-  capybara.adoc     # Capybara integration testing conventions
-  packaging.adoc    # Gem packaging conventions
 ```
