@@ -1,6 +1,6 @@
 # Rails Codex
 
-A structured collection of official documentation, handbooks, style guides, and references from the [Ruby on Rails](https://github.com/rails), [Hotwire](https://github.com/hotwired), and [Kamal](https://github.com/basecamp/kamal-site) ecosystems — plus community [style guides](https://github.com/rubocop) from RuboCop. All sources are aggregated as git submodules for local reference.
+A structured collection of official documentation, handbooks, style guides, references, and curated insights from the [Ruby on Rails](https://github.com/rails), [Hotwire](https://github.com/hotwired), and [Kamal](https://github.com/basecamp/kamal-site) ecosystems — plus community [style guides](https://github.com/rubocop) from RuboCop. All official sources are aggregated as git submodules for local reference. Curated insights from blogs, books, talks, and courses complement the official documentation.
 
 Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Agent OS](https://buildermethods.com/agent-os/concepts)) or just for offline access.
 
@@ -25,7 +25,7 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 
 ```bash
 git clone <this-repo>
-make # Initialize and fetch all submodules, then extract knowledge and style guides
+make # Initialize and fetch all submodules, then extract references and style guides
 ```
 
 ## Usage
@@ -34,14 +34,14 @@ make # Initialize and fetch all submodules, then extract knowledge and style gui
 make help                # Show all available commands
 make fetch               # Fetch updates for all submodules
 make pull                # Pull latest changes for all submodules
-make knowledge           # Copy documentation from submodules into knowledge/
+make references          # Copy documentation from submodules into references/
 make style-guide         # Copy style guides from submodules into style-guide/
-make clean               # Remove extracted knowledge/ and style-guide/ directories
+make clean               # Remove extracted references/ and style-guide/ directories
 ```
 
 ## Using as a Submodule (Sparse Checkout)
 
-If you want to include this repository as a submodule in your own project **without** recursively cloning all the source repos in `repos/`, use a sparse checkout to include only the extracted `knowledge/` and `style-guide/` directories.
+If you want to include this repository as a submodule in your own project **without** recursively cloning all the source repos in `.git-submodules/`, use a sparse checkout to include only the extracted `references/`, `insights/`, and `style-guide/` directories.
 
 ### Add the submodule
 
@@ -49,7 +49,7 @@ If you want to include this repository as a submodule in your own project **with
 git submodule add https://github.com/romansklenar/rails-codex <path>
 ```
 
-By default, `git submodule add` does **not** recursively initialize nested submodules, so the repos inside `repos/` won't be cloned. Just make sure you never run `git submodule update --init --recursive` on this submodule — use the non-recursive form instead:
+By default, `git submodule add` does **not** recursively initialize nested submodules, so the repos inside `.git-submodules/` won't be cloned. Just make sure you never run `git submodule update --init --recursive` on this submodule — use the non-recursive form instead:
 
 ```bash
 # Suggestion: use .git-submodules as path and then symlink directories where needed
@@ -58,15 +58,15 @@ git submodule update --init <path>
 
 ### Enable sparse checkout
 
-To skip checking out the `repos/` directory entirely (saving disk space and avoiding empty submodule directories):
+To skip checking out the `.git-submodules/` directory entirely (saving disk space and avoiding empty submodule directories):
 
 ```bash
 cd <path>
 git sparse-checkout init --cone
-git sparse-checkout set knowledge style-guide
+git sparse-checkout set references insights style-guide
 ```
 
-This tells git to only materialize the `knowledge/` and `style-guide/` directories (plus root files like `README.md` and `Makefile`). The `repos/` directory won't appear in your working tree at all.
+This tells git to only materialize the `references/`, `insights/`, and `style-guide/` directories (plus root files like `README.md` and `index.yml`). The `.git-submodules/` directory won't appear in your working tree at all.
 
 ### Update the submodule later
 
@@ -74,17 +74,17 @@ This tells git to only materialize the `knowledge/` and `style-guide/` directori
 git submodule update --remote <path>
 ```
 
-## Knowledge Base
+## References
 
-Running `make knowledge` extracts handbook, reference, and overview documentation from each submodule into the `knowledge/` directory:
+Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory:
 
 ```
-knowledge/
+references/
   hotwire-native/
     overview/       # How it works, navigation, path config, bridge components, native screens
     reference/      # Bridge installation, navigation, path config, bridge components
   stimulus/
-    handbook/       # Origin, introduction, hello stimulus, building, resilience, state, external knowledge, installing
+    handbook/       # Origin, introduction, hello stimulus, building, resilience, state, external resources, installing
     reference/      # Actions, controllers, CSS classes, lifecycle, outlets, targets, TypeScript, values
   strada/
     handbook/       # Introduction, how it works, web, iOS, Android, installing
@@ -96,6 +96,43 @@ knowledge/
     docs/           # Kamal deployment commands, configuration, hooks, upgrading
   rails/
     guides/         # Official Rails guides (models, views, controllers, configuration, testing, etc.)
+```
+
+## Insights
+
+The `insights/` directory contains curated knowledge extracted from blogs, books, talks, and courses. Unlike `references/`, this content is manually authored and committed directly.
+
+Each insight file uses YAML frontmatter for metadata:
+
+```markdown
+---
+title: "N+1 Query Prevention Patterns"
+source:
+  type: blog           # blog | book | talk | podcast | course
+  title: "Evil Martians Chronicles"
+  author: "Vladimir Dementyev"
+  url: "https://evilmartians.com/chronicles/..."
+  date: 2024-03-15
+topics: [active-record, performance, queries]
+---
+
+Content here...
+```
+
+To add a new insight, copy `insights/_template.md` into the appropriate subdirectory:
+
+```
+insights/
+  rails/              # Rails-specific insights
+  turbo/              # Turbo-specific insights
+  stimulus/           # Stimulus-specific insights
+  strada/             # Strada-specific insights
+  hotwire/            # Cross-project Hotwire topics
+  kamal/              # Kamal-specific insights
+  architecture/       # Cross-cutting architecture topics
+  testing/            # Testing strategies and patterns
+  performance/        # Performance optimization
+  deployment/         # Deployment and operations
 ```
 
 ## Style Guides
