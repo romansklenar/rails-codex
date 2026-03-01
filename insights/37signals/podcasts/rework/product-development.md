@@ -22,6 +22,7 @@ tags:
 - Pitches are ~800-word documents combining words and rough sketches (not wireframes); they describe the problem, appetite, a suggested solution direction, rabbit holes to avoid, and explicit no-gos; they leave implementation decisions to the team
 - **Appetite replaces estimates**: instead of asking "how long will this take?" ask "how much are we willing to spend on this?"; a six-week appetite is a maximum loss limit, not a prediction
 - **Circuit breaker**: if work is not done at the end of the cycle, it is automatically cancelled by default — not automatically re-queued; it must re-compete at the next betting table; failed projects go into a "penalty box" and sit out at least one cycle before being reconsidered
+- **The 1/3 trigger for scope renegotiation**: the ideal moment to catch an over-scoped project is one third into the cycle — two thirds of the appetite remains to try a different path; waiting until five seconds to midnight leaves hero mode as the only option
 - Teams of one designer + one programmer work autonomously for the full cycle with no interruptions from management; the team creates its own tasks from the shaped pitch rather than being handed a ticket list
 - **Two parallel tracks**: senior staff shape the next cycle's work while teams build the current cycle; this is what frees up strategic thinking time for the shapers
 - **Scopes and hill charts** are the team's primary tracking tool: scopes are named chunks of work that can be independently shipped; the hill chart plots each scope as "uphill" (figuring out unknowns) vs. "downhill" (execution); a scope stuck on the uphill side signals a design problem, not a time problem
@@ -41,7 +42,7 @@ tags:
 - Shape Up scales to Fortune 50 companies with the same core problems — too little strategic thinking time, slowdown as teams grow — the methodology isn't only for small teams
 - Shape Up is a **cultural practice**, not a technical system: the hardest part of adoption is changing the human interaction patterns (how does work feel? who owns decisions? how do people relate?) not learning the terminology
 
-→ Episodes: shape-up, shape-up-roundtable, writing-a-pitch, shape-up-principle-the-betting-table, shape-up-principle-decide-when-to-stop, shape-up-with-clients, shape-up-print-edition, product-strategy
+→ Episodes: shape-up, shape-up-roundtable, writing-a-pitch, shape-up-principle-the-betting-table, shape-up-principle-decide-when-to-stop, shape-up-with-clients, shape-up-print-edition, product-strategy, dont-be-a-hero
 
 ---
 
@@ -125,6 +126,8 @@ tags:
 - **Planning is guessing**: a plan is what you hope will happen, not what will happen; the further out you plan, the blurrier the vision; 37signals plans "10 years, six weeks at a time" — each cycle they come up for air and decide what to do next with the most current information available
 - **Estimates suck; appetites work**: humans have a 40-year track record of failing to estimate novel software work; the single most important process change at 37signals was replacing estimates with budgets; "how long will it take?" → "how much are we willing to spend on this?"
 - The gambler's metaphor: bring $500 to Vegas, lose $500, you're out — software projects without a budget keep doubling down on losses because of sunk cost; the stop-loss is what keeps the oven running
+- **Sunk cost is irrelevant to the keep-going decision**: the only test is whether the remaining work is worth the remaining time — past investment cannot be changed and must be excluded from the analysis; a feature that was worth two weeks is a bad deal at eight weeks even if the output is identical
+- **The design variations trap**: presenting ten variants without a preference delegates the decision to whoever is watching; it appears collaborative but actually produces indecision loops; designers must come with a recommendation — "here are three options, and my preference is number two" — because the alternative wastes days on low-stakes aesthetic churn
 - Most decisions are temporary: treat them as trials, not concrete; ship something, observe reality, then decide; the cost of changing your mind is much lower than the cost of paralysis or extended deliberation
 - **Making the call is making progress**: the moment a decision is made, the traffic jam of downstream decisions unblocks; never let "can we get one more opinion?" become a way of avoiding commitment; when arguments stop producing new information, decide
 - **Disagree and commit**: when you don't agree but the call must be made, the worst outcome is disagreeing and not committing — you get the downside of the decision without the upside of momentum
@@ -148,7 +151,7 @@ tags:
 - Check-in habits are a learnable behavior, not a competence signal — new team members who fail to post regular async updates are usually not yet in rhythm, not stuck on the work; redirecting feedback on the communication pattern specifically is the right intervention, not a technical deep-dive
 - **Avoid polishing before the concept is proven** — a designer or programmer stuck in a loop perfecting something that may be discarded in three months is a different kind of stuck; the fix is to move on, not to refine; "we haven't poured concrete yet" is the test: if the idea isn't committed, pixel-level polish is wasted effort and a warning sign to redirect
 
-→ Episodes: planning-is-guessing, your-estimates-suck, making-the-call-is-making-progress, illusions-of-agreement, decisions-are-temporary, disagree-and-commit, its-all-a-judgement-call, picking-priorities, reasons-to-quit, product-strategy, ignore-the-competition-listener-qs
+→ Episodes: planning-is-guessing, your-estimates-suck, making-the-call-is-making-progress, illusions-of-agreement, decisions-are-temporary, disagree-and-commit, its-all-a-judgement-call, picking-priorities, reasons-to-quit, product-strategy, ignore-the-competition-listener-qs, dont-be-a-hero
 
 ---
 
@@ -159,6 +162,7 @@ tags:
 - Don't hoard ideas: a backlog of 200 items creates guilt and obligation without creating focus; ideas that matter keep surfacing; declare bankruptcy on long lists and let working memory do the natural filtering — the good ideas re-emerge
 - **Constraints force better decisions**: 10 hours/week to build Basecamp forced ruthless prioritization; teams of 2 people prevent over-engineering; six-week cycles prevent gold-plating; companies with unlimited resources build cumbersome, feature-bloated software
 - **Throw less at the problem**: adding more people or time to a struggling project usually makes it worse; the answer to "we need more time" is almost always "we need to cut scope"
+- **Trading concessions**: when mid-cycle work reveals the original scope won't fit, negotiate explicitly — offer an alternative approach that is somewhat different but deliverable within the remaining appetite; "we could do it this way instead, here's the trade-off" is how scope gets chopped without abandoning the bet entirely
 - **Less mass**: organizational mass accumulates silently — every meeting series, every new policy, every extra hire adds inertia; ask "what if we just didn't do that?" before adding any process, role, or obligation; mass is easier to avoid than to shed
 - **Fix the team size, not the workload**: when a team is overwhelmed, the instinct is to hire; the better question is "what does this team size allow us to do?" — cut the work to fit the team rather than expanding the team to fit the work; adding people to an already-complex support role compounds the problem
 - **Saying yes to scope is saying yes forever**: roles accumulate scope the same way products do — a "yes" to handling a new category of request is effectively permanent, removing it from active consideration; teams must periodically audit what they've silently adopted and explicitly cut what no longer belongs
@@ -169,7 +173,7 @@ tags:
 - **Less is more in scope decisions**: building something that does 80% of what was imagined in two weeks is often more valuable than building 100% in twelve; you can always add the last 20% later; you usually discover you don't need it
 - Reduce organizational drag: keep product teams at two people (one designer, one programmer); avoid meetings that require everyone to synchronize; the distance between "I have a good idea" and "I fixed it" should be very short
 
-→ Episodes: narrow-as-you-go, embrace-constraints, less-mass, throw-less-at-the-problem, inspiration-is-perishable, writing-a-pitch, shape-up, rescuing-a-project-in-progress, a-matter-of-ambition, say-no, let-your-customers-outgrow-you
+→ Episodes: narrow-as-you-go, embrace-constraints, less-mass, throw-less-at-the-problem, inspiration-is-perishable, writing-a-pitch, shape-up, rescuing-a-project-in-progress, a-matter-of-ambition, say-no, let-your-customers-outgrow-you, dont-be-a-hero
 
 ---
 

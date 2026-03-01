@@ -212,3 +212,14 @@ tags:
 - The internal voice saying "you look like a beginner" is the only real obstacle — most social fear of being seen as a novice is self-generated, not external; recognizing it as internal lets you choose which voice to feed: the doubtful one or the one that's genuinely excited to get better
 
 → Episodes: maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, try-everything
+
+## Quitting as a Leadership Act
+
+- **Founders must model quitting**: when the natural human default is to double down on sunk cost, the people with formal authority must be the ones who visibly walk away first; if Jason and David never quit anything, teams will not feel safe doing it either
+- **Quitting needs active celebration, not just permission**: the organizational default is to reward people who push through — to correct this, quitting a project that genuinely revealed new information and informed a better path deserves explicit positive recognition, not just silence; celebration counteracts the sunk-cost instinct at the cultural level
+- **Quitting and personal failure are different things**: the psychological temptation to equate stopping a project with personal inadequacy ("I couldn't do it") is the main reason people don't quit; the organization can short-circuit this by clearly separating the quality of work from the decision to stop — good work that was too expensive to ship is not a failure of the person who did it
+- **Quitting has tiers of blameworthiness**: quitting because genuinely unforeseeable information emerged is a success of judgment; quitting because a foreseeable problem was ignored deserves a small "pinch" of honest reflection without escalating it to the label of failure; the distinction matters for learning without recrimination
+- **Preserving the reality of the cycle boundary**: if a six-week deadline is always extended when a project is close, the boundary is fiction; founders occasionally quitting a project that is nearly done — precisely because it is nearly done — is what proves to the team that the boundary is real and the rules apply equally
+- Quitting reinforces that momentum is not the same as progress: the fact that a team has been working on something for weeks creates its own gravitational pull toward completion; leaders who can interrupt that pull when the decision calculus changes are the ones who keep organisations from spending good time after bad
+
+→ Episodes: dont-be-a-hero, reasons-to-quit

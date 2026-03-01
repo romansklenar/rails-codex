@@ -37,11 +37,14 @@ tags:
 - Invisible handcuffs: if a manager stays late, team members feel they cannot leave; a manager visibly leaving at 5–6 pm gives the team permission to leave — leadership behavior sets the floor, not a policy document
 - Hours as a proxy for devotion creates a monoculture — it filters out anyone with caregiving obligations, medical conditions, or any life outside work; the real measure is the work, not the presence
 
+- **Hero mode is a failure state, not a badge**: arriving at crunch time with only "work the all-nighter" as an option means the project was already mismanaged — you put on the cape after you have already failed, not before; quality, clarity, and code cleanliness all suffer under sleep deprivation and show up as bugs and maintenance debt within weeks
+- **Applauding all-nighters creates more all-nighters**: organizations that celebrate heroic rescue efforts teach the team that hero mode is the path to recognition; the incentive structure produces more manufactured crises, not fewer
+- **Genuine heroics vs. manufactured heroics**: pulling an all-nighter to contain a production outage or a genuine catastrophe is real heroism and deserves recognition; pulling an all-nighter because a normal feature missed a normal deadline is a management failure dressed as dedication — they are categorically different and must be treated as such
 - Occasional crunch is acceptable and even necessary — the HEY launch required two consecutive weeks of intense effort after years of calm; the key framing is "cashing in years of calm for a few chaotic weeks," not normalizing chaos as a steady state
 - When a launch-week crisis pulls founders away from support queues, the rest of the team absorbs the overflow — designing for slack in the support headcount (not just the product team) is what allows the company to absorb a surprise spike without collapsing
 - The 40-hour week was not invented out of benevolence — Henry Ford discovered through assembly-line data that workers producing 50–60 hours per week made more mistakes, requiring costly rework; the 40-hour week was an empirical productivity optimization, not a social concession; the same industrial research has been replicated across knowledge work contexts
 - A 40-hour week is "an accomplishment of the company," not a ceiling employees must justify — the goal is working hard and efficiently in those hours, not proving devotion through duration; the few crises that spill over the boundary are accepted exceptions, not proof the boundary was wrong
-→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks, extreme-capitalism
+→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks, extreme-capitalism, dont-be-a-hero
 
 ## Remote Work
 
@@ -82,8 +85,9 @@ tags:
 - Recurring meetings are the worst form of meeting because they presuppose future relevance: a recurring meeting scheduled because something mattered six months ago will often outlive its purpose by years; CEO anxiety about team output (not coordination need) is the primary driver of most recurring meeting cultures
 - Stand-up meetings interrupt flow even when short, if scheduled at a fixed time — the appointment creates a cognitive ceiling that limits deep work in the hours before it
 - Shape Up contains the interruption problem at the organizational level: a new idea that arrives mid-cycle is written down and deferred to the next betting table, protecting the current team from thrashing across parallel priorities
+- **Drive-by comments**: when someone not closely involved in a project drops an opinion mid-execution, it can derail the team, trigger debate, and reset direction — especially if the commenter has hierarchical power; more voices are not always better; asking one more person often makes you less sure, not more; late-stage drive-bys are particularly costly because there may be nothing actionable the team can do with the feedback anyway
 
-→ Episodes: calendar-tetris, meetings-are-toxic-season-2, interruption-is-the-enemy-of-productivity, buckets-of-time, how-we-work-fewer-meetings-more-check-ins, finding-focus, interruption-not-collaboration, meetings-are-toxic, managing-chaos-listener-qs
+→ Episodes: calendar-tetris, meetings-are-toxic-season-2, interruption-is-the-enemy-of-productivity, buckets-of-time, how-we-work-fewer-meetings-more-check-ins, finding-focus, interruption-not-collaboration, meetings-are-toxic, managing-chaos-listener-qs, dont-be-a-hero
 
 ## Company Culture
 
@@ -106,6 +110,7 @@ tags:
 - Culture as a 50-day moving average: "how are we to each other over the past 50 days?" is the only meaningful measurement — what you wrote in a handbook three years ago is irrelevant to today's culture
 - A company of 80 cannot feel the same as a company of 20, and trying to preserve that feeling produces nostalgia paralysis — the goal is to carry forward the *principles*, not replicate the exact texture of an earlier era
 - Culture at scale cannot be directly injected into 80 individuals by founders; it must be transmitted through high-bandwidth relationships (founder → lead → team member) and spread one interaction at a time — code reviews, pitch feedback, and direct collaboration are the transmission mechanism, not all-hands presentations
+- **Avoid the words "failure" and "success"**: binary outcome labels are emotionally loaded and analytically imprecise; 37signals uses "that didn't work," "that worked well," or "let's see how it goes" — language that is descriptive and actionable rather than judgmental and final
 - New hires in new functions inject fresh perspectives that counteract calcification: half-life of facts in tech is short — something that failed in 2017 may work in 2023, and founders' memories of "we tried that" are often outdated, not timeless
 - Adding customer success as a proactive function (demos, walkthroughs, educational videos) is distinct from reactive customer support — both are necessary at scale, and conflating them means neither gets done well
 - Running accounting "like an ice cream stall" is sustainable for years but eventually incurs real financial risk (back sales tax liability, compliance gaps); adding financial rigor is not bureaucracy, it is risk mitigation — the cost of not doing it shows up as a multi-million-dollar settlement
@@ -115,7 +120,7 @@ tags:
 - The "enthusiastic beginner" is a specific posture to cultivate: accepting that you will be bad, that an eight-year-old will beat you at chess, and that this humility is the price of learning anything worth knowing — adults avoid this discomfort by staying in domains where they are already competent, which produces narrowness
 - Protecting personal time for non-work pursuits requires explicit work boundaries — if the job is so overwhelming there's no time for evenings and weekends, "make sure your boss reads It Doesn't Have to Be Crazy At Work"; sustainable hours are a prerequisite for whole-person development
 - Don't monetize every interest — the pressure to turn every hobby into a side hustle or social media performance corrupts the purity of the activity; picking one craft as your life's main engine and treating everything else as non-commercial enrichment preserves the joy and the learning
-→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company, try-everything
+→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company, try-everything, dont-be-a-hero
 
 ## Open Offices
 

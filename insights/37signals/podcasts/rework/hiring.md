@@ -173,15 +173,17 @@ tags:
 
 - There are no full-time managers at 37signals — everyone who carries managerial responsibilities also does direct individual-contributor work; management is a part-time role for all
 - The programming team uses a mentorship model: L4/L5 programmers are each assigned one mentee (L2 or L3), with responsibility for code review, cycle kick-offs, and annual performance reviews
+- **Formalized, named mentorship for new programmers**: rather than relying on whoever has time, each new programmer is assigned a specific named mentor; that mentor is explicitly accountable for reviewing the new person's work on a weekly mandatory basis, regardless of cycle pressure; this prevents work from drifting too far down a wrong path before anyone notices
 - Mentorship is about teaching values and decision-making, not task assignment — the goal is to make the mentee capable of making decisions independently
 - Code review in one-on-ones (live on Zoom, walking through pull requests together) outperforms async comments alone — it allows explanation of "why," live iteration, and avoids mentees just copying suggestions without understanding
 - Lead programmers mentor as a part-time obligation — each lead has at most one or two reports, keeping managerial overhead to roughly 5 hours/week
+- **Hierarchical feedback vs. peer feedback**: feedback from a designated mentor or manager carries a different weight than suggestions from a peer — it is "redirecting feedback," meaning the new direction is not optional; this clarity is valuable even if it feels like a power structure, because it eliminates the ambiguity of "do I have to do this?" that peer-only review leaves unresolved
 - The career ladder avoids the Peter Principle: individual contributors peak at senior (L3) if they want to stay heads-down; L4/L5 roles require broader organizational influence but are not pure management roles
 - All-hands meetings happen once per six-week cycle during cooldown; they are non-mandatory, about one hour, and structured around product updates, team spotlights, and peer appreciation — not status reporting
 - The best way to wreck a good team is to introduce a manager who has more hours than there is work to do; that person will invent work for others
 - The drop of product management needed by each two-person feature team is tiny — one product manager supporting six simultaneous feature teams is sufficient, not one per team
 
-→ Episodes: everybody-works, managing-vs-mentoring, listener-questions-hr-edition, hire-managers-of-one, listener-questions-ama, two-person-teams
+→ Episodes: everybody-works, managing-vs-mentoring, listener-questions-hr-edition, hire-managers-of-one, listener-questions-ama, two-person-teams, dont-be-a-hero
 
 ## Two-Person Teams as the Hiring Unit
 
