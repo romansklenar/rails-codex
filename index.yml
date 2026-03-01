@@ -414,6 +414,8 @@ insights:
           description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
         cloud-exit:
           description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
+      recordables:
+        description: "Recordables: Short-form talks and snippets from 37signals covering product, work, and business topics"
     blog: # 37signals Dev Blog (https://dev.37signals.com)
       action-push-native:
         description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections
