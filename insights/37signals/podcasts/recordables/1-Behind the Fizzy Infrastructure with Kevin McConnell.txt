@@ -1,0 +1,1664 @@
+a year from now when the app's growing
+and we have lots of customers and we're
+trying to add new features. Are we going
+to be kicking ourselves for setting it
+up in this particular way, the only
+other option would be to kind of go
+ahead and do it while not feeling
+confident that it was the right choice,
+if you see what I mean, which just that
+option just isn't really an option. We
+risked having an app that broke, which
+no one wants. This is Recordables, a
+place where the 37 signals team shares
+their behind-the-scenes work building
+products like Base Camp, Hey, Fizzy, and
+open-source products. We are sharing the
+behind the scenes of what we've done,
+how we've done it, so you can learn from
+us, and avoid some of the mistakes we've
+made. I'm Kimberly with my trusty
+co-host in tech, Fernando. Hello,
+Fernando.
+&gt;&gt; Hello. Hello. We talked recently with
+Mike Delesio about Rails multi-tenant
+structure of working with databases.
+This week we're diving a little bit
+deeper specifically into Fizzy and the
+infrastructure that we investigated with
+that product and ended up using. So to
+do that we have Kevin McConnell from our
+programming team. Kevin, welcome to
+Recordables. Well, before we dive into
+the fizzy infrastructure, tell us a
+little bit about you, how long you've
+worked here, and then we'll dive into
+the topic at hand.
+&gt;&gt; Sure. Um so yeah I'm a programmer here
+at 37 signals. I've worked um here for I
+think coming up on four years something
+like that. Um
+&gt;&gt; nice
+&gt;&gt; first for probably about the first year
+I worked on kind of across a few of the
+products worked on hay for a while
+worked on base camp a little bit not
+actually a lot but a little bit um and
+then I kind of joined the team building
+the once uh products which was part of
+what we'll we'll learn more about this I
+think when we talk a bit more about the
+architecture but some of the things we
+explored in fizzy they sort of started
+out life as part of the things we
+explored in once and kind of grew from
+there. Uh so yeah, so that was like kind
+of my first I would say the first three
+years were um working on some of the
+products and working on the ones for a
+couple of years and then the last sort
+of year and a bit has been more busy.
+&gt;&gt; Okay, awesome. And I feel like we could
+do a whole episode just about the ones
+products and how that all came to be.
+But we're going to talk a little bit
+more about Fizzy today. Let's start
+maybe with why we wanted to even
+investigate a different infrastructure,
+what we were trying to accomplish, and
+we'll go from there.
+&gt;&gt; Sure. Um so there were there were really
+two reasons for it. I think there was
+one initial reason. Um and that's
+actually the part that ties back to the
+one stuff like I was saying. So the the
+ones products the idea behind those was
+that
+um where most of our products are
+normally SAS based and people you know
+people subscribe we run all the software
+on our hardware and people use it. Um
+the once project was sort of an
+experiment to see maybe people would
+like to buy software and run it
+themselves. Kind of like the way people
+used to buy software back in the day,
+&gt;&gt; right?
+&gt;&gt; So the notion was instead of
+subscribing, you'd pay once. But there's
+also this um that was part of it. Kind
+of the business side, I guess, was like
+pay once rather than subscribing. But
+the technical side is run it yourself
+rather than rather than us running it
+for you. And when we did those those
+products, it was quite interesting. But
+I think we found that some people really
+gravitated towards the idea of running
+things themselves. And so when it came
+time to start working on Fizzy, having
+done that a little bit, we had this idea
+about should we make a product that you
+could do either. Um so rather than be
+like base cap is subscription but
+Capfire is once, it's like what if Fizzy
+was a thing where you could choose? you
+could pay for it once up front and you
+would own it your own copy and you could
+run it yourselves or you could just use
+a normal SAS subscription thing and so
+that's what led us into exploring
+architecture as a way to answer that
+because normally there you would build
+things slightly differently for those
+two use cases if you see I mean so like
+campfire the first ones product that
+ships it's very self-contained as a
+docker container uh runs SQL light so
+it's kind of like maintenancefree on the
+database side um everything that it
+needs to do is built into a single
+Docker container. It's really easy to
+run it. But for a SAS application,
+that's not what you would typically do.
+You would normally use um database
+servers that could hold data for lots of
+accounts at the same time. They would be
+separate from your application server.
+You'd spread things out a lot more. Your
+job servers would be different than your
+application servers and that kind of
+thing. And so this was one of the one of
+the angles for looking at new
+architecture for Fizzy was if we want it
+to work in both places, how what should
+we build to do that? Should it be the
+same thing that works in two? Should it
+sort of be kind of switchable in some
+way where you could change it depending
+on how like you could package it
+differently for sales as a one-off
+versus us running a SAS. So th those
+were the questions for one for one part
+of it.
+&gt;&gt; I would imagine too there's like the
+maintenance question of like keeping two
+versions for multiple people in
+different ways consistent with each
+other.
+&gt;&gt; Yeah, that's that's definitely part of
+it. like any anywhere you've kind of
+made a branch where you say if in this
+situation we're doing it this way and in
+the other situation we're doing it the
+other way then you're kind of
+potentially making things difficult for
+the future because you've got to make
+sure why any change you make has to work
+in both sort of thing but that that was
+half of the reason the other reason for
+exploring the new architecture was
+really more about sort of speed and
+performance and I think this that it
+wasn't the first reason for us to look
+at new architecture but once we had that
+other reason the once thing and we
+started thinking about the ways is we
+might solve it. It occurred to us that
+some of them would have an impact on
+performance. And then I think we sort of
+changed gears a little bit and started
+chasing this idea of how can we make
+this really fast and that became just as
+much if not more of a driver of
+exploring new architectures. A big part
+of that really is just about it's about
+where you put data locality of data to
+people. So normally when we run SAS
+applications the database lives
+somewhere geographically and you can we
+can we can use things like read replicas
+to make copies of it nearer different
+locations but essentially you have one
+main copy of your data somewhere. Um so
+that could be in something like Chicago.
+The further you are from that the slower
+the app's going to feel to you just
+because of the latency the sort of speed
+of light limits and so on. And this is
+something that comes up a lot, I think,
+because the the kinds of speeds that you
+have to reach for an app to feel fast
+are short enough that common distances
+are too long for that to feel fast, if
+you see what I mean. So like for me in
+Edinburgh, if I'm if I have to uh use an
+application that's running out of
+Chicago, say, then realistically it's
+there's probably like 100 to 150
+milliseconds of latency for me to like
+send anything there and back before
+before the server even like does any
+work. Just the time for the for my
+request to get there and come back. Like
+the the theoretical speed of light
+latency would be a bit less than that.
+It'd be like 60 or something probably.
+But in practice, it's going to be like
+150 milliseconds to do like nothing. If
+if you're actually doing something like
+rendering a page that takes 50
+milliseconds to render, then that's 200
+milliseconds for every request. And in
+practice, I think it usually feels like
+if you can get your pages to render like
+all your requests to complete in like
+100 milliseconds or less, then the app
+feels nice and fast. like more than 100
+start to feel slow. More than about 200,
+you really feel like something slow is
+happening there. And so this is an issue
+that's kind of it's hard to avoid if you
+have all your data in one place just
+because there's going to be a bunch of
+people where no matter how fast you make
+the bits of your app, they're going to
+feel it's going to feel slow to them
+just because they're far away. But if
+you took like for my situation being in
+Edinburgh, one of the other places that
+we run servers out of at the moment is
+Amsterdam. So if we moved everything to
+Amsterdam, it would be fast for me
+because my round trip to Amsterdam and
+back is like 25 milliseconds or
+something. So that 50 millisecond page
+that we talked about plus 25
+milliseconds of round trip is is nicely
+under that 100 millisecond thing. Does
+that that kind of make sense, right?
+&gt;&gt; Yeah. Yeah. The threshold. So that was a
+a little bit of a tangent, but thinking
+about that stuff was what what got us to
+think about as we're exploring different
+architectures for running self-hosted
+applications and SAS applications. Maybe
+we could take something from the model
+of the self-hosted ones where people
+would run things on their own servers
+next to themselves. Their data was right
+was generally right next to them. Right?
+If you're going to self-host something,
+you might be running on a server that's
+in your office or closet. Or if you rent
+something on a cloud provider, you can
+pick a region that's near you or
+something and you get the fastest data.
+When it's SAS, typically you plop it in
+one place and that's where the data is
+for everybody. So some for some people
+it's fast, for some people it's slow. So
+we started to think about maybe we could
+take something from this self-hosted
+model. So even when we run it as SAS,
+can we set it up somehow? So we put
+people's data near where those people
+are and then everyone gets a faster
+application.
+&gt;&gt; And how did that go?
+&gt;&gt; Answering that is jumping right to the
+end of the whole story probably.
+[laughter]
+Um so spoilers.
+&gt;&gt; Yeah, I don't know if you want to kind
+of go through there bit by bit or just
+answer it. But I will say that you can
+quite easily make reading data local to
+people because you can take databases
+and replicate all the data. So whenever
+you make a change um in the place where
+the data is normally kept like all the
+copies can go to different data centers
+and then whenever someone has to read
+their data they can just read from one
+of those read copies and that's near
+them and it's fast. This is basically
+what we've ended up doing. We do this in
+other apps as well and in fizzy where we
+landed in the end is what we do. So all
+the writes are still happening centrally
+in one place but all your reads come
+from the closest reader that there is to
+you. It actually works out pretty good
+in practice because most web
+applications
+do far more reads than writes. Um, a lot
+of it is just because the way you use
+apps, you tend to click around and look
+a lot of things and every now and again
+you'll change something. But the ratio
+of reading to writing is really heavily
+skewed to reading. I think base camp I
+once looked and it was uh something like
+94% reads, like 6% rights.
+&gt;&gt; That makes sense. So, so even if all you
+make faster is the reads, you've already
+helped most of the things most of the
+time.
+&gt;&gt; There's also, I think, a bit of a
+perception about it where
+&gt;&gt; you kind of like changes that you make.
+It's okay sometimes it's okay for them
+to feel a bit slower because it feels
+like you did something if you see what I
+mean like like if you're sending an
+email, if you click a button to send the
+email and it took half a second or
+something to happen, it wouldn't feel
+that bad. But if you've if you're trying
+to read through a set of pages on a
+website and every time you click on a
+new page it takes half a second to come
+up. [clears throat]
+&gt;&gt; That that does feel slow. So yeah, we
+ended up focusing on speeding up reads
+by making them local and not worrying
+too much about trying to divide up the
+data and move it uh around to make local
+writes because that's where a lot of the
+complexity is from. Um, but like I say,
+that's jumping to the end of the story
+because the way what we set out to do at
+the start was exactly split up
+everything and put reads and writes
+closer to people.
+&gt;&gt; Yeah. So, Kevin, let's start there on
+like what did we try or what were the
+things we thought about in terms of like
+here are our options for this new
+infrastructure.
+&gt;&gt; There were three I think kind of three
+things that we thought were worth
+trying initially. um one of them
+wouldn't have helped so much with the
+speed but more just about the packaging
+of the two different ways of using the
+software and that was just to basically
+squeeze all the things we need on the
+SAS side into the self-hosted side. So
+like when we made the once applications
+they ran on SQLite because it's nice and
+easy and convenient. Um we don't run SAS
+applications on SQLite typically because
+it's a lot easier to sort of scale
+things when you have separate database
+servers and um we have a lot of
+experience with making my SQL run really
+fast. So we usually use that. So one of
+the options that we had would be
+just take the way we would do in SAS
+take my SQL and everything and squeeze
+those into the self-hosted version. So
+we don't have to have two different ways
+of running software but people can still
+buy it and run it themselves. that would
+have helped with the packaging sort of
+side, but it doesn't really change
+anything about the speed. So, that
+wasn't the one that we decided to go to
+first.
+Another one that we kind of considered
+but quickly I think decided not to
+pursue is that
+because we knew how these self-hosted
+apps worked when running as individual
+Docker containers which is the way the
+one stuff works. We could always just
+basically host everyone's own copy of
+the app on the SAS side in the same way.
+we could run a whole bunch of Docker
+containers so that everyone who bought
+it would have their own little container
+and that's what we would run um to
+access things which is like in theory
+quite nice conceptually but in practice
+quite complicated because it'd be really
+inefficient like to do it naively would
+be very inefficient because there's a
+lot of overhead in every container and
+if you have like 100,000 customers
+running 100,000 Docker containers would
+be a huge waste of resources because
+most of them wouldn't be active all of
+the time and you'd be like using up a
+bunch of memory and CPU for things that
+don't really aren't really kind of being
+used if you see what I mean. Even for
+customers that are active, there's a lot
+of idle time between actions usually. So
+like you you do something and then you
+don't do anything for a few seconds and
+then you do something else. And if you
+kept like a container running all the
+time, it's just it's just going to be
+very inefficient to do. And so to make
+that work, you end up having to invent
+ways to do things like have containers
+that you can run but then put to sleep
+between between requests and then wake
+them up really fast when the next
+request comes in, which some things do.
+You'd basically be reinventing the
+fly.io service, which is kind of what
+what they do is like run containers
+everywhere. The thing that would have
+been nice about that would be that we
+could put them anywhere and they would
+have the data alongside all the app
+servers and job servers and everything
+they need to run. So we could spread
+them around and let people run their
+version just like they would
+self-hosted. We would just be kind of
+self-hosting it for them if you see what
+I mean. But as I say that isn't
+something we pursued because I think
+getting that to work in an efficient way
+is quite it's quite a big project. So
+then the third way which is the one that
+we did decide to pursue um and looked at
+quite seriously for a while [snorts] was
+the idea of giving everyone their own
+database but running those databases in
+inside the normal sort of setup of app
+servers that we would normally have. So
+we might have half a dozen servers
+running Rails that would normally talk
+to one MySQL database with everybody's
+data, but instead we would have half a
+dozen web servers running Rails that
+would talk to lots of little MySQL
+databases. Each one would be one
+customer's data. And we could put those
+databases and those app servers wherever
+we want. They don't have to be in the
+same central place because they're
+separate files. Um, and it felt like a
+nice a nice thing to look into because
+then we get this sort of isolation of of
+data. It's like one customer's data is
+all in a single file and um, wherever
+you want to put that only affects that
+customer. Do you see what I mean? And so
+that's what this is part of what we
+pursued. That's what became Mike's
+active record tenanted which I know you
+talked to him you talked to him about
+that recently and he'll have gone into
+all the details of that but that was
+kind of the idea behind it was it lets
+you put data wherever you want without
+having to also chop up the rest of your
+infrastructure in order to do so if you
+see what I'm
+&gt;&gt; also gets you the speed that you're
+looking for because the data can be
+closer to each customer.
+&gt;&gt; Exactly. The data can be closer to
+people so they get less latency. It's
+also quite nice because it it was one of
+the roots that could make it practical
+to run SQLite as the database server.
+Like SQLite can scale to very large
+amounts of data and in the right
+circumstances. Um but if you want to run
+SAS on it, there's some challenges about
+like concurrency like how many actions
+you can do at the same time on the same
+database. Like SQLite limits limits you
+to one right at a time. For an
+individual customer is probably fine.
+That's you can do a lot of writes very
+quickly and one customer is only going
+to be able to change so many things in a
+in a certain space of time that you can
+keep up. But if you used one SQLite
+database for all your customers, you can
+only do one right in your whole
+application at one time. You're going to
+start actually getting lock contention
+bumping up against that. Um just because
+lots of customers will try and do things
+at the same time. They'll end up waiting
+on on locks. But when if you split the
+databases up into individual databases,
+those types of blocks and those and
+those types of kind of limits, they
+apply a database level. Um, so now it's
+back to each customer can do one thing
+at a time, not the whole system could do
+one thing at a time.
+&gt;&gt; So I have I have a question about that.
+It I know this is fizzy infrastructure,
+but isn't campfire running with SQLite?
+&gt;&gt; Yeah, but we don't run campfire SAS. So
+campfire, right?
+&gt;&gt; Right. But even even what I'm wondering
+about is that each I assume it's each
+message needs to be a right.
+&gt;&gt; Yeah.
+&gt;&gt; So so it's you can scale quite far and
+that's not a problem because they're all
+so fast.
+&gt;&gt; Okay. With Campfire, we did we did run
+into it sometimes when we were when we
+were first developing Campfire and we
+would notice when we had done something
+where a right operation was slow like or
+if a right operation took too long or
+you if you start a transaction try and
+do too many things before you commit the
+transaction or something like that then
+you will start to see that you'll start
+to see the requests get held up behind
+the one that you're trying to process.
+How does that look like for a for
+someone like as a user?
+&gt;&gt; How like how would you know if that was
+happening?
+&gt;&gt; Yeah. Yeah. Cuz cuz what you're telling
+me is a little bit of like programming
+magic, right? Oh, I can see the
+transaction and the requests queued up
+behind it. But like is that noticeable
+for like the end user is it be it would
+become noticeable um when it's bad
+enough you would feel the sluggishness
+of the app is probably what would
+happen. Um, so if you start to have
+requests waiting on locks, they're sort
+of queuing up. And so a thing that you
+would try and do like posting a message
+&gt;&gt; should normally be really fast, but you
+might post it and be waiting for the
+response to come back because it's
+waiting to try and get the lock on the
+on the database,
+&gt;&gt; if you see what I mean.
+&gt;&gt; Yeah, that makes sense. Um so generally
+when working with one of the things we
+learned um with campfire I think was
+when working with SQLite it's good to be
+conscious of
+how long you're likely to be taking
+locks for. So you would keep your right
+operations short and efficient. Don't
+hold transactions open while you sort
+like because you know you can if you
+want a bunch of statements to work as an
+atomic unit with the database. You can
+start a transaction you can do some work
+then you can go off and do some other
+things in your Ruby code while you
+finish processing things and then you
+can do more and then commit the
+transaction and that whole time in see
+in the SQLite world that whole time you
+would have a right lock that you'd be
+blocking anybody else from writing to
+the database. So it just makes you be a
+bit more careful about that. And one
+more one more question about that is
+that I assume that Rails is prepared for
+that. It just cues up the requests. This
+isn't like a a Rails limitation. It's a
+a SQLite limitation.
+&gt;&gt; Yeah, it's a SQLite limitation. Exactly.
+&gt;&gt; So, so you could have like the right
+log, whatever, and Rails is happy to
+wait until you release that log and then
+continue
+&gt;&gt; Yeah.
+&gt;&gt; processing the request.
+&gt;&gt; Exactly. Um,
+&gt;&gt; Rails doesn't even really
+&gt;&gt; know about it. I mean, as long as you
+don't hit some kind of timeout or
+something that you've set up, wouldn't
+even really know. It just asks the
+database to do something and that takes
+some amount of time.
+&gt;&gt; It's just that that would slow down.
+&gt;&gt; Um,
+&gt;&gt; I mean, but as I say, if you if you keep
+your transactions short, it doesn't tend
+to come up a lot in in SQLite. At least
+if you're using SQLite with the right
+mode, you have to use it in wall mode
+and that kind of thing. But um you can
+go pretty far with it. But once you get
+into the world of running SAS with lots
+of customers, then you would you would
+start hitting those limits.
+&gt;&gt; And so that was part of what was I think
+interesting about this idea of giving
+everyone their own SQLite database
+because that meant since we're not had
+these logs then it could be practical to
+run SQLite as our SAS database rather
+than my SQL. And that has some really
+nice properties. And one of them that's
+nice for speed
+as well as the thing of getting the data
+close to people to cut down on latency.
+There's another effect that's happening
+which is more about getting the data
+close to the app server. So like
+normally if you use something like my
+SQL you you'll have a Rails server
+somewhere and a MySQL server running
+somewhere else. And whenever it needs to
+do anything with the database, there's a
+network call between the two. And
+they'll they'll be close together in the
+same data center. Usually it's usually a
+very fast network call, but still it
+does add it adds some time.
+&gt;&gt; But why is this is this like a
+I don't know a CPU limitation where you
+want to run them separately. Usually,
+you'll want to run them separately, but
+partly for resources, partly for scaling
+because you'll you want to be able to
+add more of one without necessarily the
+other, if you see what I mean. So for
+example, you might you might start with
+having two app servers and one database
+and that's enough load. But then as you
+get more customers, you might find your
+app servers are quite busy, but the data
+the database server is fine. And so you
+can add more app servers and get more
+capacity there rather than, you know, I
+mean, if they were just on the same one
+box and it got busy, you just have to
+keep making that a bigger and bigger
+box. Um,
+&gt;&gt; that makes sense. So yeah, so this thing
+where because SQLite works, it's not on
+a separate server. It's not even a
+separate process um from your like your
+Rails process. So anytime you need to
+access the database, it doesn't have to
+go across the network. It doesn't even
+have to go from one process to another
+and make some kind of IPC call. It can
+just directly carry out the query. It
+just grabs the data from disk. Or if
+quite often a lot of the active data
+will be cached, so it's basically
+pulling stuff out of memory. So it's
+really really fast and it's quite it's
+it's enough of a difference to be
+noticeable I would say like in I think
+often in a typical web application a
+request might do I don't know a handful
+of database operations a handful of
+queries um things that have to be
+separate queries really because they're
+unrelated things if you see what I mean
+like quite often you'll be loading up
+the user record to make sure they've got
+permission to see what they're looking
+at you'll be querying for whatever it is
+they're trying to see like the the fizzy
+card that they want to look at or
+something and maybe there's some sidebar
+content with a menu and you're cool like
+so you probably do a handful of
+different database operations and with a
+client server database like um like my
+SQL that's a handful of back and forth
+back and forth between machines
+when you do it with my SQL and and
+you're not doing it back and forth like
+it is a noticeable difference like my
+SQL is super fast uh sorry SQLite sorry
+is super fast when you when you use it
+that way so that was one of the other
+things that was nice was like okay with
+this architecture we'll get all the
+speed of having our databases inside the
+process and we'll be able to move them
+close to the people so fast and yeah
+that was one of the things that kind of
+drove us to chase this for a while I
+think
+&gt;&gt; I mean it sounds like a big win tell us
+when we started going down that path
+what happened or what did we find
+&gt;&gt; so
+a lot of it turns out quite to go quite
+well but I think it it starts to get a
+little bit complicated just because
+although those are those are the nice
+advantages to um to that kind of
+architecture. Basically the the nice
+parts of using SQLite means that the
+data is right there inside your Rails
+process. But the the flip side to that
+is that now your data lives on the same
+has to live on the same machine as your
+app server. Like it it can't you can't
+just put a database server somewhere and
+then have however many app servers you
+need that all talk to it. And as you're
+as you get more load and more customers,
+you can add more app servers. Like they
+have to be on the same machine. So if
+you want to increase capacity, then you
+can add servers, but then you also have
+to like move the data. So you have to
+like take some of your customers that
+were stored on server A and put those on
+server B. Um, which starts to become a
+bit more complicated.
+You also have to have a way to not have
+each particular server be the only place
+that that customer's data customer's
+data lives. And you need to have some
+kind of redundant copies because that
+machine could fail suddenly and then you
+don't have access to that customer's
+data. If you want to do the uh spread
+out the reload to multiple machines um
+like we talked about before then that
+also needs a way to replicate data from
+one server to another because otherwise
+it's always in the in that one place.
+One thing I probably should have
+mentioned about this idea of making data
+close to people is it sort of assumes
+that people tend to be accessing the
+data for the same place. So you expect
+all your customers should if they if all
+your customers work in Edinburgh and you
+put your data in Edinburgh that's great
+for them but if they're like 37 signals
+and everyone's spread all over the world
+there's not really a good spot that's
+good for everybody. So you can't avoid
+still trying to find some way of doing
+the thing of like well we can spread the
+read only copies around and everyone
+gets fast reads like you still need to
+do those types of things if you want to
+to work well in in situations like that
+if you see what I mean when you want to
+do that with SQL light it doesn't there
+wasn't really a good way that we found
+to just do that with existing software
+that kind of fit our use case well we
+had so we had to build that part too so
+there's one of the one of the places
+where the the seemingly simple
+architecture starts to get like a bigger
+project, a bigger project cuz you're
+like, well, we this bit is good, but we
+also need to build this other thing. We
+also need to build this other thing. And
+so it starts to grow arms and legs a
+little bit.
+&gt;&gt; And some of these concepts like seem
+deceptively simple, right? Like from
+what when from what we learned yesterday
+with the with Mike, like SQL light is
+just a file.
+&gt;&gt; So it at at first it seems like quite
+simple like you just copy the file
+everywhere, right? You just like do it
+right and then copy the file somewhere
+else.
+&gt;&gt; Yeah, like that should suffice. And then
+I assume that when you start doing
+something simple like that, oh there's
+this edge case that you know what when
+this happens.
+&gt;&gt; Yeah, exactly. It is just a file but
+it's a file that is being changed in
+various different parts of it
+potentially very quickly. Um and you
+need so in the case of replication you
+want another copy of it that you can use
+for reads. Then whatever changes in that
+first file has to change in that second
+file. But it has to do it really quickly
+and it has to only do the parts that
+change. Not it can't recopy the whole
+file because it'll get too big. You
+would end up trying to send far too much
+data across across the network if like
+every time you made a change you copy
+the whole file.
+&gt;&gt; How big is a SQL light file like in in
+in your experience while we were testing
+this?
+&gt;&gt; Well, so it really depends since it's
+per customer. I mean I think a lot of
+customers will be quite small. So like
+megabytes probably big big customers
+might be a gigabyte or something.
+They're not they're not massive but
+they're big enough that
+&gt;&gt; you could copy the whole thing each time
+&gt;&gt; someone changes one. Right. You need to
+you need to at least find out what's the
+part that changed and then just apply
+that change.
+&gt;&gt; Yeah. Um, and you want to do it as close
+to instantly as possible because you
+want people to be able to use those
+readonly copies for to access all the
+reads without them kind of getting
+behind and showing stale information if
+you see what I mean. So, we built a
+system for replication. We also we did
+build in something about that notion of
+stale information because you can't make
+the replication actually instant.
+There's always going to be some amount
+of delay and usually it should be short
+but I think there's always the potential
+that it's slow it gets held up for some
+reason because you essentially you're
+sending you're sending changes across
+networks between servers. If a lot of
+changes happen in one place it's
+possible that it might take a moment for
+all of those changes to kind of get
+across the network get applied in the
+other side. It shouldn't normally be
+long. should be like well under a second
+most of the time but there's always a
+chance that a lot happens suddenly or
+something or just computers you know um
+it might just get get slow for a little
+bit um so you usually need some
+mechanism to make sure that what people
+are looking at is not stale data you
+wouldn't notice stale data really if you
+weren't the one making the change like
+if if you're looking at a page that
+someone's updating and it takes two
+seconds for the change to show up.
+You're probably just not going to know
+like you didn't know it was there until
+you saw it and that was in 2 seconds is
+nothing. But the case that quite often
+comes up is if you change something and
+then you go to another page where like
+you make a new post um add a new card in
+Fizzy or something and then you go to
+the list of cards. If yours isn't there
+because you read from a server that
+didn't have it yet, it's going to look
+broken. Normally, or I think most
+commonly, the way people handle that,
+which we do in some other apps, is just
+have a a short delay where you pin your
+activity to the place where you wrote
+it. So, when you make the change, it has
+to go where where the writer is. when
+you go to make a read, normally you
+would read it from the reader, but
+because the system knows that you just
+wrote something, it'll make sure that
+you actually read from the writer for
+the next second or something, which
+works well, but it does mean that more
+of the requests go to the writer than
+have to um because you're sort of it's
+like a pessimistic kind of approach,
+right? It's like we don't know if it's
+on the other place yet. So, we'll just
+assume the worst and keep serving you
+from the writer for a couple of seconds
+until until we're sure it would be
+there. So, in the uh the architecture
+that we were building for Fizzy, we were
+quite conscious of
+trying to avoid doing any more work on
+the writer than we absolutely had to
+because we have these kind of tighter
+restrictions about how many writes we
+can push through each app server and how
+many customers can go on each app server
+as a result. So we took a different
+approach there and instead we we
+actually track what the ID of the last
+transaction is that you wrote and then
+every time when your request comes in
+we're able to
+assume that it's probably safe to serve
+it from the reader and send you to the
+reader but detect if we were wrong. And
+so in those rare cases where you your
+next request goes to the reader and it
+doesn't yet have the transaction you
+just wrote at that point it can quickly
+kind of resubmit the request to the to
+the writer to get the fresh copy which
+means
+it's potentially might be a wee bit
+slower if that happens but that very
+very rarely happens. So it gives you the
+protection to never seem broken but with
+the more optimistic behavior that it's
+fine to just read from the reader all
+the time. I feel like we just went down
+like a really deep rabbit hole there.
+Like I forgot what we were talking about
+before we went down there.
+&gt;&gt; I No, no, no. I think this is great. The
+uh the the reason is like it's it seems
+like wow like it seems so simple at
+first and and there is I'm sure you felt
+this and you and the team felt this but
+there I'm sure the desire to make
+something like SQL like work was really
+really high. It was I mean I think it
+was it was at the start because it
+seemed cool basically like we liked you
+know I mean the advantages seemed good
+also it just seemed like a fun thing to
+do and we all grew to really like SQL
+light a lot like I think we all a few of
+us had used it and quite liked for other
+things but the more we worked with it
+we're like this thing is cool we just
+want to make this work and use this and
+I I think also there's a thing where the
+more time you spend on a project you
+also get a little bit like emotionally
+attached to it and there's a there's
+there's a we get to point like I'm going
+to make it work because I said I was
+going to make it work that like it's not
+going to beat me. I'm going to do this
+&gt;&gt; which actually I think probably
+for me at least it it led me to chase it
+for a bit longer than I think like in
+hindsight I think there was a point
+where I probably it would have been
+better to stop realize that some things
+weren't going quite the way we wanted to
+and then change tech earlier but instead
+I was like so determined to make it work
+because it mostly did as well. That's
+the thing like most of this
+did turn out to work really quite well.
+&gt;&gt; Right. Right. And I was going to say
+there it doesn't there doesn't seem to
+be like a a huge wall right in front of
+you. Right. It was just like tiny
+pebbles that made you like, "Oh, yeah.
+&gt;&gt; I need to clean this up. I need to move
+this here."
+&gt;&gt; And but they just kept coming.
+&gt;&gt; Yeah. I would Well,
+&gt;&gt; or was there something like huge where
+you're like, "Oh,
+&gt;&gt; I don't think there was anything so much
+huge." Um, I actually think it was a bit
+more of a
+it became a timing issue to get it done
+because it did turn out to be quite
+quite big and quite hard to crack. So
+the the way it played out in practice
+was that we we built some of the parts
+of this first. Um we had the the
+tenanted SQLite par. We had replication
+working. We set things up. So we had one
+one app server that was the writer and
+then we had a couple of readers that
+replicated from that. We set up um the
+sort of geoloccation routting stuff. We
+use cloudflare's cloudflare is a load
+balancer service that you can use to
+sort of direct traffic to one of your
+like to the nearest data center from
+your data centers. Um so we put these
+servers in different places. is we had
+traffic ruing to the right one and that
+worked really well and that's what we
+used internally for for a long time. Um
+we had the sort of small group the sort
+of invite only early testers group that
+were using fizzy for a while were
+running on this and it was great. It was
+super fast um and worked really reliably
+but as we started to to add the sort of
+the multiple writer part there's a
+there's a lot of things in there that
+are quite difficult to get right. Um, so
+it took a while I think to land on a
+design for that that we liked. We got
+there in the end, but we were already
+like we're getting like later and later
+the project. And so we we're working on
+the infrastructure part while um it's
+basically for the the longest time it
+was just Mike and myself working on this
+and then Stano joined. So there's three
+of us towards the end. But while we're
+doing that there's other people working
+on the product. And so early on it's
+great. You have all the time in the
+world because they haven't built the
+product yet. So you can take your time
+figuring out the infrastructure, but we
+get to a point where the product's like
+good to go, ready to go out the door,
+and we're not quite ready with the
+infrastructure. We still have some some
+things to to figure out there. And for a
+little while, you could kind of get away
+with that. We can we can be like, well,
+if we need a couple more weeks to finish
+something up, then they'll add more
+things to the product for a couple more
+week. There's always more things to add.
+But I think we were getting to the point
+where it started to feel like we're
+going to we're going to end up slowing
+this down. Like we're going to end up
+not being able to release a thing we've
+built just because we still have
+questions on our side. We figured out
+how we wanted to do the MLY writer
+thing. We built that kind of towards the
+last minute in terms in project terms at
+the last minute. Um we got that stuff
+all working. But I think the for me
+there were two there were two problems
+that were kind of staring at like one
+was that
+although we got this although we kind of
+got this stuff working we had intended
+to do a lot more preparation in terms of
+how we were going to run this and make
+sure that we we were prepared for
+whatever happened. So having run books
+for how to handle operational situations
+if like a machine breaks or like if if
+something goes wrong with the
+replication and it gets and there's a
+lot of replication lag how do we deal
+with that? There were a lot of things
+that we ideally would have sort of
+practiced and researched and written up
+so we knew that we were prepared so that
+when we launched this for real if
+anything went wrong we could quickly
+recover. And we had we hadn't really
+done enough of that by that point,
+mostly because we were so busy figuring
+out these these other questions that we
+we had to kind of keep pushing that um
+further down the line. Same with
+benchmarking. We' done some basic
+benchmarking to know how fast this was
+and we knew that it was pretty fast
+those tests. But I think there's always
+the potential that there's there's kind
+of limits and ceilings that you haven't
+uncovered yet. And to be confident in
+releasing the app, I think we needed to
+have spent a bit more time um trying out
+different benchmarking scenarios knowing
+that if loads and loads of people sign
+up on day one, it's not going to catch
+fire because of sublimmit that we didn't
+know about or something. So that was
+like half of the concern was just
+not being quite ready enough to do it in
+a responsible way. Like we could have
+shipped it and lodged it. I think it
+would have probably been fine, but if it
+wasn't fine, I think we would have had a
+bad time and we would we risked having
+an app that broke, which no one wants.
+Right.
+&gt;&gt; It's all fun in games until you get the
+customer data loss.
+&gt;&gt; Exactly. Right. Because all this time
+we've been running internally. It was
+working well, but
+&gt;&gt; the stakes were low at that point
+because if it broke, we would just go, I
+wonder what went wrong. We would fix it
+and we put it back together. But I think
+the point where it's out in the wild and
+people are using it and also especially
+that early early point where you're
+trying to tell the world you've made
+this new thing and you want everybody to
+come and look at it at the same time
+like you don't want it to break in that
+in that moment. And
+as I say I don't it's not that I thought
+it would break but it was more that I
+didn't feel
+confident enough that we had made sure
+it wasn't or or that we had made sure
+that we could fix it really fast if it
+did. We just there was an amount of
+preparation that we hadn't been able to
+do in time I think. So that was half of
+it. The other reason though was that for
+all that we liked about that
+architecture,
+the longer we worked with it, I think we
+started to feel like there were some
+parts we didn't like about it as well,
+there's some parts that become harder.
+And a lot of it just boils down to that
+same
+it's that same constraint that you have
+where if you're using SQLite and your
+data is where your app server is then
+even though you can have your read only
+copies and you can read from multiple
+machines if you want to change the data
+you have to change the data on a
+specific machine if you've divided your
+data up per customer then most of the
+time that's fine because usually you you
+know for any specific request this is
+only for this customer I know which
+machine has their data. I can route the
+request to the right place and they can
+do the right there. But sometimes you
+have requests that aren't like that.
+There's some things that do span
+customers like so for us it came up with
+things like the way login works like
+when you want to log in you need a way
+to
+um enter your credentials and get
+authenticated before we can show you
+here's all your accounts. like those
+accounts are essentially the different
+tenants and so we need to find out we
+need to kind of get you authenticated,
+show your list of different accounts
+even though they're all on different
+machines. So the information about you
+and how you log in can't be just in each
+of your tenants. It's sort of it's a
+layer above that. It's across all of
+those. And so we would as we were
+working on kind of that side of it, we
+started to run into these situations
+where things that seemed like they
+should be easy were hard because you
+would have a you'd have a feature like I
+think one was that we had
+I'm trying to remember the exact detail.
+It was something like we wanted to make
+it so that your profile picture wasn't
+per account but was like per person. You
+have the same profile picture regardless
+of accounts. And initially we had built
+this into the tenant database because it
+was a per account thing. Changing that
+normally would be super easy. But in
+this architecture we're like well how we
+don't even know like which database is
+holding the information about what your
+profile picture is and if it's not the
+machine where your account's on. Now the
+request to this machine has to talk to
+this other machine. Um and we kind of
+worked our way through it but we just
+started to feel like we made things
+harder for ourselves here. Like there's
+a lot we liked where we
+we were we I don't know. I was going to
+say where we made things easier for
+ourel. I don't know if it's exactly fair
+to say we made things easier for
+ourselves, but more like we there was a
+lot where we could do things the way we
+normally did and get benefits. But then
+there's these other cases where we're
+like this is kind of awkward. I like I
+don't actually know if we're going to be
+pleased that we did this like a year
+from now when the app's growing and we
+have lots of customers and we're trying
+to add new features. Are we going to be
+kicking ourselves for setting it up in
+this particular way? If you see what I
+mean? And and I don't think
+it's super clear right now whether it
+would have been like a thing we were
+happy about or a thing we weren't happy
+about, but there was doubt. And so I
+think the the combination of we're not
+quite ready to go with this and the but
+the app is ready the product is ready to
+go. that combined with and we're not
+even really that sure we still want it
+anymore kind of thing. That's why we
+decided that the right thing to do for
+that situation was actually unwind some
+of that and go back to a more
+traditional for us architecture and ship
+on that.
+&gt;&gt; And I believe what's interesting about
+this is that it's in the git history,
+right?
+&gt;&gt; It is. Yeah. So actually I can show you
+I have um
+I bookmarked the right PR for this in
+case you're so I could kind of show
+&gt;&gt; the exact point in time where we're like
+yeah
+&gt;&gt; yeah because it was
+&gt;&gt; so it it was a dramatic week in some
+ways. Um, so this the decision to to go
+from what we were going to do to what
+like this PR here is called plan B
+because we always had this idea in mind
+that like if this didn't work out the
+plan B was that we would just um convert
+the app to run on my SQL use the same
+kind of setup that we typically use um
+for our other apps. And so the decision
+to do that like I think the the date on
+this uh says November today. I can't
+remember the dates very well but if this
+if this is November 18th that probably
+means that I think November
+19th probably was the planned day for
+shipping the app. And I think the day
+before this PR is probably when when I
+kind of went like I don't think this is
+going to work. I think it was a it was
+on a a Sunday evening I pinged David to
+say I think we should change I think we
+should do plan B like we should bail on
+the new architecture and it was like
+literally like 2 days before we were
+supposed to ship it.
+&gt;&gt; That must have been difficult.
+Um, it was like in like like I said
+earlier, I think like in hindsight
+I it makes sense like it still feels
+like that that was it was the
+appropriate thing to do in that
+situation for all the reasons that we
+just talked talked about at the time.
+But at the time of doing that, it was
+quite a hard thing to do because we'd
+invested a lot of time in it. I was
+really, like I say, like I was
+determined to make it work. There was I
+was some I was kind of attached a bit to
+the idea of shipping this. It felt like
+failure to not do it. I knew it was the
+right decision to do, but at the same
+time like you get for one thing, you get
+kind of emotionally attached a bit to
+the project you work on for a long time,
+I think. Um, but also we had talked
+about this a lot. Like I I gave a talk
+at Rails World about Beamer and how we
+were using it for Fizzy. And David in
+his keynote talked about how we were we
+were doing this whole new architecture.
+We're going to, you know, change the
+world with this new architecture. So all
+of a sudden to be like, you know, we're
+not actually going to be doing that.
+It's hard to not have that in your mind
+when you're deciding to change the plan.
+For sure.
+&gt;&gt; Just knocking on David's door like,
+"Hey,
+&gt;&gt; a second."
+&gt;&gt; It's like, "Sorry, I told you we were
+going to do this thing cuz we're now
+we're not going to do this thing." But
+it did really feel like the choice
+between like you either just kind of put
+your hands up and say, "You know what?
+This this doesn't this hasn't worked
+out. We need to do something else." or
+the only other option would be to kind
+of go ahead and do it while not feeling
+confident that it was the right choice
+if you see what I mean which just that
+option just isn't really an option I
+think
+&gt;&gt; it's it's already been a few months and
+fizzes out people love it like they
+really really love it do you see it like
+as a failure or is this just like
+software development
+mostly the latter so I think it was I
+think exploring this made a lot of sense
+I think we learned a lot from this.
+There's things that we took out of this
+like fizzy
+although we reverted to a more
+conventional for us architecture, it's
+not exactly the same. Like we did get to
+keep some things from our explorations
+on the other on the other architecture.
+So for example, the thing I described
+there about dealing with replication lag
+by tracking the transaction that you
+wrote rather than pinning your all your
+reads to the writer for some period of
+time that we figured out how to do that
+when working on this new architecture.
+And since when we switched to plan B, we
+kept that idea and we ported it to the
+MySQL side. So now Fizzy still has that
+improvement um because we had put the
+work in while we were doing the other
+stuff. And there's a couple other things
+like that like we
+part of that part that I didn't really
+talk about much earlier there was that
+as well as replication and um this the
+database location stuff the other thing
+that you have to do in all of this is
+rooting requests to the right machines
+like you have to have a more
+I don't know the right word to call it
+but like more dynamic I guess sort of
+routting so when requests come in on a
+particular data center it has to
+which is the right server for this
+customer for this action. And so there's
+a bit more behavior going on at that
+kind of level. And so we built a bunch
+of stuff into Camal proxy which is the
+proxy server that we have in Camal or
+deployment tool. Um we built a bunch of
+load balancing features into it so that
+we could build this this original
+architecture. But when we switched to
+the other the MySQL version that it
+turned out to still be really good to be
+able to do this at that level. So we
+still use Camal proxy as a load
+balancer. We have like six load
+balancers that run fizzy that are all um
+Camal proxy using the same new stuff
+that we had built originally for the
+first architecture if you see what I
+mean. So we did we did take some stuff
+out of it. We didn't throw all away but
+we did change a lot. So I I was going to
+show you the PR just to give you a sense
+of what what the work was like to do it
+because it's quite a um it was quite a
+sudden and big change in a sense. Um, so
+one thing I didn't mention is that
+there's like 14 participants. It says on
+here like a couple of these are just
+people who I think commentate and
+discuss things. So it's not exactly 14,
+but there was probably like eight or 10
+people involved in doing this change. It
+has tons of tons of commits. It's one of
+those things that GitHub is not very
+good at displaying because it has too
+many things, but it's basically like a
+week of work by the whole team. Um, so
+it was kind of a intense week where we
+all said, "All right, let's make this
+work. Let's go with plan B." And we all
+made the changes. The changes
+themselves, most of them are not
+actually that
+difficult or or complicated. It's just
+that there's a lot of them. Um,
+so I don't know if it's if it's
+interesting to see the sort of thing
+that we had to do to change this. I
+could probably point a couple of things.
+&gt;&gt; Yeah, let's do that. The way this played
+out, you could see at the start, I
+actually don't know why this first
+committed. That wasn't on the PR before.
+That's just a weird get history thing,
+but we basically started by like pulling
+stuff out. So, Beamer's the replication
+system that we built. Um, so like we
+weren't going to need the replication
+anymore. We weren't going to need this
+test bed, which was there to um test how
+replication worked across machines. Um,
+we added the trilogy adapter, which is
+the MySQL adapter. We took our active
+recording testing. And so you can see we
+basically started this project where
+we're like take out all the new stuff um
+set it up on my SQL and then there's a
+bunch of like and then make it work
+things. So there's a lot of um updating
+queries, fixing tests um and stuff like
+that until it until it worked um against
+my SQL. And a lot of it was as you just
+as you just described just now there's a
+lot of places where in the tenant need
+world the database had the data for just
+that one customer or that one account
+and that's usually the level that you
+query things at. So we didn't have if
+you want to look up your account we
+didn't have to say like find the account
+for the customer. We could just say
+accounts soul. It would just be like the
+account um and that would give us the
+account information. And if we wanted to
+get um a list of all the boards in your
+physique account, we just query for all
+the boards because they're all your
+account because the database they're in.
+Um obviously once you stop tenanting and
+you go into this model where one big
+MySQL database has everybody's data,
+then you have to you go through like if
+we find the
+uh the models down there. If you look at
+something like board uh
+system model um yeah there's tons of
+this sort stuff. So board had to had to
+have a belongs to account because before
+it didn't matter. There only was one
+account. Now um it has to have that
+relationship and then all the places
+where we do queries we have to make sure
+that we're actually accessing things
+through current account or current user
+rather than just like the only account.
+Um, so there's a lot of kind of
+mechanical changes that are of that sort
+of form.
+Um,
+&gt;&gt; Kevin, is this made any more complicated
+because we had beta testers like people
+with actual account data, not just our
+team in there? Did that make any of this
+like change unraveling any more complex
+or would it have been the same
+regardless?
+&gt;&gt; It's a bit it was a bit more complicated
+because yeah, we had people using it. We
+wanted to make sure that everyone's data
+was preserved properly and we also
+didn't want to interrupt their use of it
+too much. Even though it was
+pre-release, so it was sort of okay to
+say we're taking it down for
+maintenance, but we want to minimize the
+interruptions. So yeah, we couldn't just
+start fresh with a new database. We had
+to write scripts that imported the data
+from the uh all the individual tenite
+databases and then kind of copied them
+into the MySQL world. I saw I saw in one
+of the commits that it says remove
+Beamer. Uh Beamer is not yet open
+source, is it? Uh so it's not yet. Um I
+want to I want to open source it, but we
+there's a couple of things I wanted to
+tidy up to make sure it was ready before
+it goes out. Um and because we were
+quite busy getting Fizzy launched at the
+point where we stopped we decided we
+weren't using it, I kind of haven't
+really had a chance to go back and just
+make sure it's ready. I think like it it
+works. we were we were using it for a
+long time. Um, but there are just like a
+couple of rough edges that I don't want
+there. And I think I want to share it
+because we built it and I I think it
+works quite well. It's it's super fast.
+Um, it turned out to be pretty reliable.
+But I think as soon as you share
+something, you kind of
+you only want to do that if if you're
+ready for other people to use it, if you
+see what I mean. Like I don't want to
+share it and saying, "But it's a bit
+wonky over here." or um or not be around
+to help if someone has questions or
+something. Do you see what I mean? Like
+kind of want to do it like share it
+responsibly if you see what I mean. So I
+will
+&gt;&gt; I think that's really interesting. How
+do you marry that with like David's very
+famous the gift philosophy?
+&gt;&gt; I do think it's a gift. I think you you
+can give things uh to people and they
+don't they don't h I don't think people
+have the right to like demand that you
+start doing certain things like add
+features that they want if you don't
+want them like I think that's kind of
+where the gift thing come from right
+it's like if you make a thing and you
+think other people can benefit from it
+and you want to give it to them then you
+can and they don't really they're not
+really entitled to then demand more
+things it's a gift they could take it or
+leave it they could build their own if
+they don't like the one that you made
+Um, I think that's fine, but I do think
+there's also there's an amount of just
+um giving people something in like in a
+good form. Like you don't you don't want
+to sort of like waste people's time by
+saying like I built this thing, it's 95%
+done, you know, it's up to you to finish
+it or something. You know what I mean?
+It's sort of a balance though. I think
+&gt;&gt; I get it. And this is still your baby in
+a way, right? Like I know this is a team
+effort and everything, but for from what
+I've heard, Beamer is like something
+you've poured a lot of time into.
+&gt;&gt; Yeah. Yeah. Because although all these
+things are they're team efforts, but
+we're a small team, right? So in
+practice in practice, you might find
+that there's two people or three people
+working on a thing and there's two or
+three things that you need to make for
+it to work. So you tend to end up each
+having a thing. Um, a lot of the things
+we build end up being mostly built by
+one person, especially those kind of
+like supporting tools and stuff. It's
+usually one person that came up with an
+idea and built a thing. So,
+&gt;&gt; this path that we went down with fizzy
+infrastructure that we didn't end up
+using, do you imagine that in the future
+we'll revisit it. We'll try to go back
+to it given more time. It seems like
+there was a a time element where the
+product was ready, the backend wasn't.
+Given enough time, do you think it's
+something you'd want to reexplore?
+&gt;&gt; I think there's parts of it that we want
+to reexplore. I think
+we learned a lot from it that I think
+informed how we would do it again if we
+were to do it again. And I think I don't
+know that we would go back and exactly
+continue that same journey and finish
+the exact same thing. But I think there
+were some things that we
+thought that we were hoping to get out
+of it that we ended up because we didn't
+ship on that version. We don't have
+these things that we might want to go
+back and say, well, how do they how
+would they apply in this new
+architecture, you know? So, like one of
+the things I that I'd really like to
+look at and we'll try to do that soon, I
+think, is
+is some other form of doing the local
+writers to people. So even though we're
+not we don't have individual tenant
+databases per customer that we can move
+around to different places right now we
+have one big MySQL database with
+everybody but we could have like four or
+five or something. You could have like
+the European database, the East US, the
+West US and segment customers into a
+small number of large databases and use
+a lot of the existing like the load
+balancer routting that we already built.
+I think like we could we could apply a
+lot of what we built for the MySQL
+version onto the sorry for the SQLite
+version. We could apply a lot of that
+onto a sort of MySQL
+sort of form of this and still get that
+benefit of now you're now like my data
+could be in my SQL in Amsterdam and so
+it's fast me here in Edinburgh. So I
+think that's more like where we might go
+back and look at it's like what could we
+pick and choose from the things that we
+did and apply them in this place.
+&gt;&gt; Yeah, that makes sense. listening to
+what Mike had to say uh had to say about
+like active record being tenant
+multi-tenant and all of this it seems
+like there's like the the gem that he's
+uh working on the commal proxy load
+balancing stuff the uh beamer which in
+in the future may may come up and fizzy
+overall there was no actual real harm
+done by this exploration it seems to be
+that it was like a net win even if like
+we didn't get 100% of everything that we
+wanted, right?
+&gt;&gt; Uh yeah. Yeah. I I think so. I think it
+was a really useful exploration. Um I
+think we learned a lot of stuff and like
+with some of the things you just
+mentioned, there are things that we we
+have kept. It's not like none of it
+shipped. It was more that we shipped
+some parts, we didn't ship other parts,
+but we we did still get quite a lot out
+of it. Um, I think like I'm quite
+excited about some of the load balancing
+stuff that we built into Kamal proxy and
+that I think will be genuinely useful to
+a lot of people. We still have a little
+bit of work there to make it easier for
+people to uh to set up those load
+balancers and we're going to add some
+things to Camal to do it, but I think
+that's actually going to be really nice
+for people and that came out of that
+work. Um, so I think it was all good. I
+think like I said earlier, I think the
+one part in hindsight
+I would have liked to notice like maybe
+one month sooner than I did that we were
+going to change our mind. So instead of
+having that like 2 days before launch
+going let's change everything and then
+we had to have that crazy week. I think
+it would probably would be good to
+notice slightly earlier. Um, but other
+than that, I don't I don't regret
+looking into it. And I I do think that
+it was Yeah, it was the right thing to
+explore and it was also the right choice
+in the end to go where we went. So, I
+think I think it's all good.
+&gt;&gt; Yeah. Well, thanks for sharing all of
+that with us. This has been an episode
+of Recordables, which is a production of
+37 Signals. To hear more from our
+technical team, check out their blog at
+dev. 37signals.com.

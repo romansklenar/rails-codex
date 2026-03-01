@@ -1,0 +1,455 @@
+Welcome to Rework, the podcast by 37signals, about the better way to work and run your business.
+I'm Sean Hildner, and as always, I am joined by 37signals co-founders and the authors of Rework,
+David Heinemeyer Hanson. How are you this morning?
+Good, Sean. How are you?
+I'm well. And Jason Fried, how are you?
+Doing great, thanks.
+This week, we're talking about not being a hero, and not being a hero in the sense of,
+I think it's pretty easy to put your head down when you're working on something and sort of hammer your way through.
+So even if it's not working, just hammer away at it.
+So can we have a little refresher for our listeners about the sunk cost fallacy?
+Basically, you know, if you've poured a lot of work into something, it doesn't mean you should keep pouring more work into it.
+Like, it's sunk. You did it.
+It's like money. You spend a bunch of money on something.
+It's like, well, I need to keep spending more money on it because I already spent this much money.
+Well, it's a great way just to spend more money on something you shouldn't be spending money on at all.
+You know, and this happens with time all the time at work, especially for long projects.
+So someone's been working on something for, I don't know, six months.
+And it's like, well, just two more weeks.
+And like, okay, two more weeks.
+And you get two more weeks on six months and two weeks.
+You're like, just two more weeks, just two more weeks.
+And the answer is always going to be yes, because you put so much time into it that you feel like now you've wasted all that time if you don't finish the thing.
+Right.
+That's what that's about.
+You got to be very, very careful about that because it's very alluring.
+The test is really where you are right now.
+What it'll take to finish.
+Is that worth it?
+Yeah.
+Right.
+Like forget everything about what you've already put in that is irrelevant for the termination of whether you should keep going or not.
+That's why it's so hard.
+It's very hard for humans to look at large investments of time or money or whatever and go like, what do you mean it doesn't matter?
+I fucking put in all this time.
+I fucking put in all this money.
+Of course it matters.
+Right.
+But it just it doesn't matter for the decision on whether to keep going or not.
+Yeah.
+The only thing that matters for that decision is whether it's worth the price from here.
+You can't change the money already spent.
+You can't change the time already spent.
+The only thing you can change is to say, like, you know what?
+No.
+And it's really interesting because we've done this a number of times.
+I mean, oftentimes at 37 signals, it's running against the boundary of your reset.
+So we have the six week cycle, for example, and we're at the six week mark and we're not done.
+We just spent six weeks.
+You're really tested.
+It's hard to throw that away.
+Yeah.
+Exactly.
+And we do occasionally fail it.
+We had a project a few cycles ago where we'd actually even announced that this was the sidebar feature.
+We'd announced the sidebar feature and we'd spent six weeks on it.
+Mistake number one.
+Right.
+Absolutely.
+I think there's actually literally, there is literally a chapter either in rework or in getting real about, like, never announce anything.
+And we fell into that.
+But given that, we were looking at it and, like, the thing is sort of almost there.
+Right?
+Like, it was almost there.
+It was working sort of in beta.
+It had some issues and other complications to it.
+But it was so tempting to keep going that we actually did it twice.
+We didn't make the mistake once.
+We made the mistake twice.
+First, we said to sort of the original team, let's push through.
+Right?
+Let's just push through.
+Let's go into overtime, our cool down period, the two weeks after we were supposed to be done.
+Let's just see if we can't get it through.
+And we kept pushing, kept pushing.
+The issues were persisting.
+And then we're like, all right, fine.
+Throw in the towel.
+And then we fucking got greedy again.
+At the beginning of the next cycle, I think me and Jason Simdars were like, eh, you know, we can crack it.
+So we threw another week at it.
+Yeah.
+Just thinking, like, we can do it.
+And at the end of it, we're like, it's just not right.
+Well, you should have read Rework.
+I should have read this freaking chapter.
+I should have opened the book.
+And again, just going like, no, don't go into it.
+I mean, the hero mode, though, is a little different.
+And we'll get into that in a second.
+But just this sense of the sunk cost kind of part of it, it was just a textbook case.
+We'd sunk the six weeks.
+We had made the announcement.
+We felt like you could just push through it.
+And we couldn't.
+In fact, I'm really hard pressed to think of a single case where we really just, we're just on the cusp of throwing in the towel.
+And then we do it anyway.
+And then it pans out.
+I don't know if I can recall a single project where we were like, no, it's time to call.
+And they were like, no, let's just push through.
+Yeah.
+And then we push through and it works out.
+No.
+Yeah.
+I mean, you mentioned that we work in six week cycles, obviously.
+What do you do at week two when you realize, oh, this might take longer than the six weeks?
+You begin to reframe the question, reconsider what you're doing, or reframe the problem, I should say, or the question, whatever it is.
+Start to negotiate, really.
+It's like, hey, okay, this might be harder than we thought.
+That happens sometimes.
+You dig in, you find something you didn't know.
+And then you start saying, well, we could also do it this way.
+Here's a trade-off.
+May not be exactly the same, but we could do it.
+Not only could we do it, maybe we could do it quite a bit faster and open up opportunities to do something else.
+This is called trading concessions, which is something, I'm not sure if it was in a rework or that might be a getting real thing.
+Yep.
+Yeah.
+You just sort of, you trade a little bit.
+Like, well, we could do it this way.
+It's going to be hard.
+It's going to be down to the wire.
+It may not be worth it.
+What about this instead?
+What about that instead?
+And you kind of have a conversation, like usually a designer in a program or someone else, maybe higher up, more technical, might have a better sense of the whole system.
+And you make a call and then you chop the scope, typically.
+That's the ideal case.
+Right.
+Then things are working as they're supposed to.
+That's exactly what's supposed to happen.
+Yeah.
+That like a third into the project, you realize, you know what?
+I can see the end here and we're not going to make it.
+Because now you have two thirds of the appetite left to do something different.
+You can change your mind.
+And that is actually the ideal scenario.
+That's why those constraints appear.
+The problem and how you end up into this hero mode is when you don't make the call at one third into it, you make it five seconds to midnight.
+Yes.
+Five seconds to midnight, there is not time.
+The only option you then have is to ignore the sunk cost and potentially go into hero mode, right?
+Where you just go like, you know what?
+I'm just going to work an all-nighter.
+I'm just going to push through.
+I'm just going to take the weekend and spend all the time on this because we're up against the wall kind of thing, right?
+And that's what we really address in this, that that is almost always a bad idea.
+Because first of all, it's a symptom.
+If you put yourself in this situation, you've already failed.
+Right.
+Before you even put on the cape to be the hero, you're already failed.
+You should not be in the situation that it's five minutes to midnight and you have to do this enormous amount of work because what were you doing for the other time?
+How could you not see a week ago that this wasn't going to play?
+And then you put the cape on and then you put in all the effort and you foregoat the sleep and so on.
+And do you know what?
+It's going to show.
+It's going to show.
+The quality is going to show.
+The fatigue is going to show.
+The shortcuts are going to show.
+The bugs you sweep in under the carpet is going to show.
+Maybe not tomorrow, but then a week from now or next time you have to touch that subsystem.
+It's going to show that you're making bad decisions, right?
+I think you were alluding to this.
+Part of being a hero is a solo effort.
+It is I can do this.
+I can power through on my own.
+Can you talk a little bit about the importance of getting new eyes on a problem when someone does get stuck in that rut of, well, my options are quitting or hammering through?
+On the design side, this is important because it's really easy to get stuck in a corner of the product or that doesn't really matter.
+Like you might just iterate on some, I'm just making something up here, some form field treatment or something.
+Sure.
+And you can get almost in this trance mode where you're just like you spend eight hours on this, like trying to perfect something that just doesn't need that level.
+Absolutely.
+Yeah.
+And so it's good to have someone step in and go, that's fine.
+Let's move on.
+The other thing that happens sometimes is someone will do like five, six, seven, eight, ten variations on something and then present them.
+Like, what do you like?
+Which one do you like?
+And it's too much choice.
+Yeah.
+And to do ten variations wasn't really required or preferred.
+You know, in that case, this just happened with a new employee, a new designer we have who's great.
+He's just used to presenting a lot of options because that's like the way it was at his previous job.
+And I just reminded him, hey, you can present a few, but you also have to come with a preference.
+You have to say like, here's three or four.
+My favorite is number two.
+Because what you don't want to do is make a bunch and then throw the choice out to a bunch of other people.
+And then those people have indecision and then they ask for a combination of two and it just goes on and on and on.
+So you really got to stop that before you blow three days.
+It's really easy to blow three days on something like that.
+Yeah.
+It's a little like passing the buck, right?
+So if I presented 18 things, then it's off of my plate.
+Yeah.
+And it's not malicious.
+No, of course it's not malicious.
+No, no, no, no, no.
+Yeah.
+You get in this loop.
+You just sort of get in this loop of like, I can make, here's another version.
+Here's another version.
+Here's another version.
+Here's another version.
+And nothing like fundamentally wrong with that to play around in your mind with those ideas.
+But I think to make them all and to spend that much time on maybe a small element is typically not worth it.
+We all fall into the trap, but it's hard to see when you fall into the trap.
+Someone else can see it pretty quickly.
+And that's the idea is to kind of come in there and go, hey, that's enough.
+Or just pick one.
+Let's move forward.
+It doesn't really matter.
+I think on the programming side, it's often staring yourself blind on the definition of the problem as it exists today when you could rewrite that definition.
+And it's particularly hard when you go like, all right, here's what I need to do.
+The screen's been designed.
+I just need to fill this in.
+And you start and you go like, huh, it's a little more difficult than I thought.
+And you're like, all right, try harder.
+You push harder.
+You push harder.
+And all of a sudden, you've spent maybe a day, maybe three on trying to solve this particular problem.
+Instead of just taking that step back, which is really what we advocate here of being like being a quitter, like quit this.
+You are working too hard for this particular thing.
+It's very rare that that level of dedication is commensurate with what you're going to get out on the other side because you could just change the expectation of what we're trying to hit.
+And then it becomes much easier to hit it, right?
+You're like, if you're trying to aim and you're hitting a target, I don't know, 500 feet away with a handgun, you're like, that's very difficult.
+It'd be very easy if you just move that target three feet away.
+That's the constant option in software.
+It's always possible to rewrite the problem.
+Now, you may not like all those rewrites, but it's never just like, well, I have to do this.
+That's always bullshit.
+You never have to do basically almost anything, certainly not in the domain we work in.
+It's always up for renegotiation.
+It's always contingent on the appetite because that's the other thing.
+That's where sunk cost really comes in where you said like, well, we kick this project off thinking it's worth two weeks.
+That's often a timeframe we use.
+We say it's worth two weeks.
+If you end up spending six because you got lost and trapped in the sunk cost, this is now a bad deal.
+Even if you complete it, even if you complete the task, it's now a bad deal in much the same way that you could say like, hey, this is a great company.
+Also a great stock at a hundred bucks.
+At 500 bucks, even if it's a great company, it's a shitty investment.
+You're never going to make that money back.
+They're brutally overvalued.
+So being able to distinguish between like, hey, this is a very nice feature.
+I would love to have it at two weeks.
+I absolutely hate it.
+I think it'd be one of the great mistakes we make if we spend eight weeks on it.
+That is a key distinction that you have to keep in mind constantly with this.
+And this is where falling into the hero mode trap, falling into the trap of pushing on is so alluring that you think it's kind of like a gambler too.
+You're like, oh man, I just had a cold streak here.
+If I just keep playing, I'm going to win it back.
+One more hand, one more go.
+That example I just used was totally that, right?
+We went back to the fucking table twice and the house, of course, still won.
+Borrowing more money, right.
+Yes.
+Well, let's get into quitting a little bit later.
+I want to stay on this idea of getting more eyes on the problem.
+Is there still some mechanism that if someone is stuck after two weeks, do we here at 37 Signals force someone to come in and share something or bring new eyes on a problem?
+One thing I want to say about the eyes on a problem is you can actually have far too many eyes on a problem also.
+And this actually is, it's kind of counterintuitive, sort of, which is that you'd think, you know, more opinions, more perspectives would be a good thing.
+It's often not a good thing.
+Too many cooks, though, at some point.
+Too many cooks.
+And I've always felt like if you want to be less sure of yourself, just ask one more person.
+Sure.
+And that's what ends up happening in projects is these are what we call typically called drive-by comments.
+Someone who's not really involved comes in, looks at something and just like drops a comment out of nowhere, which throws the whole thing off the tracks for a minute.
+And then there's a debate and a discussion.
+Sometimes, look, sometimes it's valuable.
+Sometimes someone does have new perspective, but oftentimes it's just the wrong person at the wrong time and throws things off.
+And then there's a power dynamic and it's really complicated.
+Especially late in a project, getting something like, oh, well, there's nothing I can change about that now.
+So what do I do with this information?
+That's true, too.
+All these things are like, you know, your mileage may vary and it depends.
+But it's just something to keep in mind that more voices and more opinions and perspectives is not always a good thing.
+So I'll leave that there.
+Yeah.
+We've just recently made a change in terms of how we provide and expect feedback on the programming side, instituting a more formalized mentorship program for new programmers.
+So before this change, we basically just had like, hey, expect your work to be reviewed on a essentially a random schedule.
+And it may also not be.
+And no one is really accountable for the fact that the work is reviewed.
+And what we ended up with was we basically anyone who started, anyone who starts at basically, no matter how much seniority they have, needs their work reviewed to fit with sort of our style and our conventions and our approach and our architecture and all the other technical aspects of it.
+So that needs to happen.
+But it was happening sort of at random.
+Is it you?
+Is it me?
+Is it just when there's time?
+Is it where does this land?
+And we found that that was just leaving gaps.
+And it often left the gap was that the work would progress too far without getting redirecting feedback.
+And then, as you say, someone shows up quite late and go like, hey, the fundamental approach here is not right.
+And then you're like, well, great.
+Now what?
+Right?
+Like there's not that much time left in the cycle.
+So now we move to a more explicit project where there's one person who is assigned and responsible for giving that new person feedback.
+That's their mentor.
+Like it is part of your job description that on a weekly basis, you must review the work product and you must give some feedback to direct one way or another.
+Sure.
+And I think that's hopefully going to change some of that dynamic about where it goes because that is often the frustrating part, right?
+Like you walk down a path, you thought it was okay.
+And if someone wanted you to walk down a different path, damn well, they could have told you 10 miles ago.
+Right.
+Right.
+So we're trying that as a new approach to make it more like one person.
+It's not like the, hey, everyone's, it's sort of everyone's job all the time.
+I mean, I think on design, maybe it's a little easier that Jason is directly involved with every designer and gives that person direct feedback versus on program.
+We have quite a few more programmers, so we've had to distribute that workload a bit more, but we hadn't been specific about like, hey, Alberto, you are responsible for giving this person feedback.
+And like, it does have to happen on a weekly basis.
+And also, this is also some of the things, sometimes we talk about feedback and you think of like, well, here's a suggestion.
+You could also do it this way.
+That's one type of feedback.
+That's typically the kind of feedback you'll get from a peer who just, hey, have you thought about this?
+Then there's also the kind of feedback that you get from essentially a superior, where there's some hierarchical power in it.
+And we often think about like, oh, there's power structures and those are bad.
+You know what?
+They're also clear.
+Sometimes the problem with feedback is like, do I need to listen to you?
+Right.
+Do I have to make this change?
+Or are you just telling me as like an optional thing, something I could consider versus if your boss or designated mentor comes to you and tell like, hey, listen, we got to do it this way.
+It's very clear.
+You got to do it that way.
+Now, you could, of course, argue and say like, well, actually, you're wrong because blah, blah, blah.
+But there's a very clear line here that like, this is not just feedback in the optional sense.
+This is redirecting feedback as the modern euphemism sometimes goes that like, hey, I'm putting you on this other track.
+And like, let's let's roll down there.
+Yeah, I think it's interesting.
+We talk a lot about human nature on this show, that there needs to be some sort of system, some sort of mechanism to prevent you from being the hero.
+Right.
+Like it is total human nature to put on the cape.
+Yes.
+And I think this is where this is key, too, is in that same power relationship, at least at their same signals.
+For us, that's a failure state.
+Yeah.
+At other companies, that's like, oh, man, James came in and he spent all night on it.
+And then like, let's give James a hand.
+Right.
+I've literally been at companies where that was the thing, where someone was just celebrated for pulling an all nighter.
+And I was just like, why the fuck is James in this situation in the first place?
+Why are we applauding the fact that this is a fucking failure?
+Now, there are other cases where being a hero actually can be a positive thing, like the fucking ship blows up.
+There's a fire in the stern.
+Someone is rushing in with bravery and puts it out.
+OK, you're an actual fucking hero.
+Clap to you.
+And we have some of that sometimes when we have outages or something else that someone really steps up.
+A catastrophe.
+Absolutely.
+Yeah.
+Exactly.
+A catastrophe.
+But if this is a normal course of business and you're just like making what another feature?
+No, no fucking applause for the all nighters.
+Well, let's talk a little bit about quitting.
+And I know we've talked about this before, but I think it's a very important point to keep reiterating the difference between quitting and failing.
+I think it's super easy.
+And I think we have an entire episode about this, actually, to think of quitting as, oh, I'm a failure personally.
+There's a psychological aspect to that, which is I couldn't do it.
+And, you know, I couldn't do it is like what people would.
+They draw a line from that to failure and I'm a fit, whatever.
+Right.
+That's kind of a personal thing people I think have to get over.
+I'm not really sure.
+I mean, the organization can reinforce the fact that, hey, I'm glad you didn't do this.
+You saved us a lot of time.
+We've done this before where someone's done really nice work, but the work was actually just too complicated, too complex.
+And shipping that would have we'd have to carry that complication and the complexity through the product into other projects down the road.
+And it just wasn't worth it.
+So it wasn't that the work was bad by any specific definition.
+It was just like the wrong degree of detail on something.
+And keeping that out of the product is worthwhile, but that could make someone feel bad.
+So you just got to like you got to make the honest call about this stuff.
+And it's not about failure.
+We don't really even use the word failure or success here at the company.
+Hardly ever.
+We're truly it's like that didn't work or that worked well or let's see how it goes or let's not do that.
+It's more about that than these than these poles of experience like, you know, failure or success.
+I mean, I don't know.
+We just don't really talk about it that much internally.
+I don't I don't think we use the word hardly ever, actually.
+What I like about quitting is when it's based on new information that someone well, us sitting down not reasonably could have known in advance.
+Then I go like, you know what?
+Quitting was a counterintuitive choice because the default is sunk cost.
+The default is doubling down.
+The quitting needs some degree of celebration, actually, to remind ourselves that quitting is always an option.
+Now, there are also times where you go like that was kind of foreseeable.
+Sure.
+Like we kind of got down a blind alley that if we had to spend a little more time thinking here or gotten the right perspective in, we could have avoided that.
+And I also don't mind that those types of quitting sometimes have like a little pinch, just a little pinch where you just like remind yourself, eh, kind of don't want to do that again.
+Again, failure is such an overstated word.
+Like so little of what we work in can really be classified in those terms.
+As Jason said, we don't really need it.
+But I think you can go overboard sometimes by like nothing is anybody's fault.
+Nothing could have been done different when sometimes something could have been done different and sometimes even particular individuals could have done things different.
+And you might have hoped that they would have.
+But then just let that be a pinch.
+Just like, eh, ow, okay, fine.
+How important is it as managers to, you know, make sure the team knows that quitting is an option?
+I don't think that's, you know, quote unquote normal in other organizations that quitting is an option.
+That's why Jason and I usually do the quitting.
+I mean, seriously, to establish the baseline, actually we had, I forget what the last one was.
+We quit something and we were like, this is good.
+Yeah.
+This is good.
+We got to show that, for example, that the boundaries are real.
+This is the other thing.
+You get into this moral hazard.
+If you're never willing to walk away from the sunk cost, if you're never willing to say like, you know what, that's not going to ship right now.
+We just had this on, what was it, some minor feature.
+It was actually a two-weeker that had kind of just got up against a vacation time.
+And then the question was like, eh, should we just keep it rolling?
+What should we do?
+And she's like, no.
+Do you know what?
+We should quit this.
+Now we may come back to it and we may be informed by that quitting.
+And those are all options on the table.
+But we got to stick to some of this.
+And then, of course, part of this is that Jason and I usually have to make that call.
+Because as you say, there's just some human nature.
+It's like, I don't want to look like a failure.
+I'm just going to push through.
+This is how you end up with the hero mode.
+And then if the organization's then rewarding that hero mode with applause or otherwise, hey, you pulled an all-nighter, you canceled your vacation, or something else stupid that's not proportionate, then you reinforce it.
+And then you go, oh, this is how I get ahead here.
+That is our responsibility as leaders and managers to make sure you do not get – it is not a freaking gold star in your book of achievements.
+To play the hero, to bail a project out.
+Whether it's your fault or not your fault, no.
+Don't do that.
+Yeah.
+Well, perfect.
+I think that's a great place to stop.
+We're back to answering more listener questions next week.
+So if you have anything you'd like to ask Jason or David, leave me a voicemail at 708-628-7850.
+Or better yet, record a voice memo on your phone and email it to hello at rework.fm.
+Next week, we're changing gears a little bit, and we're going to talk about the importance of sleep.
+I hope both of you will join me next week for that.
+For now, I want to say thank you for joining me, David Heinemeyer-Hansen.
+Thanks, Sean.
+And thank you, Jason Fried.
+Thanks, Sean.
+We'll see you next week.
+Rebook is a production of 37 Signals.
+Our theme music is by Clipart.
+We're on the web at rework.fm, where you can find show notes and transcripts for this and
+every episode of Rework.
+We're also on Twitter at Rework Podcast.
+If you're following along in the book, next week we'll be discussing the chapter Go to
+Sleep.
+And if you like the show, I'd really appreciate it if you would leave us a review on Apple
+Podcasts, Spotify, Overcast, or wherever you're listening to this.
+I'll see you next week.
+You
