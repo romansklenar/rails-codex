@@ -3,10 +3,10 @@ title: Moving Mountains of Data off S3
 description: "How 37signals migrated 5 petabytes and 5 billion objects out of S3 in under 10 days using a custom Rails app, DuckDB, rclone, and Pure Storage FlashBlade"
 source:
   type: talk
-  title: "Moving Mountains of Data off S3 with Jeremy Daer"
+  title: "Moving Mountains of Data off S3"
   author: Jeremy Daer
-  url: https://www.youtube.com/watch?v=BnhVXGZepA8
-  date: ''
+  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
+  date: '2026-01-08'
 tags:
 - rails
 - s3
@@ -24,114 +24,103 @@ tags:
 
 # Moving Mountains of Data off S3
 
-5 petabytes of unique objects, 5 billion files, hundreds of S3 buckets — migrated in under 10 days with no downtime using a bespoke Rails app as the command-and-control layer.
+~5 petabytes of unique data, ~5 billion objects, hundreds of S3 buckets — migrated in under 10 days with zero downtime using a bespoke Rails app as the command-and-control layer.
 
-## Scale and Context
+## Scale and Constraints
 
-- ~10 PB total across all buckets (5 PB deduplicated unique objects)
-- ~5 billion objects, average size 1.1 MB
+- ~5 PB unique data; ~5 billion objects; average object size 1.1 MB
 - Hundreds of S3 buckets across multiple AWS accounts
-- 90-day egress waiver window negotiated with AWS (free egress only if all data leaves within the window)
-- AWS Direct Connect cannot be used for egress credit — must use public internet
+- 90-day egress window negotiated with AWS bandwidth waiver program — credits only provided if all data transferred successfully within the window
+- AWS Direct Connect cannot be used for egress; must use public internet
+- S3 rate limit: 5,500 GET requests/sec per bucket partition — smaller, unpartitioned buckets hit this during load testing; large buckets pre-partitioned by contacting S3 with key layout info did not
+- Sequential bucket listing would take days; S3 Inventory Reports are the only practical alternative for bulk operations
 - Third-party migration services quoted at tens to hundreds of thousands of dollars; ruled out
 
-## Why S3 Was the Last Thing Moved
+## Migration Architecture: "Nostos" (Rails App)
 
-- High trust: S3 is extremely durable and reliable — replacing it means taking on that risk yourself
-- High cost to replace: hardware purchase in the hundreds of thousands to millions; needed proof of concept before committing
-- Egress lock-in: AWS charges egress bandwidth; the EU-driven waiver program provides credits only if you exit completely within the negotiated window
+Custom Rails app built instead of expensive third-party services. Five-stage pipeline:
 
-## AWS S3 Rate Limit Gotchas
+1. **Inventory** — S3 Inventory Reports (CSV/Parquet) used as source manifest; generated daily, scheduled automatically
+2. **Partition** — DuckDB splits inventory into size-weighted 10 GB batches (cumulative sum on byte size, not object count); streams S3 Parquet glob → window function → writes to S3-compatible staging bucket; no local disk, minimal memory
+3. **Dispatch** — ActiveJob dispatches copy jobs to workers via Solid Queue; ActiveStorage wraps batch files
+4. **Copy** — Workers invoke `rclone` per batch; stdout/stderr captured and stored per job ID for live inspection
+5. **Reconcile** — S3 Inventory vs. FlashBlade listing compared; live sync run until zero objects remain
+6. **Cut over** — Dual-write mode disabled after complete verification; single-write to new destination
 
-- S3 enforces **5,500 GET requests/second per bucket partition** — hit this limit during load testing on smaller, unpartitioned buckets
-- Large buckets pre-partitioned (by contacting S3 ahead of time with key layout info) did not hit the rate limit during load tests
-- S3 uses key prefixes to auto-shard partitions; uniform random hash keys make this easy for AWS to split evenly
-- Listing a billion-object bucket sequentially takes **literally days** — S3 Inventory Reports (daily, paid) are the only practical alternative for bulk operations
+Rails app responsibilities: credentials management (Active Record Encryption), job supervision, state tracking per bucket/inventory/batch, dashboard, and error visibility. Kamal deployed the app and accessories (database, OpenTelemetry, logging) to VMs as a single-developer operation.
 
-## Migration Architecture: Custom Rails App ("Nostos")
+## Key Tools
 
-The copy system is a classic map-reduce pipeline orchestrated by a dedicated Rails app:
+### DuckDB
 
-1. **Inventory** — S3 Inventory Reports (CSV or Parquet) used as the source manifest; generated daily and scheduled automatically
-2. **Partition** — DuckDB splits the inventory into 10 GB size-weighted batches (cumulative sum on byte size, not object count) and writes them to an S3-compatible staging bucket, all streaming without local disk
-3. **Dispatch** — ActiveStorage records wrap the batch files; ActiveJob dispatches copy jobs to workers via Solid Queue
-4. **Copy** — Workers invoke `rclone` (open source) per batch; stdout/stderr captured and stored per job ID for live tail inspection
-5. **Reconcile** — S3 Inventory Report vs. FlashBlade listing compared; final live sync run until zero objects remain to copy
-6. **Cut over** — Dual writes turned off; single-write to new destination; final sync run to verify nothing changed
+- Streamed petabyte-scale S3 inventory CSVs with a single invocation
+- Replaced approaches that required local disk or ran out of memory (e.g. in-memory windowing on multi-hundred-GB inventory reports)
+- "Like somebody discovering SQLite for the first time, although DuckDB is like SQLite on whatever next generation steroids."
+- Partitioning that was expected to take hours ran in minutes
 
-Rails app responsibilities: credentials management (Active Record Encryption), job supervision, state tracking per bucket/inventory/batch, dashboard, and error visibility.
+### rclone
 
-## Why Rails Over Scripts
+- Resilience-first design; open source; bandwidth and metadata-operation efficient
+- Configurable verification: basic checksum (S3 ETag vs. destination ETag) through complete bit-by-bit validation (download from destination, recompute locally)
+- HEAD-request avoidance to sidestep S3 rate limits and unnecessary API costs
+- 37signals contributed a Pure Storage FlashBlade backend, now merged into rclone upstream
 
-- Started with scripts; immediately needed to rebuild a credentials manager — switched to Rails instead
-- Rails credentials management handles multiple AWS accounts and destination credentials cleanly
-- ActiveJob + Solid Queue provided job distribution without custom queue infrastructure
-- Kamal deployed the app and accessories (database, OpenTelemetry, logging) to VMs as a single-developer operation
-- ActiveStorage accommodated batch files written by DuckDB directly (feeding it the key rather than uploading through AS)
+### S3 Inventory Reports
 
-## DuckDB: The Critical Tool
+- Efficient bucket listings without sequential API calls
+- Sequential listing of a billion-object bucket would take days; Inventory Reports eliminate this
 
-DuckDB replaced a custom multi-step pipeline:
+### S3 Fast List
 
-| Approach | Problem |
-|---|---|
-| In-memory windowing (e.g., Polars) | OOM on a multi-hundred-GB inventory report |
-| Custom download → split → re-upload pipeline | Many moving parts, local disk required |
-| DuckDB single invocation | Streams S3 Parquet glob → window function → writes to S3-compatible store; no local disk, minimal memory |
+- AWS-maintained tool, adapted by 37signals to support non-S3 storage (e.g. FlashBlade, which has no inventory report equivalent)
+- Parallel prefix-based listing; turns days of sequential listing into ~30 minutes
+- Available on 37signals GitHub
 
-- Single `duckdb` invocation: point at a glob of S3 Parquet files, cumulative-sum window to split by 10 GB batch size, write output back to remote object store — all streaming
-- Partitioning went from "expected hours" to minutes
+## Hardware: Pure Storage FlashBlade
 
-## rclone: The Copy Tool
+- Chosen over spinning-disk HDDs (MinIO on HDDs) after TCO analysis over 5–10 year lifecycle: lower power, less rack space, cost-competitive with HDD when total cost factored in
+- Metadata throughput (hundreds of thousands of metadata ops/sec) enabled fast reconciliation without bandwidth cost
+- Bottleneck during transfer was the 100 Gbps VLAN, not the storage — hit ~80 Gbps, briefly affecting other data centre systems
 
-- Used for the actual object copies; open source; bandwidth and metadata-operation efficient
-- Checksum verification modes: (1) compare S3 ETag to destination ETag, or (2) download from destination and recompute checksum locally ("really be careful mode")
-- Tunable: skip HEAD requests against S3 to avoid rate limits and unnecessary API costs
-- 37signals contributed a **Pure Storage FlashBlade backend** to rclone upstream — now built in
+## Execution
 
-## S3 Fast List (Parallel Listing)
+| | Target | Actual |
+|---|---|---|
+| Transfer window | 90 days | Under 10 days |
+| Remaining buffer | — | Used for reconciliation and verification before deletion |
 
-- Tool forked from AWS samples, available on 37signals GitHub; adapted for non-S3 storage
-- Estimates key prefixes, issues thousands of parallel listing requests instead of one sequential pass
-- Turns a multi-day listing into ~30 minutes
-- Used for listing FlashBlade buckets (FlashBlade has no inventory report equivalent) to reconcile against S3 inventory
+## Verification and Deletion
 
-## Destination Storage: Pure Storage FlashBlade
-
-- Considered spinning-disk HDDs (MinIO on HDDs) but chose FlashBlade — custom flash modules, cost-competitive with HDDs when factoring in power/cooling/rack over a 5–10 year TCO horizon
-- FlashBlade's metadata throughput (hundreds of thousands of metadata ops/second) enabled fast reconciliation without bandwidth cost
-- Network bottleneck hit at ~80 Gbps on the shared 100 Gbps VLAN — slightly impinged other traffic; the storage system itself was not the bottleneck
+- Compare S3 Inventory Report to FlashBlade listing
+- Run live sync (rclone) until it reports zero objects remaining
+- Disable dual writes; run one more sync to confirm nothing is still writing
+- Set S3 bucket permissions to read-only to catch stray writers before deletion
+- Sampled a subset of batches with full byte-level checksum verification; no discrepancies found
+- "When you press delete, then it's... Somebody else take the wheel. It's just all happening now."
+- Zero downtime achieved
 
 ## Migration Sequencing
 
-1. **Pre-window**: Migrate smaller, representative applications first — validates the process end-to-end without the egress clock running
-2. **Window opens**: Start with the most business-critical, largest apps (Basecamp) immediately — they need the most time and leave the least room for unknowns
-3. **Per-app recipe**: dual writes → bulk copy from inventory → reconcile → final live sync → cut to single write → verify → delete S3 objects
+1. Pre-window rehearsal with smaller, representative apps — validates the process end-to-end before the egress clock starts
+2. Criticality-first ordering during the window: most business-critical, largest apps first (most time needed, least room for unknowns)
 
-## Verification and Deletion (The Hard Part)
+## AWS Account Structure Lesson
 
-- The actual copy is simpler than expected; reconciliation and verification dominate the effort and wall-clock time
-- "Belt and suspenders" verification:
-  - Compare S3 Inventory Report to FlashBlade listing
-  - Run live sync (rclone) until it reports zero objects remaining
-  - Turn off dual writes; run one more sync to confirm nothing is still writing
-  - Set S3 bucket permissions to **read-only** to catch any straggler writers before deletion
-- Sampled a subset of batches with full byte-level checksum verification (downloading from destination); did not find any discrepancies
-- Final deletion of S3 objects was the most nerve-wracking step; no data loss, no downtime
-
-## Account Structure Lesson (Do This Upfront)
-
-- Avoid sharing AWS accounts across applications — use separate accounts per application or blast-radius scope
-- Shared accounts force you to migrate everything at once, preventing per-application tailoring
-- Modern apps: build migration into ActiveStorage at the application level (dual-write + background ActiveJob copy) rather than needing a separate orchestration layer
+- Separate AWS accounts per application preserves per-app migration flexibility
+- Shared accounts force migrating everything at once, preventing per-application tailoring
 
 ## Post-Migration Storage Architecture
 
-| Site | System | Role |
+| Site | Role | Vendor |
 |---|---|---|
-| Primary | Pure Storage FlashBlade (site 1) | Live read/write |
-| Secondary | Pure Storage FlashBlade (site 2) | Live async replication; failover target |
-| Tertiary (planned) | MinIO on HDDs or different flash vendor | Vendor diversity; insurance against shared-vendor firmware bugs |
+| Primary | Live read/write | Pure Storage FlashBlade |
+| Secondary | Live async replication + disaster recovery | Pure Storage FlashBlade |
+| Tertiary (planned) | Vendor diversification | MinIO |
 
-- 3-2-1 backup rule adapted: two sites same vendor is still a single point of failure for firmware bugs; third site with a different vendor (MinIO) addresses this
-- Tape backup considered and ruled out: object storage requires a gateway layer and restores from tape are weeks-long — viable only for true catastrophic recovery scenarios
+- 3-2-1 rule: 3 copies, 2 media types, 1 offsite
+- Two sites on the same vendor is still a single point of failure for firmware bugs; third site with a different vendor (MinIO) addresses this
+- Tape rejected: requires a gateway layer for object storage and restores take weeks — operational complexity not worth it
+
+## Key Insight
+
+"The migration's real difficulty centred on modelling, coordination, and risk management rather than programming sophistication. Developers with Rails expertise could undertake similar projects successfully."

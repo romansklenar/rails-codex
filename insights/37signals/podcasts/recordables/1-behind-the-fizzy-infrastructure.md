@@ -1,12 +1,12 @@
 ---
-title: Behind the Fizzy Infrastructure with Kevin McConnell
-description: "How 37signals explored a per-tenant SQLite + replication architecture for Fizzy, what worked, what broke, and why they shipped on MySQL instead"
+title: Behind the Fizzy Infrastructure
+description: "How 37signals explored a per-tenant SQLite + replication architecture for Fizzy, pivoted to MySQL two days before launch, and kept the best parts"
 source:
   type: talk
-  title: Behind the Fizzy Infrastructure with Kevin McConnell
+  title: Behind the Fizzy Infrastructure
   author: Kevin McConnell
-  url: https://www.youtube.com/watch?v=QeGFqx4i_AU
-  date: ''
+  url: https://dev.37signals.com/fizzy-infrastructure/
+  date: '2026-02-26'
 tags:
 - rails
 - infrastructure
@@ -20,83 +20,87 @@ tags:
 - architecture
 ---
 
-# Behind the Fizzy Infrastructure with Kevin McConnell
+# Behind the Fizzy Infrastructure
 
 37signals built and then abandoned a per-tenant SQLite + replication architecture for Fizzy two days before launch, shipping on MySQL instead — and kept the best parts.
 
-## The Two Goals Driving the Architecture Exploration
+## Two Goals Driving the Exploration
 
-- **Dual-mode product**: Fizzy should work as both SaaS (37signals-hosted) and self-hosted (once, customer-run), without maintaining two divergent codebases
-- **Data locality for speed**: Put each customer's data geographically close to them to reduce latency — the same property self-hosted users get automatically
+- **Dual-mode product**: Fizzy must work as both SaaS (37signals-hosted) and self-hosted (ONCE-style) without maintaining two divergent codebases
+- **Data locality for speed**: put each customer's data geographically close to them — the latency advantage self-hosted users get automatically
 
 ## Why Latency Mattered
 
-- Edinburgh → Chicago round trip: ~150ms before the server does any work (theoretical speed-of-light minimum ~60ms)
-- Rule of thumb Kevin uses: requests under 100ms feel fast; over 200ms feel noticeably slow
-- Edinburgh → Amsterdam round trip: ~25ms — same 50ms page render now lands well under the 100ms threshold
+- Edinburgh → Chicago: inherently exceeds 100–150ms before the server does any work
+- Edinburgh → Amsterdam: ~25ms — same page render now lands well under the perceptible threshold
+- Rule of thumb: requests under 100ms feel fast; over 200ms feel slow
 - Basecamp read/write ratio: ~94% reads, ~6% writes — making reads fast covers the vast majority of interactions
 
-## Three Architectures Considered
+## Architectures Considered
 
 | Option | Description | Decision |
 |---|---|---|
-| MySQL in self-hosted container | Squeeze SaaS database setup into the ONCE Docker container | Rejected — solves packaging, not latency |
-| Per-customer Docker containers on SaaS | Run one container per tenant, spread around regions | Rejected — 100k customers = 100k idle containers; would be reinventing fly.io |
-| Per-tenant SQLite databases | Give each customer their own SQLite file; move files close to them | Pursued seriously for months |
+| MySQL in self-hosted container | Squeeze SaaS DB setup into the ONCE Docker container | Rejected — solves packaging, not latency |
+| Per-customer Docker containers | One container per tenant, spread across regions | Rejected — 100k customers = 100k idle containers; reinventing fly.io |
+| Per-tenant SQLite databases | Each customer gets their own SQLite file; move files near them | Pursued seriously for months |
 
 ## Per-Tenant SQLite: Why It Was Appealing
 
-- **In-process queries**: SQLite runs inside the Rails process — no network hop, no IPC. Queries hit memory cache or disk directly, noticeably faster than MySQL client-server round trips
+- **In-process queries**: SQLite runs inside the Rails process — no network hop, no IPC; queries hit memory cache or disk directly, faster than MySQL client-server round trips
+- **"If you're using SQLite and your data is where your app server is, then you get the fastest data."**
 - **Write concurrency solved by isolation**: SQLite's one-write-at-a-time limit applies per database — one customer can't block another
 - **Portable data unit**: each customer's data is a single file; move the file, move the data
-- **SQLite WAL mode** is required for this to work well
+- SQLite WAL mode required for this to work well
 
-## SQLite Write Lock Gotcha (Campfire Lesson)
+## What They Built (the SQLite Architecture)
 
-- Holding a transaction open while doing Ruby work in between SQL statements keeps the write lock for the entire duration
-- In a single-tenant SQLite (self-hosted Campfire), this is survivable — one customer, fast operations
-- In multi-tenant SaaS on a shared SQLite, this causes visible request queuing
-- Fix: keep write operations short, commit transactions quickly, don't interleave Ruby work inside open transactions
-
-## What They Actually Built (the SQLite Architecture)
-
-- Custom SQLite replication system called **Beamer** (not yet open-sourced at time of recording)
+- **Beamer**: custom replication system for syncing SQLite DBs across servers (not yet open-sourced)
 - One writer app server + multiple read replicas per region, replication over the network
-- Replication lag handling: instead of pinning reads to the writer for N seconds after a write (pessimistic), they track the last written transaction ID and optimistically serve from the reader — only falling back to the writer if the replica doesn't yet have that transaction
-- **Cloudflare** used as geo-routing layer to direct traffic to the nearest data center
+- **Transaction-aware read routing**: tracks the last transaction ID the user wrote; optimistically serves from replica, falls back to writer only if replica hasn't caught up yet — avoids pessimistic N-second writer pinning
+- **CloudFlare** for geo-routing: directs traffic to the nearest data centre
 - Custom load balancing features built into **Kamal Proxy** for dynamic per-customer request routing
 
-## Why the Per-Tenant SQLite Architecture Was Abandoned
+## SQLite Write Lock Lesson (from Campfire)
 
-Two reasons combined:
+- Holding a transaction open while doing Ruby work between SQL statements keeps the write lock for the entire duration
+- In a single-tenant self-hosted setup this is survivable; in multi-tenant SaaS it causes visible request queuing
+- Fix: keep write operations short, commit transactions quickly, don't interleave Ruby work inside open transactions
 
-1. **Not operationally ready**: no runbooks for replication lag, machine failure, or data recovery scenarios; benchmarking under launch-day load was insufficient; team felt unable to recover quickly if something went wrong with real customer data
-2. **Cross-tenant requests become hard**: anything that spans tenants (login, global user identity, per-person profile picture) requires knowing which machine holds which database — what seemed simple kept growing edge cases
+## Why They Pivoted (2 days before launch, November 19th)
 
-The call was made two days before launch. Kevin messaged David on a Sunday evening. A ~10-person "Plan B" week followed.
+Two compounding reasons:
+
+1. **Not operationally ready**: no runbooks for replication lag, machine failure, or data recovery; benchmarking under realistic load was insufficient; team felt unable to recover quickly if something went wrong with real customer data
+2. **Cross-tenant features became hard**: anything spanning tenants — login, global user identity, per-person profile pictures (not per-account) — required unexpected DB coordination across customer instances; edge cases kept growing
+
+- "A year from now when the app's growing...are we going to be kicking ourselves for setting it up in this particular way?"
+- Emotional sunk-cost was real: "There's a thing where the more time you spend on a project, you also get a little bit emotionally attached to it."
+- No single blocking failure made it hard to stop — "tiny pebbles, not a huge wall"
 
 ## The MySQL Migration (Plan B)
 
-- Switched to Trilogy MySQL adapter
-- Removed Beamer replication
-- Re-added `belongs_to :account` on every model that had been implicit in the tenant database (e.g. `Board` had no account scope because the database was the scope)
+- Switched to Trilogy MySQL adapter; removed Beamer replication
+- Re-added `belongs_to :account` on every model (previously implicit in the tenant DB — `Board` had no account scope because the database *was* the scope)
 - All queries like `Board.all` became `current_account.boards` throughout
-- Wrote migration scripts to import data from individual per-tenant SQLite files into the shared MySQL database (beta testers' data had to be preserved)
-- One week, ~8–10 engineers involved
+- Wrote migration scripts to import per-tenant SQLite data into the shared MySQL database (beta testers' data preserved)
+- ~one week, ~8–10 engineers involved
 
-## What Shipped from the Exploration
+## What Survived the Pivot
 
-- **Optimistic read-after-write consistency** (transaction ID tracking): ported from the SQLite architecture to the MySQL side — Fizzy still has this improvement
-- **Enhanced Kamal Proxy load balancing**: dynamic request routing features built for the SQLite architecture were kept and now power Fizzy's six Kamal Proxy load balancers on MySQL
-- **Active Record multi-tenant gem** (built by Mike Dellesio, discussed in a companion episode)
+| Artefact | Status |
+|---|---|
+| Kamal Proxy enhancements | Shipped — 6 load balancers now use the improved routing features |
+| Transaction-aware read routing | Ported from SQLite architecture to MySQL side |
+| Beamer | Functional but unpublished; Kevin plans future open-source release |
 
-## Future Plans
+## Future Directions
 
-- Regional MySQL sharding: instead of one global MySQL database, use 3–5 regional databases (EU, East US, West US) and route customers to their nearest shard using the load balancer routing already built — gets the data-locality benefit without per-tenant file management complexity
+- Regional MySQL sharding: EU, East US, West US segmented databases rather than per-customer instances — gets data-locality benefit without per-tenant file management complexity
+- Route customers to their nearest shard using the load balancer routing already built
 
 ## Lessons
 
-- Sunk-cost attachment is real: Kevin acknowledges he chased the SQLite path longer than he should have because he was emotionally invested and it *mostly* worked
-- The absence of a single blocking failure made it hard to stop — it was "tiny pebbles not a huge wall"
-- Operational readiness (runbooks, chaos testing, benchmarking under realistic load) should be a first-class deliverable, not deferred until after the architecture is "done"
-- Exploration with no shipped output is not waste: the load balancer work, the replication consistency pattern, and the multi-tenant tooling all outlived the architecture that motivated them
+- Operational readiness (runbooks, chaos testing, realistic load benchmarking) is a first-class deliverable, not a post-architecture afterthought
+- Cross-tenant concerns surface late and compound quickly — map them before committing to a per-tenant data model
+- "We learned a lot from this that I think informed how we would do it again."
+- Exploration with no shipped output is not waste: load balancer work, replication consistency pattern, and multi-tenant tooling all outlived the architecture that motivated them

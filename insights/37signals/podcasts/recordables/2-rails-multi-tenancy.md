@@ -1,12 +1,12 @@
 ---
-title: Rails Multi-Tenancy with Mike Dalessio
-description: "How 37signals built the active_record_tenanted gem to make Rails multi-tenancy safe, usable, and framework-wide"
+title: Rails Multi-Tenancy
+description: "How 37signals built the active_record_tenanted gem to make Rails multi-tenancy safe, efficient, and framework-wide"
 source:
   type: talk
-  title: Rails Multi-Tenancy with Mike Dalessio
+  title: Rails Multi-Tenancy
   author: Mike Dalessio
-  url: https://www.youtube.com/watch?v=J1I3puqWDEw
-  date: ''
+  url: https://dev.37signals.com/rails-multi-tenancy/
+  date: '2026-02-13'
 tags:
 - rails
 - multi-tenancy
@@ -18,94 +18,113 @@ tags:
 - once
 ---
 
-# Rails Multi-Tenancy with Mike Dalessio
+# Rails Multi-Tenancy
 
-37signals built a new multi-tenancy gem for Rails after finding the existing `apartment` gem too old, inefficient, and too narrow — covering only ActiveRecord while leaving the rest of Rails unaware of tenant context.
+Mike Dalessio (Security Infrastructure and Performance team, previously at Shopify on Ruby performance) discusses multi-tenant database architecture in Rails and the `active_record_tenanted` gem he built for 37signals.
 
-## The Problem with Shared Databases
+## Why Multi-Tenancy Matters
 
-- Default Rails SaaS pattern: all customers co-mingled in one database, isolated only by `account_id` scoping in queries
-- Any forgotten `WHERE account_id = ?` in production leaks data across customers — silent in tests, explosive in production
-- Scaling requires increasingly large database machines with expensive replication (Basecamp and Hey both run on large replicated MySQL clusters)
-- No tenant isolation = no easy customer data export or deletion (files all land in one S3 bucket / directory)
+- Keeps customer data separate and private
+- Prevents developers from accidentally exposing one customer's data to another
+- Enables clean per-tenant data export and deletion (files land in separate directories, not one shared bucket)
+- Default Rails SaaS pattern — all customers co-mingled, isolated only by `account_id` scoping — is fragile: one forgotten `WHERE` clause leaks data silently
+
+## The Fizzy SQLite Vision
+
+- Original goal: per-customer SQLite file per database (local disk vs. network latency)
+- Core complication: SQLite allows only one writer at a time → complex routing when requests come from multiple regions worldwide
+- Required coupling network-layer routing with database-layer connection management — architecturally awkward
+- Also needed: replication, failover, and consistency mechanisms
 
 ## Why the `apartment` Gem Falls Short
 
 | Issue | Detail |
 |---|---|
-| Age | ~12 years old, shows its age |
-| Thread safety | Not fully thread-safe in all circumstances |
-| Connection handling | Closes and reopens connections on tenant switch instead of pooling |
-| Scope | Only patches ActiveRecord — fragment cache, Action Cable, Active Storage all remain unaware |
-| API | Global singleton (`Apartment.switch`) — can't handle multiple tenancy dimensions in one app |
+| Age | Mature but showing age |
+| Thread safety | Not thread-safe in all circumstances |
+| Connection handling | Closes and reopens connections on switch instead of pooling |
+| Scope | Only patches ActiveRecord — fragment cache, Action Cable, Active Storage remain unaware |
+| API | Global singleton — cannot handle multiple tenancy dimensions simultaneously |
 
-## What `active_record_tenanted` Fixes
+## `active_record_tenanted` (Mike's Solution)
 
-- Tenant methods live on application model classes, not a global singleton — enables multiple tenancy dimensions in one app simultaneously
-- Rack middleware intercepts requests, reads the tenant from the subdomain (or any custom lambda), and connects to the right database before the request hits Rails
-- Connection pool is kept open and reused across tenant switches — no close/reopen overhead
-- Tenant name used as both subdomain key and database filename — network and database layers unified by convention
+- Efficient connection pooling — no close/reopen overhead on tenant switch
+- Thread-safe operations
+- Rack middleware extracts tenant identifier from requests (subdomain, path, or custom lambda) and connects to the right database before the request hits Rails
+- Framework-wide tenant awareness across all relevant Rails subsystems
 
-## Framework-Wide Tenant Awareness
+### Framework-Wide Integration
 
-The gem patches all Rails subsystems that can cross tenant boundaries:
+- **Fragment cache**: cache keys automatically scoped to tenant — prevents account A's cached view serving to account B
+- **Active Storage**: blob storage paths automatically include tenant ID — clean per-tenant directories
+- **Action Cable**: tenant context propagated to WebSocket connections
 
-- **Fragment cache**: cache keys automatically scoped to tenant — prevents account A's cached view serving to account B when both have record ID 1
-- **Active Storage**: blob keys prefixed with `tenant_id/` — enables per-tenant directory on disk or in S3, clean account deletion/export
-- **Action Text / rich text**: Rails internal models (normally in a separate class hierarchy) injected as "subtenants" so joins across `ActionText::RichText`, `ActiveStorage::Blob`, and application models work within a single tenanted database
-- **Action Cable**: tenant context propagated to WebSocket connections — still needs per-app wiring validation
+### Safety Mechanisms
 
-## Safety Checks
+- Raises exceptions when accessing an untenanted database outside any tenant context — no silent wrong-tenant queries
+- Validates model instances match their connection's tenant context
+- Prevents saving objects to incorrect tenant databases
+- Safeguards for Action Cable connections
 
-- Querying the database outside any tenant context raises an exception immediately — no silent queries returning wrong-tenant data
-- Saving a model object loaded from tenant A while connected to tenant B raises a safety exception at runtime — cross-stream writes blocked at the framework level
-- Goal: make it structurally impossible for a developer to accidentally co-mingle customer data
+## Tenant Resolution API
 
-## Tenant Resolution is Pluggable
+- Lambda-based, pluggable
+- Default: subdomain (`foo.rightbook.com` → tenant `"foo"`)
+- Fizzy uses path-based approach (first path segment, like Basecamp)
+- Multi-dimensional: can tenant by customer account AND by geographic region simultaneously
 
 ```ruby
 # Default: subdomain
 # foo.rightbook.com → tenant "foo" → storage/foo.sqlite3
 
-# Fizzy's approach: first path segment (like Basecamp)
+# Fizzy's approach: first path segment
 # app.fizzy.com/123456/... → tenant "123456"
 
-# Custom: pass any lambda that receives the request and returns a tenant name
+# Custom: any lambda receiving the request and returning a tenant name
 ```
 
-## Multi-Dimensional Tenancy (Advanced)
+## Multi-Dimensional Tenancy
 
-The model-scoped API unlocks multiple tenancy dimensions within a single app:
+- Model-scoped API (not a global singleton) enables multiple tenancy axes in one process simultaneously
+- Example: `ApplicationRecord` tenanted by customer `account_id`, Solid Queue databases tenanted by geographic region (`us-east`, etc.)
+- Both dimensions active at the same time with no conflicts
 
-- Fizzy used `ApplicationRecord` tenanted by customer `account_id` (SQLite file per customer)
-- Solid Queue databases tenanted by region (`SolidQueueRecord.with_tenant("us-east") { ... }`) — job workers connect to the geographically local queue database
-- Both dimensions active simultaneously in the same process with no conflicts
+## Live Demo: Converting Writebook to Multi-Tenant
 
-## SQLite Multi-Tenancy: What Worked vs. What Blocked Launch
+Two code changes required:
+
+1. Mark the database as tenanted (add `tenanted` to `ApplicationRecord`)
+2. Update database path config to include tenant identifier (`%{tenant}` in `database.yml`)
+
+System automatically creates separate database files and organises static assets by tenant.
+
+## Why Fizzy Launched Without SQLite
 
 | Layer | Status |
 |---|---|
-| Per-customer SQLite files in Rails | Working — gem solid after ~6 months internal use on Fizzy |
-| Single-machine deployment | Fully functional — could have shipped day one |
+| Per-customer SQLite files in Rails | Working — gem solid after internal use on Fizzy |
+| Single-machine deployment | Fully functional |
 | Global replication (read replicas) | Working |
-| Write routing across regions | Blocked — coupling between network routing and database routing requires a unified stack |
-| Automatic failover | Incomplete — edge cases found weekly; `primary/passive` mode concept exists but not productionized |
+| Write routing across regions | Blocked — coupling between network and database routing |
+| Automatic failover | Incomplete — edge cases appeared weekly |
 
-Fizzy launched with MySQL instead. SQLite multi-tenancy was not discarded — it was not finished in time.
+- Emergent complexities arose during replication + failover implementation
+- Unexpected combinations from coupling SQLite + Rails tenanting + global replication + network routing + automatic failover produced edge cases approximately weekly
+- Time constraints → launched with MySQL instead; SQLite multi-tenancy was not discarded, it was not finished in time
 
-## Converting an Existing App (Writebook Demo)
+## API Design
 
-Changes needed to make the open-source Writebook app multi-tenant with per-tenant SQLite databases:
-
-1. Add `tenanted` to `ApplicationRecord`
-2. Update `database.yml` to use `%{tenant}` format specifier in the database path
-3. Rack middleware wires subdomain → tenant automatically
-
-Result: `ApplicationRecord.create_tenant("foo")` creates the database file and runs all migrations. Active Storage files land in `storage/foo/` automatically. Total code change: ~5 minutes.
+- Went through 3 iterations before achieving a natural Rails feel
+- Goal: make multi-tenancy feel like a first-class Rails concern rather than a bolt-on
 
 ## Path to Rails Core
 
-- Mike's goal: upstream `active_record_tenanted` into Rails as an opt-in feature
-- Prerequisite: production mileage — plan is to convert all ONCE products (Writebook, Campfire, etc.) to multi-tenant SQLite to prove the gem in production
-- Missing Rails primitive needed first: a first-class `primary/passive` mode concept for failover — currently reimplemented in Hey, Solid Queue fork, and Beamer separately
-- Replication daemon (`Beamer`, written in Go by Kevin McFadden) needs to be open-sourced and stabilized before SQLite multi-tenancy can be recommended at scale
+- Plan: use ONCE products (Writebook, Campfire, etc.) to accumulate production experience with multi-tenant SQLite
+- Missing Rails primitive: "primary versus backup mode" for failover/replication — currently reimplemented separately in Hey, Solid Queue fork, and Beamer
+- Upstream into Rails core once production-proven
+
+## Open Source
+
+- `active_record_tenanted`: available on GitHub
+- Fizzy: open-source codebase with full implementation history
+- Writebook: usable as an example multi-tenant app
