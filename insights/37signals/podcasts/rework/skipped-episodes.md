@@ -14,18 +14,11 @@ Episodes not included in the thematic insight files, with the reason why. Do not
 
 ---
 
-## Empty stubs — no transcript content
+## No transcript available on episode page
 
-Files exist but contain only a frontmatter header or placeholder text. Nothing to extract.
+The episode page was fetched but 37signals has not published a transcript for it.
 
-- **building-on-the-side** — stub
-- **dont-be-a-hero** — stub
-- **extreme-capitalism** — stub
-- **ignore-the-competition-listener-qs** — stub
-- **rapid-fire-questions** — stub
-- **software-as-art** — stub (transcript never fetched)
-- **the-case-for-cover-letters** — stub
-- **try-everything** — stub
+- **dont-be-a-hero** — page exists, no transcript section
 
 ---
 

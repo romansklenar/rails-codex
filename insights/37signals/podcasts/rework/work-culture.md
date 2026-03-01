@@ -39,7 +39,9 @@ tags:
 
 - Occasional crunch is acceptable and even necessary — the HEY launch required two consecutive weeks of intense effort after years of calm; the key framing is "cashing in years of calm for a few chaotic weeks," not normalizing chaos as a steady state
 - When a launch-week crisis pulls founders away from support queues, the rest of the team absorbs the overflow — designing for slack in the support headcount (not just the product team) is what allows the company to absorb a surprise spike without collapsing
-→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks
+- The 40-hour week was not invented out of benevolence — Henry Ford discovered through assembly-line data that workers producing 50–60 hours per week made more mistakes, requiring costly rework; the 40-hour week was an empirical productivity optimization, not a social concession; the same industrial research has been replicated across knowledge work contexts
+- A 40-hour week is "an accomplishment of the company," not a ceiling employees must justify — the goal is working hard and efficiently in those hours, not proving devotion through duration; the few crises that spill over the boundary are accepted exceptions, not proof the boundary was wrong
+→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks, extreme-capitalism
 
 ## Remote Work
 
@@ -108,7 +110,12 @@ tags:
 - Adding customer success as a proactive function (demos, walkthroughs, educational videos) is distinct from reactive customer support — both are necessary at scale, and conflating them means neither gets done well
 - Running accounting "like an ice cream stall" is sustainable for years but eventually incurs real financial risk (back sales tax liability, compliance gaps); adding financial rigor is not bureaucracy, it is risk mitigation — the cost of not doing it shows up as a multi-million-dollar settlement
 - Letting go as a founder: the shift from evaluating *how* work is done to evaluating *what the work results in* is the hardest behavioral change as a company grows; setting a "rendezvous point" (three months, six months) before assessing a new initiative prevents premature judgment without enabling indefinite drift
-→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company
+- 37signals offers a yearly education stipend employees can spend on anything — classes don't need to relate to the job; coworkers have used it for botany, improv, cake decorating, woodblock printmaking, chamber music, and even a real estate license; the signal is that the company values whole people, not just their work output
+- Deliberately learning one new skill per year outside work is a framework for staying humble, curious, and generative — picking a skill, committing a year of evenings/weekends, and making an external commitment (a performance, a mountain, a tournament) creates structured personal growth that carries back into professional life
+- The "enthusiastic beginner" is a specific posture to cultivate: accepting that you will be bad, that an eight-year-old will beat you at chess, and that this humility is the price of learning anything worth knowing — adults avoid this discomfort by staying in domains where they are already competent, which produces narrowness
+- Protecting personal time for non-work pursuits requires explicit work boundaries — if the job is so overwhelming there's no time for evenings and weekends, "make sure your boss reads It Doesn't Have to Be Crazy At Work"; sustainable hours are a prerequisite for whole-person development
+- Don't monetize every interest — the pressure to turn every hobby into a side hustle or social media performance corrupts the purity of the activity; picking one craft as your life's main engine and treating everything else as non-commercial enrichment preserves the joy and the learning
+→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company, try-everything
 
 ## Open Offices
 
@@ -206,3 +213,19 @@ tags:
 - Emotional culture is set by micro-decisions at scale, not by stated values: one organization built a literal "crying room" to signal that intense emotional reactions are normal and expected in high-stakes work — explicit environmental design beats policy memos
 
 → Episodes: no-hard-feelings, dose-of-empathy, customer-support
+
+## Side Projects & Independent Work
+
+- Building something on the side while consulting is a time-tested path: 37signals itself originated as a web-design consultancy that built Basecamp as the side project; consulting provides the income floor that makes experimental shots viable without existential pressure
+- **Consulting is the easiest first product**: getting a consulting client is substantially easier than finding a paying customer for a cold product — no discovery problem, no onboarding, no subscription retention; start consulting first, run experiments alongside it
+- **Don't take a job you hate on the premise a side project will save you in nine months**: resentment poisons both the job and the project; the right setup is a role you can genuinely enjoy while treating side experiments as parallel, optional bets
+- **Starting is no longer the hard part**: AI tools, cheap hosting, and payment infrastructure (Stripe vs. a physical bank branch) have made launching trivially easy; the difficulty has shifted entirely to getting and holding attention — the same explosion of ease that enables you enables everyone else simultaneously
+- Software entrepreneurship is following the path music already took: when distribution barriers collapsed with streaming, it became easier than ever to publish music and harder than ever to be heard; the same dynamic now applies to software — a flood of competent products means attention is the scarce resource, not the product itself
+- **Do it for reasons other than "this will be a business"**: the statistical probability of any side project becoming a primary income source is low; pursue projects for the learning, skills acquired, people met, and personal growth — those outcomes are guaranteed regardless of market reception; treating business success as the only valid outcome guarantees disappointment
+- **Make something you'd put your name on**: authenticity and genuine enthusiasm are legible to the market; build something you'd proudly sign, because that integrity is also better marketing
+- **Focus on one thing with real conviction rather than firing off many**: the odds of ten mediocre ideas combining into a hit are lower than the odds of one fully-committed, excellent idea finding traction; conviction is also what sustains you through the dip in motivation every project encounters
+- Products rarely announce themselves as hits overnight: give a launched project months, not days, before judging traction; cultivate it — talk about it consistently, keep tending it — rather than publishing and immediately pivoting to the next idea
+- **Every failed or base-hit product is a direct investment in the next one**: 37signals extracted learnings from every product that underperformed and applied them to Basecamp; a project that only pays expenses is still a multi-month curriculum in product, marketing, and distribution
+- Hold two conflicting ideas simultaneously: believe fully that this idea could succeed (because half-hearted effort guarantees failure), while also accepting statistically that it probably won't — this dual awareness produces committed work without brittle attachment to a specific outcome
+
+→ Episodes: building-on-the-side

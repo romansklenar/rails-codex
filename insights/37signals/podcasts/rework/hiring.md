@@ -69,7 +69,18 @@ tags:
 - Job ads themselves are a filter — write them in the company's actual voice, describe what the person would have done last week, and name specific work; generic bullet-point ads attract generic candidates
 - Remote-first hiring gives access to the entire world's talent pool; constraining to a 40-minute commute radius makes it nearly impossible to find someone who matches quirky principles
 
-→ Episodes: how-we-work-finding-the-right-team, hire-when-it-hurts, listener-questions-hr-edition, titles-tenure-dont-matter, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, hire-great-writers, in-the-market-for-a-marketer, listener-questions-part-2
+- Cover letters are read before resumes, not alongside them — at 37signals, Jason does not look at a resume until the cover letter earns it; the resume is never the first impression
+- A cover letter should be specific to this company and this role, not a generic self-summary — if the letter could have been sent to any employer, it will read like one of the hundred that are immediately filtered out; the specificity is the signal
+- **AI-written cover letters are detectable at scale**: a single AI letter may be indistinguishable from a human letter, but patterns emerge across a large applicant pool — phrasing structures, sentence-opening habits, and organizational templates repeat; pattern recognition across a sample size of hundreds is a different capability than evaluating one document in isolation
+- Using AI as an editor (proofing, rephrasing a clunky paragraph) is acceptable and analogous to having a friend proofread — but having AI write the letter and tweaking 5% of it means the letter is not yours, and you're not the person being evaluated
+- **Deadline behavior is a candidate signal**: applicants who request exceptions after the deadline because they waited until the last moment are advertising a procrastination pattern — the same pattern that will show up on the job; the deadline was posted alongside the opening, giving weeks of runway
+- Being first to submit is not an advantage: applications are reviewed as a batch after the close date, not in arrival order; rushing an application to get in early typically means less time was invested in it
+- Posting a closing date (not just "open until filled") is a candidate-respecting practice: applicants can pace their effort and submit thoughtfully rather than racing to beat an unknown clock
+- **Designer cover letters as crafted artifacts**: some design candidates build a mini-site or designed PDF for their cover letter — this is not requested but signals design sensibility, initiative, and understanding of what the role actually is; extra effort in format is recognized and respected even if not required
+- **If you're hiring humans, humans should do the hiring**: algorithmic or AI pre-screening is understandable at massive hiring scale, but at small company scale it offloads a skill (evaluating people) that the founders and team need to develop themselves; hiring judgment compounds over years; outsourcing it to a system early stunts that growth
+- Founders should do all hiring personally as long as possible — Jason and David handled hiring themselves for years before delegating; the first-hand experience of reading hundreds of cover letters and resumes calibrates taste in ways no briefing can replicate
+
+→ Episodes: how-we-work-finding-the-right-team, hire-when-it-hurts, listener-questions-hr-edition, titles-tenure-dont-matter, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, hire-great-writers, in-the-market-for-a-marketer, listener-questions-part-2, the-case-for-cover-letters
 
 ## Hiring for Senior & Executive Roles
 
@@ -96,7 +107,11 @@ tags:
 - For customer support candidates, tone in the writing sample matters more than correctness — look for genuine voice even in a formal application context; stiffness that doesn't ease over time is a predictor of scripted responses
 - For executive candidates, ask them to respond to scenarios in writing rather than deck presentations; the quality and specificity of written communication is the signal that substitutes for a work sample
 
-→ Episodes: hire-great-writers, how-we-work-finding-the-right-team, listener-questions-hr-edition, dont-be-fake, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions
+- **The cover letter is the first answer in the interview**: it is not a formality before the real process begins — it is the process beginning; evaluating it rigorously from the first line sets the standard for what clear communication at the company looks like
+- A cover letter that could have been sent to any employer reveals that the applicant did not read the job posting carefully; the ability to respond specifically to what was actually written is the same skill required to understand a shaped pitch, a customer complaint, or a design critique
+- **Most applicants phone it in**: in a competitive market the gap between median effort and standout effort is small in absolute hours but enormous in impression; a cover letter that demonstrates genuine interest and clear thinking places the applicant in the top 5–10% without requiring exceptional experience
+
+→ Episodes: hire-great-writers, how-we-work-finding-the-right-team, listener-questions-hr-edition, dont-be-fake, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, the-case-for-cover-letters
 
 ## Interview Anti-Patterns to Avoid
 
