@@ -391,8 +391,29 @@ insights:
       description: 37 principles on product development, work culture, business philosophy, and decision-making from 37signals.com
     thoughts:
       description: Long-form essays on shipping, decisions, profit, communication, and influences from 37signals.com/thoughts
-    podcast:
-      description: "REWORK podcast: 185+ episodes on product development, shipping, hiring, communication, and culture"
+    podcasts:
+      rework:
+        description: "REWORK podcast: 185+ episodes on product development, shipping, hiring, communication, and culture"
+        product-development:
+          description: Shape Up methodology, shipping discipline, product philosophy, decisions, and scope management
+        work-culture:
+          description: Sustainable pace, remote work, meetings, interruptions, and company culture practices
+        hiring:
+          description: When to hire, who to hire, evaluation process, team structure, and onboarding
+        communication:
+          description: Async-first principles, cycle communication, customer outreach, and apologies
+        marketing:
+          description: Teaching as marketing, founder-led content, audience building, and free plan strategy
+        business-philosophy:
+          description: Profitable independence, anti-VC stance, ONCE pay-once model, and open source commitment
+        customer-support:
+          description: Support as a feature, everyone on front lines, community building, and customer segmentation
+        founder-leadership:
+          description: Stepping back, sabbaticals, co-founder partnerships, and lean org design
+        privacy-ethics:
+          description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
+        cloud-exit:
+          description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
     blog: # 37signals Dev Blog (https://dev.37signals.com)
       action-push-native:
         description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections

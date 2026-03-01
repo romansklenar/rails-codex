@@ -1,0 +1,61 @@
+---
+title: Business Philosophy
+description: "37signals' business principles: profitable independence, anti-VC stance, ONCE pay-once model, product longevity commitment, and open source as foundational obligation"
+source:
+  type: podcast
+  title: REWORK
+  author: 37signals
+  url: https://37signals.com/podcast
+tags:
+- business
+- profit
+- independence
+- open-source
+- once
+- bootstrapping
+---
+
+# Business Philosophy
+
+## Independence & Profit
+
+- Profit enables optionality, not just revenue — profitability means you can give a product away for free on a whim (Writebook), reverse a growth decision, or skip a lucrative opportunity you don't want; optionality is the meta-outcome above all other business metrics
+- Your real competition is your own cost structure, not other products — HEY with tens of thousands of paying customers is a success; the same number would be failure at Google; stop watching competitors, control what you can control
+- Taking outside money is Plan Z — specifically because it eliminates optionality; VC money locks you into a single lane: rapid growth toward IPO or acquisition; you internalize goals you didn't choose
+- Building to flip is building to flop — a flip mindset produces spec-house quality: looks good on a term sheet, built with shortcuts, delivered with a known expiration date; customers deserve software the founders intend to live in long-term
+- "Startup" is a costume that lets you suspend basic economics — a new business that doesn't have a path to profit is a financial instrument, not a business; just call it a business and act accordingly from day one
+- You need less than you think to start — 37signals launched Basecamp with no billing system (one-month free trial bought time to build one), no office (borrowed desk space), and a friend-of-Jason's-mom as accountant; the startup tax of fancy infrastructure is mostly invented
+- Growth should be questioned, not assumed — the right question is always "why grow?" not "how fast?"; size should serve the work, not ambition
+- Small businesses are the core customer and the kindred spirit — 37signals targets the Fortune 5 million, not the Fortune 500; no salespeople, no enterprise pricing, no long sales cycles, and that's deliberate
+- Continuous profit-taking off the table reduces eventual regret — taking distributions every year means the company can end and the founders don't start from zero; "no one ever went broke taking a profit"
+- Cost scrutiny is an aesthetic, not just accounting — AWS at 30% of HEY's $100 revenue per user was "disproportionate"; Datadog at $83K/year for partially optional analytics was "preposterous"; the smell test: would I spend my own money on this?
+
+→ Episodes: why-we-choose-profit, achieving-optionality, competition-is-your-costs, outside-money-is-plan-z, building-to-flip-is-building-to-flop, start-a-business-not-a-startup, you-need-less-than-you-think, why-grow, come-small-come-all
+
+## Product Strategy
+
+- ONCE is a direct response to subscription overload — customers pay perpetual monthly fees for software that is essentially identical month to month; ONCE restores the product model: pay once, get the source, install on your own server, own it indefinitely
+- Each ONCE product must be buildable by two people in a few months — the constraint forces radical scope discipline and proves that small teams can ship complete, commercial-quality software
+- Including source code with the product is a deliberate statement — buyers can inspect exactly what the software does, audit privacy behavior, and run it indefinitely even if 37signals disappeared; source-included software is analogous to watchmakers who publish their movements
+- SaaS and ONCE can coexist in the same product (Fizzy model) — the "O'Saasy" license: full open source rights except the right to run it as a competing SaaS; enables community collaboration while preserving a commercial SaaS tier
+- Maintain products until the end of the internet — including ones that make no money; Tada List, a free to-do app from 2005, received zero material updates since 2006 but 37signals migrated it through four hosting environments rather than shut it down; principles have to cost something to mean something
+- Never sell new customers into a product you're not actively developing — Backpack, Highrise, and Basecamp Classic are in "heritage mode": existing customers can stay forever, new signups not accepted
+- Product spinoffs work cleanest when the cut is clean — Know Your Company (now Canopy) was spun off with a one-page agreement: 50/50 split until $1M revenue, then 75/25 in the operator's favor; the simpler the deal, the more likely it gets honored
+- The Google Graveyard is a competitive advantage for 37signals — Google has killed 447+ products; every kill plants doubt about all Google products; "Can you trust us?" is answered by 20+ years of keeping every product running; brand longevity can't be engineered in, only accumulated
+- The right size for a product portfolio depends on how many products you can maintain at high quality — in 2014, four products with 16 people meant cutting to one; in 2021, two large products meant roughly doubling headcount; the calculus is capability, not ambition
+
+→ Episodes: 37signals-introduces-once, once-again, a-spin-off-story, the-google-graveyard, more-than-a-month-of-once, open-source-outside-the-box
+
+## Open Source & Technology
+
+- Open source is a moral and practical obligation, not a marketing strategy — 37signals was built entirely on open source (Linux, Ruby, PostgreSQL); giving back isn't charity, it's repaying the infrastructure that made it possible to start a software company without a database license fee
+- Ruby on Rails was open-sourced because the investment was already made — the marginal cost of releasing it was near zero; the benefit (external contributors, talent pipeline, community standing) was enormous; this is the core economic logic for all 37signals open source: we had to build it anyway
+- Publishing source code raises internal quality standards — knowing others will inspect the code changes how you write it: cleaner structure, fewer shortcuts, more intentional design decisions; open source is a forcing function for craftsmanship
+- Dropping TypeScript from Turbo 8 was a principled tool preference, not a political statement — the team wasn't enjoying writing TypeScript; a programmer removed it in 40 minutes; the internet storm was predictable but the decision stood anyway
+- DHH moved from Apple to Linux after 23 years because values alignment matters more than comfort — Apple blocked app distribution without permission, extracted 30% of revenue, and treated developers as adversaries; Framework laptops (user-repairable, modular hardware) align with the same principles
+- Omarchy is the Linux onboarding experience 37signals wanted — rather than asking developers to spend two months configuring Linux themselves, DHH packaged his own optimized Arch Linux setup and released it publicly
+- 37signals is intentionally multi-platform: Apple, Windows, and Linux — more than half of Basecamp users run Windows; a company building for customers should see what customers see
+- The open source commitment extends to commercial products — Fizzy (open source SaaS tool) and the ONCE line (source-included purchases) both reject the idea that competitive advantage requires keeping code secret; the competitive moat is craft and execution, not obscurity
+- Support everything you release, no strings attached — Turbo, Hotwire, Rails, Kamal: all MIT licensed, all maintained with company resources, all available without licensing fees or revenue cuts
+
+→ Episodes: open-source-outside-the-box, typescript-drama-and-open-source-opinions, for-the-love-of-linux, moving-to-omarchy, the-google-graveyard, open-source-and-power-with-matt-mullenweg
