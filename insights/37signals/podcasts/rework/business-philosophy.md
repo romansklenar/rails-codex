@@ -30,7 +30,14 @@ tags:
 - Continuous profit-taking off the table reduces eventual regret — taking distributions every year means the company can end and the founders don't start from zero; "no one ever went broke taking a profit"
 - Cost scrutiny is an aesthetic, not just accounting — AWS at 30% of HEY's $100 revenue per user was "disproportionate"; Datadog at $83K/year for partially optional analytics was "preposterous"; the smell test: would I spend my own money on this?
 
-→ Episodes: why-we-choose-profit, achieving-optionality, competition-is-your-costs, outside-money-is-plan-z, building-to-flip-is-building-to-flop, start-a-business-not-a-startup, you-need-less-than-you-think, why-grow, come-small-come-all
+- Success is surviving, not maximizing — Heath Ceramics' explicit goal is a 200-year lifespan; the measure of success is still being around through cycles, not hitting an ROI multiple or exit; "if you're surviving, and you're still doing well" is the bar
+- Optionality is highest before any funding decision — once liquidation preferences exist (e.g. $16.5M before founders see a dollar), the founder's motivation to continue collapses; the moment to protect optionality is before the first check, not after
+- Payroll changes the game irreversibly — the moment you have employees depending on a paycheck, the psychological stakes shift entirely; missing payroll, even once due to a clerical error, is one of the worst things a founder can experience; that weight is permanent
+- VC structural pressure is implicit, not explicit — investors rarely issue direct ultimatums; the pressure is built into the system: board seats, growth targets, liquidity timelines, and social exclusion from the ecosystem if you're not performing on the unicorn trajectory
+- The minority/no-control deal structure is the only acceptable form of outside investment — the Bezos/Basecamp deal's two defining terms were minority stake and no control to force any particular decision; both conditions must hold simultaneously or independence is compromised
+- Customers' anxiety about ownership changes is rational — users of bootstrapped software feel a personal connection to the founders' values; when ownership changes, that connection severs and trust erodes, which is why announcing VC raises triggers immediate public backlash from loyal users
+
+→ Episodes: why-we-choose-profit, achieving-optionality, competition-is-your-costs, outside-money-is-plan-z, building-to-flip-is-building-to-flop, start-a-business-not-a-startup, you-need-less-than-you-think, why-grow, come-small-come-all, success-is-surviving, the-road-out-of-startupland, venture-capital-and-control-with-david-teare
 
 ## Product Strategy
 
@@ -44,7 +51,12 @@ tags:
 - The Google Graveyard is a competitive advantage for 37signals — Google has killed 447+ products; every kill plants doubt about all Google products; "Can you trust us?" is answered by 20+ years of keeping every product running; brand longevity can't be engineered in, only accumulated
 - The right size for a product portfolio depends on how many products you can maintain at high quality — in 2014, four products with 16 people meant cutting to one; in 2021, two large products meant roughly doubling headcount; the calculus is capability, not ambition
 
-→ Episodes: 37signals-introduces-once, once-again, a-spin-off-story, the-google-graveyard, more-than-a-month-of-once, open-source-outside-the-box
+- Easy cancellation is a trust signal, not a revenue risk — companies that force phone calls, hold queues, or scripted retention loops to cancel a subscription are revealing that they don't believe their product is worth paying for; the businesses that allow one-click cancellation attract and retain customers who actually want to be there
+- Subscription hostage tactics are a dark pattern with a name — requiring customers to "discuss" cancellation, restricting online cancellation to specific jurisdictions, or only offering cancellation within a narrow call-center window are legally challengeable and ethically indefensible; California's 2017 legislation mandated online cancellation for any service that allows online signup
+- A product that can't retain customers on merit will eventually trap them or lose them — the retention game played through friction (dark patterns) is a losing long-term strategy; the alternative is making something worth $59/year that people renew without thinking about it
+- Self-competing products within your own portfolio are acceptable — when two products you own serve different use cases with different "grips," you don't need to fear internal competition; if the customer chooses your other product, you still win
+
+→ Episodes: 37signals-introduces-once, once-again, a-spin-off-story, the-google-graveyard, more-than-a-month-of-once, open-source-outside-the-box, subscription-hostages, fizzy-qs-and-as
 
 ## Open Source & Technology
 
@@ -58,4 +70,12 @@ tags:
 - The open source commitment extends to commercial products — Fizzy (open source SaaS tool) and the ONCE line (source-included purchases) both reject the idea that competitive advantage requires keeping code secret; the competitive moat is craft and execution, not obscurity
 - Support everything you release, no strings attached — Turbo, Hotwire, Rails, Kamal: all MIT licensed, all maintained with company resources, all available without licensing fees or revenue cuts
 
-→ Episodes: open-source-outside-the-box, typescript-drama-and-open-source-opinions, for-the-love-of-linux, moving-to-omarchy, the-google-graveyard, open-source-and-power-with-matt-mullenweg
+- Platform dependency is an existential risk — building your entire audience on Twitter, Substack, or any third-party platform means you can be deplatformed, algorithmically suppressed, or simply made irrelevant by the platform's business decisions; HEY World was built explicitly so authors own their subscriber email addresses, not a platform
+- Web 1.0 principles are a product philosophy, not just an aesthetic — no JavaScript, no tracking, no cookies, no infinite scroll, no algorithmic amplification; these constraints enforce privacy, speed, and independence by design rather than as add-on features
+- "Active safety" is better than moderating at scale — designing a product that doesn't amplify content is structurally safer than hiring 30,000 moderators to clean up what amplification creates; a typewriter company isn't responsible for what people type; a publisher of op-eds is; the product model determines the liability
+- Feature comparison charts are the worst way to select software — a feature checklist will always favor the product with more checkboxes, which is usually the most complex and least enjoyable to use; the only reliable selection method is a 10-minute test drive to feel whether the grip is right
+- Aesthetics are a legitimate first-order product criterion — in every other domain (cars, clothing, cutlery), people freely admit they chose something because of how it looks or feels; software should be no different; surrounding yourself with products that give you joy is a genuine quality-of-life variable, not a frivolous one
+- AI should not ship until accuracy exceeds end-user tolerance — a developer can productively use a tool that's right 80% of the time; an end-user will hate a tool that's wrong 1 in 5 times; shipping AI features before they clear the tolerance threshold is self-defeating and generates lasting brand damage
+- Employee ownership (ESOP) is a succession plan, not just a benefit — Heath Ceramics chose an ESOP specifically to solve the succession problem that almost killed the original company; the structure gives employees a retirement stake, preserves company direction, and prevents a sale-driven pivot away from founding values
+
+→ Episodes: open-source-outside-the-box, typescript-drama-and-open-source-opinions, for-the-love-of-linux, moving-to-omarchy, the-google-graveyard, open-source-and-power-with-matt-mullenweg, hey-world, fizzy-qs-and-as, success-is-surviving

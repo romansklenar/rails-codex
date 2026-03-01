@@ -51,7 +51,12 @@ tags:
 - These writeups let new employees read up on a year of company history at their own pace — far more useful than recordings of Zoom status calls
 - The Kickoff serves as a self-restraint mechanism for founders: ideas go on a "card table" and are only pulled out at the next cycle planning discussion, not acted on impulsively
 
-→ Episodes: kickoffs-and-heartbeats
+- Shape Up's six-week cadence runs for every team at 37signals (Support, Ops, Finance, People Ops, Marketing) — the shared clock frequency is as much a communication ritual as a scheduling one; everyone can follow any department's Kickoff/Heartbeat without needing constant updates
+- For high-interrupt teams (Ops, SIP), plan only ~50% capacity in the Kickoff and reserve the other half for reactive work; do not hold reactive teams to the same project-density as product teams
+- Shape Up acts as a founder-protection mechanism: ideas must sit until the next betting table instead of interrupting whoever's on a project; the cadence contains the impulse to tap someone on the shoulder with every new bright idea
+- Six weeks is not a magic number — the principle is a time-box with a visible end; adapt the length (8, 11, 12 weeks) to your context while keeping the boundary-creates-decision-pressure logic intact
+
+→ Episodes: kickoffs-and-heartbeats, managing-chaos-listener-qs
 
 ## Customer Communication
 
@@ -76,7 +81,17 @@ tags:
 - Founder-led marketing is a superpower unavailable to large companies: the person with the most skin in the game speaking directly to customers cannot be replicated by a marketing department
 - Avoid off-season burnout on social platforms — extended breaks are necessary to avoid the attention economy pulling you into performing a character rather than being authentic
 
-→ Episodes: press-releases-are-spam, talk-directly-to-your-customers
+- Small companies have a structural communication advantage unavailable to large ones: no legal or PR filter means ideas go straight from mind to published word; filtering through committees produces "perfectly round pebbles that don't mean anything"
+- Writing by committee is instantly detectable — read any corporate mission statement; the goal is to sound like a specific human being, not a legal minimum viable statement
+- Find your native medium before forcing yourself into writing: Gary Vaynerchuk built his brand on video because that was his native form; a bad writer who's a great speaker should podcast or shoot video, not grind out blog posts
+- Authentic publishing is a body-of-work endeavor, not a single-post endeavor — expect nothing to happen in the first 50 pieces; the hits emerge from volume and consistency, not from optimizing one post
+- Publishing vanity metrics (likes, views, follower counts) visible from day one make starting almost psychologically impossible; 37signals built HEY World without article-level read counts specifically to protect writers developing their voice
+- "Content marketing" as a frame is corrupting because it implies you're writing toward a result rather than writing what you actually believe — readers detect instrumentalism and discount it accordingly
+- Avoid over-reviewing your own work: publishing something without nine people giving feedback is the right default; over-reviewing creates the same filtered blandness as corporate PR review
+- Client service businesses can and should set communication norms from day one: if you respond at 11 PM, clients will keep sending at 11 PM; set expectations explicitly ("I'll reply tomorrow morning") and clients adapt to your rhythm, not the other way around
+- Never proactively over-promise availability to clients — announcing "my cell is always on" invites an abusive relationship that erodes all other boundaries, not just time ones
+
+→ Episodes: press-releases-are-spam, talk-directly-to-your-customers, sound-like-you, rework-mailbag-3
 
 ## Crisis Communication and Apologies
 
@@ -101,3 +116,40 @@ tags:
 - Long-form work (data reports, research writeups) deserves explicit acknowledgment mechanisms so authors know their work was read — silence after effort damages motivation
 
 → Episodes: dont-like-this, dont-like-this-update
+
+## Customer Support Voice
+
+- The goal of support writing is to sound like a specific individual, not like a company — at 37signals, every support rep sounds slightly different, and that's the point; genuine variety beats enforced brand uniformity
+- Ban "sorry for the inconvenience" and "apologies for the inconvenience" — phrases so overused they carry no meaning and signal a scripted response the customer is not actually being heard
+- Never write "actually" in a support reply: the word implies the customer missed something obvious and carries a subtle accusation of stupidity even when none is intended
+- Mirror the customer's emotional state: if they're terse and task-focused, match that; if they're distressed, bring warmth; being ebullient when someone is furious is "super annoying"
+- Err on the side of extra exclamation points over none — "thanks." with a period signals coldness and is reliably misread as hostile; a slightly chipper reply is a better trade-off than a curt one
+- In negative or escalating interactions, the support rep's humanity is the intervention: show explicitly that a real person read the message carefully; many customers have never experienced that and escalate precisely because they assume they're talking to a bot or script
+- When hiring for support, evaluate tone and voice over factual correctness in writing samples — the right answer delivered in stilted corporate language is a worse hire than the warm communicator who needs product training
+- Formal language in writing samples is expected during applications; look for genuine tone underneath the formality, especially whether the applicant is "looking for the person on the other end of the question"
+- Poetry and support writing share the same discipline: be concise while reaching something larger; clarity and engagement at the same time
+
+→ Episodes: dont-be-fake
+
+## Co-founder and Stakeholder Disagreements
+
+- Disagree and commit is an explicit named tactic at 37signals: after a debate, the less passionate party states "I don't agree, but I commit to whatever we decide" — naming the tactic made it easier to actually use it
+- Measure disagreements by who cares more, not by who argues better — when passion is lopsided, the more passionate person's preference gets the try; this resolves most ties without compromise-by-averaging
+- Avoid the words "always" and "never" in a disagreement — their appearance signals the conversation has shifted from merits to personal labeling, and you need to pull it back to the substance
+- Most decisions are reversible — treat them as experiments with a defined check-in period rather than permanent commitments that require winning the argument now
+- A healthy debate on the merits should end with both parties able to go for a drink afterward; if the personal relationship is strained, the argument went off the rails before the conclusion
+- With 10,000 debates behind you, the data says you're wrong a meaningful fraction of the time — calibrate confidence accordingly; humility about past wrongness makes committing to someone else's call psychologically easier
+- Don't ask investor or partner permission before announcing a decision — make the decision, then inform stakeholders the day it goes live; asking permission transfers veto power you don't need to give away
+
+→ Episodes: rework-mailbag-3, dont-be-fake
+
+## Job Ads and Hiring Communication
+
+- Job ads are the clearest signal of a company's actual culture — read them for what the company brags about (money raised, passion, after-hours activities) to identify calm vs. chaotic workplaces before applying
+- "Hard work" in a job posting is always a euphemism for overwork — no one uses the phrase to mean 40 hours a week; treat it as a warning marker
+- Write job ads that describe what the person would have done last week had they held the role — specificity draws people who care about the actual work, not the abstract title
+- Vague principles in job ads ("we value teamwork") are non-filters; a real principle must be something another company would disagree with, otherwise it does not discriminate between you and everyone else
+- The tone and voice of a job ad communicates culture as directly as its content — a candidate who wants a buttoned-up corporate environment will self-select out after reading a 37signals job ad; this is the desired outcome
+- Remote-first hiring is a communication force-multiplier: opening roles globally produces hundreds or thousands of applicants vs. a thin local pool, giving you enough signal to identify genuine principle-alignment
+
+→ Episodes: listener-questions-part-2, rework-mailbag-3

@@ -25,8 +25,12 @@ tags:
 - Distinguish between the pain threshold: a "5 out of 10" sustained over time now qualifies; it used to require an "8 or 9 out of 10" before acting — the threshold can be recalibrated as the company matures
 - Hiring two people at once is often better than one: they start with a built-in peer, and you get a comparison point for evaluating progress and cultural fit
 - Exception: accelerate the process (skip the open search) when someone highly trusted becomes available right when you were about to look anyway — treat it as a shortcut, not an impulse hire
+- Redundancy is a valid reason to hire a second person in a role — if one person is the sole owner of a critical function (QA, finance, ops), the company cannot absorb their sabbatical or extended absence without risk
+- "Hire when it hurts" applies to attrition too: when someone leaves, don't automatically refill the identical role — let it hurt a little, then decide if the scope should shift before re-hiring
+- Preemptive or defensive hiring (hiring to block a competitor from getting talent) is an insult to the person hired and generates bullshit jobs — people who feel they contribute nothing are measurably more miserable than people who are out of a job
+- Silicon Valley's binge-hire-then-mass-layoff cycles are a symptom of promise-driven roadmaps and too much capital, not a model to emulate
 
-→ Episodes: hire-when-it-hurts-rework, hire-when-it-hurts, strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once, titles-tenure-dont-matter
+→ Episodes: hire-when-it-hurts-rework, hire-when-it-hurts, strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once, titles-tenure-dont-matter, two-person-teams, listener-questions-part-2
 
 ## Who to Hire
 
@@ -38,8 +42,11 @@ tags:
 - Avoid candidates who need external validation to make decisions; they create friction in a structure where every team member makes hundreds of small product calls per cycle
 - Prior credentials (university, employer brand, years of experience) have near-zero predictive power for performance at 37signals — Google's own internal research showed the same conclusion
 - Titles and tenure don't matter; the work does — always
+- For non-technical roles, prefer candidates who are customers of the product: they bring direct experience of the actual pain, not a proxy understanding — the best marketing hire was someone who had used, left, and returned to Basecamp across different businesses
+- Entrepreneurs make excellent non-traditional hires for roles like marketing: their natural frugality with budgets, bias toward doing-over-planning, and comfort with ambiguity are more valuable than years of title-specific experience
+- When hiring for a role that doesn't exist yet, the shopping process itself is a discovery mechanism — you may find you wanted a different kind of person entirely once you see candidates side-by-side
 
-→ Episodes: hire-managers-of-one, titles-tenure-dont-matter, hire-great-writers, managing-vs-mentoring, listener-questions-hr-edition
+→ Episodes: hire-managers-of-one, titles-tenure-dont-matter, hire-great-writers, managing-vs-mentoring, listener-questions-hr-edition, in-the-market-for-a-marketer, meet-andy
 
 ## The Hiring Process
 
@@ -53,8 +60,25 @@ tags:
 - After delivering work, conversation about it is critical: ask what they'd change, what they're unhappy with, how they'd push it further — this reveals self-awareness, taste, and how they handle critique
 - Past-looking interview questions outperform forward-looking ones: "Tell me about a project that didn't work out" reveals attitude, ownership, and critical thinking better than "Where do you see yourself in five years?"
 - Compare candidates against each other rather than against an abstract ideal — human comparison is the tool you're best equipped for; trust the gut that emerges from seeing many candidates side-by-side
+- For marketing and other hard-to-evaluate roles, give finalists the same paid project (same brief, same budget) and compare their instincts: does the candidate ask to spend the whole budget or question whether they need it?
+- Paid work-sample projects reveal planning style: candidates who propose independently executable ideas score higher than those whose plans depend heavily on third-party coordination or external partnerships
+- Job ads themselves are a filter — write them in the company's actual voice, describe what the person would have done last week, and name specific work; generic bullet-point ads attract generic candidates
+- Remote-first hiring gives access to the entire world's talent pool; constraining to a 40-minute commute radius makes it nearly impossible to find someone who matches quirky principles
 
-→ Episodes: how-we-work-finding-the-right-team, hire-when-it-hurts, listener-questions-hr-edition, titles-tenure-dont-matter, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, hire-great-writers
+→ Episodes: how-we-work-finding-the-right-team, hire-when-it-hurts, listener-questions-hr-edition, titles-tenure-dont-matter, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, hire-great-writers, in-the-market-for-a-marketer, listener-questions-part-2
+
+## Hiring for Senior & Executive Roles
+
+- C-level hiring is the only category where 37signals uses a recruiter — the goal is to reach people who are not actively looking but would consider being recruited
+- The paid-work-sample test does not translate well to executive roles: you cannot evaluate an executive the way you evaluate a programmer or designer, which is why executive hiring so often goes wrong
+- For COO/executive candidates, writing replaces the deck: ask candidates to respond in writing to a set of scenarios — no PowerPoint, no Keynote, because that is not how 37signals works
+- Chemistry and gravitas are the decisive factors at this level, not credentials — a candidate can be overqualified on paper and still feel wrong in the room after three or four conversations
+- In-person meetings are essential for senior hires even at a distributed company: Zoom conversations reveal competence, in-person reveals fit
+- Resist the impulse to close on the first strong candidate — the person who stands out early often falls short once more candidates are seen; beware of hiring just to end the interview process
+- When adding a third person to a long-running two-person executive team, evaluate for complementary temperament (e.g., calming to the team's existing dynamic), not just complementary skills
+- Allow months for the process — four to five months is appropriate for a COO-level search; rushing produces regret
+
+→ Episodes: hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions
 
 ## Writing as a Hiring Signal
 
@@ -65,8 +89,10 @@ tags:
 - Code should be written such that a non-specialist designer can roughly follow the intent — heavy jargon is a negative signal, not a positive one
 - Writing quality is a company-wide expectation — customer support, marketing, operations — no role is exempt, because async collaboration is the default mode of work
 - Hiring great writers creates compounding benefits: written decisions, pitches, and project updates accumulate as searchable institutional memory; they scale linearly whereas meetings scale exponentially
+- For customer support candidates, tone in the writing sample matters more than correctness — look for genuine voice even in a formal application context; stiffness that doesn't ease over time is a predictor of scripted responses
+- For executive candidates, ask them to respond to scenarios in writing rather than deck presentations; the quality and specificity of written communication is the signal that substitutes for a work sample
 
-→ Episodes: hire-great-writers, how-we-work-finding-the-right-team, listener-questions-hr-edition
+→ Episodes: hire-great-writers, how-we-work-finding-the-right-team, listener-questions-hr-edition, dont-be-fake, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions
 
 ## Interview Anti-Patterns to Avoid
 
@@ -77,8 +103,33 @@ tags:
 - Forward-looking soft questions ("describe your greatest weakness") are answered formulaically by prepared candidates and stumbled on by unprepped-but-capable ones; ask about real past events instead
 - Portfolio review discriminates against engineers at companies with NDAs or moonlighting clauses — don't require it as the sole proof of ability
 - Trying to expose candidate weaknesses instead of discover strengths produces bad hiring decisions and damages the company's reputation as an employer
+- Evaluating marketing candidates by their resume metrics ("increased ROI 43%") is unreliable — results are rarely individually attributable and correlate poorly with ability to execute at a new company
+- Measuring marketing via a fixed budget exercise reveals mindset: professional marketers spend the budget because that is what is expected; entrepreneurs question whether the budget is even necessary
 
-→ Episodes: hiring-is-not-hazing, how-we-work-finding-the-right-team, titles-tenure-dont-matter
+→ Episodes: hiring-is-not-hazing, how-we-work-finding-the-right-team, titles-tenure-dont-matter, in-the-market-for-a-marketer
+
+## Finding a Good Employer (Candidate Perspective)
+
+- Job postings reveal company culture before you apply: look at what the company brags about — raising money, "passion," after-hours activities, and "hard work" are all red flags for overwork culture
+- "Hard work" in a job posting is a euphemism for long hours; no calm company uses it because 40 hours is already hard work
+- Company blogs, founder interviews, and how executives talk about pride tell you more about culture than the job description itself
+- Remote-first companies are visible by what they don't say: they don't list office perks, ping-pong tables, or catered lunches as draws
+- Fraudulent job postings targeting remote workers are common: if you are never asked to speak with a real person (phone or video), treat it as a scam; legitimate employers want to know you are a real person
+- Scam signals: a free email domain (e.g., gmail) used by the "company," requests for personal bank information before starting, payment upfront for "materials," and compensation that sounds impossibly fast
+- Report job fraud to the FTC and FBI via their public portals; companies whose names are used cannot legally stop impersonation but can confirm through official channels whether a role is real
+
+→ Episodes: rework-mailbag-3, job-scam
+
+## Job Scams & Fraud
+
+- Remote-hiring reputation makes companies like Basecamp targets for impersonation: scammers use old job postings to construct plausible-looking offers, spoof email addresses, and collect personal data or banking information
+- A convincing fraudulent offer will include: realistic company branding, a test-work assignment, a plausible reason to provide bank details for "payment," and social proof from other fake employees
+- The harm is compounded: victims do real work, hand over personal data, and are not paid — targeting job-seekers is "extra terrible" because of their financial vulnerability
+- Defence as a company: monitor your brand on job boards and social media; report impersonation to Gmail/Facebook's fraud teams and the FTC; alert candidates through official job channels when scams appear
+- Defence as a candidate: if a process is entirely via email with no live conversation, stop; if the onboarding asks for bank details before a signed contract, stop; if it sounds too good to be true, it is
+- Job boards and Craigslist carry disclaimers, but social media ads (Facebook) do not — scams increasingly run through paid social where there is no built-in warning
+
+→ Episodes: job-scam
 
 ## Performance Management & Reviews
 
@@ -89,8 +140,11 @@ tags:
 - Five levels: junior (L1), programmer (L2), senior (L3), lead (L4), principal (L5) — same structure on both programming and design tracks
 - Performance management relies on automated check-ins (Basecamp asks "What did you work on today?" and "What will you work on this week?") rather than standups or status meetings
 - "Hell yeah or no" applies to employment as much as to projects: continued employment should clear a high bar, not just "they're fine"
+- The worst performance reviews share a structural failure: success criteria are undefined or communicated only at review time, never during the work itself — employees who ask for feedback and receive only generalizations ("it wasn't what we wanted") are experiencing a management failure, not a performance failure
+- Employees bear some responsibility too: self-assessments matter; asking specific questions ("what's one thing I could do 10% better?") yields specific feedback, while vague asks ("how am I doing?") yield vague answers
+- Design feedback at 37signals is informal and opt-in: a designer pings the CEO or product strategist when they want a second opinion, not on a fixed schedule; this eliminates the anxiety of mandatory formal reviews and preserves the designer's ownership of the decision
 
-→ Episodes: listener-questions-hr-edition, how-we-work-finding-the-right-team, hire-managers-of-one, everybody-works
+→ Episodes: listener-questions-hr-edition, how-we-work-finding-the-right-team, hire-managers-of-one, everybody-works, the-worst-performance-review
 
 ## Team Structure & Management Philosophy
 
@@ -101,8 +155,51 @@ tags:
 - Lead programmers mentor as a part-time obligation — each lead has at most one or two reports, keeping managerial overhead to roughly 5 hours/week
 - The career ladder avoids the Peter Principle: individual contributors peak at senior (L3) if they want to stay heads-down; L4/L5 roles require broader organizational influence but are not pure management roles
 - All-hands meetings happen once per six-week cycle during cooldown; they are non-mandatory, about one hour, and structured around product updates, team spotlights, and peer appreciation — not status reporting
+- The best way to wreck a good team is to introduce a manager who has more hours than there is work to do; that person will invent work for others
+- The drop of product management needed by each two-person feature team is tiny — one product manager supporting six simultaneous feature teams is sufficient, not one per team
 
-→ Episodes: everybody-works, managing-vs-mentoring, listener-questions-hr-edition, hire-managers-of-one
+→ Episodes: everybody-works, managing-vs-mentoring, listener-questions-hr-edition, hire-managers-of-one, listener-questions-ama, two-person-teams
+
+## Two-Person Teams as the Hiring Unit
+
+- The atomic product team at 37signals is one programmer plus one designer — this is not a staffing shortcut but a deliberate structural choice backed by 20+ years of iteration
+- Two-person teams work because they eliminate translation layers: there is no PM relaying the designer's intent to the programmer or vice versa; both work in the same codebase simultaneously
+- Designers at 37signals write HTML, JavaScript, and some Ruby — the shared technical material is what makes two-person teams possible; a designer who can only work in Figma creates a translation problem
+- Five teams at once on a single product is too many — three is the sweet spot for Basecamp; beyond that, coordination overhead exceeds the output gain
+- When adding capacity, add parallel two-person teams, not more people to an existing team — two teams of two outperform one team of four
+- Two-person teams handle vacation and sickness through scope flexibility, not bench warmers: if a designer is out for a week, the programmer works ahead on things that don't require them; scope absorbs the gap
+- The "two-person team" label applies to feature work, not to entire products: multiple teams touch the same product; if one team is out, another can respond
+- For non-product functions (finance, QA, people ops), the principle is the same — roles that start as one-person positions should eventually grow to two for redundancy and the mental health of the sole owner
+- Sole-owner roles have an expiration date: someone who is the only person doing a type of work for more than a couple of years goes "a little stir crazy" — they need a peer who understands the work, not just a manager who oversees it
+
+→ Episodes: two-person-teams, two-person-teams-listener-questions, a-matter-of-ambition, listener-questions-hr-edition
+
+## Trust, Autonomy & New Employee Ramp
+
+- New hires start at roughly 50% on the "trust battery" — enough to get going, not enough to deploy to production alone on day one
+- Trust is individual: a manager's trust battery with one employee may be at 75% while with another it is at 35%, based on accumulated experience
+- New programmers have a mentor who reviews all their code before it ships — this is not distrust, it is protection: deploying something that takes the app down on your first week is a punishment, not an opportunity
+- Trust scales up naturally — as a new hire demonstrates judgment over multiple cycles, oversight recedes; the mentorship check-in frequency drops as the mentee's confidence and track record build
+- "Default to trust" is the winning bet over 20 years: two episodes that could be called "taking advantage" occurred in two decades; the cost of surveillance and verification would have far exceeded those losses
+- Unlimited vacation policies often fail not because people abuse them but because people take less vacation when there is no floor; a fixed minimum (37signals: three weeks mandatory) outperforms unlimited in practice
+- When policies are vague, "abuse" is often a failure of clarity: if someone takes eight weeks and you thought seven was the limit, the policy is wrong, not the person
+- New hires find the autonomy disorienting at first — being given a single-page brief with squiggly sketches and told to ship something great in six weeks is unusual; most workplaces have task lists, standups, and daily direction
+- The goal is for people to live up to high expectations, not down to low ones — even junior hires are delegated full projects, not task lists; the best junior hires reveal themselves immediately by rising to that challenge
+
+→ Episodes: two-person-teams-listener-questions, listener-questions-part-2, managing-vs-mentoring
+
+## Compensation & Equity
+
+- 37signals does not offer equity or stock options — no signing bonuses, no lottery tickets
+- Compensation philosophy: high base pay (benchmarked at top 10% of San Francisco rates) removes the speculative risk factor; workers know what they are getting
+- Profit sharing distributes 10% of profits annually, weighted by tenure (not by salary or role) — everyone who has been here N years receives the same share of the pool regardless of their job level
+- Tenure-based profit sharing is deliberate: it rewards staying, not just performing; someone who has survived the company's evaluation process for seven years is highly valuable regardless of title
+- The profit sharing cap is set at 10 years — long-tenured employees do not accumulate unlimited shares; the cap prevents the pool from concentrating among founders and very early hires
+- In a liquidity event (sale of the company), the same tenure-based unit model applies — no special founder or early-employee windfall at the expense of long-serving team members
+- Two employees left over 20 years specifically because they wanted equity upside instead of high base pay; that is the correct tradeoff for them — 37signals cannot offer unicorn prospects and does not try to
+- This model is congruent with company identity: a slow-growth, profitable, privately-held company is not a rocket ship; pretending to offer rocket-ship compensation would be dishonest
+
+→ Episodes: listener-questions
 
 ## Onboarding
 
@@ -113,5 +210,6 @@ tags:
 - A "Basecamp buddy" — someone outside the new hire's immediate team — is assigned from day one to answer questions about how other parts of the company work
 - Written materials (guides, glossaries, checklists) are stored permanently in Basecamp and remain available after training ends — the goal is gradual ramp with lasting reference material
 - Tribal knowledge is explicitly documented in team glossaries: team-specific terms, abbreviations, and norms are codified so new hires don't feel excluded by insider language
+- For product teams, new hires should expect that the first cycle will be disorienting — the single-page brief and high autonomy are by design, and the first cycle rarely produces a slam dunk; that is normal and expected
 
-→ Episodes: welcome-aboard, listener-questions-hr-edition, hire-when-it-hurts
+→ Episodes: welcome-aboard, listener-questions-hr-edition, hire-when-it-hurts, two-person-teams-listener-questions

@@ -29,6 +29,19 @@ tags:
 
 → Episodes: support-is-a-feature, tales-from-the-front-lines, customer-support
 
+## On-Call / Technical Support as a Career Path
+
+- Create an "on-call" queue for cases that require diving into the codebase — these are separate from standard questions and need back-end investigation
+- Let support reps who show curiosity about code self-select into on-call work; the career path grew organically at Basecamp before it was ever formalized
+- Use expressive, readable languages (e.g., Ruby) as an entry point for non-engineers — support reps with no CS background can learn to read code well enough to diagnose issues
+- Build a team wiki of code scripts for common on-call fixes; document every solved case with detailed notes as if the reader is brand-new, creating a breadcrumb trail for colleagues in other timezones
+- Teaching programming via "fix things, not build things" is more useful for support work than conventional "build a Twitter clone" curricula
+- Validate potential features through on-call work: solve a recurring customer problem with a manual script, prove demand, then pitch it as a full product feature
+- Readable code is a diversity and inclusion issue: when code reads like plain English, people from non-traditional programming backgrounds can contribute to technical support roles
+- Pair support reps learning on-call work with a programmer who holds "office hours" — not as dedicated on-call backup, but as an informal knowledge resource
+
+→ Episodes: support-console-ation
+
 ## Everyone on the Front Lines
 
 - Every employee — designers, programmers, executives, founders — rotates through customer support (called "EOS," Everyone On Support)
@@ -40,7 +53,15 @@ tags:
 - EOS creates a mirror effect: DHH reports becoming embarrassed about his own past behavior as an impatient customer after spending a day answering support tickets
 - Watching someone use your product in a demo or support session is more valuable than any usability report — you cringe at what you thought was obvious
 
-→ Episodes: put-everyone-on-the-front-lines, tales-from-the-front-lines, customer-support
+- EOS can fail if you set-and-forget it: the support team's obsession with inbox zero left non-support colleagues with nothing to do, generating frustration and resentment
+- Fix EOS by giving non-support participants freedom to do their own kind of work — a designer can do a "farm-to-table" product pitch based on customer conversations; a developer can fix the bug they spotted; they don't need to answer emails like a support pro
+- For the first two EOS shifts, focus on tool setup and tone — can the person get a customer logged in and write at a human level? After that, let them choose how to contribute
+- Track and share EOS outcomes in heartbeat posts: celebrate bugs squashed, pitches generated, and product improvements so the whole company sees the value
+- EOS is emergency preparedness training: during a major outage, non-support developers jumped into the support queue and replied to customers without being asked — that's only possible because they had EOS experience
+- Write a clear intro guide explaining *why* EOS exists, not just how to do the shifts — people need the "why" to feel that the time is worth it
+- The intangible result of EOS: it "infects the company like a merciless empathy virus," aligning everyone around company values of being human, empowered, and responsive
+
+→ Episodes: put-everyone-on-the-front-lines, tales-from-the-front-lines, customer-support, james-glazebrook-support-driven
 
 ## Handling Difficult Customers
 
@@ -53,7 +74,14 @@ tags:
 - A personal follow-up (small gift, handwritten thank-you card) after a recovery moment creates lifetime brand advocates
 - Phone or video calls, not just email, are a legitimate support channel — jump on a Zoom link when a customer needs real-time help
 
-→ Episodes: tales-from-the-front-lines, customer-support, put-everyone-on-the-front-lines
+- Tell an irate customer directly: "We're both human — let's treat each other with respect and I'll be your advocate through this" — naming the dynamic often resets it
+- Give grace and space to yourself as a support rep, not just to customers: back-to-back empathy-heavy interactions accumulate; step away, take breaks, ask a teammate to cover the next email if you're not in the right headspace
+- Record customer calls (with permission) so the product team can listen in without being on the call — a lightweight way to close the gap between support intelligence and product decisions
+- Support teams dealing with emotionally intense customer interactions (grief, crisis, stress) should cap back-to-back calls — switching from two-to-three calls with breaks rather than four-to-five in a row preserves the quality of presence each customer receives
+- Bring in outside experts (e.g., trauma stewardship specialists) when your support team regularly absorbs significant emotional load from customers — internal leadership alone can't provide all the coping frameworks needed
+- Do not incentivize support staff with sales commissions; separate education/service roles from sales roles entirely — the moment commission enters, the relationship dynamic shifts from advocate to salesperson
+
+→ Episodes: tales-from-the-front-lines, customer-support, put-everyone-on-the-front-lines, dose-of-empathy
 
 ## Talking Directly to Customers
 
@@ -96,3 +124,26 @@ tags:
 - Trying to keep every customer at every size is itself a choice — one that silently kills the product for the customers you actually want
 
 → Episodes: biggest-customer-conundrum, let-your-customers-outgrow-you
+
+## Delighting Customers with Surprise Gifts
+
+- Run a formal customer delight program: anyone at the company can nominate a customer (via a to-do with name, address, and the interaction context) and a dedicated person handles the research and sourcing
+- Research recipients through public social profiles (Twitter, Instagram, LinkedIn) before choosing a gift — 90% of the time you can find enough to send something genuinely personal (sports team tickets, a restaurant voucher, a pet-related item)
+- Surprise is the goal: send to a business address or home without alerting the recipient; only ask for an address when no other route exists
+- Avoid food gifts as a default — allergies and sensitivities are too unpredictable; flowers, candles (unscented/lightly scented), movie gift cards, spa finder cards, and company swag are safer fallbacks
+- For international recipients, source gifts locally using companies based in the recipient's country to avoid customs charges landing on the customer
+- Trigger moments for sending delight: a long-tenured customer venting about a missing feature, someone who posted something kind about your product on social media, a new user who helped surface a bug, or a personal email from a customer that caught a team member's attention
+- Comp a month of service as a delight option for long-term customers who are frustrated — a concrete, immediately useful gesture that costs the company little and signals you value the relationship
+- Use curated gift box companies (especially those that are women-owned, environmentally focused, or support local artisans) as a reliable fallback when you can't find enough personal information about the recipient
+
+→ Episodes: sending-a-little-delight
+
+## Support Team Autonomy and Research
+
+- Give support team members dedicated Research & Innovation Days — self-directed time away from the queue to pursue projects that interest them; this is what produced initiatives like peer benchmarking surveys and technical documentation guides
+- Support reps conducting peer-to-peer research with similar companies (same industry, remote teams) surfaces practices you'd never find by staying inside your own organization — treat it as casual benchmarking, not corporate audit
+- Use structured anonymous/non-anonymous surveys (not just open discussion threads) to capture feedback from remote team members who won't speak up in large async threads or feel their voice gets lost in the notification volume
+- Document knowledge in a searchable central place (wikis, project templates, Campfire searches) so support context doesn't live only in the heads of long-tenured employees — the moment a fact isn't written down, it becomes a risk when that person is unavailable
+- Build new hire onboarding around project templates with mini-guides for every tool, video walkthroughs, and culture docs — the "sink or swim" approach costs disproportionately more than the time it takes to document things once
+
+→ Episodes: temperature-check, support-console-ation, customer-support

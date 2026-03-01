@@ -38,14 +38,25 @@ tags:
 
 - The seven shipping principles: (1) only ship good work, (2) ship when confident (confidence is calibrated to criticality, not a fixed process), (3) own the issues after you ship — monitor the error tracker yourself, be first-line support for your own feature, (4) don't ship if it isn't right, (5) cut scope not quality, (6) ship to your appetite
 - "We only ship good work" is a higher bar than MVP — "minimally viable" is too low; you can't get useful feedback from a half-assed idea; what you ship can be smaller than you wanted, but what you do ship must be complete and good
+- A suspiciously high shipping rate (100%) is a sign your standards are too low; you should occasionally have a project that simply doesn't meet the bar — that's what "we only ship good work" really means at the 11th hour
+- "Better than nothing" is a dangerously low burden of proof; never let that be your internal argument for pushing deploy
 - Test confidence against criticality: billing code and data-mutation paths get more rigor (external QA firm, heavier review); low-criticality UI polish ships with near-zero ceremony; applying one universal QA process to everything is waste in both directions
-- **The developer who shipped it owns the aftermath**: if you throw work over the wall, you lose calibration on confidence, you don't learn from bugs, and on-call ends up holding someone else's context-free mess
+- **The developer who shipped it owns the aftermath**: if you throw work over the wall, you lose calibration on confidence, you don't learn from bugs, and on-call ends up holding someone else's context-free mess; the cool-down period exists specifically to allow the builder to monitor what they shipped
+- **Gold-plating is its own failure mode**: perfecting a specific solution to a flawed premise is worse than shipping a good solution to a great premise; a clever implementation of the wrong idea is still the wrong idea
+- If something is hard to implement, always ask "why is this hard?" before pushing through — hardness is usually a signal the concept needs cleaning up, not that you need more engineering effort; "make the change easy, then make the easy change"
 - Launch before you are comfortable: Basecamp launched without billing in 2004 (the constraint of needing to get paid in 30 days forced a working billing system in 30 days); HEY World launched in under two weeks intentionally; the content moderation concern they spent time worrying about never materialized
+- Billing is a legitimate thing to defer past launch: leaving it out focuses energy on the product, and the time-pressure of approaching trial expiry forces a simpler billing implementation anyway
 - Ask "if I only had two weeks to launch, what would I cut?" — that exercise clarifies what's actually essential; the answer is almost always more than you think
 - Distinguish **fidelity from quality**: quality (well-built implementation) is non-negotiable at any fidelity level; fidelity (how polished the user-facing thing is) is a dial you adjust to the importance of the interaction; there is real skill in knowing when "meh" is appropriate
 - After launching something genuinely novel, sit back for a few months before reacting to feedback; initial complaints often reflect habit ("where's the archive button?"), not actual design failures; confidence in deliberate decisions is required to ship real breakthroughs
+- Don't knee-jerk in the first weeks post-launch: fix broken things immediately, but don't make sweeping changes because early users are still adjusting to something new; give it time to see whether complaints are real design failures or habituation
 - When something isn't shipping right, question the premise rather than pushing harder: the keyboard-navigation feature in HEY that got dropped led to the "scroll through unreads" redesign — a better solution to the underlying problem (catching up on email quickly), not just a fix to the original implementation
 - Quick wins matter: shipping early and often builds the muscle; teams that practice being late get good at being late; teams that practice shipping get good at shipping
+- Track the minimum post-launch: total accounts, rough trend direction, and a handful of sanity-check numbers are enough; only instrument what you will actually act on; data analysis that doesn't change your decisions is vanity, not insight
+- Post-launch team size should shrink back to a small core (2–3 people) after the launch surge; running permanently at crunch staffing levels destroys the sustainability of the work
+- **Code quality is the prerequisite for speed**: a clean, readable codebase lets a single designer or programmer ship a full feature in a day; a ball of mud prevents it regardless of team size; the "judo move" — bending existing components in slightly new ways — only works when the underlying code is well-maintained
+- Aim for **durable software**: durable means easy to repair, not just hard to break; code that people are afraid to touch doesn't get improved and slowly rots; lower the cost of change so anyone can get in there and improve things
+- Invest in things that don't change: most web fundamentals (cookies, HTTP, relational data) look the same after 20 years; knowledge invested there compounds; new-technology investments carry high obsolescence risk and should be sized accordingly
 
 → Episodes: seven-shipping-principles, launch-now, quick-wins, readying-for-launch, refining-before-release, launch-day, move-fast-when-you-can, you-launched-now-what
 
@@ -64,9 +75,14 @@ tags:
 - **Ignore the details early on**: get the fundamentals working first; pixel-perfect design before the concept is proved is wasted work; start with affordances (a toggle, a button, a label) so both designer and programmer can begin simultaneously
 - Don't build for imaginary customers: the Highrise Deals feature (built for a sales process 37signals doesn't run) was mediocre; the Highrise core (notes on people — a problem Jason and David actually had) was excellent
 - **What are you replacing?**: understand what the customer sacrifices to adopt your product; HEY launched without signatures and vacation responders because the novel features (Screener, Imbox) were worth giving those up — the same framing applies when deciding what not to build in v1
-- **Making things that multiply**: look for concepts or patterns in one product that can propagate across others; the most leveraged product decisions are the ones that compound
+- **Making things that multiply**: look for concepts or patterns in one product that can propagate across others; the most leveraged product decisions are the ones that compound; UI patterns (stacks, unified menus, keyboard navigation) discovered in one product become candidates for the whole portfolio — but let them breathe for months before deciding what's actually worth porting
+- New products are **design and technology labs**: a green-field codebase lets you experiment with ideas that would be too expensive or risky to try in an established product; many Rails framework advances came directly from 37signals product launches; this alone justifies building new products even if they never reach Basecamp-scale
+- **Revisit the back catalog with benchmarks, not nostalgia**: going back to an earlier product version to find an idea that aged well is legitimate — but evaluate it against a concrete benchmark ("can you immediately orient to what's fresh in this project?"), not a vague feeling of "that was better"; nostalgia is seasoning, not the meal
+- Don't formalize style guides across products — keep each product's aesthetic fluid; the living products are the style guide; this fluidity makes it easy to pull a good idea from one product into another without bureaucratic friction
+- **Software should be fun**: Easter eggs, hidden keyboard commands, and small moments of levity are worth building; they signal that real humans made the product; they generate organic word-of-mouth that no marketing budget can buy; hiding them behind a key combo means only willing participants encounter them
+- **Organizational health test**: can your team ship something genuinely small (an hour of work) in a single day without it touching a QA queue, a roadmap, or a sign-off process? If not, your processes have become too rigid for low-risk work; probe this regularly — the ability to do small things fast is what allows levity, Easter eggs, and rapid market responses
 
-→ Episodes: v1-is-for-us, start-at-the-epicenter, eat-your-own-dogfood, underdo-the-competition, be-a-curator, ignore-the-details-early-on, build-half-a-product-not-a-half-assed-project, good-enough-is-fine, scratch-your-own-itch, what-are-you-replacing, making-things-that-multiply, a-product-pivot
+→ Episodes: v1-is-for-us, start-at-the-epicenter, eat-your-own-dogfood, underdo-the-competition, be-a-curator, ignore-the-details-early-on, build-half-a-product-not-a-half-assed-project, good-enough-is-fine, scratch-your-own-itch, what-are-you-replacing, making-things-that-multiply, a-product-pivot, the-f-k-no-feature
 
 ---
 
@@ -102,4 +118,40 @@ tags:
 - **Less is more in scope decisions**: building something that does 80% of what was imagined in two weeks is often more valuable than building 100% in twelve; you can always add the last 20% later; you usually discover you don't need it
 - Reduce organizational drag: keep product teams at two people (one designer, one programmer); avoid meetings that require everyone to synchronize; the distance between "I have a good idea" and "I fixed it" should be very short
 
-→ Episodes: narrow-as-you-go, embrace-constraints, less-mass, throw-less-at-the-problem, inspiration-is-perishable, writing-a-pitch, shape-up
+→ Episodes: narrow-as-you-go, embrace-constraints, less-mass, throw-less-at-the-problem, inspiration-is-perishable, writing-a-pitch, shape-up, rescuing-a-project-in-progress, a-matter-of-ambition
+
+---
+
+## Bugs & Quality
+
+- Bugs are inevitable in any software of real complexity; every piece of serious software ever written has had them; accepting this is not lowering your standards — it is the prerequisite for a mature, sustainable engineering culture
+- Not all bugs are equal: separate them into tiers — **Code Red** (data loss, access blocked, financial impact: drop everything), **Code Yellow** (degraded but not catastrophic: fix within the week), and everything else (schedule like any other work); calling everything a "bug" collapses the distinction between "line breaks wrong" and "customer lost emails"
+- A healthy bug backlog will contain items that are legitimately never fixed; a "forget drawer" for low-criticality, low-frequency bugs is not negligence — it is prioritization; some bugs survive as long as the software itself
+- Bug-free software that nobody wants is "perfectly bad software" — it is not good software; low-quality software that people find valuable can be fixed; an unwanted-but-polished product cannot be rescued by fixing bugs
+- **The Andon cord principle**: anyone on the team should be able to call a code and stop the line when they notice something materially wrong; the instinct to wait — because software can be fixed later — is what causes bugs to quietly accumulate; make it culturally safe to pull the cord
+- Founders doing early customer support are prone to passing customer frustration directly into the engineering queue without filtering; a professional support layer acts as a triage buffer, preventing intensity-of-complaint from driving prioritization instead of actual impact
+- Managing bug load: on-call rotation (two programmers, one week at a time) handles minor issues and escalations; team that built a feature cleans up the first week post-launch; spring cleaning cycles and end-of-year cool-down months address the accumulated backlog
+- UX flaws (confusing flows, bad copy, too many steps) matter more than many technical bugs and should be classified in the same triage system; something that "works" but works poorly is a more important fix than an obscure edge-case crash
+- Your **company is a product with bugs too**: if customers feel they can never reach you, that inaccessibility is a company-level bug that outweighs many software bugs; fix the company as rigorously as you fix the code
+- Build with good habits — automated testing, aesthetic care, simplicity — and quality follows; beautiful, simple code surfaces bugs faster than convoluted code; the habits precede the outcomes
+
+→ Episodes: software-has-bugs
+
+---
+
+## Project Rescue & Ambition
+
+- **Finish one thing completely before starting the next**: the most common cause of projects spiraling out of control is layering new work onto unfinished work; every open thread costs attention and momentum; stop adding, pick the most important open item, finish it 100%, then move on
+- The last 10% of any project is often half the work; never let the apparent nearness of completion justify opening new fronts; punch lists in construction and software both grow if you keep adding scope while 90% things sit incomplete
+- **Long timelines make problems worse, not better**: the "luxury of time" is actually a curse — more time means more opportunity to defer hard decisions; the easiest moment to stay on track was the beginning; it only gets harder from there; "we'll deal with it later" is the most comfortable sentence and the most damaging habit
+- Precise estimates on multi-month projects are a form of self-deception; even 37signals with 20 years of experience regularly overshoots six-week estimates by a week or two; the longer the timeline, the less precise any estimate can honestly be
+- Large projects fail because they commit to a specific scope far in advance; the only way to hit a long deadline reliably is to treat it as a budget: "we will ship whatever is finished by that date," not "we will finish everything we specified"
+- **Daily standups are the wrong cadence for spotting real problems**: you cannot see that something is genuinely off-track in 24 hours; over-checking creates false confidence and interrupts the builders; async hill charts and weekly check-ins give the signal without the noise
+- Constant micro-management is the equivalent of sawing at the steering wheel through a turn — you go slower and lose control; let the team drive, check in at a reasonable distance, and inject urgency deliberately when warranted
+- **Ambition is "how much can you do with little"** — not "how much can you accumulate"; the right kind of ambition is about efficiency, leverage, and density: same impact, fewer people, fewer features, less complexity; the consolidation season of technology (after years of expansion) rewards this approach
+- The ideal new-product team is three people (two programmers + one designer) — enough to cover all dimensions of the work with essentially zero coordination overhead; Shape Up adds overhead that isn't needed at that scale, so drop the process and just build
+- Fix time and resources; leave scope open for renegotiation throughout the build; the pressure of fixed constraints produces better trade-offs and a more focused product than any upfront spec
+- **The benchmark competitor is email and WhatsApp** — not other SaaS tools; that's what most people actually default to; building something that beats email for three-person collaboration over two weeks is the bar; complexity beyond that needs to earn its place
+- Calm company is the platform for ambitious sprints, not the destination; running at a sustainable baseline is what lets you choose to go somewhere far and uncertain when it matters; if you're always at the red line, you have no reserve for the adventure
+
+→ Episodes: rescuing-a-project-in-progress, a-matter-of-ambition, your-estimates-suck

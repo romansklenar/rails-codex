@@ -54,6 +54,9 @@ tags:
 - Without outside money, any individual mistake is bounded: "I can't think of a decision that, if Jason is really wrong, we're done" — low criticality enables trust over time
 - After 23 years: the moving average is so long that no single disagreement can dent it; the default is now "let's see where it goes" rather than "I must win this"
 - The operating agreement has been nearly unchanged for 20 years — a mark of alignment, not complacency
+- Genuine admiration is load-bearing: if you privately believe you're pulling all the weight, that attitude will corrode any partnership regardless of complementary skills
+- Accept that you can't fully explain why a long partnership works — post-hoc rationalizations ("great value overlap", "distinct domains") are useful frameworks but don't capture causation; humility about this is itself stabilizing
+- Concrete example of trust overriding conviction: DHH was certain HEY should launch for businesses first; Jason pushed individuals first; DHH deferred; result was 30,000 signups vs. "crickets" for the business version — a visceral reminder to trust your partner's gut even when you disagree
 
 → Episodes: working-with-a-business-partner, maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, building-with-llms-listener-qs
 
@@ -107,6 +110,12 @@ tags:
 - Retrospectives on software projects are mostly useless — the lessons from going through the work are already internalized; the gut has been trained; articulating them in a two-hour meeting adds almost nothing
 - Retrospectives work for repeatable, measurable processes (database migrations, outage reviews) not for creative product work where every output is different
 - Campfire launched in 2005 and didn't take off; Slack launched the same product 10 years later and dominated — "learning" that chat-first didn't work would have been the wrong lesson
+- The real learning happens during the work, not in the debrief: those weeks or months are the training data; your intuition is already updated before you sit down to discuss it
+- Analogy to AI model weights: a good product person can't fully articulate why a decision is right any more than a language model can explain its next token — the wisdom is in the weights, not in a list of conclusions
+- You can't achieve second-order learning from retrospective notes either — reading someone else's compiled lessons from a project you didn't work on transfers essentially nothing
+- The right error rate: if you're not wrong, badly, at least 10% of the time, you're not deciding fast enough; the majority of decisions are reversible, so speed and willingness to be wrong are features, not recklessness
+- Data analysts at 37signals produced months of rigorous analysis that concluded "people convert when they get others to use it with them" — obvious, and barely actionable; the full-time analyst role generates full-time analysis work that rarely improves decisions
+- Every decision is ultimately a judgment call; even ostensibly "data-driven" companies hire executives for experience (accumulated human intuition), not for spreadsheet fluency — just admit it
 
 → Episodes: learning-from-mistakes-is-overrated, look-back-less
 
@@ -119,8 +128,16 @@ tags:
 - Write job postings with 5–8 concrete projects the person could have worked on in the past month; if you can't write that list, you're not ready to hire
 - Speculative hires (COO, data scientist, in-house lawyer) created work that pulled the whole company in; removing those roles made everyone more capable
 - Start as small as you can for as long as you can; new companies' biggest advantage is having no legacy and no baggage — squandering that by mimicking larger companies' structures is a mistake
+- Two-person teams work because there is no translation layer — not just no human middleman, but no technical handoff layer either; designers work directly in the same HTML/CSS/Ruby codebase as programmers
+- Management at 37signals is by process, not by person: automated weekly check-ins ("what are you working on this week?", "what did you work on today?") replace daily standups and manager nagging; the six-week cycle clock is the oversight mechanism
+- Product management dosing: one PM for six active teams across two major products is sufficient — "it's like food coloring, one drop turns the whole glass red; you don't need a gallon"
+- Two-week scrum sprints produce nothing shippable — they're artificial bites of a real thing that accumulate as half-done work behind feature flags; 37signals' six-week cycle ends with something live and complete, then moves on
+- Promise-driven growth is the root cause of bloated teams: far-future roadmap commitments force premature hiring, which requires more promises, which requires more hiring — break the loop by committing to nothing beyond the current cycle
+- Single-person roles have a morale expiration date of roughly two years; people need someone who understands the actual work, not just a manager — this is a legitimate hiring trigger independent of workload
+- Redundancy becomes a valid hiring reason once the business is solidly established: the "bus factor" of one person in a critical function (finance, QA) is prudent to resolve at maturity, but this logic does not apply early
+- Invest in long-term employees as the internal version of "focus on what won't change" — customer support staff with 10+ years of tenure can make wide decisions on the spot; high turnover in support is a direct product of treating it as a cost center
 
-→ Episodes: roles-at-the-company-staying-involved-as-a-founder-other-listener-questions, maintaining-a-business-partnership-simple-product-design-and-other-listener-questions
+→ Episodes: roles-at-the-company-staying-involved-as-a-founder-other-listener-questions, maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, two-person-teams, focus-on-what-wont-change
 
 ## AI & the Evolving Founder Toolkit
 
@@ -132,3 +149,28 @@ tags:
 - Non-programmers get proportionally more out of AI than expert programmers do — the programmer knows they could do it; the non-programmer gets access to something that didn't exist for them before
 
 → Episodes: ai-revisited, building-with-llms-listener-qs
+
+## Naming Products
+
+- A name is fuel: Jason does not start building until a name feels right — "if I can't find a name for something early, it's a sign something's missing"; the name is what you grab onto and pull yourself forward with
+- Names follow the product's evolution: Fizzy started as Splat (bug tracker with windshield imagery), changed to Fizzy when the shapes became bubbles, briefly became Boxcar when the UI became cards — the name should track the actual product, not the original concept
+- Conceptual tightness loses to phonetics: Boxcar had a richer conceptual story; Fizzy won because it's more pleasant to say and better fits the product's personality — prefer a name that sounds good over one that requires explanation
+- Basecamp is the ideal: name, iconography, and concept all converge perfectly; you won't always be that lucky — don't hold out for perfection
+- The banner matters for internal morale, not just marketing: "if your banner looks shit, who's going to want to charge up the hill for that?" — team enthusiasm for a name is a real signal
+- The clean .com domain is overrated: basecamphq.com, backpackit.com, campfirenow.com were the original domains for years; the name came first; the domain was acquired later when the business could afford it
+- Names acquire meaning through success, not the reverse: Instagram, Slack, WhatsApp, Yahoo — none would survive an internal rename proposal 10 years in; early-stage names are a product of the moment and don't need to be defensible by committee logic
+- For open source, DHH favors invented words with a preferred pronunciation even if the letters don't warrant it: Omarchy (not "Omaki"), Kamal — the creator gets to decide how it sounds
+
+→ Episodes: give-it-a-name
+
+## Beginner's Mind & Protecting Ignorance
+
+- The greatest gift of being new is having no legacy and no baggage; most startups squander it immediately by inheriting other companies' complexity, processes, and structures
+- Working on an existing product is cognitively tainted — you cannot clear prior design history from your head no matter how hard you try; every revision is colored by what existed before; new founders have a precious window of uncontaminated thinking they should protect as long as possible
+- Embrace ignorance as a creative asset: DHH and Jason benefited enormously from not having 50 startup podcasts pre-programming their assumptions in 2001; that contamination is now near-unavoidable and requires deliberate effort to resist
+- "What would I tell my 21-year-old self?" — keep your mouth shut; revealing the outcome spoils the journey; the novelty of discovering things for the first time is irreplaceable
+- The overabundance of other people's opinions (Twitter, podcasts, reviews, box office results) is a destruction of self — you get pre-programmed before you form your own view; the deliberate cultivation of "not knowing what everyone else thinks" is a competitive advantage for founders
+- If building from scratch today: keep it as simple and as small as possible for as long as possible; resist adopting best practices from elsewhere that lock you into a path before you've found your own way
+- The company structure follows the same logic: an LLC that worked at 4 people still works at 60 people 25 years in; complexity is always a choice, not an inevitability — don't add it until you genuinely need it, because you can't easily remove it once it's there
+
+→ Episodes: maintaining-a-business-partnership-simple-product-design-and-other-listener-questions
