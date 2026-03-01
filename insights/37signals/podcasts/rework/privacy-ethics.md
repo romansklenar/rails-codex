@@ -23,7 +23,7 @@ tags:
 - Plain-English test for any tracker: "Can I explain in two sentences what this collects, for whom, and would the recipient consent?" — most trackers fail this test
 - Removing pixels from 5 million daily emails is not symbolic; it shifts what the industry treats as normal — individual company decisions compound into cultural standards
 
-→ Episodes: the-spy-who-emailed-me, heal-the-internet, 100-facebook-free
+→ Episodes: spy-who-emailed-me, heal-the-internet, 100-facebook-free
 
 ## Anti-Surveillance Stance
 
@@ -34,7 +34,7 @@ tags:
 - The "tattleware" category (software designed to catch employees "slacking") is philosophically incompatible with remote-first trust-based management
 - 37signals' own management philosophy is the opposite: no time-tracking, no keystroke logging, no activity monitoring; output and communication quality are the metrics
 
-→ Episodes: big-brother-at-the-office, the-spy-who-emailed-me
+→ Episodes: big-brother-at-the-office, spy-who-emailed-me
 
 ## Employee Monitoring Tools
 

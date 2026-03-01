@@ -25,8 +25,9 @@ tags:
 - Your tagline should be written by a disinterested customer, not your marketing team — asking customers what a product does strips away the self-congratulatory framing and reveals the plain transactional truth ("Basecamp covers your ass"); that truth is more memorable and useful than anything crafted internally
 - Actions reveal values; statements don't — whether a rental car company cares about customers is visible in whether someone is at the counter, whether the car is clean, and whether the hold music lies about your call's importance; no amount of mission statement language changes any of those signals
 - The "serial entrepreneur" framing treats companies as temporary — the assumption embedded in "what's next?" is that the current business is a stepping stone; founders who define themselves by this identity build with shortcuts, transfer problems to the next owner, and leave the world slightly worse; the alternative identity is simply: I own a business, I make things, that's it
+- **Saying no is a values test, not just a product decision**: the things you say no to define what you stand for more clearly than the things you say yes to; a business that says yes to every customer request, every pricing tier, and every product direction has no character; refusal is where identity becomes visible
 
-→ Episodes: mission-statement-impossible, enough-with-entrepreneurs, draw-a-line-in-the-sand, take-a-stand
+→ Episodes: mission-statement-impossible, enough-with-entrepreneurs, draw-a-line-in-the-sand, take-a-stand, say-no-by-default
 
 ## Independence & Profit
 
