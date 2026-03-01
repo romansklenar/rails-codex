@@ -14,14 +14,6 @@ Episodes not included in the thematic insight files, with the reason why. Do not
 
 ---
 
-## No transcript available on episode page
-
-The episode page was fetched but 37signals has not published a transcript for it.
-
-- **dont-be-a-hero** — page exists, no transcript section
-
----
-
 ## Replays & duplicate slugs
 
 Exact replays of episodes already cited, or malformed slugs pointing to the same content.
@@ -130,9 +122,3 @@ Transcripts with real content that was assessed by agents and found to duplicate
 - **this-time-its-personal** — DHH discussing his personal situation during the political controversy period; situational, not tactical
 - **truss-the-process** — salary transparency experiment at an external company (Wildbit); the 37signals-specific compensation model is already in `hiring.md`
 - **work-out-from-home** — COVID small business pivots; no new remote-work tactics for existing sections
-
----
-
-## Citation note
-
-`spy-who-emailed-me` was originally cited as `the-spy-who-emailed-me` (wrong slug) in `privacy-ethics.md`. This has been corrected. The episode is fully covered.
