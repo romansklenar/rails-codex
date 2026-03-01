@@ -34,7 +34,7 @@ tags:
 - DHH's framing: cloud costs that feel disproportionate are literally disgusting — "a sausage that fell on the ground and has hair on it"; disgust as a useful motivational heuristic for cost audits
 - Cloud exit was partly aesthetic, not just financial: waste in vendor-locked spend offended a sensibility for clean, well-run systems independent of investor pressure
 
-→ Episodes: leaving-the-cloud, leaving-the-cloud-part-2, leaving-the-cloud-the-finale, spending-in-the-clouds, its-time-to-care-about-costs
+→ Episodes: [Leaving the cloud](https://37signals.com/podcast/leaving-the-cloud/), [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [Spending in the clouds](https://37signals.com/podcast/spending-in-the-clouds/), [It's time to care about costs](https://37signals.com/podcast/its-time-to-care-about-costs/)
 
 ## Hardware Economics
 
@@ -49,7 +49,7 @@ tags:
 - Data center co-location in Ashburn, VA is physically ~0.5 miles from AWS US-East-1 — direct fiber connection with sub-millisecond latency enabled hybrid/bridged migration approach
 - Framework laptop (repairable, upgradeable down to CPU and motherboard) as hardware philosophy applied to developer workstations: own hardware you can service rather than soldered-down rentals that require vendor permission to fix
 
-→ Episodes: leaving-the-cloud, leaving-the-cloud-part-2, leaving-the-cloud-the-finale, for-the-love-of-linux
+→ Episodes: [Leaving the cloud](https://37signals.com/podcast/leaving-the-cloud/), [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [For the love of Linux](https://37signals.com/podcast/for-the-love-of-linux/)
 
 ## Cloud Cost Optimization (Before Exit)
 
@@ -64,7 +64,7 @@ tags:
 - Total ops cost for cloud was still ~5x the equivalent on-prem bill for the same workloads
 - DHH reviews the monthly books with the CFO line-by-line; multiplies monthly SaaS costs by 12 to see annual impact, then by 3 for 3-year TCO — the multiplication exercise converts small numbers into meaningful sums
 
-→ Episodes: spending-in-the-clouds, leaving-the-cloud, leaving-the-cloud-part-2, its-time-to-care-about-costs
+→ Episodes: [Spending in the clouds](https://37signals.com/podcast/spending-in-the-clouds/), [Leaving the cloud](https://37signals.com/podcast/leaving-the-cloud/), [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [It's time to care about costs](https://37signals.com/podcast/its-time-to-care-about-costs/)
 
 ## Migration Process
 
@@ -82,7 +82,7 @@ tags:
 - Migration of 7 major applications (6 heritage + HEY) completed in 6 months vs. the multi-year expectation; cloud → on-prem took 2–3x less time than on-prem → cloud had taken
 - Basecamp 4 migration to Kamal was still in progress post-cloud-exit (the largest app, expected to take 2–3 ops cycles); split into two workstreams: app preparation + infrastructure provisioning
 
-→ Episodes: leaving-the-cloud-part-2, leaving-the-cloud-the-finale, listener-questions-ops-edition
+→ Episodes: [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [Listener questions: Ops edition](https://37signals.com/podcast/listener-questions-ops-edition/)
 
 ## Tooling Built
 
@@ -94,7 +94,7 @@ tags:
 - Deft (data center partner, 14+ year relationship): handles all physical operations — unpacking, racking, cabling; 37signals never physically visits the data centers
 - **BGP Anycast**: network routing technology routing user traffic to the nearest data center; in use for Basecamp for 10+ years; being extended to HEY and the Amsterdam outpost
 
-→ Episodes: leaving-the-cloud-part-2, leaving-the-cloud-the-finale, listener-questions-ops-edition
+→ Episodes: [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [Listener questions: Ops edition](https://37signals.com/podcast/listener-questions-ops-edition/)
 
 ## Network Architecture & Resilience
 
@@ -106,7 +106,7 @@ tags:
 - DDoS incident handled in 2024; resulted in delayed Amsterdam launch but led to improved defenses
 - Ops team size at post-cloud-exit: 11 people (including director) across three regional teams — still considered lean relative to the infrastructure and customer base managed
 
-→ Episodes: listener-questions-ops-edition, leaving-the-cloud-part-2
+→ Episodes: [Listener questions: Ops edition](https://37signals.com/podcast/listener-questions-ops-edition/), [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/)
 
 ## Outcomes & Lessons
 
@@ -124,7 +124,7 @@ tags:
 - Alternative on-ramp for others: lease dedicated servers from Hetzner (Germany), Digital Ocean, or OVH before committing to hardware purchase; co-locate a few owned boxes next to leased capacity
 - Post-cloud ops team runs in six-week cycles like the rest of the company; projects that span multiple cycles are declared upfront rather than forced into artificial scope — e.g. Basecamp 4 → Kamal expected to take 2–3 cycles
 
-→ Episodes: leaving-the-cloud, leaving-the-cloud-part-2, leaving-the-cloud-the-finale, spending-in-the-clouds, listener-questions-ops-edition
+→ Episodes: [Leaving the cloud](https://37signals.com/podcast/leaving-the-cloud/), [Leaving the cloud Part 2](https://37signals.com/podcast/leaving-the-cloud-part-2/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [Spending in the clouds](https://37signals.com/podcast/spending-in-the-clouds/), [Listener questions: Ops edition](https://37signals.com/podcast/listener-questions-ops-edition/)
 
 ## Incident Response & Ops Culture
 
@@ -141,7 +141,7 @@ tags:
 - Ops team deliberately avoids hero culture during incidents: breaks are mandated, sustainable pace enforced even during 3-hour wait windows; overtime is the exception for genuine crises, not the norm
 - Kamal migration and other multi-cycle projects are worked on continuously; on-call engineer pauses project work for their rotation week so the rest of the team can keep project focus
 
-→ Episodes: big-integer, somethings-broken, did-you-order-the-code-red, leaving-the-cloud-the-finale, listener-questions-ops-edition
+→ Episodes: [Big integer](https://37signals.com/podcast/big-integer/), [Something's broken](https://37signals.com/podcast/somethings-broken/), [Did you order the code red?](https://37signals.com/podcast/did-you-order-the-code-red/), [Leaving the cloud: The finale](https://37signals.com/podcast/leaving-the-cloud-the-finale/), [Listener questions: Ops edition](https://37signals.com/podcast/listener-questions-ops-edition/)
 
 ## Linux & Hardware Choices
 
@@ -157,7 +157,7 @@ tags:
 - **Omarchy** (Arch-based): the evolved version; 37signals moving all developer workstations to it; more advanced than Omakub, targeted at developers comfortable with Arch
 - Machine management tooling: Kandji (previously used for Macs) replaced with cross-platform alternatives for Windows and Linux; Docker + containers standardize the development environment across all three platforms
 
-→ Episodes: for-the-love-of-linux, moving-to-omarchy, this-again-apple
+→ Episodes: [For the love of Linux](https://37signals.com/podcast/for-the-love-of-linux/), [Moving to Omarchy](https://37signals.com/podcast/moving-to-omarchy/), [This again, Apple?](https://37signals.com/podcast/this-again-apple/)
 
 ## Vendor Independence Philosophy
 
@@ -170,4 +170,4 @@ tags:
 - Independence as a business principle: being profitable means you never have to ask anyone for permission — not investors, not platform gatekeepers, not cloud vendors; every dependency on an external service is a potential point of control others can exercise over you
 - VCs train companies to spend, not to make; bootstrap companies that play with their own money develop visceral cost sensitivity that persists through downturns; VC-funded spending habits are incompatible with long-term infrastructure independence
 
-→ Episodes: this-again-apple, for-the-love-of-linux, open-source-beyond-the-market, its-time-to-care-about-costs, leaving-the-cloud
+→ Episodes: [This again, Apple?](https://37signals.com/podcast/this-again-apple/), [For the love of Linux](https://37signals.com/podcast/for-the-love-of-linux/), [Open source beyond the market](https://37signals.com/podcast/open-source-beyond-the-market/), [It's time to care about costs](https://37signals.com/podcast/its-time-to-care-about-costs/), [Leaving the cloud](https://37signals.com/podcast/leaving-the-cloud/)

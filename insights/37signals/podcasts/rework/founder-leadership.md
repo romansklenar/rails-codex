@@ -26,7 +26,7 @@ tags:
 - The "I intend to" framework (from _Turn the Ship Around_): people state intention then act unless overridden, versus asking permission; puts ownership and learning on the person closest to the work
 - Default to trusting people's execution; override is available but rarely needed — on the REWORK podcast itself, topic selection is fully delegated to the host
 
-→ Episodes: the-subtle-art-of-staying-out-of-it, build-a-business-that-runs-without-you, roles-at-the-company-staying-involved-as-a-founder-other-listener-questions
+→ Episodes: [The subtle art of staying out of it](https://37signals.com/podcast/the-subtle-art-of-staying-out-of-it/), [Build a business that runs without you](https://37signals.com/podcast/build-a-business-that-runs-without-you/), [Roles at the company & listener questions](https://37signals.com/podcast/roles-at-the-company-staying-involved-as-a-founder-other-listener-questions/)
 
 ## Sabbaticals & Extended Time Off
 
@@ -40,7 +40,7 @@ tags:
 - The organizational benefit is as important as the personal one — sabbaticals teach the company it is self-sufficient and eliminate "learned helplessness"
 - For small businesses (under ~7 people), sabbaticals are harder; the policy becomes viable once you have enough slack in the system to absorb one absence
 
-→ Episodes: taking-a-sabbatical-as-a-business-owner, take-a-break, the-subtle-art-of-staying-out-of-it
+→ Episodes: [Taking a sabbatical](https://37signals.com/podcast/taking-a-sabbatical-as-a-business-owner/), [Take a break](https://37signals.com/podcast/take-a-break/), [The subtle art of staying out of it](https://37signals.com/podcast/the-subtle-art-of-staying-out-of-it/)
 
 ## Co-founder Partnership
 
@@ -58,7 +58,7 @@ tags:
 - Accept that you can't fully explain why a long partnership works — post-hoc rationalizations ("great value overlap", "distinct domains") are useful frameworks but don't capture causation; humility about this is itself stabilizing
 - Concrete example of trust overriding conviction: DHH was certain HEY should launch for businesses first; Jason pushed individuals first; DHH deferred; result was 30,000 signups vs. "crickets" for the business version — a visceral reminder to trust your partner's gut even when you disagree
 
-→ Episodes: working-with-a-business-partner, maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, building-with-llms-listener-qs
+→ Episodes: [Working with a business partner](https://37signals.com/podcast/working-with-a-business-partner/), [Business partnership & listener questions](https://37signals.com/podcast/maintaining-a-business-partnership-simple-product-design-and-other-listener-questions/), [Building with LLMs & listener questions](https://37signals.com/podcast/building-with-llms-listener-qs/)
 
 ## Finding and Vetting Co-founders
 
@@ -69,7 +69,7 @@ tags:
 - YC pushes co-founders because investor risk is mitigated when one founder leaves; that logic does not apply to bootstrapped companies
 - Solo founding is viable; the missing value of a co-founder is cognitive diversity and someone to argue against, not just another pair of hands
 
-→ Episodes: working-with-a-business-partner, building-with-llms-listener-qs
+→ Episodes: [Working with a business partner](https://37signals.com/podcast/working-with-a-business-partner/), [Building with LLMs & listener questions](https://37signals.com/podcast/building-with-llms-listener-qs/)
 
 ## Succession & Founder Exit
 
@@ -80,7 +80,7 @@ tags:
 - If sold: the new owners should have it "a million miles away" — any association with original founders would corrupt both parties' ability to act freely
 - Trial runs with spin-offs and external investments have confirmed this: being partially out but still "on the hook" is the worst of both worlds
 
-→ Episodes: building-with-llms-listener-qs, roles-at-the-company-staying-involved-as-a-founder-other-listener-questions
+→ Episodes: [Building with LLMs & listener questions](https://37signals.com/podcast/building-with-llms-listener-qs/), [Roles at the company & listener questions](https://37signals.com/podcast/roles-at-the-company-staying-involved-as-a-founder-other-listener-questions/)
 
 ## Founder Accessibility & Staying Connected
 
@@ -90,7 +90,7 @@ tags:
 - Long sales cycles are real: people followed 37signals since 2005 and signed up for Basecamp or HEY 15 years later — staying visible compounds
 - The product is inseparable from the founders' worldview — people who interact with the ideas for years eventually become customers; that requires the founders to remain visible and opinionated
 
-→ Episodes: roles-at-the-company-staying-involved-as-a-founder-other-listener-questions
+→ Episodes: [Roles at the company & listener questions](https://37signals.com/podcast/roles-at-the-company-staying-involved-as-a-founder-other-listener-questions/)
 
 ## Founder Presence: Public Speaking & Conferences
 
@@ -110,7 +110,7 @@ tags:
 - For keynotes with concrete new material (new frameworks, shipped products), preparation is manageable; for abstract thesis talks, scripting becomes homework that makes DHH nervous rather than confident — avoid grand abstractions in favor of concrete, already-shipped things
 - Start small: speaking skill is acquired through reps; early clips of now-famous speakers are often cringe-worthy; the only path to good is to do it badly in smaller venues first, then work up
 
-→ Episodes: speaking-gigs-attending-conferences-and-the-importance-of-gathering, progressing-in-public-speaking
+→ Episodes: [Speaking gigs & the importance of gathering](https://37signals.com/podcast/speaking-gigs-attending-conferences-and-the-importance-of-gathering/), [Progressing in public speaking](https://37signals.com/podcast/progressing-in-public-speaking/)
 
 ## Product Portfolio Pruning
 
@@ -122,7 +122,7 @@ tags:
 - Mass is the enemy: holding onto products you don't love actively prevents you from focusing creative energy on what you do love; killing is not giving up, it's making room
 - Trying to sell a product (Highrise spin-off attempts) and finding it harder than expected is itself useful data — it taught Jason and DHH what they do and don't want to take on in future portfolio decisions; "even those twists and turns taught us something"
 
-→ Episodes: spark-joy-with-dhh, less-mass
+→ Episodes: [Spark joy with DHH](https://37signals.com/podcast/spark-joy-with-dhh/), [Less mass](https://37signals.com/podcast/less-mass/)
 
 ## Ignoring the "Real World" Skeptics
 
@@ -133,7 +133,7 @@ tags:
 - Being "weird" is a deliberate directive: HEY was explicitly required to look nothing like Gmail or Outlook; differentiation from incumbents is the strategy, not a side effect
 - The motivation to prove skeptics wrong is a legitimate creative fuel — Ruby on Rails was built in part because people said exotic programming languages from Japan couldn't work in the enterprise
 
-→ Episodes: ignore-the-real-world, learning-from-mistakes-is-overrated
+→ Episodes: [Ignore the real world](https://37signals.com/podcast/ignore-the-real-world/), [Learning from mistakes is overrated](https://37signals.com/podcast/learning-from-mistakes-is-overrated/)
 
 ## Learning: Successes, Not Failures
 
@@ -149,7 +149,7 @@ tags:
 - Data analysts at 37signals produced months of rigorous analysis that concluded "people convert when they get others to use it with them" — obvious, and barely actionable; the full-time analyst role generates full-time analysis work that rarely improves decisions
 - Every decision is ultimately a judgment call; even ostensibly "data-driven" companies hire executives for experience (accumulated human intuition), not for spreadsheet fluency — just admit it
 
-→ Episodes: learning-from-mistakes-is-overrated, look-back-less
+→ Episodes: [Learning from mistakes is overrated](https://37signals.com/podcast/learning-from-mistakes-is-overrated/), [Look back less](https://37signals.com/podcast/look-back-less/)
 
 ## Lean Org Design for Founders
 
@@ -169,7 +169,7 @@ tags:
 - Redundancy becomes a valid hiring reason once the business is solidly established: the "bus factor" of one person in a critical function (finance, QA) is prudent to resolve at maturity, but this logic does not apply early
 - Invest in long-term employees as the internal version of "focus on what won't change" — customer support staff with 10+ years of tenure can make wide decisions on the spot; high turnover in support is a direct product of treating it as a cost center
 
-→ Episodes: roles-at-the-company-staying-involved-as-a-founder-other-listener-questions, maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, two-person-teams, focus-on-what-wont-change
+→ Episodes: [Roles at the company & listener questions](https://37signals.com/podcast/roles-at-the-company-staying-involved-as-a-founder-other-listener-questions/), [Business partnership & listener questions](https://37signals.com/podcast/maintaining-a-business-partnership-simple-product-design-and-other-listener-questions/), [Two person teams](https://37signals.com/podcast/two-person-teams/), [Focus on what won't change](https://37signals.com/podcast/focus-on-what-wont-change/)
 
 ## AI & the Evolving Founder Toolkit
 
@@ -180,7 +180,7 @@ tags:
 - Don't ship AI features that add an "AI sticker" without being unambiguously better; being later to market with something customers will actually value is better than shipping slop to check a box
 - Non-programmers get proportionally more out of AI than expert programmers do — the programmer knows they could do it; the non-programmer gets access to something that didn't exist for them before
 
-→ Episodes: ai-revisited, building-with-llms-listener-qs
+→ Episodes: [AI Revisited](https://37signals.com/podcast/ai-revisited/), [Building with LLMs & listener questions](https://37signals.com/podcast/building-with-llms-listener-qs/)
 
 ## Naming Products
 
@@ -193,7 +193,7 @@ tags:
 - Names acquire meaning through success, not the reverse: Instagram, Slack, WhatsApp, Yahoo — none would survive an internal rename proposal 10 years in; early-stage names are a product of the moment and don't need to be defensible by committee logic
 - For open source, DHH favors invented words with a preferred pronunciation even if the letters don't warrant it: Omarchy (not "Omaki"), Kamal — the creator gets to decide how it sounds
 
-→ Episodes: give-it-a-name
+→ Episodes: [Give it a name](https://37signals.com/podcast/give-it-a-name/)
 
 ## Beginner's Mind & Protecting Ignorance
 
@@ -211,7 +211,7 @@ tags:
 - Make an external commitment before you start — telling people "I'm going to climb that mountain in France at the end of this year" is more binding than a private goal; public accountability changes the motivational calculus and creates a natural deadline; whether you meet it exactly is less important than what you built toward it
 - The internal voice saying "you look like a beginner" is the only real obstacle — most social fear of being seen as a novice is self-generated, not external; recognizing it as internal lets you choose which voice to feed: the doubtful one or the one that's genuinely excited to get better
 
-→ Episodes: maintaining-a-business-partnership-simple-product-design-and-other-listener-questions, try-everything
+→ Episodes: [Business partnership & listener questions](https://37signals.com/podcast/maintaining-a-business-partnership-simple-product-design-and-other-listener-questions/), [Try everything](https://37signals.com/podcast/try-everything/)
 
 ## Quitting as a Leadership Act
 
@@ -222,4 +222,4 @@ tags:
 - **Preserving the reality of the cycle boundary**: if a six-week deadline is always extended when a project is close, the boundary is fiction; founders occasionally quitting a project that is nearly done — precisely because it is nearly done — is what proves to the team that the boundary is real and the rules apply equally
 - Quitting reinforces that momentum is not the same as progress: the fact that a team has been working on something for weeks creates its own gravitational pull toward completion; leaders who can interrupt that pull when the decision calculus changes are the ones who keep organisations from spending good time after bad
 
-→ Episodes: dont-be-a-hero, reasons-to-quit
+→ Episodes: [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/), [Reasons to quit](https://37signals.com/podcast/reasons-to-quit/)

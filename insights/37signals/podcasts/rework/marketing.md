@@ -27,7 +27,7 @@ tags:
 - ClickUp and Monday plaster ads everywhere — the assumption is they must be winning, but both are losing hundreds of millions per year; marketing spend equals spend, not success
 - Following a competitor's marketing strategy means following someone who may be running off a cliff; you have incomplete information — all you see is the surface, not what's actually working behind it
 - Conclusion: test paid channels rigorously, measure incrementality not just conversions, accept the result if economics don't work after multiple attempts
-→ Episodes: traditional-marketing, founder-led-marketing, google-ads-shakedown, pick-a-fight
+→ Episodes: [Traditional marketing doesn't work for us](https://37signals.com/podcast/traditional-marketing/), [Founder-led marketing](https://37signals.com/podcast/founder-led-marketing/), [The Google Ads shakedown](https://37signals.com/podcast/google-ads-shakedown/), [Pick a fight](https://37signals.com/podcast/pick-a-fight/)
 
 ## Founder-Led Marketing: What It Actually Is
 
@@ -42,7 +42,7 @@ tags:
 - Jason's self-check: "If I didn't work here, would I ever spend another second on LinkedIn?" Honest answer: no — but he does it because it's part of the job
 - Picking fights must be grounded in something you truly believe — if you go looking for a fight as a marketing tactic, it comes off contrived; the HEY vs. Apple conflict worked because it was completely unplanned and the reaction was completely genuine
 - Small companies have a structural advantage in founder-led marketing: the founder linked to the product can speak for it in ways a revolving-door CEO never can — these principles are personal, not acquired through a focus group session
-→ Episodes: founder-led-marketing, traditional-marketing, it-started-with-a-blog, pick-a-fight
+→ Episodes: [Founder-led marketing](https://37signals.com/podcast/founder-led-marketing/), [Traditional marketing doesn't work for us](https://37signals.com/podcast/traditional-marketing/), [It started with a blog](https://37signals.com/podcast/it-started-with-a-blog/), [Pick a fight](https://37signals.com/podcast/pick-a-fight/)
 
 ## Teaching as the Core Marketing Mechanism
 
@@ -55,7 +55,7 @@ tags:
 - Fear of sharing "secrets" is unfounded: execution and timing determine success, not code snippets; treat your company like a restaurant that also publishes a cookbook
 - Don't share lessons as "seven tips" SEO bait — share only what genuinely interests the author; inauthentic educational content is worse than no content
 - Sharing doesn't require production values — a 10-minute post written and shipped same-day captures freshness that a polished article scheduled two weeks out loses
-→ Episodes: out-teach-your-competition, blogging-isnt-dead, build-an-audience, sell-your-by-products
+→ Episodes: [Out-teach your competition](https://37signals.com/podcast/out-teach-your-competition/), [Blogging isn't dead](https://37signals.com/podcast/blogging-isnt-dead/), [Build an audience](https://37signals.com/podcast/build-an-audience/), [Sell your by-products](https://37signals.com/podcast/sell-your-by-products/)
 
 ## Blogging and Written Content
 
@@ -69,7 +69,7 @@ tags:
 - Every blog post lives forever — a post from 2016 still acquires readers in 2026; the cost is paid once, the value compounds indefinitely
 - DHH used Twitter as a first-draft sketchpad: gut reactions become tweets, tweets get weathered in public debate, the best ones become blog posts, some blog posts become books or keynotes — one medium feeds the next
 - Twitter/social posts are highest value when you're present to respond; auto-scheduling turns posts into monologues and destroys the community-building dynamic
-→ Episodes: it-started-with-a-blog, blogging-isnt-dead, sell-your-by-products, pick-a-fight-on-twitter
+→ Episodes: [It started with a blog](https://37signals.com/podcast/it-started-with-a-blog/), [Blogging isn't dead](https://37signals.com/podcast/blogging-isnt-dead/), [Sell your by-products](https://37signals.com/podcast/sell-your-by-products/), [Pick a fight (on Twitter)](https://37signals.com/podcast/pick-a-fight-on-twitter/)
 
 ## Audience Building
 
@@ -84,7 +84,7 @@ tags:
 - Polarizing opinions accelerate audience formation: people who love your takes and people who hate them are both more useful than indifferent followers — if no one disagrees, you don't have a point of view
 - The courage to be disliked is required: if you have strong opinions and express them, you will have detractors; that's confirmation you actually stand for something, not a signal to soften
 - If gatekeepers exclude you from the natural network of serendipity (conferences, VC social circles, geographic hubs), build your own — POCIT, Black & Brown Founders, and similar communities manufactured the serendipitous connections their founders couldn't find in existing networks
-→ Episodes: build-an-audience, it-started-with-a-blog, out-teach-your-competition, pick-a-fight, create-your-own-serendipity
+→ Episodes: [Build an audience](https://37signals.com/podcast/build-an-audience/), [It started with a blog](https://37signals.com/podcast/it-started-with-a-blog/), [Out-teach your competition](https://37signals.com/podcast/out-teach-your-competition/), [Pick a fight](https://37signals.com/podcast/pick-a-fight/), [Create your own serendipity](https://37signals.com/podcast/create-your-own-serendipity/)
 
 ## Picking a Fight
 
@@ -98,7 +98,7 @@ tags:
 - Ignoring competition (for product decisions) and picking a fight (for marketing) are not contradictory — ignore the competition so you don't follow them into product dead ends; pick a fight to illuminate your different values
 - Polarizing creative works when the audience self-selects: the Quiznos spongmonkeys got 30,000 calls and letters in month one — half were complaints, but the product was a sandwich and the complainers weren't the target; complaints from the wrong audience are confirmation you reached the right one
 - Distributing edgy creative on mass-market channels amplifies both the reach and the backlash — the spongmonkeys ran on general cable, not just SpikeTV/MTV, which horrified middle-aged viewers and created the very controversy that drove news coverage; the "wrong" audience reaction can be the fuel
-→ Episodes: pick-a-fight, pick-a-fight-on-twitter, google-ads-shakedown, are-you-an-underdog-we-want-to-hear-from-you, we-love-the-subs
+→ Episodes: [Pick a fight](https://37signals.com/podcast/pick-a-fight/), [Pick a fight (on Twitter)](https://37signals.com/podcast/pick-a-fight-on-twitter/), [The Google Ads shakedown](https://37signals.com/podcast/google-ads-shakedown/), [Are you an underdog?](https://37signals.com/podcast/are-you-an-underdog-we-want-to-hear-from-you/), [We love the subs](https://37signals.com/podcast/we-love-the-subs/)
 
 ## Selling By-Products
 
@@ -113,7 +113,7 @@ tags:
 - Ruby on Rails is the ultimate by-product: extracted from Basecamp's codebase and open-sourced, it built a global developer community that fed Basecamp's hiring pipeline and brand for two decades at zero incremental marketing cost
 - The flywheel: by-products generate audience → audience generates product signups → product usage generates new by-products → repeat; the job board 37signals ran was a by-product of their audience, not a primary business
 - "Would I pay for this?" is the heuristic for whether a by-product has commercial potential; free reception from a community doesn't confirm value the way a purchase does
-→ Episodes: sell-your-by-products, out-teach-your-competition, sell-your-by-products-season-2, ruby-on-rails
+→ Episodes: [Sell your by-products](https://37signals.com/podcast/sell-your-by-products/), [Out-teach your competition](https://37signals.com/podcast/out-teach-your-competition/), [Sell your by-products](https://37signals.com/podcast/sell-your-by-products-season-2/), [Ruby on Rails](https://37signals.com/podcast/ruby-on-rails/)
 
 ## Transparency and Behind the Scenes
 
@@ -127,7 +127,7 @@ tags:
 - "Document, don't create" applies to transparency: you're making decisions every day; writing up what you decided and why costs almost nothing extra and produces genuine, shareable content
 - Invest in a realistic, resettable product demo: Basecamp built a full "seed data" demo account for HEY — 100+ realistic emails, a fictional persona (Julie Young), and a reset mechanism that wipes and reloads all content on demand; every demo starts fresh, no personal data is ever exposed, and support staff share one canonical demo environment instead of improvising from personal accounts
 - Demo realism pays dividends beyond sales: the HEY seed account became the shared reference for the entire customer support team, enabling consistent and credible responses that screenshots of real email could not safely provide
-→ Episodes: go-behind-the-scenes, dont-be-fake, building-in-public, out-teach-your-competition, an-email-account-is-born
+→ Episodes: [Go behind the scenes](https://37signals.com/podcast/go-behind-the-scenes/), [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Building in public](https://37signals.com/podcast/building-in-public/), [Out-teach your competition](https://37signals.com/podcast/out-teach-your-competition/), [An email account is born](https://37signals.com/podcast/an-email-account-is-born/)
 
 ## The Overnight Success Myth
 
@@ -137,7 +137,7 @@ tags:
 - There is no such thing as a sudden breakthrough — every overnight success is preceded by years of work that wasn't visible; the narrative of sudden discovery serves the media, not the entrepreneur
 - Timing and luck play a real role: 37signals' early success with Basecamp (2004) benefited from being first in a new category at the right moment; that exact window doesn't reopen — but the principles still apply at any scale
 - The implication for marketing: don't chase the viral moment; build the base that makes the viral moment matter when it arrives and lets you sustain the uplift rather than bounce back to zero
-→ Episodes: the-myth-of-the-overnight-success, the-myth-of-the-overnight-sensation
+→ Episodes: [The myth of the overnight sensation](https://37signals.com/podcast/the-myth-of-the-overnight-success/), [The myth of the overnight sensation](https://37signals.com/podcast/the-myth-of-the-overnight-sensation/)
 
 ## Scratch Your Own Itch
 
@@ -147,7 +147,7 @@ tags:
 - The marketing advantage: customers can detect when founders are describing a problem they actually have vs. describing what they think customers have; authenticity is perceptible
 - Side projects scratched from personal itch have the same advantage at smaller scale — the board game designer who builds games she wants to play, the skincare blogger who formulated a product for her own skin, the backpack maker who needed a pack that didn't exist
 - "Use the product you're selling" is table stakes for credibility: if you can't dogfood your own product, your marketing is a performance; if you do dogfood it, your marketing is just a report from the field
-→ Episodes: scratch-your-own-itch-replay, scratch-your-own-itch, eat-your-own-dogfood, start-making-something
+→ Episodes: [Scratch your own itch (Replay)](https://37signals.com/podcast/scratch-your-own-itch-replay/), [Scratch your own itch](https://37signals.com/podcast/scratch-your-own-itch/), [Eat your own dogfood](https://37signals.com/podcast/eat-your-own-dogfood/), [Start making something](https://37signals.com/podcast/start-making-something/)
 
 ## Underdog Positioning
 
@@ -158,7 +158,7 @@ tags:
 - Pick fights upward: being the underdog punching at a Goliath creates a story; being Goliath punching down destroys credibility (Slack vs. Microsoft dynamic — Slack was the incumbent in chat, so welcoming Microsoft looked absurd even though Microsoft was the larger corporation)
 - The fastest-growing segment of new entrepreneurs is minority women, most of whom have zero access to VC money or Silicon Valley networks — they are building businesses under real constraints that look nothing like the startup archetype, and they are succeeding; the underdog story is the majority story, not the exception
 - Scrappiness is a marketing asset when authentic: a team of four taking on Microsoft Project in 2004 creates a narrative no PR firm can manufacture; the narrative is only credible because it's true
-→ Episodes: are-you-an-underdog-we-want-to-hear-from-you, pick-a-fight, the-soul-of-an-entrepreneur, start-a-business-not-a-startup
+→ Episodes: [Are you an underdog?](https://37signals.com/podcast/are-you-an-underdog-we-want-to-hear-from-you/), [Pick a fight](https://37signals.com/podcast/pick-a-fight/), [The soul of an entrepreneur](https://37signals.com/podcast/the-soul-of-an-entrepreneur/), [Start a business, not a startup](https://37signals.com/podcast/start-a-business-not-a-startup/)
 
 ## Brand Naming and Identity
 
@@ -168,7 +168,7 @@ tags:
 - The right name test: does it give you something to stand behind? Does it function as a vehicle for the attitude you want to project? A name like "37signals" has no inherent meaning, which means it can mean whatever the company makes it mean through its work
 - Naming anxiety is a form of premature optimization: founders spend weeks agonizing over names while the business waits; pick something you can live with and build the meaning through what you do
 - Company name changes are survivable: the fear that rebranding will destroy accumulated equity is usually overstated; customers follow products, not company names, when the products are good
-→ Episodes: whats-in-a-name, aim-for-a-name, give-it-a-name
+→ Episodes: [What's in a name](https://37signals.com/podcast/whats-in-a-name/), [The aim for a name](https://37signals.com/podcast/aim-for-a-name/), [Give it a name](https://37signals.com/podcast/give-it-a-name/)
 
 ## Authenticity in Communication
 
@@ -182,7 +182,7 @@ tags:
 - Inauthentic stock photography has the same problem at scale: images of "powerful business women with arms folded" or "smiling white man pumping fist" create an aspirational lie that audiences have learned to distrust; authentic visual representation (Colorstock's approach) breaks through precisely because it is genuinely representational
 - Parasocial relationships are the mechanism behind effective direct-response advertising — when the person pitching looks and sounds like a friend who genuinely uses and loves the product, purchase intent rises; when there's visible mismatch (an acne product pitched by someone with perfect skin), the inauthenticity is immediately disqualifying
 - Creative made for one medium doesn't transfer natively: content that works on the open internet (where the viewer chose to find it) feels invasive when beamed into passive broadcast media; platform-native creative is the modern equivalent — a viral Flash animation adapted for TV was seen as an assault by viewers who didn't seek it out; the same content shared virally online was beloved
-→ Episodes: dont-be-fake, hire-great-writers, using-ai-for-writing-being-facebook-free-and-other-listener-questions, we-love-the-subs, but-wait-theres-more
+→ Episodes: [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Hire great writers](https://37signals.com/podcast/hire-great-writers/), [Using AI for writing & listener questions](https://37signals.com/podcast/using-ai-for-writing-being-facebook-free-and-other-listener-questions/), [We love the subs](https://37signals.com/podcast/we-love-the-subs/), [But wait, there's more](https://37signals.com/podcast/but-wait-theres-more/)
 
 ## Free Plans and Conversion Strategy
 
@@ -198,7 +198,7 @@ tags:
 - A/B testing cadence: look at weekly aggregates, not daily; tests need weeks to reach significance, and early peeking produces false winners
 - "Ask reality for an answer" — run the test rather than relying on results from years ago; markets, products, and customers change enough to invalidate historical A/B data
 - Presenting the most expensive plan first on pricing pages tested better for plan mix — but this finding doesn't transfer across industries or even across time for the same product
-→ Episodes: bringing-back-free, mailbag-1-1
+→ Episodes: [Bringing back free](https://37signals.com/podcast/bringing-back-free/), [REWORK Mailbag 1 — Part 1](https://37signals.com/podcast/mailbag-1-1/)
 
 ## Metrics and What to Measure
 
@@ -211,7 +211,7 @@ tags:
 - Measuring too early traps you: 37signals fell into this when switching blogging platforms, started tracking article traffic, and nearly lost the habit by obsessing over numbers that were still tiny
 - Measuring customer support response times caused reps to optimize for speed over quality, generating stress without improving outcomes; they pulled back to a range ("under 10 minutes is excellent") rather than a competitive metric
 - No revenue targets, no growth goals at the company level: "things are wonderful right now" is itself a target — external stakeholders (public markets, VCs) are what inject the quarterly number obsession; stay private to stay free of it
-→ Episodes: by-the-numbers, traditional-marketing, it-started-with-a-blog, build-an-audience, mailbag-1-1
+→ Episodes: [By the numbers](https://37signals.com/podcast/by-the-numbers/), [Traditional marketing doesn't work for us](https://37signals.com/podcast/traditional-marketing/), [It started with a blog](https://37signals.com/podcast/it-started-with-a-blog/), [Build an audience](https://37signals.com/podcast/build-an-audience/), [REWORK Mailbag 1 — Part 1](https://37signals.com/podcast/mailbag-1-1/)
 
 ## Testing Creative Before You Commit
 
@@ -225,7 +225,7 @@ tags:
 - Strong creative that is genuinely weird or polarizing earns press coverage that paid media cannot buy: the Quiznos spongmonkeys were covered by the New York Times, Wall Street Journal, Ad Age, and Adweek — none of that coverage was purchased; the strangeness was the story
 - Creative power is with the creator, not the client: the spongmonkeys worked because Quiznos licensed Joel Veitch's pre-existing, self-motivated work ("something you feel driven to make") rather than commissioning him to produce something sensible to spec; the best branded creative often starts as someone's personal obsession
 - A brand that abandons distinctive creative for "beauty shots" and category-standard advertising gets category-standard results: Quiznos went from 4,700 to 400 US locations in 10 years after replacing the spongmonkeys with conventional food photography
-→ Episodes: but-wait-theres-more, we-love-the-subs, traditional-marketing, mailbag-1-1
+→ Episodes: [But wait, there's more](https://37signals.com/podcast/but-wait-theres-more/), [We love the subs](https://37signals.com/podcast/we-love-the-subs/), [Traditional marketing doesn't work for us](https://37signals.com/podcast/traditional-marketing/), [REWORK Mailbag 1 — Part 1](https://37signals.com/podcast/mailbag-1-1/)
 
 ## Meaningful Work as Marketing Foundation
 
@@ -237,4 +237,4 @@ tags:
 - The business doesn't have to change the world; it has to matter to the customers it serves, and that mattering is what generates word-of-mouth that no ad budget can replicate
 - Motivation is the most underrated asset in marketing: a four-person team that is ferociously motivated to solve a problem they actually have will outmarket a 200-person team running on quarterly targets — motivation produces tunnel vision and rocket fuel simultaneously
 - Pick the problem you're most fired up about, not the most commercially optimized one; motivation gives you the X factor that compensates for everything you lack in resources, team size, and brand recognition
-→ Episodes: make-a-dent-in-the-universe, founder-led-marketing, build-an-audience, listener-questions
+→ Episodes: [Make a dent in the universe](https://37signals.com/podcast/make-a-dent-in-the-universe/), [Founder-led marketing](https://37signals.com/podcast/founder-led-marketing/), [Build an audience](https://37signals.com/podcast/build-an-audience/), [AI, employee equity & listener questions](https://37signals.com/podcast/listener-questions/)

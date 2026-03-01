@@ -27,7 +27,7 @@ tags:
 - Never hide behind automated phone trees, bots, or help-doc links when a human conversation would serve the customer better
 - Keep "Fisher Price easy" as the writing standard: short, clean answers beat comprehensive but dense ones
 
-→ Episodes: support-is-a-feature, tales-from-the-front-lines, customer-support
+→ Episodes: [Support is a feature](https://37signals.com/podcast/support-is-a-feature/), [Tales from the front lines](https://37signals.com/podcast/tales-from-the-front-lines/), [Going remote: Customer support](https://37signals.com/podcast/customer-support/)
 
 ## On-Call / Technical Support as a Career Path
 
@@ -40,7 +40,7 @@ tags:
 - Readable code is a diversity and inclusion issue: when code reads like plain English, people from non-traditional programming backgrounds can contribute to technical support roles
 - Pair support reps learning on-call work with a programmer who holds "office hours" — not as dedicated on-call backup, but as an informal knowledge resource
 
-→ Episodes: support-console-ation
+→ Episodes: [Support and console-ation](https://37signals.com/podcast/support-console-ation/)
 
 ## Everyone on the Front Lines
 
@@ -61,7 +61,7 @@ tags:
 - Write a clear intro guide explaining *why* EOS exists, not just how to do the shifts — people need the "why" to feel that the time is worth it
 - The intangible result of EOS: it "infects the company like a merciless empathy virus," aligning everyone around company values of being human, empowered, and responsive
 
-→ Episodes: put-everyone-on-the-front-lines, tales-from-the-front-lines, customer-support, james-glazebrook-support-driven
+→ Episodes: [Put everyone on the front lines](https://37signals.com/podcast/put-everyone-on-the-front-lines/), [Tales from the front lines](https://37signals.com/podcast/tales-from-the-front-lines/), [Going remote: Customer support](https://37signals.com/podcast/customer-support/), [James Glazebrook at Support Driven](https://37signals.com/podcast/james-glazebrook-support-driven/)
 
 ## Handling Difficult Customers
 
@@ -81,7 +81,7 @@ tags:
 - Bring in outside experts (e.g., trauma stewardship specialists) when your support team regularly absorbs significant emotional load from customers — internal leadership alone can't provide all the coping frameworks needed
 - Do not incentivize support staff with sales commissions; separate education/service roles from sales roles entirely — the moment commission enters, the relationship dynamic shifts from advocate to salesperson
 
-→ Episodes: tales-from-the-front-lines, customer-support, put-everyone-on-the-front-lines, dose-of-empathy
+→ Episodes: [Tales from the front lines](https://37signals.com/podcast/tales-from-the-front-lines/), [Going remote: Customer support](https://37signals.com/podcast/customer-support/), [Put everyone on the front lines](https://37signals.com/podcast/put-everyone-on-the-front-lines/), [A dose of empathy](https://37signals.com/podcast/dose-of-empathy/)
 
 ## Talking Directly to Customers
 
@@ -94,7 +94,7 @@ tags:
 - Founders can also initiate: scan recent orders for recognizable names and reach out proactively — the relationship formed before the product arrives makes the product taste better
 - A personal reply to a complaint — even one that doesn't grant the request — that includes an authentic apology and a change in process converts a detractor into an advocate
 
-→ Episodes: talk-directly-to-your-customers, support-is-a-feature
+→ Episodes: [Talk directly to your customers](https://37signals.com/podcast/talk-directly-to-your-customers/), [Support is a feature](https://37signals.com/podcast/support-is-a-feature/)
 
 ## Building a Customer Community
 
@@ -108,7 +108,7 @@ tags:
 - Lurkers are valid members — they learn, they don't cause harm, and they occasionally convert into contributors; don't gate the community behind forced participation
 - Grow slowly and manually: 2,100 members after three years is a sign of health, not underperformance
 
-→ Episodes: building-a-community
+→ Episodes: [Building a community](https://37signals.com/podcast/building-a-community/)
 
 ## Customer Segmentation: Who to Serve
 
@@ -123,7 +123,7 @@ tags:
 - Don't build the features that only a fraction of large existing customers request; those requests, if fulfilled, price out the small new customers who represent your real market
 - Trying to keep every customer at every size is itself a choice — one that silently kills the product for the customers you actually want
 
-→ Episodes: biggest-customer-conundrum, let-your-customers-outgrow-you
+→ Episodes: [The biggest customer conundrum](https://37signals.com/podcast/biggest-customer-conundrum/), [Let your customers outgrow you](https://37signals.com/podcast/let-your-customers-outgrow-you/)
 
 ## Pricing as a Customer Signal
 
@@ -136,7 +136,7 @@ tags:
 - A flat per-company (not per-seat) price is itself a pro-customer product decision: the cost stays fixed as a team grows, unlike seat-based competitors whose bills compound with headcount
 - The signal you want to send is seriousness and value, not just affordability — "affordable" and "cheap" feel different to buyers even at the same price point
 
-→ Episodes: the-price-of-basecamps-water, picking-pricing
+→ Episodes: [The price of Basecamp's water](https://37signals.com/podcast/the-price-of-basecamps-water/), [Picking pricing](https://37signals.com/podcast/picking-pricing/)
 
 ## Delighting Customers with Surprise Gifts
 
@@ -149,7 +149,7 @@ tags:
 - Comp a month of service as a delight option for long-term customers who are frustrated — a concrete, immediately useful gesture that costs the company little and signals you value the relationship
 - Use curated gift box companies (especially those that are women-owned, environmentally focused, or support local artisans) as a reliable fallback when you can't find enough personal information about the recipient
 
-→ Episodes: sending-a-little-delight
+→ Episodes: [Send a little delight](https://37signals.com/podcast/sending-a-little-delight/)
 
 ## Support Team Autonomy and Research
 
@@ -159,7 +159,7 @@ tags:
 - Document knowledge in a searchable central place (wikis, project templates, Campfire searches) so support context doesn't live only in the heads of long-tenured employees — the moment a fact isn't written down, it becomes a risk when that person is unavailable
 - Build new hire onboarding around project templates with mini-guides for every tool, video walkthroughs, and culture docs — the "sink or swim" approach costs disproportionately more than the time it takes to document things once
 
-→ Episodes: temperature-check, support-console-ation, customer-support
+→ Episodes: [Temperature check](https://37signals.com/podcast/temperature-check/), [Support and console-ation](https://37signals.com/podcast/support-console-ation/), [Going remote: Customer support](https://37signals.com/podcast/customer-support/)
 
 ## Email as a Deliberate Channel
 
@@ -175,7 +175,7 @@ tags:
 - A product philosophy for how communication should work is as important as the feature set — most email tools ship features without a point of view on how people ought to use them; the absence of philosophy leaves users without guidance
 - Independence from investor pressure is what enables opinionated product choices: if a vendor's revenue depends on ad eyeballs or engagement metrics, their incentives are structurally opposed to the user's attention
 
-→ Episodes: hey-whats-going-on, designing-hey, q-and-hey-1, q-and-hey-2
+→ Episodes: [HEY, what's going on?](https://37signals.com/podcast/hey-whats-going-on/), [Designing HEY](https://37signals.com/podcast/designing-hey/), [Q and HEY Part 1](https://37signals.com/podcast/q-and-hey-1/), [Q and HEY Part 2](https://37signals.com/podcast/q-and-hey-2/)
 
 ## Hiring Vendors and Consultants
 
@@ -189,7 +189,7 @@ tags:
 - For specialist work that spans two domains (e.g., technical SEO and content SEO), find the best person for one domain and ask them to refer someone for the other rather than hiring a generalist agency to cover both poorly
 - Buying something you know little about is a visceral reminder of what prospects feel when evaluating your own product — use vendor-shopping experiences as customer-empathy exercises
 
-→ Episodes: six-hours-of-phone-calls
+→ Episodes: [Six hours of phone calls](https://37signals.com/podcast/six-hours-of-phone-calls/)
 
 ## Marketing Design at Small Scale
 
@@ -200,4 +200,4 @@ tags:
 - Cross-pollinate freely between marketing and product design — colors, shapes, and motifs that start on the marketing site often find their way into the app interface, and vice versa; keep the visual language unified
 - Use short looping videos (under 20 seconds) rather than static screenshots to demo interaction-heavy software — a screenshot of an email inbox conveys almost nothing; a 15-second clip of the screener in action tells the whole story
 
-→ Episodes: manos-hands-of-hey, designing-hey
+→ Episodes: [Manos: The hands of HEY](https://37signals.com/podcast/manos-hands-of-hey/), [Designing HEY](https://37signals.com/podcast/designing-hey/)

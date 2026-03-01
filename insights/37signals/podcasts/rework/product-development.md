@@ -42,7 +42,7 @@ tags:
 - Shape Up scales to Fortune 50 companies with the same core problems — too little strategic thinking time, slowdown as teams grow — the methodology isn't only for small teams
 - Shape Up is a **cultural practice**, not a technical system: the hardest part of adoption is changing the human interaction patterns (how does work feel? who owns decisions? how do people relate?) not learning the terminology
 
-→ Episodes: shape-up, shape-up-roundtable, writing-a-pitch, shape-up-principle-the-betting-table, shape-up-principle-decide-when-to-stop, shape-up-with-clients, shape-up-print-edition, product-strategy, dont-be-a-hero
+→ Episodes: [Shape Up](https://37signals.com/podcast/shape-up/), [Shape Up roundtable](https://37signals.com/podcast/shape-up-roundtable/), [Writing a pitch](https://37signals.com/podcast/writing-a-pitch/), [Shape Up: The betting table](https://37signals.com/podcast/shape-up-principle-the-betting-table/), [Shape Up: Decide when to stop](https://37signals.com/podcast/shape-up-principle-decide-when-to-stop/), [Shape Up with clients](https://37signals.com/podcast/shape-up-with-clients/), [Shape Up: The print edition](https://37signals.com/podcast/shape-up-print-edition/), [Product strategy Q&A](https://37signals.com/podcast/product-strategy/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ---
 
@@ -81,7 +81,7 @@ tags:
 - Don't make sweeping product changes in the first 30 days post-launch of a new version: fix truly broken things immediately; ignore everything else for at least a month; early complaints are often habituation reactions ("where did X go?") not design failures; the same people who hated a change in v2 will defend it when v3 changes it again
 - **Darling features that never get used are dangerous**: the HEY Speakeasy Code had such a good name it became a darling too cute to kill, yet neither Jason nor David ever used it; a feature's catchiness is not evidence of its value
 
-→ Episodes: seven-shipping-principles, launch-now, quick-wins, readying-for-launch, refining-before-release, launch-day, move-fast-when-you-can, you-launched-now-what, designing-hey, enough-is-enough, soft-openings
+→ Episodes: [Seven Shipping Principles](https://37signals.com/podcast/seven-shipping-principles/), [Launch now](https://37signals.com/podcast/launch-now/), [Quick wins](https://37signals.com/podcast/quick-wins/), [Readying for launch](https://37signals.com/podcast/readying-for-launch/), [Refining before release](https://37signals.com/podcast/refining-before-release/), [Launch day](https://37signals.com/podcast/launch-day/), [Move fast when you can](https://37signals.com/podcast/move-fast-when-you-can/), [You've launched... now what?](https://37signals.com/podcast/you-launched-now-what/), [Designing HEY](https://37signals.com/podcast/designing-hey/), [When is enough, enough?](https://37signals.com/podcast/enough-is-enough/), [Soft openings](https://37signals.com/podcast/soft-openings/)
 
 ---
 
@@ -117,7 +117,7 @@ tags:
 - **Greenfield as a technical validation lab**: a new product is the correct place to push novel architectural ideas too risky to introduce into an established codebase; the hallmark of a genuinely good technical idea is that it works in greenfield and is valuable enough to retrofit back into existing products — if it only makes sense in isolation, it probably is not worth the complexity
 - **Technical ambition must accrue to the customer**: pushing the envelope for its own sake produces convolutions that developers can justify to themselves but never to the market; the right question is always "what does the customer actually feel from this?" — if the answer is nothing, stop
 
-→ Episodes: v1-is-for-us, start-at-the-epicenter, eat-your-own-dogfood, underdo-the-competition, be-a-curator, ignore-the-details-early-on, build-half-a-product-not-a-half-assed-project, good-enough-is-fine, scratch-your-own-itch, what-are-you-replacing, making-things-that-multiply, a-product-pivot, the-f-k-no-feature, itch-for-a-new-version, designing-hey, software-as-art, rapid-fire-questions
+→ Episodes: [V1 is for us](https://37signals.com/podcast/v1-is-for-us/), [Start at the epicenter](https://37signals.com/podcast/start-at-the-epicenter/), [Eat your own dogfood](https://37signals.com/podcast/eat-your-own-dogfood/), [Underdo the competition](https://37signals.com/podcast/underdo-the-competition/), [Be a curator](https://37signals.com/podcast/be-a-curator/), [Ignore the details early on](https://37signals.com/podcast/ignore-the-details-early-on/), [Build half a product](https://37signals.com/podcast/build-half-a-product-not-a-half-assed-project/), [Good enough is fine](https://37signals.com/podcast/good-enough-is-fine/), [Scratch your own itch](https://37signals.com/podcast/scratch-your-own-itch/), [What are you replacing?](https://37signals.com/podcast/what-are-you-replacing/), [Making things that multiply](https://37signals.com/podcast/making-things-that-multiply/), [A product pivot](https://37signals.com/podcast/a-product-pivot/), [The F*#k No feature](https://37signals.com/podcast/the-f-k-no-feature/), [The itch for a new version](https://37signals.com/podcast/itch-for-a-new-version/), [Designing HEY](https://37signals.com/podcast/designing-hey/), [Software as art](https://37signals.com/podcast/software-as-art/), [Rapid fire questions](https://37signals.com/podcast/rapid-fire-questions/)
 
 ---
 
@@ -151,7 +151,7 @@ tags:
 - Check-in habits are a learnable behavior, not a competence signal — new team members who fail to post regular async updates are usually not yet in rhythm, not stuck on the work; redirecting feedback on the communication pattern specifically is the right intervention, not a technical deep-dive
 - **Avoid polishing before the concept is proven** — a designer or programmer stuck in a loop perfecting something that may be discarded in three months is a different kind of stuck; the fix is to move on, not to refine; "we haven't poured concrete yet" is the test: if the idea isn't committed, pixel-level polish is wasted effort and a warning sign to redirect
 
-→ Episodes: planning-is-guessing, your-estimates-suck, making-the-call-is-making-progress, illusions-of-agreement, decisions-are-temporary, disagree-and-commit, its-all-a-judgement-call, picking-priorities, reasons-to-quit, product-strategy, ignore-the-competition-listener-qs, dont-be-a-hero
+→ Episodes: [Planning is guessing](https://37signals.com/podcast/planning-is-guessing/), [Your estimates suck](https://37signals.com/podcast/your-estimates-suck/), [Making the call is making progress](https://37signals.com/podcast/making-the-call-is-making-progress/), [Illusions of agreement](https://37signals.com/podcast/illusions-of-agreement/), [Decisions are temporary](https://37signals.com/podcast/decisions-are-temporary/), [Disagree and commit](https://37signals.com/podcast/disagree-and-commit/), [It's all a judgment call](https://37signals.com/podcast/its-all-a-judgement-call/), [Picking priorities](https://37signals.com/podcast/picking-priorities/), [Reasons to quit](https://37signals.com/podcast/reasons-to-quit/), [Product strategy Q&A](https://37signals.com/podcast/product-strategy/), [Ignoring the competition & listener questions](https://37signals.com/podcast/ignore-the-competition-listener-qs/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ---
 
@@ -173,7 +173,7 @@ tags:
 - **Less is more in scope decisions**: building something that does 80% of what was imagined in two weeks is often more valuable than building 100% in twelve; you can always add the last 20% later; you usually discover you don't need it
 - Reduce organizational drag: keep product teams at two people (one designer, one programmer); avoid meetings that require everyone to synchronize; the distance between "I have a good idea" and "I fixed it" should be very short
 
-→ Episodes: narrow-as-you-go, embrace-constraints, less-mass, throw-less-at-the-problem, inspiration-is-perishable, writing-a-pitch, shape-up, rescuing-a-project-in-progress, a-matter-of-ambition, say-no, let-your-customers-outgrow-you, dont-be-a-hero
+→ Episodes: [Narrow as you go](https://37signals.com/podcast/narrow-as-you-go/), [Embrace constraints](https://37signals.com/podcast/embrace-constraints/), [Less mass](https://37signals.com/podcast/less-mass/), [Throw less at the problem](https://37signals.com/podcast/throw-less-at-the-problem/), [Inspiration is perishable](https://37signals.com/podcast/inspiration-is-perishable/), [Writing a pitch](https://37signals.com/podcast/writing-a-pitch/), [Shape Up](https://37signals.com/podcast/shape-up/), [Rescuing a project in progress](https://37signals.com/podcast/rescuing-a-project-in-progress/), [A matter of ambition](https://37signals.com/podcast/a-matter-of-ambition/), [Say no](https://37signals.com/podcast/say-no/), [Let your customers outgrow you](https://37signals.com/podcast/let-your-customers-outgrow-you/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ---
 
@@ -191,7 +191,7 @@ tags:
 - **New products are the moment of maximum courage**: a product with no customers and no revenue has no constituency defending the status quo; this is the only moment you can make the cleanest decisions, introduce the smoothest design, and say no by default without any collateral damage; use that window fully — it closes permanently the moment the first customer signs up
 - **Saying no inside the organization is as hard as saying no to customers**: on-call teams, support rotations, and internal service roles accumulate scope through courtesy and helpfulness; "we can do that" slowly becomes "we always do that" becomes "we must do that"; the same discipline required for product scope applies to internal service scope
 
-→ Episodes: say-no, say-no-by-default, be-a-curator, the-f-k-no-feature
+→ Episodes: [Say no](https://37signals.com/podcast/say-no/), [Say no by default](https://37signals.com/podcast/say-no-by-default/), [Be a curator](https://37signals.com/podcast/be-a-curator/), [The F*#k No feature](https://37signals.com/podcast/the-f-k-no-feature/)
 
 ---
 
@@ -208,7 +208,7 @@ tags:
 - Your **company is a product with bugs too**: if customers feel they can never reach you, that inaccessibility is a company-level bug that outweighs many software bugs; fix the company as rigorously as you fix the code
 - Build with good habits — automated testing, aesthetic care, simplicity — and quality follows; beautiful, simple code surfaces bugs faster than convoluted code; the habits precede the outcomes
 
-→ Episodes: software-has-bugs
+→ Episodes: [Software has bugs](https://37signals.com/podcast/software-has-bugs/)
 
 ---
 
@@ -227,7 +227,7 @@ tags:
 - **The benchmark competitor is email and WhatsApp** — not other SaaS tools; that's what most people actually default to; building something that beats email for three-person collaboration over two weeks is the bar; complexity beyond that needs to earn its place
 - Calm company is the platform for ambitious sprints, not the destination; running at a sustainable baseline is what lets you choose to go somewhere far and uncertain when it matters; if you're always at the red line, you have no reserve for the adventure
 
-→ Episodes: rescuing-a-project-in-progress, a-matter-of-ambition, your-estimates-suck
+→ Episodes: [Rescuing a project in progress](https://37signals.com/podcast/rescuing-a-project-in-progress/), [A matter of ambition](https://37signals.com/podcast/a-matter-of-ambition/), [Your estimates suck](https://37signals.com/podcast/your-estimates-suck/)
 
 ---
 
@@ -246,4 +246,4 @@ tags:
 - When pricing a new product, consider whether it functions as a standalone or an **accessory** to other tools people already use; accessory pricing (low, flat, "no-brainer") lowers the evaluation threshold and accepts that many users will mix it with other products rather than replacing them
 - A large free tier (e.g., 1,000 free cards in Fizzy) serves awareness and adoption over revenue maximization; if the product is not your primary revenue vehicle, having many happy free users who get exposure to your broader product portfolio may be worth more than extracting maximum per-unit revenue
 
-→ Episodes: picking-pricing, launch-now
+→ Episodes: [Picking pricing](https://37signals.com/podcast/picking-pricing/), [Launch now](https://37signals.com/podcast/launch-now/)

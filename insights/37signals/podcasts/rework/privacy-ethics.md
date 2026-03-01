@@ -23,7 +23,7 @@ tags:
 - Plain-English test for any tracker: "Can I explain in two sentences what this collects, for whom, and would the recipient consent?" — most trackers fail this test
 - Removing pixels from 5 million daily emails is not symbolic; it shifts what the industry treats as normal — individual company decisions compound into cultural standards
 
-→ Episodes: spy-who-emailed-me, heal-the-internet, 100-facebook-free
+→ Episodes: [The spy who emailed me](https://37signals.com/podcast/spy-who-emailed-me/), [Heal the internet](https://37signals.com/podcast/heal-the-internet/), [100% Facebook-free](https://37signals.com/podcast/100-facebook-free/)
 
 ## Anti-Surveillance Stance
 
@@ -34,7 +34,7 @@ tags:
 - The "tattleware" category (software designed to catch employees "slacking") is philosophically incompatible with remote-first trust-based management
 - 37signals' own management philosophy is the opposite: no time-tracking, no keystroke logging, no activity monitoring; output and communication quality are the metrics
 
-→ Episodes: big-brother-at-the-office, spy-who-emailed-me
+→ Episodes: [Big brother at the office](https://37signals.com/podcast/big-brother-at-the-office/), [The spy who emailed me](https://37signals.com/podcast/spy-who-emailed-me/)
 
 ## Employee Monitoring Tools
 
@@ -45,7 +45,7 @@ tags:
 - The counterargument "what if someone is slacking?" misses the point: covert monitoring doesn't fix slacking, it just catches it; the fix is clearer expectations, better communication, and if necessary, a direct conversation
 - The question "would you be comfortable if the employee saw exactly what you're collecting and why?" is the correct threshold for any monitoring tool
 
-→ Episodes: big-brother-at-the-office, winston-sat-at-his-computer
+→ Episodes: [Big brother at the office](https://37signals.com/podcast/big-brother-at-the-office/), [Winston sat at his computer](https://37signals.com/podcast/winston-sat-at-his-computer/)
 
 ## School & Child Surveillance
 
@@ -57,7 +57,7 @@ tags:
 - The consent problem: schools often deploy these tools under broad acceptable-use policies signed during enrollment — not meaningful informed consent for continuous behavioral surveillance
 - The counterargument "we're just trying to prevent school shootings" is used to deflect any scrutiny; the tools have not demonstrated effectiveness at that goal and impose documented harms on non-threatening students
 
-→ Episodes: are-the-kids-alright
+→ Episodes: [Are the kids alright?](https://37signals.com/podcast/are-the-kids-alright/)
 
 ## Privacy Policy Design
 
@@ -68,7 +68,7 @@ tags:
 - A scavenger-hunt exercise: go through your own product as a user and try to find every place data is collected, stored, shared, and retained — most companies have significant blind spots
 - The goal is not a policy that protects the company legally — it is a policy that respects users enough to tell them the truth in language they can read in two minutes
 
-→ Episodes: privacy-scavenger-hunt
+→ Episodes: [Privacy scavenger hunt](https://37signals.com/podcast/privacy-scavenger-hunt/)
 
 ## Big Tech Accountability & Antitrust
 
@@ -79,7 +79,7 @@ tags:
 - Structural separation argument: the historical precedent for resolving conflicts of interest is structural separation (banks cannot own investment firms, phone companies could not own content) — the same logic applies to search, app distribution, and social networking
 - DHH's requested outcome: ban on targeted advertising as the business model driver — not because ads are wrong, but because behavioral surveillance at scale is the specific harm that drives the race-to-the-bottom in privacy
 
-→ Episodes: mr-dhh-goes-to-washington
+→ Episodes: [Mr. DHH goes to Washington](https://37signals.com/podcast/mr-dhh-goes-to-washington/)
 
 ## Individual Action & Systemic Change
 
@@ -92,7 +92,7 @@ tags:
 - Spending money is voting: every dollar spent at a company is an endorsement of that company's practices — 37signals stopped expensing Uber rides after serial ethics scandals made continued support feel like complicity
 - "Every dollar's a vote" — whether from personal pocket or company pocket; 37signals stopped spending thousands of dollars per year on Uber meetup transport as a direct act of opposition to documented abusive corporate practices
 
-→ Episodes: 100-facebook-free, heal-the-internet, delete-your-account, take-a-stand
+→ Episodes: [100% Facebook-free](https://37signals.com/podcast/100-facebook-free/), [Heal the internet](https://37signals.com/podcast/heal-the-internet/), [Delete your account](https://37signals.com/podcast/delete-your-account/), [Take a stand](https://37signals.com/podcast/take-a-stand/)
 
 ## Platform Monopolies & App Store Power
 
@@ -105,7 +105,7 @@ tags:
 - Progressive Web Apps (PWAs) as a route around the App Store — 37signals' ONCE product line deliberately targets PWA technology to create software that can be installed without Apple or Google's permission
 - Amazon's tax avoidance and loss-leader pricing: independent bookstore The Raven documented publicly that Amazon sells books at or below cost (seller's wholesale price), a strategy cross-subsidized by profitable AWS and marketplace businesses that no independent retailer can match — and Amazon does this while systematically avoiding the corporate taxes that independent businesses pay
 
-→ Episodes: this-again-apple, mr-dhh-goes-to-washington, nevermore-amazon
+→ Episodes: [This again, Apple?](https://37signals.com/podcast/this-again-apple/), [Mr. DHH goes to Washington](https://37signals.com/podcast/mr-dhh-goes-to-washington/), [Nevermore, Amazon](https://37signals.com/podcast/nevermore-amazon/)
 
 ## Targeted Advertising & the Surveillance Economy
 
@@ -116,7 +116,7 @@ tags:
 - Vermont bans highway billboards entirely; São Paulo and European cities have banned outdoor advertising — regulatory precedent exists for restricting advertising in public space as an aesthetic and civic decision, not just a privacy one
 - The Facebook-free pledge evolved: 37signals now has an Instagram presence, recognizing that Instagram is a separate product with genuine utility and that blanket corporate boycotts can be counterproductive
 
-→ Episodes: 100-facebook-free, using-ai-for-writing-being-facebook-free-and-other-listener-questions, mr-dhh-goes-to-washington
+→ Episodes: [100% Facebook-free](https://37signals.com/podcast/100-facebook-free/), [Using AI for writing & listener questions](https://37signals.com/podcast/using-ai-for-writing-being-facebook-free-and-other-listener-questions/), [Mr. DHH goes to Washington](https://37signals.com/podcast/mr-dhh-goes-to-washington/)
 
 ## Twitter / Social Media Ethics
 
@@ -129,7 +129,7 @@ tags:
 - DHH on personal social media hygiene: keeping social media apps off his main phone, leaving them on a secondary device in another room — not an all-or-nothing quit, but friction-based control of consumption; read more books as a result
 - The network moat of social platforms: follower counts are a form of loss aversion — going from 32,000 followers on Twitter to zero on a new platform feels catastrophic, which is the main reason Twitter alternatives have struggled even among users who genuinely dislike the platform
 
-→ Episodes: keep-calm-and-delete-the-tweet, twitter-is-still-up, happy-pacifists
+→ Episodes: [Keep calm and delete the tweet](https://37signals.com/podcast/keep-calm-and-delete-the-tweet/), [Twitter is still up](https://37signals.com/podcast/twitter-is-still-up/), [Happy pacifists](https://37signals.com/podcast/happy-pacifists/)
 
 ## Business Ethics & Taking a Stand
 
@@ -140,7 +140,7 @@ tags:
 - The spending-as-voting principle generalizes: it applies to which bank holds deposits (JPMorgan finances fossil fuel extraction), which cloud provider is used, which advertising platforms are supported — every financial relationship is an implicit endorsement
 - Calling out specific companies by name on social media requires proportionality and verification — DHH regrets joining the Away CEO pile-on based on a journalist's framing that turned out to be incomplete; the willingness to say "I was wrong" publicly is itself an ethical act
 
-→ Episodes: take-a-stand, moral-abc, using-ai-for-writing-being-facebook-free-and-other-listener-questions, keep-calm-and-delete-the-tweet
+→ Episodes: [Take a stand](https://37signals.com/podcast/take-a-stand/), [The Moral ABC](https://37signals.com/podcast/moral-abc/), [Using AI for writing & listener questions](https://37signals.com/podcast/using-ai-for-writing-being-facebook-free-and-other-listener-questions/), [Keep calm and delete the tweet](https://37signals.com/podcast/keep-calm-and-delete-the-tweet/)
 
 ## Environmental Responsibility
 
@@ -152,7 +152,7 @@ tags:
 - Individual company action is necessary but insufficient: "Basecamp could essentially erase itself off the earth and it would be a 100th of a 100th of a 10th of the remaining carbon budget" — the real lever is pressuring high-power actors (Amazon, Google, large banks) to change, using a company's public megaphone and industry relationships rather than just internal optimization
 - The compounding cultural effect: when carbon accounting, publication of results, and ongoing investment in mitigation become visible and imitated, it shifts what CFOs and boards consider normal — this is how cultural change moves faster than regulation
 
-→ Episodes: greening-basecamp
+→ Episodes: [Greening Basecamp](https://37signals.com/podcast/greening-basecamp/)
 
 ## Political Neutrality at Work
 
@@ -162,7 +162,7 @@ tags:
 - "The worst way to impress me is to work too much" — Marty's explicit framing to new employees; the political industry glorifies overwork and burnout as proof of dedication, and refusing to participate in that culture is a deliberate ethical stance
 - Social media consumption as a workplace ethics issue: Marty mutes political keywords on Twitter during work hours and has an explicit rule against checking it first thing in the morning — even professionals whose job is political communication recognize that unmanaged social media consumption is harmful
 
-→ Episodes: calm-in-the-political-storm
+→ Episodes: [Calm in the political storm](https://37signals.com/podcast/calm-in-the-political-storm/)
 
 ## Online Fraud & Identity Impersonation
 
@@ -173,7 +173,7 @@ tags:
 - The legal remediation gap: Basecamp's own remediation was limited to reporting to the FTC and FBI, and requesting takedowns from Gmail and Facebook — building a criminal case against distributed fraud networks is resource-intensive and rarely leads to prosecution
 - Protection principle: "Never give money upfront" — any job opportunity that requires a fee to access training or materials is a scam; legitimate employers do not ask candidates to pay for the privilege of applying
 
-→ Episodes: job-scam
+→ Episodes: [Job scam](https://37signals.com/podcast/job-scam/)
 
 ## Open Source Ethics & Software as a Commons
 
@@ -185,7 +185,7 @@ tags:
 - Shopify built a $20B business on Rails; Twitter also built on Rails but contributed nothing back and blamed Rails for their architectural problems — DHH's response: "whatever? I wasn't looking for gratitude in the first place" — the market framing of ingratitude only arises if you first adopt the market framing of debt
 - Proselytizing vs. selling: DHH used marketing techniques in Rails' early days but for ideological not commercial purposes — he now regrets that this led many into the commercial track without the ideological distinction in place
 
-→ Episodes: open-source-beyond-the-market
+→ Episodes: [Open source beyond the market](https://37signals.com/podcast/open-source-beyond-the-market/)
 
 ## AI Ethics
 
@@ -197,4 +197,4 @@ tags:
 - Meta/Facebook's open-source AI contribution (Llama series): DHH credits this as "absolutely incredible" — open-sourcing frontier AI models prevents capture by OpenAI or Google, and Meta is underwriting hundreds of millions in compute costs as a gift to the community; this is a case where a company 37signals previously boycotted is doing something of enormous public value, illustrating that companies should be evaluated action-by-action rather than written off wholesale
 - PWA technology and GDPR compliance: Once products built as PWAs can deliver push notifications directly from the company's servers to the user's device, without routing through Apple or Google — for European customers with sensitive data, this is a genuine privacy win, not just an App Store workaround
 
-→ Episodes: using-ai-for-writing-being-facebook-free-and-other-listener-questions, this-again-apple, listener-questions
+→ Episodes: [Using AI for writing & listener questions](https://37signals.com/podcast/using-ai-for-writing-being-facebook-free-and-other-listener-questions/), [This again, Apple?](https://37signals.com/podcast/this-again-apple/), [AI, employee equity & listener questions](https://37signals.com/podcast/listener-questions/)

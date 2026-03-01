@@ -26,7 +26,7 @@ tags:
 - Avoid gamifying internal communication: Applause-style like buttons create power-dynamic anxiety, reward cheap engagement, and corrupt internal compasses for what is actually good
 - The "37signals Guide to Internal Communication" (30 principles) serves as the onboarding reference for all new hires on how the org communicates
 
-→ Episodes: principles-of-communication, dont-like-this, dont-like-this-update
+→ Episodes: [Principles of communication](https://37signals.com/podcast/principles-of-communication/), [Please don't like this](https://37signals.com/podcast/dont-like-this/), [Please don't like this (Update)](https://37signals.com/podcast/dont-like-this-update/)
 
 ## Async vs. Real-Time Chat
 
@@ -38,7 +38,7 @@ tags:
 - Five uninterrupted hours of focused work is the productivity standard; constant chat monitoring makes this impossible for most workers who have never experienced it
 - Do not default to chat for complex decisions — verbal and chat descriptions create illusions of agreement; written proposals make misalignment visible
 
-→ Episodes: the-wrong-time-for-real-time, principles-of-communication
+→ Episodes: [The wrong time for real time](https://37signals.com/podcast/the-wrong-time-for-real-time/), [Principles of communication](https://37signals.com/podcast/principles-of-communication/)
 
 ## Cycle Communication: Kickoffs and Heartbeats
 
@@ -56,7 +56,7 @@ tags:
 - Shape Up acts as a founder-protection mechanism: ideas must sit until the next betting table instead of interrupting whoever's on a project; the cadence contains the impulse to tap someone on the shoulder with every new bright idea
 - Six weeks is not a magic number — the principle is a time-box with a visible end; adapt the length (8, 11, 12 weeks) to your context while keeping the boundary-creates-decision-pressure logic intact
 
-→ Episodes: kickoffs-and-heartbeats, managing-chaos-listener-qs
+→ Episodes: [Kickoffs & heartbeats](https://37signals.com/podcast/kickoffs-and-heartbeats/), [Managing chaos & listener questions](https://37signals.com/podcast/managing-chaos-listener-qs/)
 
 ## Customer Communication
 
@@ -72,7 +72,7 @@ tags:
 - Launch first, then step into the firehose — do not do pre-launch customer research asking what people want; build something, ship it, then learn from real users at scale; there is no better research instrument than a live product with actual customers
 - Post-launch customer conversations surface problems you never anticipated but can fix immediately — the act of responding to that volume in the first days after launch is itself the best product education available
 
-→ Episodes: talk-directly-to-your-customers, question-your-customers, rework-live
+→ Episodes: [Talk directly to your customers](https://37signals.com/podcast/talk-directly-to-your-customers/), [Question your customers](https://37signals.com/podcast/question-your-customers/), [REWORK Live!](https://37signals.com/podcast/rework-live/)
 
 ## Public and External Communication
 
@@ -102,7 +102,7 @@ tags:
 - A customer who experiences a failure that gets fixed with exceptional care often becomes a stronger advocate than one who had no problem at all — the recovery story is the one that spreads
 - Never hold a grudge against customers who left and come back; update your priors when someone who previously criticized your work returns — the capacity to change minds, in both directions, is healthy for a marketplace
 
-→ Episodes: press-releases-are-spam, talk-directly-to-your-customers, sound-like-you, rework-mailbag-3, what-are-you-really-buying
+→ Episodes: [Press releases are spam](https://37signals.com/podcast/press-releases-are-spam/), [Talk directly to your customers](https://37signals.com/podcast/talk-directly-to-your-customers/), [Sound like you](https://37signals.com/podcast/sound-like-you/), [REWORK Mailbag 3](https://37signals.com/podcast/rework-mailbag-3/), [What are you really buying?](https://37signals.com/podcast/what-are-you-really-buying/)
 
 ## Crisis Communication and Apologies
 
@@ -115,7 +115,7 @@ tags:
 - Communicate outage status via infrastructure that stays up even when your product is down; baking your status page into the product means it goes dark precisely when customers need it most
 - Do not demand forgiveness in an apology — offer it, let the other party decide, and accept that accepting an apology is distinct from forgiving
 
-→ Episodes: how-to-say-sorry
+→ Episodes: [How to say you're sorry](https://37signals.com/podcast/how-to-say-sorry/)
 
 ## Feedback and Acknowledgment Design
 
@@ -126,7 +126,7 @@ tags:
 - The goal of acknowledgment tooling is to confirm receipt, not to generate engagement metrics — Basecamp has no ad model requiring eyeballs, so engagement maximization is actively harmful
 - Long-form work (data reports, research writeups) deserves explicit acknowledgment mechanisms so authors know their work was read — silence after effort damages motivation
 
-→ Episodes: dont-like-this, dont-like-this-update
+→ Episodes: [Please don't like this](https://37signals.com/podcast/dont-like-this/), [Please don't like this (Update)](https://37signals.com/podcast/dont-like-this-update/)
 
 ## Customer Support Voice
 
@@ -144,7 +144,7 @@ tags:
 - Use the same matter-of-fact collaborative tone for sensitive topics ("I have a concern about X") as you would for routine ones ("the software isn't working") — treating a difficult conversation as emotionally exceptional before it begins signals fragility and often escalates it
 - Employees systematically underestimate how much good managers want to hear from them — speaking up early and directly is almost always welcomed by capable managers and builds career credibility faster than waiting
 
-→ Episodes: dont-be-fake, ask-a-manager
+→ Episodes: [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Ask a manager](https://37signals.com/podcast/ask-a-manager/)
 
 ## Co-founder and Stakeholder Disagreements
 
@@ -159,7 +159,7 @@ tags:
 - Avoid making reactive secondary decisions in the fog of a major stressful decision — when under pressure, you slip and make permanent calls you wouldn't make calmly; after a big company decision, pause before acting on every subsequent impulse it generates
 - Project one year ahead as a filter for in-the-moment choices: "how will this feel in 12 months?" correctly deprioritizes the pain of the present and aligns you with the outcome you actually want
 
-→ Episodes: rework-mailbag-3, dont-be-fake, listener-questions-part-3
+→ Episodes: [REWORK Mailbag 3](https://37signals.com/podcast/rework-mailbag-3/), [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Listener questions Part 3](https://37signals.com/podcast/listener-questions-part-3/)
 
 ## Job Ads and Hiring Communication
 
@@ -170,7 +170,7 @@ tags:
 - The tone and voice of a job ad communicates culture as directly as its content — a candidate who wants a buttoned-up corporate environment will self-select out after reading a 37signals job ad; this is the desired outcome
 - Remote-first hiring is a communication force-multiplier: opening roles globally produces hundreds or thousands of applicants vs. a thin local pool, giving you enough signal to identify genuine principle-alignment
 
-→ Episodes: listener-questions-part-2, rework-mailbag-3
+→ Episodes: [Listener questions Part 2](https://37signals.com/podcast/listener-questions-part-2/), [REWORK Mailbag 3](https://37signals.com/podcast/rework-mailbag-3/)
 
 ## Advice, Input, and Decision Confidence
 
@@ -186,4 +186,4 @@ tags:
 - Keep a short list of 50 core principles rather than accumulating thousands — having 10,000 ideas in your head makes it impossible to know which one to apply; the constraint forces synthesis and actually increases decisiveness
 - Successful people often cannot accurately explain what made them successful — survivorship bias, timing, and compounding small accidents are invisible; copying their stated strategy without their context produces a worse copy, not a similar outcome
 
-→ Episodes: be-careful-who-you-listen-to, tone-is-in-your-fingers
+→ Episodes: [Be careful who you listen to](https://37signals.com/podcast/be-careful-who-you-listen-to/), [Tone is in your fingers](https://37signals.com/podcast/tone-is-in-your-fingers/)

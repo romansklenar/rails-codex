@@ -44,7 +44,7 @@ tags:
 - When a launch-week crisis pulls founders away from support queues, the rest of the team absorbs the overflow — designing for slack in the support headcount (not just the product team) is what allows the company to absorb a surprise spike without collapsing
 - The 40-hour week was not invented out of benevolence — Henry Ford discovered through assembly-line data that workers producing 50–60 hours per week made more mistakes, requiring costly rework; the 40-hour week was an empirical productivity optimization, not a social concession; the same industrial research has been replicated across knowledge work contexts
 - A 40-hour week is "an accomplishment of the company," not a ceiling employees must justify — the goal is working hard and efficiently in those hours, not proving devotion through duration; the few crises that spill over the boundary are accepted exceptions, not proof the boundary was wrong
-→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks, extreme-capitalism, dont-be-a-hero
+→ Episodes: [Escaping Workaholism](https://37signals.com/podcast/escaping-workaholism/), [8's enough, 40's plenty](https://37signals.com/podcast/8s-enough-40s-plenty/), [Workaholism](https://37signals.com/podcast/workaholism/), [The outwork myth](https://37signals.com/podcast/the-outwork-myth/), [The power of time off](https://37signals.com/podcast/the-power-of-time-off/), [Work, rest, and what you will](https://37signals.com/podcast/work-rest-and-what-you-will/), [Balancing it all](https://37signals.com/podcast/balancing-it-all/), [How we work: Summer Fridays](https://37signals.com/podcast/how-we-work-summer-fridays/), [Lab week](https://37signals.com/podcast/lab-week/), [Take some time off](https://37signals.com/podcast/take-some-time-off/), [Workaholics aren't heroes](https://37signals.com/podcast/workaholics-arent-heroes/), [The cult of overwork](https://37signals.com/podcast/cult-of-overwork/), [Two weeks](https://37signals.com/podcast/two-weeks/), [Extreme capitalism](https://37signals.com/podcast/extreme-capitalism/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ## Remote Work
 
@@ -64,7 +64,7 @@ tags:
 - Platform diversity matters for product quality: a fully Apple-only team will ship broken experiences on Windows (wrong fonts, missing emoji flags, poor scroll bars) without noticing; having team members on Windows and Android surfaces these issues before customers do
 - New remote employees should have an explicit onboarding buddy and clearly documented day-one instructions, because the implicit knowledge that office environments transmit ("when the Slack dot goes green, you're visible") is invisible until written down
 
-→ Episodes: the-challenges-of-remote-work, how-we-work-fewer-meetings-more-check-ins, less-business-more-d20s, remote-work-extreme-edition, going-remote-design, remote-work-q-a-1, remote-work-q-a-2, a-new-take-on-platform-preferences, out-in-the-open
+→ Episodes: [The challenges of remote work](https://37signals.com/podcast/the-challenges-of-remote-work/), [Fewer meetings, more check-ins](https://37signals.com/podcast/how-we-work-fewer-meetings-more-check-ins/), [Less business, more d20s](https://37signals.com/podcast/less-business-more-d20s/), [Remote work: Extreme edition](https://37signals.com/podcast/remote-work-extreme-edition/), [Going remote: Design](https://37signals.com/podcast/going-remote-design/), [Remote work Q&A Part 1](https://37signals.com/podcast/remote-work-q-a-1/), [Remote work Q&A Part 2](https://37signals.com/podcast/remote-work-q-a-2/), [A new take on platform preferences](https://37signals.com/podcast/a-new-take-on-platform-preferences/), [Out in the open](https://37signals.com/podcast/out-in-the-open/)
 
 ## Meetings & Interruptions
 
@@ -87,7 +87,7 @@ tags:
 - Shape Up contains the interruption problem at the organizational level: a new idea that arrives mid-cycle is written down and deferred to the next betting table, protecting the current team from thrashing across parallel priorities
 - **Drive-by comments**: when someone not closely involved in a project drops an opinion mid-execution, it can derail the team, trigger debate, and reset direction — especially if the commenter has hierarchical power; more voices are not always better; asking one more person often makes you less sure, not more; late-stage drive-bys are particularly costly because there may be nothing actionable the team can do with the feedback anyway
 
-→ Episodes: calendar-tetris, meetings-are-toxic-season-2, interruption-is-the-enemy-of-productivity, buckets-of-time, how-we-work-fewer-meetings-more-check-ins, finding-focus, interruption-not-collaboration, meetings-are-toxic, managing-chaos-listener-qs, dont-be-a-hero
+→ Episodes: [Calendar tetris](https://37signals.com/podcast/calendar-tetris/), [Meetings are toxic](https://37signals.com/podcast/meetings-are-toxic-season-2/), [Interruption is the enemy](https://37signals.com/podcast/interruption-is-the-enemy-of-productivity/), [Buckets of time](https://37signals.com/podcast/buckets-of-time/), [Fewer meetings, more check-ins](https://37signals.com/podcast/how-we-work-fewer-meetings-more-check-ins/), [Finding focus](https://37signals.com/podcast/finding-focus/), [Interruption is not collaboration](https://37signals.com/podcast/interruption-not-collaboration/), [Meetings are toxic](https://37signals.com/podcast/meetings-are-toxic/), [Managing chaos & listener questions](https://37signals.com/podcast/managing-chaos-listener-qs/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ## Company Culture
 
@@ -120,7 +120,7 @@ tags:
 - The "enthusiastic beginner" is a specific posture to cultivate: accepting that you will be bad, that an eight-year-old will beat you at chess, and that this humility is the price of learning anything worth knowing — adults avoid this discomfort by staying in domains where they are already competent, which produces narrowness
 - Protecting personal time for non-work pursuits requires explicit work boundaries — if the job is so overwhelming there's no time for evenings and weekends, "make sure your boss reads It Doesn't Have to Be Crazy At Work"; sustainable hours are a prerequisite for whole-person development
 - Don't monetize every interest — the pressure to turn every hobby into a side hustle or social media performance corrupts the purity of the activity; picking one craft as your life's main engine and treating everything else as non-commercial enrichment preserves the joy and the learning
-→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company, try-everything, dont-be-a-hero
+→ Episodes: [You don't create a culture](https://37signals.com/podcast/you-dont-create-a-culture/), [Built on trust](https://37signals.com/podcast/built-on-trust/), [Total transparency](https://37signals.com/podcast/total-transparency/), [Everybody works](https://37signals.com/podcast/everybody-works/), [Dare to be basic](https://37signals.com/podcast/dare-to-be-basic/), [AI, employee equity & listener questions](https://37signals.com/podcast/listener-questions/), [Listener questions Part 2](https://37signals.com/podcast/listener-questions-part-2/), [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Out in the open](https://37signals.com/podcast/out-in-the-open/), [Year in review](https://37signals.com/podcast/year-in-review-growing-as-a-company/), [Try everything](https://37signals.com/podcast/try-everything/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ## Open Offices
 
@@ -132,7 +132,7 @@ tags:
 - The open office draws criticism for noise and interruption, but some small teams report that transitioning from cubicles to open improved cross-team communication — the key variable is team size and whether the primary bottleneck is isolation or interruption
 - Smaller, cozier shared spaces attract more regular use than large, empty ones; Basecamp's Chicago office lost regular attendance partly because 10,000 sqft felt like an airport terminal for the 2–3 people who showed up daily
 
-→ Episodes: the-open-office, interruption-not-collaboration, office-space, it-doesnt-have-to-be-crazy-1
+→ Episodes: [The open office](https://37signals.com/podcast/the-open-office/), [Interruption is not collaboration](https://37signals.com/podcast/interruption-not-collaboration/), [Office space](https://37signals.com/podcast/office-space/), [It Doesn't Have to be Crazy — Part 1](https://37signals.com/podcast/it-doesnt-have-to-be-crazy-1/)
 
 ## Physical Office Design
 
@@ -144,7 +144,7 @@ tags:
 - Venue quality for meetups has measurable morale effects: a hotel ballroom with round tables and pitchers of water sets a "mandatory conference" tone that undercuts the energy of the gathering; an architecturally distinctive space (old bank, brick factory) signals that the event is worth being at and raises the behavioral standard of participants
 - The cost of a bad venue is not just the venue fee — it is months of lowered morale and the lingering memory of "last time we all got together, that was forgettable"; the cost of a great venue pays forward in energy that outlasts the bill
 
-→ Episodes: office-space, preparing-for-meet-up, the-open-office
+→ Episodes: [Office space](https://37signals.com/podcast/office-space/), [Preparing for meet-up](https://37signals.com/podcast/preparing-for-meet-up/), [The open office](https://37signals.com/podcast/the-open-office/)
 
 ## Company Meetups
 
@@ -161,7 +161,7 @@ tags:
 - First-time meetup attendees need a buddy: the jump from remote teammate to walking into a room of 60+ people is disorienting even when relationships are strong over text — a designated veteran can smooth that transition and ensure new people have dinner plans and feel socially connected
 - Buffer (85-person remote company) runs one large annual retreat plus smaller team meetups mid-year; the large retreat shifted from a "ship a product" goal to pure connection after learning that flying to Thailand to sit in a conference room felt like a waste of the trip
 
-→ Episodes: out-of-office-together, company-meet-up-amsterdam-edition, preparing-for-meet-up, how-buffer-meets-up, the-social-distance, a-hosty-retreat
+→ Episodes: [Out of office, together](https://37signals.com/podcast/out-of-office-together/), [Company meet-up: Amsterdam edition](https://37signals.com/podcast/company-meet-up-amsterdam-edition/), [Preparing for meet-up](https://37signals.com/podcast/preparing-for-meet-up/), [How Buffer meets up](https://37signals.com/podcast/how-buffer-meets-up/), [The (social) distance](https://37signals.com/podcast/the-social-distance/), [A hosty retreat](https://37signals.com/podcast/a-hosty-retreat/)
 
 ## Working Parents
 
@@ -174,7 +174,7 @@ tags:
 - Screen time guilt during crisis periods is not worth carrying — when a parent is doing survival mode work during an emergency, some extra screen time for children is the lesser cost; chronic guilt about imperfect parenting during crunch compounds the burnout rather than resolving it
 - Remote work is net positive for working parents because it eliminates commute time, enables flexible scheduling around school rhythms, and removes the implicit pressure of facetime culture — but it requires explicit communication about availability that office workers do not have to articulate
 
-→ Episodes: going-remote-kids-at-home, babies-at-work, kids_incorporated, no-time-is-no-excuse
+→ Episodes: [Going remote: Kids at home](https://37signals.com/podcast/going-remote-kids-at-home/), [Babies at work](https://37signals.com/podcast/babies-at-work/), [Kids Incorporated](https://37signals.com/podcast/kids_incorporated/), [No time is no excuse](https://37signals.com/podcast/no-time-is-no-excuse/)
 
 ## Burnout Prevention
 
@@ -191,7 +191,7 @@ tags:
 - Platform dependency creates a specific burnout trigger: when an external gatekeeper (e.g., Apple's App Store) can threaten the existence of a product the team has spent years building, the resulting helplessness and lost sleep is categorically different from ordinary work stress — founders described feeling physically ill during the HEY/Apple standoff
 - Stoic philosophy as a practical work tool: separating what you can control from what you cannot is easier to preach than to practice when you have partial control (some levers but not full resolution) — the worst mental state is having options you don't want to use while watching a situation deteriorate
 - Radical transparency during a crisis preserves trust more than spin: after the botched "It Doesn't Have to Be Crazy" book launch, DHH and Jason publicly owned their share of the blame (cover design, print run assumptions) rather than framing the sellout as a positive signal — this honesty with their audience is itself a cultural artifact
-→ Episodes: workaholics-arent-heroes, selling-burnout, cult-of-overwork, take-some-time-off, escaping-workaholism, lab-week, it-doesnt-have-to-be-crazy-1, it-doesnt-have-to-be-crazy-2, two-weeks, sometimes-its-crazy-at-work
+→ Episodes: [Workaholics aren't heroes](https://37signals.com/podcast/workaholics-arent-heroes/), [Selling burnout](https://37signals.com/podcast/selling-burnout/), [The cult of overwork](https://37signals.com/podcast/cult-of-overwork/), [Take some time off](https://37signals.com/podcast/take-some-time-off/), [Escaping Workaholism](https://37signals.com/podcast/escaping-workaholism/), [Lab week](https://37signals.com/podcast/lab-week/), [It Doesn't Have to be Crazy — Part 1](https://37signals.com/podcast/it-doesnt-have-to-be-crazy-1/), [It Doesn't Have to be Crazy — Part 2](https://37signals.com/podcast/it-doesnt-have-to-be-crazy-2/), [Two weeks](https://37signals.com/podcast/two-weeks/), [Sometimes it's crazy at work](https://37signals.com/podcast/sometimes-its-crazy-at-work/)
 
 ## Scaling the Organization
 
@@ -204,7 +204,7 @@ tags:
 - Rapid hiring for launch emergencies is possible but costly: five temporary customer support reps were contracted and onboarded in ~36 hours; three months of standard onboarding was compressed into one day — it worked, but only because the existing team had deep product knowledge and could create fast-track documentation on the fly
 - "Illusions of agreement" cause expensive rework: the "It Doesn't Have to Be Crazy" book cover was designed to REWORK's exact dimensions, but the publisher assumed standard dimensions — both parties believed they had agreed; the fix is to verify shared understanding with specifics, not confirmations
 
-→ Episodes: year-in-review-growing-as-a-company, two-weeks, sometimes-its-crazy-at-work, increasing-capacity
+→ Episodes: [Year in review](https://37signals.com/podcast/year-in-review-growing-as-a-company/), [Two weeks](https://37signals.com/podcast/two-weeks/), [Sometimes it's crazy at work](https://37signals.com/podcast/sometimes-its-crazy-at-work/), [Increasing capacity](https://37signals.com/podcast/increasing-capacity/)
 
 ## Emotions at Work
 
@@ -217,7 +217,7 @@ tags:
 - "When I'm happy I get the promotion" is more accurate than "when I get the promotion I'll be happy" — the causal arrow runs from wellbeing to performance, not the reverse; cultivating a life outside work is not a distraction from career success, it is foundational to sustaining it
 - Emotional culture is set by micro-decisions at scale, not by stated values: one organization built a literal "crying room" to signal that intense emotional reactions are normal and expected in high-stakes work — explicit environmental design beats policy memos
 
-→ Episodes: no-hard-feelings, dose-of-empathy, customer-support
+→ Episodes: [No hard feelings](https://37signals.com/podcast/no-hard-feelings/), [A dose of empathy](https://37signals.com/podcast/dose-of-empathy/), [Going remote: Customer support](https://37signals.com/podcast/customer-support/)
 
 ## Side Projects & Independent Work
 
@@ -233,4 +233,4 @@ tags:
 - **Every failed or base-hit product is a direct investment in the next one**: 37signals extracted learnings from every product that underperformed and applied them to Basecamp; a project that only pays expenses is still a multi-month curriculum in product, marketing, and distribution
 - Hold two conflicting ideas simultaneously: believe fully that this idea could succeed (because half-hearted effort guarantees failure), while also accepting statistically that it probably won't — this dual awareness produces committed work without brittle attachment to a specific outcome
 
-→ Episodes: building-on-the-side
+→ Episodes: [Building on the side](https://37signals.com/podcast/building-on-the-side/)

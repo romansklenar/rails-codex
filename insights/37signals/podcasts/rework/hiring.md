@@ -34,7 +34,7 @@ tags:
 - Raising money to hire ahead of revenue masks broken unit economics — if you're spending $2 to make $1, no volume of hiring or growth fixes it; fix the fundamentals before scaling the team
 - The wrong kind of pressure (hire-into-debt, investor-deadline pressure) does not produce good products — it produces "freaking your way out" of a hard spot, which rarely works
 
-→ Episodes: hire-when-it-hurts-rework, hire-when-it-hurts, strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once, titles-tenure-dont-matter, two-person-teams, listener-questions-part-2, user-testing-stoic-philosophy-and-other-listener-questions
+→ Episodes: [Hire when it hurts](https://37signals.com/podcast/hire-when-it-hurts-rework/), [Hire when it hurts](https://37signals.com/podcast/hire-when-it-hurts/), [Strangers at a cocktail party](https://37signals.com/podcast/strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once/), [Titles, tenure, don't matter](https://37signals.com/podcast/titles-tenure-dont-matter/), [Two person teams](https://37signals.com/podcast/two-person-teams/), [Listener questions Part 2](https://37signals.com/podcast/listener-questions-part-2/), [User testing, stoic philosophy & listener questions](https://37signals.com/podcast/user-testing-stoic-philosophy-and-other-listener-questions/)
 
 ## Who to Hire
 
@@ -50,7 +50,7 @@ tags:
 - Entrepreneurs make excellent non-traditional hires for roles like marketing: their natural frugality with budgets, bias toward doing-over-planning, and comfort with ambiguity are more valuable than years of title-specific experience
 - When hiring for a role that doesn't exist yet, the shopping process itself is a discovery mechanism — you may find you wanted a different kind of person entirely once you see candidates side-by-side
 
-→ Episodes: hire-managers-of-one, titles-tenure-dont-matter, hire-great-writers, managing-vs-mentoring, listener-questions-hr-edition, in-the-market-for-a-marketer, meet-andy
+→ Episodes: [Hire managers of one](https://37signals.com/podcast/hire-managers-of-one/), [Titles, tenure, don't matter](https://37signals.com/podcast/titles-tenure-dont-matter/), [Hire great writers](https://37signals.com/podcast/hire-great-writers/), [Managing vs mentoring](https://37signals.com/podcast/managing-vs-mentoring/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [In the market for a marketer](https://37signals.com/podcast/in-the-market-for-a-marketer/), [Meet Andy](https://37signals.com/podcast/meet-andy/)
 
 ## The Hiring Process
 
@@ -80,7 +80,7 @@ tags:
 - **If you're hiring humans, humans should do the hiring**: algorithmic or AI pre-screening is understandable at massive hiring scale, but at small company scale it offloads a skill (evaluating people) that the founders and team need to develop themselves; hiring judgment compounds over years; outsourcing it to a system early stunts that growth
 - Founders should do all hiring personally as long as possible — Jason and David handled hiring themselves for years before delegating; the first-hand experience of reading hundreds of cover letters and resumes calibrates taste in ways no briefing can replicate
 
-→ Episodes: how-we-work-finding-the-right-team, hire-when-it-hurts, listener-questions-hr-edition, titles-tenure-dont-matter, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, hire-great-writers, in-the-market-for-a-marketer, listener-questions-part-2, the-case-for-cover-letters
+→ Episodes: [Finding the right team](https://37signals.com/podcast/how-we-work-finding-the-right-team/), [Hire when it hurts](https://37signals.com/podcast/hire-when-it-hurts/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [Titles, tenure, don't matter](https://37signals.com/podcast/titles-tenure-dont-matter/), [Hiring senior leaders & listener questions](https://37signals.com/podcast/hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions/), [Hire great writers](https://37signals.com/podcast/hire-great-writers/), [In the market for a marketer](https://37signals.com/podcast/in-the-market-for-a-marketer/), [Listener questions Part 2](https://37signals.com/podcast/listener-questions-part-2/), [The case for cover letters](https://37signals.com/podcast/the-case-for-cover-letters/)
 
 ## Hiring for Senior & Executive Roles
 
@@ -93,7 +93,7 @@ tags:
 - When adding a third person to a long-running two-person executive team, evaluate for complementary temperament (e.g., calming to the team's existing dynamic), not just complementary skills
 - Allow months for the process — four to five months is appropriate for a COO-level search; rushing produces regret
 
-→ Episodes: hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions
+→ Episodes: [Hiring senior leaders & listener questions](https://37signals.com/podcast/hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions/)
 
 ## Writing as a Hiring Signal
 
@@ -111,7 +111,7 @@ tags:
 - A cover letter that could have been sent to any employer reveals that the applicant did not read the job posting carefully; the ability to respond specifically to what was actually written is the same skill required to understand a shaped pitch, a customer complaint, or a design critique
 - **Most applicants phone it in**: in a competitive market the gap between median effort and standout effort is small in absolute hours but enormous in impression; a cover letter that demonstrates genuine interest and clear thinking places the applicant in the top 5–10% without requiring exceptional experience
 
-→ Episodes: hire-great-writers, how-we-work-finding-the-right-team, listener-questions-hr-edition, dont-be-fake, hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions, the-case-for-cover-letters
+→ Episodes: [Hire great writers](https://37signals.com/podcast/hire-great-writers/), [Finding the right team](https://37signals.com/podcast/how-we-work-finding-the-right-team/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [Don't be fake](https://37signals.com/podcast/dont-be-fake/), [Hiring senior leaders & listener questions](https://37signals.com/podcast/hiring-senior-leaders-getting-started-with-six-week-cycles-and-other-listener-questions/), [The case for cover letters](https://37signals.com/podcast/the-case-for-cover-letters/)
 
 ## Interview Anti-Patterns to Avoid
 
@@ -125,7 +125,7 @@ tags:
 - Evaluating marketing candidates by their resume metrics ("increased ROI 43%") is unreliable — results are rarely individually attributable and correlate poorly with ability to execute at a new company
 - Measuring marketing via a fixed budget exercise reveals mindset: professional marketers spend the budget because that is what is expected; entrepreneurs question whether the budget is even necessary
 
-→ Episodes: hiring-is-not-hazing, how-we-work-finding-the-right-team, titles-tenure-dont-matter, in-the-market-for-a-marketer
+→ Episodes: [Hiring is not hazing](https://37signals.com/podcast/hiring-is-not-hazing/), [Finding the right team](https://37signals.com/podcast/how-we-work-finding-the-right-team/), [Titles, tenure, don't matter](https://37signals.com/podcast/titles-tenure-dont-matter/), [In the market for a marketer](https://37signals.com/podcast/in-the-market-for-a-marketer/)
 
 ## Finding a Good Employer (Candidate Perspective)
 
@@ -141,7 +141,7 @@ tags:
 - Salary transparency in a job posting is a strong positive signal; withholding it signals the employer treats compensation as leverage over candidates
 - Companies that are genuinely remote-first became so before it was forced on them — prior remote history (partial or full) before a crisis is meaningful evidence of real infrastructure and norms, not just a policy
 
-→ Episodes: rework-mailbag-3, job-scam, help-wanted
+→ Episodes: [REWORK Mailbag 3](https://37signals.com/podcast/rework-mailbag-3/), [Job scam](https://37signals.com/podcast/job-scam/), [Help wanted](https://37signals.com/podcast/help-wanted/)
 
 ## Job Scams & Fraud
 
@@ -152,7 +152,7 @@ tags:
 - Defence as a candidate: if a process is entirely via email with no live conversation, stop; if the onboarding asks for bank details before a signed contract, stop; if it sounds too good to be true, it is
 - Job boards and Craigslist carry disclaimers, but social media ads (Facebook) do not — scams increasingly run through paid social where there is no built-in warning
 
-→ Episodes: job-scam
+→ Episodes: [Job scam](https://37signals.com/podcast/job-scam/)
 
 ## Performance Management & Reviews
 
@@ -167,7 +167,7 @@ tags:
 - Employees bear some responsibility too: self-assessments matter; asking specific questions ("what's one thing I could do 10% better?") yields specific feedback, while vague asks ("how am I doing?") yield vague answers
 - Design feedback at 37signals is informal and opt-in: a designer pings the CEO or product strategist when they want a second opinion, not on a fixed schedule; this eliminates the anxiety of mandatory formal reviews and preserves the designer's ownership of the decision
 
-→ Episodes: listener-questions-hr-edition, how-we-work-finding-the-right-team, hire-managers-of-one, everybody-works, the-worst-performance-review
+→ Episodes: [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [Finding the right team](https://37signals.com/podcast/how-we-work-finding-the-right-team/), [Hire managers of one](https://37signals.com/podcast/hire-managers-of-one/), [Everybody works](https://37signals.com/podcast/everybody-works/), [The worst performance review](https://37signals.com/podcast/the-worst-performance-review/)
 
 ## Team Structure & Management Philosophy
 
@@ -183,7 +183,7 @@ tags:
 - The best way to wreck a good team is to introduce a manager who has more hours than there is work to do; that person will invent work for others
 - The drop of product management needed by each two-person feature team is tiny — one product manager supporting six simultaneous feature teams is sufficient, not one per team
 
-→ Episodes: everybody-works, managing-vs-mentoring, listener-questions-hr-edition, hire-managers-of-one, listener-questions-ama, two-person-teams, dont-be-a-hero
+→ Episodes: [Everybody works](https://37signals.com/podcast/everybody-works/), [Managing vs mentoring](https://37signals.com/podcast/managing-vs-mentoring/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [Hire managers of one](https://37signals.com/podcast/hire-managers-of-one/), [Listener questions / AMA](https://37signals.com/podcast/listener-questions-ama/), [Two person teams](https://37signals.com/podcast/two-person-teams/), [Don't be a hero](https://37signals.com/podcast/dont-be-a-hero/)
 
 ## Two-Person Teams as the Hiring Unit
 
@@ -197,7 +197,7 @@ tags:
 - For non-product functions (finance, QA, people ops), the principle is the same — roles that start as one-person positions should eventually grow to two for redundancy and the mental health of the sole owner
 - Sole-owner roles have an expiration date: someone who is the only person doing a type of work for more than a couple of years goes "a little stir crazy" — they need a peer who understands the work, not just a manager who oversees it
 
-→ Episodes: two-person-teams, two-person-teams-listener-questions, a-matter-of-ambition, listener-questions-hr-edition
+→ Episodes: [Two person teams](https://37signals.com/podcast/two-person-teams/), [Two-person teams: Listener questions](https://37signals.com/podcast/two-person-teams-listener-questions/), [A matter of ambition](https://37signals.com/podcast/a-matter-of-ambition/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/)
 
 ## Trust, Autonomy & New Employee Ramp
 
@@ -211,7 +211,7 @@ tags:
 - New hires find the autonomy disorienting at first — being given a single-page brief with squiggly sketches and told to ship something great in six weeks is unusual; most workplaces have task lists, standups, and daily direction
 - The goal is for people to live up to high expectations, not down to low ones — even junior hires are delegated full projects, not task lists; the best junior hires reveal themselves immediately by rising to that challenge
 
-→ Episodes: two-person-teams-listener-questions, listener-questions-part-2, managing-vs-mentoring
+→ Episodes: [Two-person teams: Listener questions](https://37signals.com/podcast/two-person-teams-listener-questions/), [Listener questions Part 2](https://37signals.com/podcast/listener-questions-part-2/), [Managing vs mentoring](https://37signals.com/podcast/managing-vs-mentoring/)
 
 ## Compensation & Equity
 
@@ -224,7 +224,7 @@ tags:
 - Two employees left over 20 years specifically because they wanted equity upside instead of high base pay; that is the correct tradeoff for them — 37signals cannot offer unicorn prospects and does not try to
 - This model is congruent with company identity: a slow-growth, profitable, privately-held company is not a rocket ship; pretending to offer rocket-ship compensation would be dishonest
 
-→ Episodes: listener-questions
+→ Episodes: [AI, employee equity & listener questions](https://37signals.com/podcast/listener-questions/)
 
 ## Onboarding
 
@@ -237,4 +237,4 @@ tags:
 - Tribal knowledge is explicitly documented in team glossaries: team-specific terms, abbreviations, and norms are codified so new hires don't feel excluded by insider language
 - For product teams, new hires should expect that the first cycle will be disorienting — the single-page brief and high autonomy are by design, and the first cycle rarely produces a slam dunk; that is normal and expected
 
-→ Episodes: welcome-aboard, listener-questions-hr-edition, hire-when-it-hurts, two-person-teams-listener-questions
+→ Episodes: [Welcome aboard](https://37signals.com/podcast/welcome-aboard/), [Listener questions: HR edition](https://37signals.com/podcast/listener-questions-hr-edition/), [Hire when it hurts](https://37signals.com/podcast/hire-when-it-hurts/), [Two-person teams: Listener questions](https://37signals.com/podcast/two-person-teams-listener-questions/)
