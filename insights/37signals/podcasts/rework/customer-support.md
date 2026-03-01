@@ -125,6 +125,19 @@ tags:
 
 → Episodes: biggest-customer-conundrum, let-your-customers-outgrow-you
 
+## Pricing as a Customer Signal
+
+- Being the cheapest option in a competitive set is not a virtue — if the only reason for success is price, that's a fragile foundation and signals low value to prospects
+- Customers will say directly: "I don't know if I'd trust something that cheap to run my business on" — low price actively destroys confidence in some segments
+- Run a competitive price analysis across ~25 comparable products before any pricing change; know where you sit relative to the market before deciding whether to move
+- Eliminate pricing tiers when they create confusion rather than value — Basecamp collapsed from 5–6 tiers to a single flat rate and outcomes improved across the board
+- Raising prices 3× while already profitable is a legitimate strategic move: sign-up volume fell slightly, but average ticket price rose significantly and conversion rates improved
+- Grandfather all existing customers at their original rate when raising prices for new customers — this respects the relationship, avoids churn, and lets you treat the change as a safe experiment
+- A flat per-company (not per-seat) price is itself a pro-customer product decision: the cost stays fixed as a team grows, unlike seat-based competitors whose bills compound with headcount
+- The signal you want to send is seriousness and value, not just affordability — "affordable" and "cheap" feel different to buyers even at the same price point
+
+→ Episodes: the-price-of-basecamps-water, picking-pricing
+
 ## Delighting Customers with Surprise Gifts
 
 - Run a formal customer delight program: anyone at the company can nominate a customer (via a to-do with name, address, and the interaction context) and a dedicated person handles the research and sourcing
@@ -147,3 +160,44 @@ tags:
 - Build new hire onboarding around project templates with mini-guides for every tool, video walkthroughs, and culture docs — the "sink or swim" approach costs disproportionately more than the time it takes to document things once
 
 → Episodes: temperature-check, support-console-ation, customer-support
+
+## Email as a Deliberate Channel
+
+- Treat the inbox as something you control, not something that controls you — the default model (anyone with your address can interrupt you) is a choice, not a law of nature
+- The "screener" pattern: route first-contact emails to a pending queue where you approve or block the sender before they ever reach your inbox — the same instinct as screening phone calls
+- Standard spam filters are the wrong tool for unwanted-but-legitimate email (salespeople, recruiters, press) — the problem is not spam in the technical sense, it's unsolicited access; require consent instead
+- Inbox zero as a daily discipline is counterproductive: it forces you to process email at the sender's pace rather than your own, fragmenting deep work into tiny reactive slices
+- Reply in batches rather than reactively — DHH moved to replying to email ~twice a week in bulk; the quality of responses improved and deep-work time expanded dramatically
+- Build explicit "reply later" and "set aside" affordances into email workflows instead of abusing unread/star flags as a proxy for follow-up intent — mark-as-unread does not mean "reply later"
+- Spy pixels (1×1 tracking images embedded by senders) expose when you opened an email, from where, and on what device — blocking them is a baseline privacy responsibility for any tool that handles customer communication
+- The majority of spy pixels come from a small set (~40–50) of marketing vendors; identifying and blocking by vendor pattern is more effective than generic image-proxy rules alone
+- "Footer crap" (boilerplate legal disclaimers, unenforceable confidentiality notices, social media icon rows) degrades the signal-to-noise ratio of every email — eliminating automatic signatures is a defensible product position, not a missing feature
+- A product philosophy for how communication should work is as important as the feature set — most email tools ship features without a point of view on how people ought to use them; the absence of philosophy leaves users without guidance
+- Independence from investor pressure is what enables opinionated product choices: if a vendor's revenue depends on ad eyeballs or engagement metrics, their incentives are structurally opposed to the user's attention
+
+→ Episodes: hey-whats-going-on, designing-hey, q-and-hey-1, q-and-hey-2
+
+## Hiring Vendors and Consultants
+
+- Schedule all vendor/consultant interviews on the same day, back to back — contrast and recall both sharpen dramatically; it's harder to compare when conversations are spread over weeks
+- Prepare a clear, honest problem statement before any call ("we are invisible on Google for non-branded keywords") and let candidates do most of the talking — the ratio of listening to pitching is the same discipline as employee interviews
+- The most confidence-inspiring vendors acknowledge the limits of their differentiation honestly: "everyone uses the same tools, here's what actually differs between us" beats proprietary-sounding buzzwords
+- Penalize vague language ("big data," "machine learning," "solutions") in vendor pitches; reward specific, mechanistic explanations of how their work actually produces results
+- Vendors who share their screen, show real past work products, and demonstrate messy-but-functional workflows signal practical competence more than polished decks
+- Prefer individuals or tiny teams over large agencies for specialized work — agencies introduce account managers, conference-call overhead, and "we" language that obscures who will actually do the work
+- Observe post-call follow-up as a data point: some will send a custom mini-audit, some a templated PDF, some nothing at all — the approach reveals how they think about client communication
+- For specialist work that spans two domains (e.g., technical SEO and content SEO), find the best person for one domain and ask them to refer someone for the other rather than hiring a generalist agency to cover both poorly
+- Buying something you know little about is a visceral reminder of what prospects feel when evaluating your own product — use vendor-shopping experiences as customer-empathy exercises
+
+→ Episodes: six-hours-of-phone-calls
+
+## Marketing Design at Small Scale
+
+- A department-of-one marketing designer must optimize for production speed and web performance alongside aesthetics — "how many kilobytes over the wire" is a legitimate design criterion that disappears when branding, web design, and development are split across specialists
+- Choose visual motifs that translate naturally to vector graphics and lightweight web assets; a 1KB SVG shape can carry as much brand weight as a 400KB illustration
+- Brand exploration starts with the messaging, not the visual — lock down the two or three product principles you want to communicate before deciding what anything looks like
+- Self-imposed constraints produce better creative outcomes than open briefs: a limited color range, a single-stroke drawing rule, or a two-chord album are examples of constraints that force unexpected solutions
+- Cross-pollinate freely between marketing and product design — colors, shapes, and motifs that start on the marketing site often find their way into the app interface, and vice versa; keep the visual language unified
+- Use short looping videos (under 20 seconds) rather than static screenshots to demo interaction-heavy software — a screenshot of an email inbox conveys almost nothing; a 15-second clip of the screener in action tells the whole story
+
+→ Episodes: manos-hands-of-hey, designing-hey

@@ -96,7 +96,9 @@ tags:
 - 37signals' core fight: "we've been profitable for 23+ years; if you have to make more money than you spend, buy from someone who does the same" — the contrast with loss-making SaaS competitors is a credible, values-grounded fight
 - Being on the receiving end of attacks: grow a thick skin; if people are punching back it means you said something real; if you're insecure about your position, a rebuttal will knock you over; if you're well-grounded, it won't
 - Ignoring competition (for product decisions) and picking a fight (for marketing) are not contradictory — ignore the competition so you don't follow them into product dead ends; pick a fight to illuminate your different values
-→ Episodes: pick-a-fight, pick-a-fight-on-twitter, google-ads-shakedown, are-you-an-underdog-we-want-to-hear-from-you
+- Polarizing creative works when the audience self-selects: the Quiznos spongmonkeys got 30,000 calls and letters in month one — half were complaints, but the product was a sandwich and the complainers weren't the target; complaints from the wrong audience are confirmation you reached the right one
+- Distributing edgy creative on mass-market channels amplifies both the reach and the backlash — the spongmonkeys ran on general cable, not just SpikeTV/MTV, which horrified middle-aged viewers and created the very controversy that drove news coverage; the "wrong" audience reaction can be the fuel
+→ Episodes: pick-a-fight, pick-a-fight-on-twitter, google-ads-shakedown, are-you-an-underdog-we-want-to-hear-from-you, we-love-the-subs
 
 ## Selling By-Products
 
@@ -123,7 +125,9 @@ tags:
 - The "30 Days of Honesty" project surfaced feedback that directly changed a pricing decision — customers recommended changes that the founders were too hesitant to propose themselves; the transparency created a safe channel for honest input
 - Being willing to document struggles, near-misses, and wrong turns builds more authentic connection than only sharing wins — the imperfections are real and people respond to real
 - "Document, don't create" applies to transparency: you're making decisions every day; writing up what you decided and why costs almost nothing extra and produces genuine, shareable content
-→ Episodes: go-behind-the-scenes, dont-be-fake, building-in-public, out-teach-your-competition
+- Invest in a realistic, resettable product demo: Basecamp built a full "seed data" demo account for HEY — 100+ realistic emails, a fictional persona (Julie Young), and a reset mechanism that wipes and reloads all content on demand; every demo starts fresh, no personal data is ever exposed, and support staff share one canonical demo environment instead of improvising from personal accounts
+- Demo realism pays dividends beyond sales: the HEY seed account became the shared reference for the entire customer support team, enabling consistent and credible responses that screenshots of real email could not safely provide
+→ Episodes: go-behind-the-scenes, dont-be-fake, building-in-public, out-teach-your-competition, an-email-account-is-born
 
 ## The Overnight Success Myth
 
@@ -176,7 +180,9 @@ tags:
 - AI as editorial assistant (thesaurus, second opinion on phrasing, sanity check) is valid; AI as author is not — if you don't have something original to say, the question is why you're writing in the first place, not how to generate content faster
 - The Google ad that was pulled — a father asking Google to help his daughter write a heartfelt letter — was criticized not because it featured AI, but because it showed a parent outsourcing their own voice; inauthenticity is the issue, not the technology
 - Inauthentic stock photography has the same problem at scale: images of "powerful business women with arms folded" or "smiling white man pumping fist" create an aspirational lie that audiences have learned to distrust; authentic visual representation (Colorstock's approach) breaks through precisely because it is genuinely representational
-→ Episodes: dont-be-fake, hire-great-writers, using-ai-for-writing-being-facebook-free-and-other-listener-questions
+- Parasocial relationships are the mechanism behind effective direct-response advertising — when the person pitching looks and sounds like a friend who genuinely uses and loves the product, purchase intent rises; when there's visible mismatch (an acne product pitched by someone with perfect skin), the inauthenticity is immediately disqualifying
+- Creative made for one medium doesn't transfer natively: content that works on the open internet (where the viewer chose to find it) feels invasive when beamed into passive broadcast media; platform-native creative is the modern equivalent — a viral Flash animation adapted for TV was seen as an assault by viewers who didn't seek it out; the same content shared virally online was beloved
+→ Episodes: dont-be-fake, hire-great-writers, using-ai-for-writing-being-facebook-free-and-other-listener-questions, we-love-the-subs, but-wait-theres-more
 
 ## Free Plans and Conversion Strategy
 
@@ -206,6 +212,20 @@ tags:
 - Measuring customer support response times caused reps to optimize for speed over quality, generating stress without improving outcomes; they pulled back to a range ("under 10 minutes is excellent") rather than a competitive metric
 - No revenue targets, no growth goals at the company level: "things are wonderful right now" is itself a target — external stakeholders (public markets, VCs) are what inject the quarterly number obsession; stay private to stay free of it
 → Episodes: by-the-numbers, traditional-marketing, it-started-with-a-blog, build-an-audience, mailbag-1-1
+
+## Testing Creative Before You Commit
+
+- The infomercial industry invented rigorous creative testing decades before A/B testing was a software concept: buy a small media test ($25k), measure media efficiency ratio (gross revenue / media cost), and use a 1.7:1 ratio as the minimum threshold — below it, rework or kill the concept; above 2:1, scale aggressively
+- Test one variable at a time: run the same commercial with only the product name changed (Mobile Cane vs. Get Up & Go Cane) to isolate name resonance, then lock the name and test price points — the Get Up & Go Cane at $39.95 outperformed the same product at $19.95, doubling profit with identical costs
+- The "does America love you" test: before investing in optimization, run a minimal buy to answer a binary question — does the market respond at all? Failure at this stage means fundamental concept problems that price or copy tweaks won't fix (the first Thighmaster test failed because of wardrobe, not the product)
+- Show the idea to your actual target audience before showing it to the client: the Martin Agency filmed real college-age men watching the "We Love the Moon" spongmonkey video and compiled their unfiltered reactions (laughing, saying "this is f***ing awesome") — the client presentation opened with this reaction reel, not the campaign itself; the audience sold the work before the agency had to
+- Creating anticipation before revealing the work is a presentation technique: "What are those guys looking at?" asked of the client before playing the commercial caused them to lean forward and want to see the answer — the ask activates curiosity and lowers defensive judgment
+- The hook window on social/digital video is three seconds: everything else is optimization of what comes after a viewer has already decided to stay — design the first three seconds as if the rest doesn't exist, then optimize the remainder once you know which hook version wins
+- TV / video is used for testing, not primarily for direct sales: for every infomercial buyer, 10–15 people buy the same product at retail; the commercial's job is to create brand recognition and demand that converts at point of purchase, not just at the "call now" moment
+- Strong creative that is genuinely weird or polarizing earns press coverage that paid media cannot buy: the Quiznos spongmonkeys were covered by the New York Times, Wall Street Journal, Ad Age, and Adweek — none of that coverage was purchased; the strangeness was the story
+- Creative power is with the creator, not the client: the spongmonkeys worked because Quiznos licensed Joel Veitch's pre-existing, self-motivated work ("something you feel driven to make") rather than commissioning him to produce something sensible to spec; the best branded creative often starts as someone's personal obsession
+- A brand that abandons distinctive creative for "beauty shots" and category-standard advertising gets category-standard results: Quiznos went from 4,700 to 400 US locations in 10 years after replacing the spongmonkeys with conventional food photography
+→ Episodes: but-wait-theres-more, we-love-the-subs, traditional-marketing, mailbag-1-1
 
 ## Meaningful Work as Marketing Foundation
 

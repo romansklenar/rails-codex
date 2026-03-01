@@ -92,6 +92,38 @@ tags:
 
 → Episodes: roles-at-the-company-staying-involved-as-a-founder-other-listener-questions
 
+## Founder Presence: Public Speaking & Conferences
+
+- Live speaking is one of the few contexts where you have someone's full attention — no multi-tab browsing, no five-second skip; the scarcity of that attention makes in-person worth the travel cost
+- Both Jason and DHH dropped in-person speaking for years during/after Covid; once re-engaged, both concluded "a few times a year" is the right cadence — not never, not the conference circuit treadmill
+- The constraint Jason uses: stay within the same time zone; cross-timezone travel for a talk is not worth it at this stage of life — plenty of west-coast opportunities without flying to New York
+- DHH's recovery heuristic: he needs recovery time after each event before the urge to say yes re-opens; don't commit to the next thing while still in recovery from the last
+- Conferences recharge faith in your community in ways social media actively destroys — in-person you don't encounter the weaponized negativity that Twitter optimizes for; that recharge is medicinal, not optional
+- Physical touch — a handshake — literally opens minds to counter-arguments in a way that no Twitter thread can; in-person disagreements almost never reach the toxicity floor of the average social media exchange
+- "You're shorter than I thought, and you're nicer than I thought" — showing up in person corrects false impressions formed from 140-character opinions; founders with polarizing public personas especially benefit from this humanizing effect
+- DHH's framework for conferences as an introvert: treat it like a race or a heavy workout — you know going in you won't enjoy every moment, but the long-term return (social capacity, community connection) justifies the discomfort; "obstacle is the way"
+- Conference talks are more about how you make people feel than what you say — attendees leave Rails World with a sense that the community is vibrant and exciting, not primarily with a list of new APIs; engineer the feeling, not just the content
+- For aspiring speakers: the teaching-forces-learning loop — speaking at a conference forces you to distill material to its fundamentals in a way that private thinking never does; the preparation stress is the point, not a side effect
+- DHH's public speaking preference: walk in cold with no pre-discussed topics and freestyle — he consistently produces better material that way than from written-out keynotes; Fleetwood Mac's "Dreams" was the first take and three days of re-recording couldn't beat it
+- Jason's rule: never read interview questions in advance; wanting to know what you'll be asked is the desire to recite rather than to think; "people can smell the script" — scripted delivery signals inauthenticity even when the underlying ideas are good
+- Authenticity beats polish: the best public speakers Jason has seen (Gary Vaynerchuk, Jim Rohn) are compelling because they are unmistakably themselves on stage, not because they are technically flawless
+- For keynotes with concrete new material (new frameworks, shipped products), preparation is manageable; for abstract thesis talks, scripting becomes homework that makes DHH nervous rather than confident — avoid grand abstractions in favor of concrete, already-shipped things
+- Start small: speaking skill is acquired through reps; early clips of now-famous speakers are often cringe-worthy; the only path to good is to do it badly in smaller venues first, then work up
+
+→ Episodes: speaking-gigs-attending-conferences-and-the-importance-of-gathering, progressing-in-public-speaking
+
+## Product Portfolio Pruning
+
+- The KonMari question applied to product decisions: "does this product spark joy?" — DHH and Jason read Marie Kondo's book together and immediately identified products that weren't sparking joy; it directly led to selling We Work Remotely and stopping active development of Highrise
+- Thanking a product for what it contributed before retiring it is not sentimentality — it's a framework for overcoming the sunk-cost guilt that causes founders to keep zombie products alive; Highrise ran for 12 years, made millions, served customers well; "that's an incredible run"
+- The KonMari method applied to software: you can let go of code the same way you let go of camera gear you haven't used — "if you let things out, they can go fulfill their potential elsewhere"
+- YAGNI and KonMari share the same root: both say "if you haven't used this thing, the assumption that you'll need it later is almost always wrong; let it go and trust you can bring it back if you were wrong"
+- "Do I want to take this into the future with me?" — this framing works for product roadmap items, code, features, book chapters, and podcast edits equally; the 37signals books started at twice their published length and were cut by half using the same question
+- Mass is the enemy: holding onto products you don't love actively prevents you from focusing creative energy on what you do love; killing is not giving up, it's making room
+- Trying to sell a product (Highrise spin-off attempts) and finding it harder than expected is itself useful data — it taught Jason and DHH what they do and don't want to take on in future portfolio decisions; "even those twists and turns taught us something"
+
+→ Episodes: spark-joy-with-dhh, less-mass
+
 ## Ignoring the "Real World" Skeptics
 
 - "That would never work in the real world" is a defensive rationalization, not an analytical claim; it protects the speaker from having to examine their own assumptions

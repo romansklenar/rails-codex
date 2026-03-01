@@ -30,7 +30,18 @@ tags:
 - Start shaping and building with the question "if I had to ship today, would this be ready?" — on the shaping side that means "is this solved enough to hand to a team?"; on the build side it means the code is always in a deployable state
 - Don't label anything a "2.0 revamp" — that's a sign the scope is too large; factor it into three or four separate, independent projects
 
-→ Episodes: shape-up, shape-up-roundtable, writing-a-pitch, shape-up-principle-the-betting-table, shape-up-principle-decide-when-to-stop
+- New product development runs in three distinct phases: **(1) R&D** — small core team explores and builds tentpole features without fixed deliverables, ripping up and replanting until the architecture is clear; **(2) production mode** — standard Shape Up cycles with shaped pitches delegated to teams; **(3) polish/fill-in** — a final open-ended cycle (or two) with no specific bets, just a mandate to close every loose end before ship
+- In the R&D phase, shaping and building happen simultaneously and messily — the team rips up database models mid-cycle, tries directions, abandons them; this is appropriate only for the core team and cannot be delegated; it ends when the fundamental unknowns are answered and the architecture is stable
+- **Unknown attacking, not planning**: the first thing built for HEY was "receive an email"; sign-up, login, and user management were hardcoded stubs; start with the one thing you most need to learn, not the one that feels like a safe warm-up
+- Teams build their own task lists from a shaped pitch — no tickets are handed to them; tasks are discovered by trying to build, not planned in advance; a list of nine steps for one button is too granular — "make sign-up button work" is sufficient
+- Pitches almost always end up *smaller* after discussion, rarely bigger; bring ideas as wet clay, not finished proposals; if a collaborator cuts your pitch in half and it still works, that's a success — not a loss
+- Shape Up applied to **client services**: frame the contract as "best version of this feature deliverable in six weeks" rather than a fixed scope; clients accept this once they understand it means something will ship, which most fixed-scope contracts never actually guarantee
+- Adapting six-week cycles for client work: shorter contracts reduce the future you need to predict; clients can pitch phase 2 internally using tangible phase 1 deliverables — this unlocks budgets that would never have been approved for a multi-year engagement upfront
+- The circuit breaker applies in client work too: a client running out of appetite (realizing 200-unit scale is needed when you've proven one) is a legitimate circuit-breaker moment, not a failure
+- Shape Up scales to Fortune 50 companies with the same core problems — too little strategic thinking time, slowdown as teams grow — the methodology isn't only for small teams
+- Shape Up is a **cultural practice**, not a technical system: the hardest part of adoption is changing the human interaction patterns (how does work feel? who owns decisions? how do people relate?) not learning the terminology
+
+→ Episodes: shape-up, shape-up-roundtable, writing-a-pitch, shape-up-principle-the-betting-table, shape-up-principle-decide-when-to-stop, shape-up-with-clients, shape-up-print-edition, product-strategy
 
 ---
 
@@ -58,7 +69,18 @@ tags:
 - Aim for **durable software**: durable means easy to repair, not just hard to break; code that people are afraid to touch doesn't get improved and slowly rots; lower the cost of change so anyone can get in there and improve things
 - Invest in things that don't change: most web fundamentals (cookies, HTTP, relational data) look the same after 20 years; knowledge invested there compounds; new-technology investments carry high obsolescence risk and should be sized accordingly
 
-→ Episodes: seven-shipping-principles, launch-now, quick-wins, readying-for-launch, refining-before-release, launch-day, move-fast-when-you-can, you-launched-now-what
+- **V1 aerodynamics**: think of the first version as a physical object in a wind tunnel — every extra feature creates drag; the goal is the smoothest, tightest shape possible, not the most complete one; features that "would be nice" are burrs that slow the whole thing down
+- **Start weirder than you intend to end up**: early prototyping is the only moment you can be truly strange — radical visual experiments, unusual interaction models; the spirit of those experiments persists even after you smooth them out; you can never get weirder as you go along, so start there
+- New product development is inherently more stressful than feature work on existing products — you are inventing the entirety of an ecosystem with no prior decisions to anchor to, high ambiguity, and frequent disagreements; this is expected and not a sign something is wrong
+- **The "slightly embarrassed" test**: if you aren't at least slightly embarrassed when you launch, you waited too long; you could always polish for five more years; set a date, cut to it, and let the world calibrate you
+- **Soft openings / staged early access**: invite 5–25 handpicked people before any public announcement; this is not a feature focus group — V1 is for you first; the goal is to surface catastrophic blind spots (broken sign-up flows, data loss paths) that internal testing missed because everyone followed the golden path
+- Staged rollout is a **forcing function for priorities**: knowing guests are arriving means you stop debating medium-priority issues and focus only on what would embarrass you in front of a stranger; the entire long priority list collapses into one question — what must be fixed before someone else sees this?
+- Use a collaborative chat room (not just email) for early testers: testers corroborate each other's findings ("I saw that too"), which raises the signal quality of issues you'd otherwise dismiss as one-offs
+- Avoid the word "beta" — it implies unfinished software and sets the wrong expectation; call it early access; V1 of anything is unfinished by definition; the distinction is early adopters who want to be in early, not a public signal of incompleteness
+- Don't make sweeping product changes in the first 30 days post-launch of a new version: fix truly broken things immediately; ignore everything else for at least a month; early complaints are often habituation reactions ("where did X go?") not design failures; the same people who hated a change in v2 will defend it when v3 changes it again
+- **Darling features that never get used are dangerous**: the HEY Speakeasy Code had such a good name it became a darling too cute to kill, yet neither Jason nor David ever used it; a feature's catchiness is not evidence of its value
+
+→ Episodes: seven-shipping-principles, launch-now, quick-wins, readying-for-launch, refining-before-release, launch-day, move-fast-when-you-can, you-launched-now-what, designing-hey, enough-is-enough, soft-openings
 
 ---
 
@@ -82,7 +104,12 @@ tags:
 - **Software should be fun**: Easter eggs, hidden keyboard commands, and small moments of levity are worth building; they signal that real humans made the product; they generate organic word-of-mouth that no marketing budget can buy; hiding them behind a key combo means only willing participants encounter them
 - **Organizational health test**: can your team ship something genuinely small (an hour of work) in a single day without it touching a QA queue, a roadmap, or a sign-off process? If not, your processes have become too rigid for low-risk work; probe this regularly — the ability to do small things fast is what allows levity, Easter eggs, and rapid market responses
 
-→ Episodes: v1-is-for-us, start-at-the-epicenter, eat-your-own-dogfood, underdo-the-competition, be-a-curator, ignore-the-details-early-on, build-half-a-product-not-a-half-assed-project, good-enough-is-fine, scratch-your-own-itch, what-are-you-replacing, making-things-that-multiply, a-product-pivot, the-f-k-no-feature
+- **Morph vs. rebuild**: a new product version is warranted when a genuinely new interface or structural idea cannot be grafted onto the existing chassis without the result being unrecognizable; if the renovation would go down to the studs, build a new house instead; if the new ideas can be introduced while keeping familiar landmarks in place, morph the existing product
+- **Forced vs. optional upgrades**: keeping old versions alive (Classic, v2, v3) lets customers opt out, but it permanently multiplies the support and infrastructure burden; morphing forces everyone forward but requires the new version to be familiar enough that it doesn't feel like a product replacement; choose based on how radical the change actually is
+- Invite customers who will be affected by a major version change at least six weeks before launch — walkthroughs, preview videos, written explanations of why changes were made; people can't prevent the change, but being informed and prepared dramatically reduces the backlash surface area
+- When designing for real human workflows, look for the real-world physical analogue first: HEY's Reply Later and Set Aside were designed around the "pile on the desk" model of paper mail; software that fights the computer to match how humans actually behave is harder to build but produces genuinely better products
+
+→ Episodes: v1-is-for-us, start-at-the-epicenter, eat-your-own-dogfood, underdo-the-competition, be-a-curator, ignore-the-details-early-on, build-half-a-product-not-a-half-assed-project, good-enough-is-fine, scratch-your-own-itch, what-are-you-replacing, making-things-that-multiply, a-product-pivot, the-f-k-no-feature, itch-for-a-new-version, designing-hey
 
 ---
 
@@ -100,7 +127,14 @@ tags:
 - When do you have to decide? Delay a decision until it actually needs to be made — more information will be available; but once the decision-time arrives, stop deliberating and make the call
 - Avoid metrics tyranny: most important decisions can't be measured; 37signals ran for 20+ years measuring very few things; what you measure is a vanishingly small subset of what matters
 
-→ Episodes: planning-is-guessing, your-estimates-suck, making-the-call-is-making-progress, illusions-of-agreement, decisions-are-temporary, disagree-and-commit, its-all-a-judgement-call, picking-priorities, reasons-to-quit
+- **Product strategy is not about certainty**: never research and second-guess your way to 99% confidence before acting; that approach is very expensive, very slow, and probably just as likely to be wrong as acting at 75% confidence; the goal is to improve odds while capping the downside — not to eliminate risk
+- **Quantify the downside, not the upside**: you cannot reliably predict whether a feature will hit 20% or 22% adoption; you can know exactly how many weeks you are willing to lose; size the bet on the downside, let the upside surprise you
+- **Two separate debates in every pitch**: (1) is this the right solution? and (2) does this problem actually matter? These are distinct conversations; a technical objection to a solution is an invitation to find a different angle; a "we don't care about that problem" is a signal to stop pursuing the idea entirely
+- Don't attach ego to ideas: most pitched ideas don't happen; come in already knowing it's a long shot, and disagreements stop feeling like losses; the goal is shared understanding of what the product should be, not defense of the specific shape you brought in
+- Separate "we disagree on whether this matters" from "we disagree on whether it makes sense technically" — the first kills the idea, the second just sends it back to be reshaped
+- Avoid arbitrary success metrics: if you set 20% adoption as the threshold for a feature being worthwhile and you hit 15%, you'll spend the next month trying to explain the shortfall rather than learning anything real; feelings of "customers clearly want this, we've heard it a hundred times" are more reliable planning inputs than manufactured round numbers
+
+→ Episodes: planning-is-guessing, your-estimates-suck, making-the-call-is-making-progress, illusions-of-agreement, decisions-are-temporary, disagree-and-commit, its-all-a-judgement-call, picking-priorities, reasons-to-quit, product-strategy
 
 ---
 
@@ -155,3 +189,22 @@ tags:
 - Calm company is the platform for ambitious sprints, not the destination; running at a sustainable baseline is what lets you choose to go somewhere far and uncertain when it matters; if you're always at the red line, you have no reserve for the adventure
 
 → Episodes: rescuing-a-project-in-progress, a-matter-of-ambition, your-estimates-suck
+
+---
+
+## Pricing
+
+- Pick a price that feels reasonable, covers costs, and that you yourself would pay — then keep costs low and see if it works; do not try to back out a required price from unknown future customer volume before you have any customers
+- **Price per seat creates gamesmanship**: every time someone evaluates adding a user, they run a cost-benefit calculation; bucket pricing (e.g., 0–15 users, 15–30 users) reduces the per-seat anxiety but creates step-function optimization where teams try to stay inside a bucket; flat pricing eliminates the per-user decision entirely
+- **The whale trap**: capping your high end (Basecamp's $299 flat ceiling) structurally prevents your product and organization from warping around enterprise sales; once you close a $12k/month deal, the gravitational pull to hire key account managers, add enterprise-only features, and optimize for more whales is nearly irresistible — and that's a fundamentally different company
+- Enterprise whale accounts corrupt the product backlog: each whale deal closes as a checkbox in the settings menu; over years this accumulates irreversible complexity that makes the product worse for the small and medium customers who actually liked it
+- **Avoid discounts and coupon codes**: public sales train customers to wait; a stable price signals confidence, eliminates "should I wait?" behavior, and respects existing customers who paid the same price without a discount; if you want to experiment with price, do it on new customers only
+- Don't change pricing for existing customers: people make commitments based on the price they signed up at; price experiments belong in new-customer acquisition, not retroactive repricing of the base
+- **Annual vs. monthly for consumer products**: annual billing is an easier purchase decision (think once a year, not once a month), creates stronger commitment, and avoids the psychological drip of monthly charges; for HEY, annual billing was also required by the irreversibility of claiming a name-spaced email address
+- **Scarcity pricing for real estate**: HEY charges more for shorter usernames (3-letter: 3x price, 2-letter: 10x price) because the namespace is genuinely scarcer; price can signal real scarcity rather than just being an optimization lever
+- Long-term pricing tests can mislead: a six-month A/B test may show that per-seat pricing increases revenue per account, but misses the four-year secondary effect — fewer signups means fewer people invited to collaborate who then become customers themselves; price elasticity tests need multi-year time horizons to reveal viral effects
+- Launching without billing is a legitimate choice: Basecamp launched in 2004 without a payment system; the 30-day free period forced a working billing implementation by day 30; the constraint of "we need to get paid" is a better spec for billing than any amount of upfront planning
+- When pricing a new product, consider whether it functions as a standalone or an **accessory** to other tools people already use; accessory pricing (low, flat, "no-brainer") lowers the evaluation threshold and accepts that many users will mix it with other products rather than replacing them
+- A large free tier (e.g., 1,000 free cards in Fizzy) serves awareness and adoption over revenue maximization; if the product is not your primary revenue vehicle, having many happy free users who get exposure to your broader product portfolio may be worth more than extracting maximum per-unit revenue
+
+→ Episodes: picking-pricing, launch-now

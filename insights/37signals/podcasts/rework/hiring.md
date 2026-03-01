@@ -29,8 +29,12 @@ tags:
 - "Hire when it hurts" applies to attrition too: when someone leaves, don't automatically refill the identical role — let it hurt a little, then decide if the scope should shift before re-hiring
 - Preemptive or defensive hiring (hiring to block a competitor from getting talent) is an insult to the person hired and generates bullshit jobs — people who feel they contribute nothing are measurably more miserable than people who are out of a job
 - Silicon Valley's binge-hire-then-mass-layoff cycles are a symptom of promise-driven roadmaps and too much capital, not a model to emulate
+- The arithmetic test: if you have $85K of profit this year and the hire costs $80K, that may be worth it — you're roughly breakeven and there is still healthy pressure to perform; going into debt to hire is not a valid variant of this test
+- Do not hire in anticipation of future pain ("we'll need this person in six months") — the business must already be ahead of you before the hurt justifies a hire; if the business is not ahead and it still hurts, the unit economics are broken and need to be fixed first, not papered over with headcount
+- Raising money to hire ahead of revenue masks broken unit economics — if you're spending $2 to make $1, no volume of hiring or growth fixes it; fix the fundamentals before scaling the team
+- The wrong kind of pressure (hire-into-debt, investor-deadline pressure) does not produce good products — it produces "freaking your way out" of a hard spot, which rarely works
 
-→ Episodes: hire-when-it-hurts-rework, hire-when-it-hurts, strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once, titles-tenure-dont-matter, two-person-teams, listener-questions-part-2
+→ Episodes: hire-when-it-hurts-rework, hire-when-it-hurts, strangers-at-a-cocktail-party-the-downside-of-hiring-too-many-people-at-once, titles-tenure-dont-matter, two-person-teams, listener-questions-part-2, user-testing-stoic-philosophy-and-other-listener-questions
 
 ## Who to Hire
 
@@ -117,8 +121,12 @@ tags:
 - Fraudulent job postings targeting remote workers are common: if you are never asked to speak with a real person (phone or video), treat it as a scam; legitimate employers want to know you are a real person
 - Scam signals: a free email domain (e.g., gmail) used by the "company," requests for personal bank information before starting, payment upfront for "materials," and compensation that sounds impossibly fast
 - Report job fraud to the FTC and FBI via their public portals; companies whose names are used cannot legally stop impersonation but can confirm through official channels whether a role is real
+- Evaluate a company by its behaviors, not its perks — ping-pong tables and unlimited vacation signal nothing meaningful; look instead for whether the company measures outcomes or time-in-seat, whether it enables async communication, and whether it explicitly caps weekly hours
+- Fall in love with a company, not a job — find an employer whose values you want to work inside, then wait for the right role to open rather than accepting any role that matches your skills at a company you are ambivalent about
+- Salary transparency in a job posting is a strong positive signal; withholding it signals the employer treats compensation as leverage over candidates
+- Companies that are genuinely remote-first became so before it was forced on them — prior remote history (partial or full) before a crisis is meaningful evidence of real infrastructure and norms, not just a policy
 
-→ Episodes: rework-mailbag-3, job-scam
+→ Episodes: rework-mailbag-3, job-scam, help-wanted
 
 ## Job Scams & Fraud
 

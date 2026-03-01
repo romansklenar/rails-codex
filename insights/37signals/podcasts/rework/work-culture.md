@@ -37,7 +37,9 @@ tags:
 - Invisible handcuffs: if a manager stays late, team members feel they cannot leave; a manager visibly leaving at 5–6 pm gives the team permission to leave — leadership behavior sets the floor, not a policy document
 - Hours as a proxy for devotion creates a monoculture — it filters out anyone with caregiving obligations, medical conditions, or any life outside work; the real measure is the work, not the presence
 
-→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork
+- Occasional crunch is acceptable and even necessary — the HEY launch required two consecutive weeks of intense effort after years of calm; the key framing is "cashing in years of calm for a few chaotic weeks," not normalizing chaos as a steady state
+- When a launch-week crisis pulls founders away from support queues, the rest of the team absorbs the overflow — designing for slack in the support headcount (not just the product team) is what allows the company to absorb a surprise spike without collapsing
+→ Episodes: escaping-workaholism, 8s-enough-40s-plenty, workaholism, the-outwork-myth, the-power-of-time-off, work-rest-and-what-you-will, balancing-it-all, how-we-work-summer-fridays, lab-week, take-some-time-off, workaholics-arent-heroes, cult-of-overwork, two-weeks
 
 ## Remote Work
 
@@ -99,7 +101,14 @@ tags:
 - Customer support tone should sound like the person writing it, not a scripted response — using phrases like "sorry for the inconvenience" or "I understand your frustration" when you don't feel those things is detectable and corrosive to trust; mirror the customer's actual energy and be specific
 - A public company handbook signals alignment before hiring: candidates who read it and self-select out save everyone time; candidates who read it and resonate are better first-day fits than those who discover the culture only after accepting an offer
 
-→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open
+- Culture as a 50-day moving average: "how are we to each other over the past 50 days?" is the only meaningful measurement — what you wrote in a handbook three years ago is irrelevant to today's culture
+- A company of 80 cannot feel the same as a company of 20, and trying to preserve that feeling produces nostalgia paralysis — the goal is to carry forward the *principles*, not replicate the exact texture of an earlier era
+- Culture at scale cannot be directly injected into 80 individuals by founders; it must be transmitted through high-bandwidth relationships (founder → lead → team member) and spread one interaction at a time — code reviews, pitch feedback, and direct collaboration are the transmission mechanism, not all-hands presentations
+- New hires in new functions inject fresh perspectives that counteract calcification: half-life of facts in tech is short — something that failed in 2017 may work in 2023, and founders' memories of "we tried that" are often outdated, not timeless
+- Adding customer success as a proactive function (demos, walkthroughs, educational videos) is distinct from reactive customer support — both are necessary at scale, and conflating them means neither gets done well
+- Running accounting "like an ice cream stall" is sustainable for years but eventually incurs real financial risk (back sales tax liability, compliance gaps); adding financial rigor is not bureaucracy, it is risk mitigation — the cost of not doing it shows up as a multi-million-dollar settlement
+- Letting go as a founder: the shift from evaluating *how* work is done to evaluating *what the work results in* is the hardest behavioral change as a company grows; setting a "rendezvous point" (three months, six months) before assessing a new initiative prevents premature judgment without enabling indefinite drift
+→ Episodes: you-dont-create-a-culture, built-on-trust, total-transparency, everybody-works, dare-to-be-basic, listener-questions, listener-questions-part-2, dont-be-fake, out-in-the-open, year-in-review-growing-as-a-company
 
 ## Open Offices
 
@@ -167,4 +176,33 @@ tags:
 - Millennial burnout (documented by Anne Helen Peterson) is not individual laziness but structural: the combination of wage stagnation, credential inflation, student debt, and "hustle culture" messaging produces chronic errand paralysis and emotional exhaustion that looks like procrastination but is actually depletion
 - The manager's visibility is the clearest cultural signal: a manager who leaves at 5pm visibly signals that leaving at 5pm is acceptable; a manager who stays until 8pm — even without saying anything — creates invisible pressure to stay; organizational norms travel through observed behavior, not stated policy
 
-→ Episodes: workaholics-arent-heroes, selling-burnout, cult-of-overwork, take-some-time-off, escaping-workaholism, lab-week, it-doesnt-have-to-be-crazy-1, it-doesnt-have-to-be-crazy-2
+- Platform dependency creates a specific burnout trigger: when an external gatekeeper (e.g., Apple's App Store) can threaten the existence of a product the team has spent years building, the resulting helplessness and lost sleep is categorically different from ordinary work stress — founders described feeling physically ill during the HEY/Apple standoff
+- Stoic philosophy as a practical work tool: separating what you can control from what you cannot is easier to preach than to practice when you have partial control (some levers but not full resolution) — the worst mental state is having options you don't want to use while watching a situation deteriorate
+- Radical transparency during a crisis preserves trust more than spin: after the botched "It Doesn't Have to Be Crazy" book launch, DHH and Jason publicly owned their share of the blame (cover design, print run assumptions) rather than framing the sellout as a positive signal — this honesty with their audience is itself a cultural artifact
+→ Episodes: workaholics-arent-heroes, selling-burnout, cult-of-overwork, take-some-time-off, escaping-workaholism, lab-week, it-doesnt-have-to-be-crazy-1, it-doesnt-have-to-be-crazy-2, two-weeks, sometimes-its-crazy-at-work
+
+## Scaling the Organization
+
+- Running lean (1% body fat) has real advantages early: smaller budget, faster moves, higher nimbleness — but past a point it makes the system brittle; a single departure or illness removes a critical part with no spare
+- Scheduling everyone fully every cycle is efficient but exhausting at sustained pace; adding headcount to create "slack weeks" (three weeks of assigned work in a six-week cycle vs. six full weeks) materially changes whether employees can see themselves staying for 10+ years
+- On-call rotation is a concrete signal of team health: at ~40 people, engineers were on-call every few cycles; at ~80 people, it dropped to once per cycle — this is a quantifiable quality-of-life improvement that hiring enables
+- Doing two products simultaneously requires roughly double the capacity — 37signals ran one product at a time for most of their history; only after reaching ~80 people could both Basecamp and HEY receive full-cycle attention in parallel
+- "Do the job yourself before hiring for it" — before bringing in a dedicated writer or marketer, Jason and David wrote company material themselves; the first-hand experience clarifies exactly what the role should accomplish and prevents hiring for a vague idea of a function
+- The launch of a major new product (HEY) effectively created a second company inside Basecamp overnight: it required new support headcount, new infrastructure capabilities, new legal and finance functions — treating a hit product launch as purely additive underestimates the organizational load it places on existing teams
+- Rapid hiring for launch emergencies is possible but costly: five temporary customer support reps were contracted and onboarded in ~36 hours; three months of standard onboarding was compressed into one day — it worked, but only because the existing team had deep product knowledge and could create fast-track documentation on the fly
+- "Illusions of agreement" cause expensive rework: the "It Doesn't Have to Be Crazy" book cover was designed to REWORK's exact dimensions, but the publisher assumed standard dimensions — both parties believed they had agreed; the fix is to verify shared understanding with specifics, not confirmations
+
+→ Episodes: year-in-review-growing-as-a-company, two-weeks, sometimes-its-crazy-at-work, increasing-capacity
+
+## Emotions at Work
+
+- Suppressing emotions does not neutralize them — they manifest physically (numbness, headaches, anxiety spikes) or erupt at inconvenient moments; acknowledging an emotion is a prerequisite for acting rationally on it
+- "Emotional fluency" is more actionable than "emotional intelligence" (EQ): EQ describes the ability to recognize emotions; emotional fluency means knowing *how and when to translate that into action* — the additional step is the whole game
+- Envy is an underused career signal: Gretchen Rubin noticed she felt "sick with envy" reading about writers but neutral reading about successful lawyers — she switched careers; envy toward others is often a direct readout of what you actually value but are not pursuing
+- The "smile file" is a practical antidote to criticism paralysis: save every email, note, or comment with positive feedback in a dedicated folder; revisit it when receiving critical feedback to restore perspective and separate a single data point from your overall competence
+- Every workplace has an emotional culture, legible from small signals: break room signs (scolding vs. celebratory photos), spelling people's names correctly in outreach, and the answer to "tell me a story about something that would only happen here" — all reveal the actual emotional norms before you join
+- Schedule reflection time explicitly; it does not happen naturally in back-to-back meeting cultures — even 5–10 minutes at the end of a meeting before the next one allows the brain to process rather than carry unresolved emotional residue into the next interaction
+- "When I'm happy I get the promotion" is more accurate than "when I get the promotion I'll be happy" — the causal arrow runs from wellbeing to performance, not the reverse; cultivating a life outside work is not a distraction from career success, it is foundational to sustaining it
+- Emotional culture is set by micro-decisions at scale, not by stated values: one organization built a literal "crying room" to signal that intense emotional reactions are normal and expected in high-stakes work — explicit environmental design beats policy memos
+
+→ Episodes: no-hard-feelings, dose-of-empathy, customer-support

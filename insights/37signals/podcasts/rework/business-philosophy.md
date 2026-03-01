@@ -17,6 +17,17 @@ tags:
 
 # Business Philosophy
 
+## Identity & Values
+
+- Mission statements fail because they contain no tradeoffs — a value statement that everyone in the world would agree with is not a value statement, it's a list of pleasant-sounding sentences; the test of a real value is whether it would turn some people off; no mission statement ever written would turn anyone off
+- A mission statement that contradicts visible reality is actively harmful — a crooked clipart printout on a dirty rental car office wall quoting commitments to "exceptional personalized service" doesn't express aspiration; it broadcasts that the organization is either deluded or lying; the gap between the statement and the experience is worse than silence
+- Hundreds of specific, opinionated essays beat eight abstract values — 37signals tried distilling its beliefs into eight handbook entries; the result sounded nice but couldn't actually drive decisions in context; the hundreds of concrete Signal v. Noise posts and essays, each taking a narrow, contestable position, communicated the actual worldview far more precisely
+- Your tagline should be written by a disinterested customer, not your marketing team — asking customers what a product does strips away the self-congratulatory framing and reveals the plain transactional truth ("Basecamp covers your ass"); that truth is more memorable and useful than anything crafted internally
+- Actions reveal values; statements don't — whether a rental car company cares about customers is visible in whether someone is at the counter, whether the car is clean, and whether the hold music lies about your call's importance; no amount of mission statement language changes any of those signals
+- The "serial entrepreneur" framing treats companies as temporary — the assumption embedded in "what's next?" is that the current business is a stepping stone; founders who define themselves by this identity build with shortcuts, transfer problems to the next owner, and leave the world slightly worse; the alternative identity is simply: I own a business, I make things, that's it
+
+→ Episodes: mission-statement-impossible, enough-with-entrepreneurs, draw-a-line-in-the-sand, take-a-stand
+
 ## Independence & Profit
 
 - Profit enables optionality, not just revenue — profitability means you can give a product away for free on a whim (Writebook), reverse a growth decision, or skip a lucrative opportunity you don't want; optionality is the meta-outcome above all other business metrics
@@ -37,7 +48,13 @@ tags:
 - The minority/no-control deal structure is the only acceptable form of outside investment — the Bezos/Basecamp deal's two defining terms were minority stake and no control to force any particular decision; both conditions must hold simultaneously or independence is compromised
 - Customers' anxiety about ownership changes is rational — users of bootstrapped software feel a personal connection to the founders' values; when ownership changes, that connection severs and trust erodes, which is why announcing VC raises triggers immediate public backlash from loyal users
 
-→ Episodes: why-we-choose-profit, achieving-optionality, competition-is-your-costs, outside-money-is-plan-z, building-to-flip-is-building-to-flop, start-a-business-not-a-startup, you-need-less-than-you-think, why-grow, come-small-come-all, success-is-surviving, the-road-out-of-startupland, venture-capital-and-control-with-david-teare
+- "Entrepreneur" is a gatekeeping word loaded with exclusionary baggage — the definition implies 80-hour weeks, massive risk, and capital-raising; that definition filters out most people who could and should start a business; replacing it with "starter" didn't catch on, but the critique stands: starting something is not the hard part, surviving is
+- Serial entrepreneur is the worst archetype — the "what's next?" assumption treats every business as a temporary financial instrument on the way to the next flip; founders who could just as easily sell milk as software reveal through that attitude that they don't actually care about what they build
+- Craft and enthusiasm are visible in the product — companies run by enthusiasts (watchmakers, independent coffee grinder builders, Saddleback Leather) produce things that are obviously overbuilt in ways no commercial calculus would justify; customers who share that enthusiasm seek these products out and pay premium prices; the quality of caring shows
+- The baker should run the bakery — "The E-Myth" argument (a baker is the worst person to run a bakery because they'll care too much about flour quality) inverts cause and effect; Toyota became one of the world's largest car companies precisely because engineers ran it and anyone on the assembly line could stop production if something was wrong
+- Validation before product is always cheaper than product before validation — launching a website with a screenshot of a mocked-up product, posting on BetaList, and messaging LinkedIn strangers to gauge interest costs nothing and reveals market demand before a dollar is spent on manufacturing or development
+
+→ Episodes: why-we-choose-profit, achieving-optionality, competition-is-your-costs, outside-money-is-plan-z, building-to-flip-is-building-to-flop, start-a-business-not-a-startup, you-need-less-than-you-think, why-grow, come-small-come-all, success-is-surviving, the-road-out-of-startupland, venture-capital-and-control-with-david-teare, enough-with-entrepreneurs, apps-without-code
 
 ## Product Strategy
 
@@ -56,7 +73,13 @@ tags:
 - A product that can't retain customers on merit will eventually trap them or lose them — the retention game played through friction (dark patterns) is a losing long-term strategy; the alternative is making something worth $59/year that people renew without thinking about it
 - Self-competing products within your own portfolio are acceptable — when two products you own serve different use cases with different "grips," you don't need to fear internal competition; if the customer chooses your other product, you still win
 
-→ Episodes: 37signals-introduces-once, once-again, a-spin-off-story, the-google-graveyard, more-than-a-month-of-once, open-source-outside-the-box, subscription-hostages, fizzy-qs-and-as
+- "Done for you" and "done for others" are different products — HEY for Work ran internally at Basecamp for most of its two-year development cycle; when it was ready for the public, months of additional "finishing carpentry" remained: signup flows, onboarding screens, edge cases that internal users had manually worked around; this gap exists for every internal tool turned product
+- You don't need all the customers — HEY for Work targeting tens of thousands of small companies is a deliberate success definition; a startup needing to show massive traction in 18 months would rationally avoid competing with Gmail and Outlook; 37signals can play an infinite game because it doesn't owe investors a specific exit timeline
+- Slow cohort rollouts reveal real problems before they compound — launching HEY for Work by inviting companies of 1–5 first, then 6–10, then 11–20 meant each wave's support load was manageable; unexpected requests (catch-all addresses, journaling/forwarding for legal compliance) surfaced before they became crises at scale
+- Kickstarter's meritocracy illusion is gone — in the early days, a good product could surface organically through Kickstarter's editorial picks; by 2018, campaigns required $25K video budgets, pre-lined-up press, knowledge of the platform's editorial calendar, and blogger payments; the platform shifted from discovery engine to pay-to-play marketing channel; a failed campaign doesn't mean a failed product
+- Manufacturing partners should argue with you — a partner who shrugs and makes what you asked for without pushback produces what you designed, not what's actually manufacturable; a partner who says "why did you do it this way?" makes a better product and transfers knowledge to the designer
+
+→ Episodes: 37signals-introduces-once, once-again, a-spin-off-story, the-google-graveyard, more-than-a-month-of-once, open-source-outside-the-box, subscription-hostages, fizzy-qs-and-as, hey-for-work, no-half-measures
 
 ## Open Source & Technology
 
@@ -78,4 +101,13 @@ tags:
 - AI should not ship until accuracy exceeds end-user tolerance — a developer can productively use a tool that's right 80% of the time; an end-user will hate a tool that's wrong 1 in 5 times; shipping AI features before they clear the tolerance threshold is self-defeating and generates lasting brand damage
 - Employee ownership (ESOP) is a succession plan, not just a benefit — Heath Ceramics chose an ESOP specifically to solve the succession problem that almost killed the original company; the structure gives employees a retirement stake, preserves company direction, and prevents a sale-driven pivot away from founding values
 
-→ Episodes: open-source-outside-the-box, typescript-drama-and-open-source-opinions, for-the-love-of-linux, moving-to-omarchy, the-google-graveyard, open-source-and-power-with-matt-mullenweg, hey-world, fizzy-qs-and-as, success-is-surviving
+- AI FOMO is manufactured and counterproductive — the "you're already falling behind" framing on LinkedIn and Twitter is a pressure tactic, not an accurate description of competitive risk; the half-life of being an AI expert is roughly 48 hours given the rate of model and tooling changes; a late adopter can catch up almost immediately
+- Treat AI with curiosity, not fear or urgency — the most productive early stance is playful experimentation (Midjourney for images, ChatGPT for text prompts) rather than rushed feature integration; the businesses adding AI to summarize documents are implementing the most boring possible use of the technology
+- Thin wrappers on OpenAI APIs are not products — dozens of "AI startups" consist entirely of an API call plus a UI; OpenAI shipping its own app eliminated them overnight; pennies-in-front-of-a-steamroller economics apply to any startup whose competitive advantage is API access to someone else's model
+- Confidential data and AI services don't mix safely — prompts sent to commercial AI services go into a database; what happens to that database is governed by terms that can change, employees who can access it, and security teams that can be breached; treat AI input the same way you'd treat a web form: don't type anything you wouldn't want leaked
+- Accessibility built in from the start costs a fraction of what retrofitting costs — starting accessibility work midway through a product's lifecycle means every new feature is accessible but a permanent backlog of inaccessible legacy UI exists; starting from scratch (as with HEY) allows the team to ship with a clear sense of what's good and what needs work rather than a fog of unknown debt
+- Designing for accessibility makes the product better for everyone — keyboard shortcuts added for screen reader users gave all HEY users faster navigation; autocomplete pickers that announce result counts clearly help sighted users track state too; the WCAG principle that "designing for accessibility results in better features for all users" holds empirically
+- Small accessibility changes produce disproportionate impact — relabeling a button from "Write" to "Write a new message" costs one line of code and costs nothing visually, but transforms the experience for a screen reader user who might have misread the instruction as directional; labeling buttons and assets correctly is the highest-ROI accessibility intervention available
+- 15% of web users have some form of disability — that's not an edge case, it's a sizable market segment; companies that don't build accessibly are voluntarily excluding a large customer cohort and exposing themselves to legal and reputational risk, especially in workplace software where employees don't have the option to simply switch products
+
+→ Episodes: open-source-outside-the-box, typescript-drama-and-open-source-opinions, for-the-love-of-linux, moving-to-omarchy, the-google-graveyard, open-source-and-power-with-matt-mullenweg, hey-world, fizzy-qs-and-as, success-is-surviving, when-to-jump-into-ai, hey-is-this-app-accessible

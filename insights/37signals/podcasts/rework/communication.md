@@ -69,7 +69,10 @@ tags:
 - Publishing a founder's direct email address (no assistant, no AI relay) is a differentiator — it signals accessibility and creates personal bonds that outlast product frustrations
 - Direct customer communication also surfaces product misunderstandings: many "feature requests" are for things that already exist but aren't discoverable
 
-→ Episodes: talk-directly-to-your-customers, question-your-customers
+- Launch first, then step into the firehose — do not do pre-launch customer research asking what people want; build something, ship it, then learn from real users at scale; there is no better research instrument than a live product with actual customers
+- Post-launch customer conversations surface problems you never anticipated but can fix immediately — the act of responding to that volume in the first days after launch is itself the best product education available
+
+→ Episodes: talk-directly-to-your-customers, question-your-customers, rework-live
 
 ## Public and External Communication
 
@@ -91,7 +94,15 @@ tags:
 - Client service businesses can and should set communication norms from day one: if you respond at 11 PM, clients will keep sending at 11 PM; set expectations explicitly ("I'll reply tomorrow morning") and clients adapt to your rhythm, not the other way around
 - Never proactively over-promise availability to clients — announcing "my cell is always on" invites an abusive relationship that erodes all other boundaries, not just time ones
 
-→ Episodes: press-releases-are-spam, talk-directly-to-your-customers, sound-like-you, rework-mailbag-3
+- Buying a product is a vote — customers buy the company and its values, not only the feature set; communicate what you stand for explicitly because no one will do it for you, especially early on
+- Longevity and stability are underrated competitive differentiators in SaaS: a company that has been around for 25 years and never killed a product speaks louder than any marketing claim about reliability
+- Reputation is a moat available to small companies: each time a large competitor sunsets a beloved product, it is an opportunity to publicly restate your own commitment to permanence
+- Teach and give away knowledge without expecting anything in return — "content marketing" framing corrupts the act; give because you have something useful, and customers who benefit from the free knowledge become advocates and buyers
+- Retail politics: one-on-one founder interactions with customers (support, direct email replies) build brand affinity at a scale no campaign can replicate; Jason handled all Basecamp support personally for two-plus years at launch
+- A customer who experiences a failure that gets fixed with exceptional care often becomes a stronger advocate than one who had no problem at all — the recovery story is the one that spreads
+- Never hold a grudge against customers who left and come back; update your priors when someone who previously criticized your work returns — the capacity to change minds, in both directions, is healthy for a marketplace
+
+→ Episodes: press-releases-are-spam, talk-directly-to-your-customers, sound-like-you, rework-mailbag-3, what-are-you-really-buying
 
 ## Crisis Communication and Apologies
 
@@ -129,7 +140,11 @@ tags:
 - Formal language in writing samples is expected during applications; look for genuine tone underneath the formality, especially whether the applicant is "looking for the person on the other end of the question"
 - Poetry and support writing share the same discipline: be concise while reaching something larger; clarity and engagement at the same time
 
-→ Episodes: dont-be-fake
+- Frame requests and disagreements from the organization's perspective, not "I want X" — managers and stakeholders must justify decisions to the org, so meeting them at that framing makes conversations more effective
+- Use the same matter-of-fact collaborative tone for sensitive topics ("I have a concern about X") as you would for routine ones ("the software isn't working") — treating a difficult conversation as emotionally exceptional before it begins signals fragility and often escalates it
+- Employees systematically underestimate how much good managers want to hear from them — speaking up early and directly is almost always welcomed by capable managers and builds career credibility faster than waiting
+
+→ Episodes: dont-be-fake, ask-a-manager
 
 ## Co-founder and Stakeholder Disagreements
 
@@ -141,7 +156,10 @@ tags:
 - With 10,000 debates behind you, the data says you're wrong a meaningful fraction of the time — calibrate confidence accordingly; humility about past wrongness makes committing to someone else's call psychologically easier
 - Don't ask investor or partner permission before announcing a decision — make the decision, then inform stakeholders the day it goes live; asking permission transfers veto power you don't need to give away
 
-→ Episodes: rework-mailbag-3, dont-be-fake
+- Avoid making reactive secondary decisions in the fog of a major stressful decision — when under pressure, you slip and make permanent calls you wouldn't make calmly; after a big company decision, pause before acting on every subsequent impulse it generates
+- Project one year ahead as a filter for in-the-moment choices: "how will this feel in 12 months?" correctly deprioritizes the pain of the present and aligns you with the outcome you actually want
+
+→ Episodes: rework-mailbag-3, dont-be-fake, listener-questions-part-3
 
 ## Job Ads and Hiring Communication
 
@@ -153,3 +171,19 @@ tags:
 - Remote-first hiring is a communication force-multiplier: opening roles globally produces hundreds or thousands of applicants vs. a thin local pool, giving you enough signal to identify genuine principle-alignment
 
 → Episodes: listener-questions-part-2, rework-mailbag-3
+
+## Advice, Input, and Decision Confidence
+
+- Advice has an expiration date — Jason and David are the wrong people to ask about starting a business because they haven't done it in 20 years; seek out someone who started one six months ago for current, actionable experience
+- Asking more people produces more uncertainty, not more clarity — if you want to feel less sure about your direction, ask five more people; at some point you must commit to your gut
+- Ignore more advice than you take — collecting mentors like trading cards is counterproductive; too many inputs crowd out the internal voice that actually has to make the decision
+- Internet reviews distort reality: only extreme experiences (the one broken sauna out of 50,000, the one perfect one) get written up; the vast silent majority who found something "fine" never publishes; therefore the review landscape makes every ordinary decision feel high-stakes when it isn't
+- Comparison-shopping paralysis is a form of procrastination — the time spent researching gear is time not spent doing the work; ask one trusted person what to buy, buy that, and move on
+- Taking the same inputs as everyone else in your circle produces outputs similar to theirs — originality requires cultivating different sources, including deliberately uncomfortable or historically distant ones
+- The most useful mentors are often dead ones: books survive their authors precisely because the ideas had to stand alone; a dead author cannot dazzle you with personality or podcast presence — only the insight remains, and you must translate it to your context yourself, which personalizes and internalizes it
+- Prefer reality as a mentor over accumulated advice — throw the ball and see how it bounces; the first throw gives you more corrective information than extended pre-throw analysis, and most decisions give you multiple throws before the game is over
+- The real function of good advice is often permission, not information — the reader usually already holds the correct instinct; the adviser's job is to confirm that the instinct is not crazy and encourage action
+- Keep a short list of 50 core principles rather than accumulating thousands — having 10,000 ideas in your head makes it impossible to know which one to apply; the constraint forces synthesis and actually increases decisiveness
+- Successful people often cannot accurately explain what made them successful — survivorship bias, timing, and compounding small accidents are invisible; copying their stated strategy without their context produces a worse copy, not a similar outcome
+
+→ Episodes: be-careful-who-you-listen-to, tone-is-in-your-fingers
