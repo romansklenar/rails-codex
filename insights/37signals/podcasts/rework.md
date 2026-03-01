@@ -15,7 +15,7 @@ tags:
 
 # REWORK Podcast
 
-185+ episodes across 2 seasons (2017–2026). Source: [37signals.com/podcast](https://37signals.com/podcast)
+341+ episodes across 2 seasons (2017–2026). Source: [37signals.com/podcast](https://37signals.com/podcast)
 
 ---
 
