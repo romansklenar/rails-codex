@@ -48,7 +48,7 @@ tags:
 
 ## Shipping & Launch
 
-- The seven shipping principles: (1) only ship good work, (2) ship when confident (confidence is calibrated to criticality, not a fixed process), (3) own the issues after you ship — monitor the error tracker yourself, be first-line support for your own feature, (4) don't ship if it isn't right, (5) cut scope not quality, (6) ship to your appetite
+- The six shipping principles: (1) only ship good work, (2) ship when confident (confidence is calibrated to criticality, not a fixed process), (3) own the issues after you ship — monitor the error tracker yourself, be first-line support for your own feature, (4) don't ship if it isn't right, (5) cut scope not quality, (6) ship to your appetite
 - "We only ship good work" is a higher bar than MVP — "minimally viable" is too low; you can't get useful feedback from a half-assed idea; what you ship can be smaller than you wanted, but what you do ship must be complete and good
 - A suspiciously high shipping rate (100%) is a sign your standards are too low; you should occasionally have a project that simply doesn't meet the bar — that's what "we only ship good work" really means at the 11th hour
 - "Better than nothing" is a dangerously low burden of proof; never let that be your internal argument for pushing deploy
