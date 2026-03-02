@@ -616,6 +616,67 @@ insights:
       writing-custom-rubocop-rules-in-2026:
         description: Custom RuboCop cop authoring — NodePattern DSL, plugin system, requires_gem API, autocorrect safety, and distribution
 
+  books:
+    # Master Hotwire — chapter → insight file mapping:
+    # Ch 3  Turbo Drive enhancements        → master-hotwire/turbo-drive
+    # Ch 4  Link prefetching                → master-hotwire/turbo-drive
+    # Ch 5  Turbo Frames                    → master-hotwire/turbo-frames-advanced
+    # Ch 7  Turbo Streams                   → master-hotwire/turbo-streams-advanced
+    # Ch 8  Turbo Morphing                  → master-hotwire/turbo-morphing
+    # Ch 9  ActionCable broadcasting        → master-hotwire/turbo-streams-advanced
+    # Ch 10 Stimulus UX basics              → master-hotwire/stimulus-reusability
+    # Ch 18 Native without custom code      → master-hotwire/native
+    # Ch 19 Path Configuration              → master-hotwire/native
+    # Ch 20 Bridge Components               → master-hotwire/native
+    # Ch 24 Turbo Cache                     → master-hotwire/turbo-morphing
+    # Ch 25 Advanced Stimulus               → master-hotwire/stimulus-reusability, stimulus-composition
+    # Ch 26 System testing Hotwire          → master-hotwire/system-tests
+    # Ch 27 Legacy migration                → master-hotwire/turbo-drive
+    # Ch 28 Debugging Hotwire               → master-hotwire/debugging
+    #
+    # Not documented (conceptual/historical/tutorial-only):
+    # Ch 0 Preface, Ch 1/13/14/23 Part intros, Ch 2 Plain HTML, Ch 6 Philosophy,
+    # Ch 11 Stimulus vs SPAs, Ch 12 Exercise, Ch 15 History, Ch 16 Mobile UI differences,
+    # Ch 17 Native app scaffolding, Ch 21 Publishing apps, Ch 22/29 Where to go / What's next
+    #
+    # Official docs mapping:
+    # Stimulus handbook/reference  → master-hotwire/stimulus-actions, stimulus-targets-values, stimulus-css-classes, stimulus-outlets
+    # Turbo handbook/reference     → master-hotwire/turbo-attributes, turbo-events
+    master-hotwire:
+      description: "Hotwire knowledge from three sources: Master Hotwire book (Andrea Fomera), Official Stimulus Handbook, and Official Turbo Handbook — patterns, APIs, debugging, and system testing"
+      debugging:
+        description: Debug techniques for Turbo, Stimulus, broadcasts, and Hotwire Native apps
+      hotwire:
+        description: Turbo Drive, Turbo Frames, Turbo Streams, Stimulus controllers — overview and common patterns
+      native:
+        description: Native apps, navigation routing matrix, Bridge Component API, Path Configuration properties, route decision handlers, Rails helpers
+      stimulus-actions:
+        description: Action descriptors, keyboard filters, global events, action options, parameters with type casting
+      stimulus-composition:
+        description: Combining controllers via HTML, custom events, and outlets with decision guide
+      stimulus-css-classes:
+        description: CSS class definitions, generated properties, progressive enhancement pattern
+      stimulus-outlets:
+        description: Cross-controller outlets API, callbacks, namespace handling, conditional registration
+      stimulus-reusability:
+        description: HTML as source of truth, value/target callbacks, conditional registration, error handling
+      stimulus-targets-values:
+        description: Target/value generated properties, type defaults, change callbacks, TypeScript declarations
+      system-tests:
+        description: Flakiness reduction, broadcast testing, multiple sessions, WebSocket timing
+      turbo-attributes:
+        description: All data attributes, meta tags, and auto-set attributes quick reference
+      turbo-drive:
+        description: Prefetching, visit actions, form submission rules, cache API, View Transitions, legacy migration
+      turbo-events:
+        description: All Turbo events with detail properties, custom rendering, pause/resume patterns
+      turbo-frames-advanced:
+        description: Frame targeting, remote frames, FrameElement JS API, morphing, autoscroll, session expiry
+      turbo-morphing:
+        description: Page morphing for minimal DOM changes, Turbo Cache snapshots/previews, flashing fixes
+      turbo-streams-advanced:
+        description: All 9 stream actions, morph method, stream sources, manual rendering, broadcasting
+
 style-guide:
   ruby:
     description: Ruby coding conventions and best practices
