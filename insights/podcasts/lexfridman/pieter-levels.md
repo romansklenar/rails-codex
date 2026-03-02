@@ -1,24 +1,18 @@
 ---
 title: "Pieter Levels: Programming, Viral AI Startups, and Digital Nomad Life | Lex Fridman Podcast #440"
-description: Pieter Levels shares how he built multiple profitable software products solo using minimal tools, why he prefers PHP and jQuery over modern frameworks, and how he went from depression while traveling to making millions with AI photo products.
+description: "Pieter Levels shares how he built multiple profitable software products solo using minimal tools, why he prefers PHP and jQuery over modern frameworks, and how he went from depression while traveling to making millions with AI photo products."
 source:
   type: podcast
   title: Lex Fridman Podcast
   author: Lex Fridman
   url: "https://lexfridman.com/pieter-levels"
   date: 2024-08-20
-tags:
-  - indie-hacking
-  - startups
-  - ai
-  - digital-nomad
-  - programming
-  - entrepreneurship
-  - productivity
-  - minimalism
-  - bootstrapping
-  - shipping
+tags: [indie-hacking, startups, ai, digital-nomad, programming, entrepreneurship, productivity, minimalism, bootstrapping, shipping]
 ---
+
+# Pieter Levels: Programming, Viral AI Startups, and Digital Nomad Life | Lex Fridman Podcast #440
+
+Pieter Levels built Photo AI, Nomad List, and Remote OK solo using PHP, jQuery, and SQLite — shipping fast, charging from day one, and scaling to millions in revenue without investors or a team.
 
 ## Indie Hacking Philosophy
 
