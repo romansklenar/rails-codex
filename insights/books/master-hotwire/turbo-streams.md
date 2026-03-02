@@ -4,7 +4,7 @@ description: "Turbo Streams deliver surgical, per-element DOM mutations from the
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [turbo-streams, turbo, action-cable, broadcasting, real-time]

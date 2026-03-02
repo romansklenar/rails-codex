@@ -4,7 +4,7 @@ description: "Turbo Drive intercepts link clicks and form submissions to replace
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [turbo-drive, turbo, prefetching, cache, navigation, legacy-migration]

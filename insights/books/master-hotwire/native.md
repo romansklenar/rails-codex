@@ -4,7 +4,7 @@ description: "Hotwire Native wraps a Hotwire-powered Rails web app into a native
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [hotwire-native, ios, android, navigation, architecture, webview]

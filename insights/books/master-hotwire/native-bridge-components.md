@@ -4,7 +4,7 @@ description: "Bridge components let web Stimulus controllers drive native iOS/An
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [hotwire-native, bridge-components, ios, android, publishing, app-store]

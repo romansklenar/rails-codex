@@ -4,7 +4,7 @@ description: "Path Configuration is a server-served JSON file that lets Hotwire 
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [hotwire-native, path-configuration, navigation, ios, android]

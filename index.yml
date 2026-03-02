@@ -637,7 +637,7 @@ insights:
     # All 30 chapters covered. Conceptual/intro chapters (0,1,2,6,11,13,22,23,29) folded into master-hotwire/hotwire.md (philosophy & overview).
     #
     master-hotwire:
-      description: "Master Hotwire by Andrea Fomera — Turbo, Stimulus, and Hotwire Native patterns, APIs, debugging, and system testing"
+      description: "Master Hotwire by Radan Skorić — Turbo, Stimulus, and Hotwire Native patterns, APIs, debugging, and system testing"
       debugging:
         description: Debug techniques for Turbo, Stimulus, broadcasts, and Hotwire Native apps
       hotwire:

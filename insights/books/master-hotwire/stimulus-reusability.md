@@ -4,7 +4,7 @@ description: "Stimulus augments server-rendered HTML with just enough JavaScript
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [stimulus, javascript, targets, values, actions, ux, controllers]

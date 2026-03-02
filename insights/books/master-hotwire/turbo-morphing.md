@@ -4,7 +4,7 @@ description: "Turbo Morphing uses the Idiomorph algorithm to apply only the mini
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [turbo-morphing, turbo-drive, cache, morphing, performance, history]

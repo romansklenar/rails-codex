@@ -4,7 +4,7 @@ description: "Turbo Frames scope navigation and form submissions to a named regi
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [turbo-frames, turbo, navigation, lazy-loading, hotwire, rails]

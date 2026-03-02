@@ -4,7 +4,7 @@ description: "Complex Stimulus UIs are built by composing small, focused control
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [stimulus, javascript, outlets, composition, lifecycle, reusability, advanced]

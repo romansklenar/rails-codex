@@ -4,7 +4,7 @@ description: "A practical reference for diagnosing and fixing bugs in Turbo Driv
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [debugging, turbo, stimulus, hotwire-native, devtools, logging]

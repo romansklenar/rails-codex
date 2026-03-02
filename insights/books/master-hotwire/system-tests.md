@@ -4,7 +4,7 @@ description: "Practical guidance for writing robust, non-flaky system tests for 
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [testing, system-tests, capybara, turbo, stimulus, flaky-tests, minitest]

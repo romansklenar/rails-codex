@@ -4,7 +4,7 @@ description: "Hotwire compresses web application complexity by returning to serv
 source:
   type: book
   title: "Master Hotwire"
-  author: "Andrea Fomera"
+  author: "Radan Skorić"
   url: "https://masterhotwire.com"
   date: "2026-02-01"
 tags: [hotwire, turbo, stimulus, progressive-enhancement, philosophy, architecture]
