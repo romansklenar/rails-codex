@@ -512,6 +512,85 @@ insights:
       yjit-performance:
         description: Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold
 
+  evilmartians:
+    blog: # Martian Chronicles (https://evilmartians.com/chronicles)
+      5-tips-for-activerecord-dashboards:
+        description: Explicit view data structures, N+1 guards with includes, column restriction, and materialized views for dashboard queries
+      anycable-goes-pro-fast-websockets-for-ruby-at-scale:
+        description: AnyCable Pro architecture — Go WebSocket server, cable-ready compatibility, clustering, and performance at scale
+      anycable-rails-and-the-pitfalls-of-llm-streaming:
+        description: Reliable LLM token streaming over Action Cable/AnyCable — backpressure, reconnection, and pitfalls
+      enter-anycable-v1-4-reliable-real-time-features-for-apps-of-any-size:
+        description: AnyCable 1.4 — Reliable Streams, resumable sessions, long-polling fallback, and Hotwire compatibility
+      exploring-active-agent-or-can-we-build-ai-features-the-rails-way:
+        description: Active Agent gem — Rails-style AI agents with callbacks, prompts, and action-driven LLM logic
+      flying-free-a-tale-of-partitioning-with-canaries-in-postgresql:
+        description: Zero-downtime partitioning of 140GB/60M-row table with canary routing, pg_query linter, and bidirectional triggers
+      gemfile-of-dreams-libraries-we-use-to-build-rails-apps:
+        description: Evil Martians' curated Rails gem stack — 70+ dependencies across testing, security, performance, and DX
+      hotwire-rails-summit-interactive-multi-step-forms-peak-ux:
+        description: Multi-step form wizards with state machines, Turbo morphing, view transitions, and formaction/formmethod patterns
+      hotwire-reactive-rails-with-no-javascript:
+        description: Turbo Drive, Frames, Streams, and Action Cable for reactive Rails with minimal JavaScript
+      how-to-graphql-with-ruby-rails-active-record-and-no-n-plus-one:
+        description: GraphQL N+1 solutions — Lookahead, ar_lazy_preload, graphql-batch, and GraphQL::Dataloader with fibers
+      it-deserved-its-own-tome-layered-design-and-the-extended-rails-way:
+        description: Layered Design book — policies, form objects, query objects, and abstraction layers beyond vanilla Rails
+      keeping-rails-cool-the-modern-frontend-toolkit:
+        description: Three-tier frontend decision framework for Rails — Hotwire for CRUD, Turbo Mount for components, Inertia for SPAs
+      logidze-1-0-active-record-postgresql-rails-and-time-travel:
+        description: PostgreSQL trigger-based audit log with JSONB diffs, at/diff_from/undo! time-travel API, and responsible_id attribution
+      martian-kubernetes-kit-a-smooth-sailing-toolkit-from-our-sre-team:
+        description: Production K8s toolkit — Terragrunt, Argo CD GitOps, Prometheus/Grafana, Loki, and automated PR preview apps
+      mrsk-hot-deployment-tool-or-total-game-changer:
+        description: Kamal deployment review — destinations, health checks, rollback, version history, limitations, and decision matrix
+      oklch-in-css-why-quit-rgb-hsl:
+        description: OKLCH color space — P3 wide-gamut, relative color syntax, gamut mapping, and migration tooling from RGB/HSL
+      partition-and-conquer:
+        description: View-based PostgreSQL table partitioning with PL/pgSQL INSTEAD OF INSERT triggers and zero-downtime switchover
+      postgresql-and-rails-sitting-in-a-tree:
+        description: Hierarchical data patterns in PostgreSQL — Nested Set, Materialized Path, Closure Table, and pg_closure_tree_rebuild
+      railing-against-time-tools-and-techniques-that-got-us-5x-faster-results:
+        description: 53min→11min test suite optimization with StackProf, AnyFixture, before_all, let_it_be, and create_default
+      rubanok-carve-your-rails-controllers-like-papa-carlo:
+        description: Rubanok gem — declarative parameter-to-scope mapping for skinny controllers via ruleset objects
+      ruby-bytes-or-generating-standalone-generators:
+        description: rbytes toolkit for composable Rails app templates — partial includes, conditional injection, and CLI distribution
+      ruby-on-rails-on-webassembly-a-guide-to-full-stack-in-browser-action:
+        description: wasmify-rails gem — WASM build pipeline, SQLite Wasm with OPFS persistence, in-browser Rails apps
+      ruby-on-whales-docker-for-ruby-rails-development:
+        description: Dockerized Ruby/Rails dev — dip CLI, multi-stage Dockerfile, gem/node volume caching, remote Chrome for tests
+      simple-declarative-presence-for-hotwire-apps-with-anycable:
+        description: Declarative user presence with turbo-cable-presence-source custom element, AnyCable Streams, and join/leave templates
+      system-of-a-test-setting-up-end-to-end-rails-testing:
+        description: Cuprite/Ferrum as CDP-based Capybara driver replacing Selenium — BetterRailsSystemTests module, Docker/CI setup
+      taking-off-the-heroku-training-wheels-the-rails-preflight-checklist:
+        description: Heroku production checklist — Pipelines, Procfile, CDN, review apps, anyway_config, rack-timeout, and Preboot
+      test-prof-3-guided-and-automated-ruby-test-profiling:
+        description: TestProf Autopilot CLI — scenario DSL, MemoryProf, Vernier/Firefox Profiler integration, and AI roadmap
+      testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest:
+        description: Factory cascade elimination with FactoryProf flamegraphs, FactoryDefault, and AnyFixture suite-level fixtures
+      testprof-a-good-doctor-for-slow-ruby-tests:
+        description: TestProf profiler suite — TagProf, StackProf, EventProf, FactoryDoctor, RubyProf, and before_all
+      the-art-of-turbo-mount-hotwire-meets-modern-js-frameworks:
+        description: Turbo Mount gem — embedding React/Vue/Svelte components in Hotwire via registerComponent and Stimulus extension
+      the-future-of-full-stack-rails-turbo-morph-drive:
+        description: Pre-Turbo-8 Idiomorph integration, scroll fix, data-morph-permanent attribute, and StreamActions.refresh pattern
+      the-whop-chop-how-we-cut-a-rails-test-suite-and-ci-time-in-half:
+        description: TestProf + StackProf profiling, let_it_be, create_default, parallel_tests to test-queue migration at Whop
+      time-series-data-using-timescaledb-with-ruby-on-rails:
+        description: TimescaleDB hypertables, continuous aggregates with refresh policies, data retention, and timescaledb-ruby gem
+      viewcomponent-in-the-wild-building-modern-rails-frontends:
+        description: ViewComponent fundamentals — slots, SRP, testing, dry-effects context, general-purpose vs app-specific design
+      viewcomponent-in-the-wild-embracing-tailwindcss-classes-and-html-attributes:
+        description: Style Variants DSL, tailwind_merge integration, html_option/dots attribute bags, inline system tests
+      viewcomponent-in-the-wild-supercharging-your-components:
+        description: view_component-contrib sidecar structure, dry-initializer base class, PostCSS scoping, Stimulus auto-register, Lookbook
+      vite-lizing-rails-get-live-reload-and-hot-replacement-with-vite-ruby:
+        description: vite_rails gem setup, import.meta.glob for Stimulus auto-loading, HMR plugins, and Docker hybrid configuration
+      writing-custom-rubocop-rules-in-2026:
+        description: Custom RuboCop cop authoring — NodePattern DSL, plugin system, requires_gem API, autocorrect safety, and distribution
+
 style-guide:
   ruby:
     description: Ruby coding conventions and best practices
