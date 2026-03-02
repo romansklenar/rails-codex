@@ -7,17 +7,7 @@ source:
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17891804-florent-beaurain-optimizing-rails-tests-at-doctolib-scale"
   date: 2025-10-07
-tags:
-  - testing
-  - performance
-  - factories
-  - fixtures
-  - minitest
-  - ci
-  - monolith
-  - database
-  - packwerk
-  - flaky-tests
+tags: [testing, performance, factories, fixtures, minitest, ci, monolith, database, packwerk, flaky-tests]
 ---
 
 # Florent Beaurain: Optimizing Rails Tests at Doctolib Scale
