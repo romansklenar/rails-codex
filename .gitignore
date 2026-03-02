@@ -10,6 +10,7 @@
 
 # Ignore system files
 .DS_Store
+.playwright-mcp
 
 # Ignore raw transcript source files
 transcripts/
