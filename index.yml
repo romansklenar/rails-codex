@@ -512,6 +512,30 @@ insights:
       yjit-performance:
         description: Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold
 
+  rails-official:
+    podcasts:
+      rails-official: # On Rails podcast (https://podcast.rubyonrails.org)
+        ep01-rosa-gutierrez-solid-queue:
+          description: "How 37signals built and migrated to Solid Queue — a database-backed ActiveJob backend replacing 7 Resque gems — running 20M+ daily jobs in production on Hey and Basecamp."
+        ep02-jean-boussier-io-bound-misconceptions:
+          description: "Jean Boussier challenges the assumption that Rails apps are always IO-bound, explaining how to properly measure GVL contention, reason about latency vs. throughput, and use instrumentation before reaching for concurrency solutions."
+        ep03-nadia-odunayo-scaling-rails-for-millions-of-users:
+          description: "How one developer built and scaled The StoryGraph to four million users using Rails, Turbo Native, Sidekiq, YugabyteDB, and a deliberate choice to stay solo."
+        ep04-ryan-stawarz-austin-story-doximity-rails-monolith:
+          description: "How Doximity scaled a single Rails monolith to 100–150 engineers by adopting GraphQL Federation for mobile-safe API evolution, Packwerk for domain isolation, and pragmatic service extraction over premature microservices."
+        ep05-hilary-stohs-krause-scaling-rails-with-small-wins:
+          description: "How incremental, developer-level performance habits — choosing the right ActiveRecord method, eliminating flaky tests, standardizing code conventions — compound into meaningful system-wide improvements in a large Rails monolith."
+        ep06-florent-beaurain-optimizing-rails-tests-at-doctolib-scale:
+          description: "How Doctolib cut a 7-minute engine test run to under 1 minute by returning to Rails defaults — transactional tests, fixtures over factories, and parallel minitest."
+        ep07-alexander-stathis-scaling-modular-rails-monolith-angellist:
+          description: "How AngelList evolved a Rails monolith into a modular engine structure using Packwerk, Sorbet, and explicit service-layer patterns to manage a deeply interconnected financial domain."
+        ep08-miguel-conde-peter-compernolle-gusto-rails-biolith:
+          description: "How Gusto runs two Rails monoliths — a 'biolith' — at 600+ engineer scale, using Packwerk, Sorbet, and service-layer patterns to enforce domain boundaries without going full microservices."
+        ep09-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you:
+          description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
+        ep10-jay-tennier-rainforest-qa-tests-itself:
+          description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
+
   evilmartians:
     blog: # Martian Chronicles (https://evilmartians.com/chronicles)
       5-tips-for-activerecord-dashboards:
