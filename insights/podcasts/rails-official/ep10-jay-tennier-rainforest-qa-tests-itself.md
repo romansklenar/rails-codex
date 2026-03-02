@@ -17,7 +17,7 @@ Jay Tennier (Engineering Manager at Rainforest QA) explains how a platform that 
 ## Rainforest QA's Stack and Architecture
 
 - Core product: a Rails monolith powering all back-end logic, with a fully separate React app (split out ~8 years ago) making HTTP requests to Rails APIs built with Grape
-- VM infrastructure: dedicated servers at Leesweb (US) and Hetzner (Germany) running ~20 VMs each across ~200 servers; US servers added specifically to reduce latency during interactive test authoring
+- VM infrastructure: dedicated servers at Leaseweb (US) and Hetzner (Germany) running ~20 VMs each across ~200 servers; US servers added specifically to reduce latency during interactive test authoring
 - Supporting Rails services: VManager (VM lifecycle management) and VControl (low-level OS interaction with VMs), kept separate because they are not user-facing
 - Non-Rails services: an Erlang service for tester job dispatch (mediates between available human testers and queued jobs) and a Go CLI (cross-platform distribution requirement)
 - All front-end traffic is routed through the monolith — VManager and VControl are never directly exposed to the React app, which centralises auth and logging in one place
