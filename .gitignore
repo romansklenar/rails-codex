@@ -14,7 +14,7 @@
 
 # Ignore raw transcript/chapter source files (copyrighted material)
 transcripts/
-chapters-txt/
+chapters/
 
 # Ignore local Claude Code config
 .claude/worktrees/*
