@@ -6,6 +6,7 @@ source:
   title: "Master Hotwire"
   author: "Andrea Fomera"
   url: "https://store.masterhotwire.com"
+  date: "2026-02-01"
 tags: [hotwire-native, bridge-components, ios, android, publishing, app-store]
 ---
 
