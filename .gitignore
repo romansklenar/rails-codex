@@ -12,8 +12,9 @@
 .DS_Store
 .playwright-mcp
 
-# Ignore raw transcript source files
+# Ignore raw transcript/chapter source files and book-derived content (copyrighted material)
 transcripts/
+chapters/
 
 # Ignore local Claude Code config
 .claude/worktrees/*
