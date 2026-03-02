@@ -61,7 +61,7 @@ tags: [physics, cosmology, black-holes, relativity, gravitational-waves, quantum
 
 ## Proposed Resolutions: Fuzzballs, Soft Hair, ER = EPR, Firewalls
 
-- The fuzz ball proposal from string theory holds that black holes have no interior at all: strings smear around the event horizon due to time dilation, tangling into a horizonless object, so information never falls in and therefore never needs to come back out.
+- The fuzzball proposal from string theory holds that black holes have no interior at all: strings smear around the event horizon due to time dilation, tangling into a horizonless object, so information never falls in and therefore never needs to come back out.
 - The soft hair proposal, developed by Hawking, Perry, and Strominger, challenges the classical no-hair theorem by suggesting that very low-energy quantum excitations — soft gravitons or photons — at the event horizon can encode information about infalling matter.
 - ER = EPR, conjectured by Juan Maldacena and Lenny Susskind, posits that quantum entanglement (Einstein-Podolsky-Rosen) and wormholes (Einstein-Rosen bridges) are the same phenomenon — entangled particles are literally connected by a microscopic wormhole.
 - In the ER = EPR picture, the event horizon of a black hole is not a smooth geometric surface but is "embroidered" from a dense fabric of quantum wormholes linking the interior to the Hawking radiation escaping outside.
