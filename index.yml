@@ -391,31 +391,6 @@ insights:
       description: 37 principles on product development, work culture, business philosophy, and decision-making from 37signals.com
     thoughts:
       description: Long-form essays on shipping, decisions, profit, communication, and influences from 37signals.com/thoughts
-    podcasts:
-      rework:
-        description: "REWORK podcast: 185+ episodes on product development, shipping, hiring, communication, and culture"
-        product-development:
-          description: Shape Up methodology, shipping discipline, product philosophy, decisions, and scope management
-        work-culture:
-          description: Sustainable pace, remote work, meetings, interruptions, and company culture practices
-        hiring:
-          description: When to hire, who to hire, evaluation process, team structure, and onboarding
-        communication:
-          description: Async-first principles, cycle communication, customer outreach, and apologies
-        marketing:
-          description: Teaching as marketing, founder-led content, audience building, and free plan strategy
-        business-philosophy:
-          description: Profitable independence, anti-VC stance, ONCE pay-once model, and open source commitment
-        customer-support:
-          description: Support as a feature, everyone on front lines, community building, and customer segmentation
-        founder-leadership:
-          description: Stepping back, sabbaticals, co-founder partnerships, and lean org design
-        privacy-ethics:
-          description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
-        cloud-exit:
-          description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
-      recordables:
-        description: "Recordables: Short-form talks and snippets from 37signals covering product, work, and business topics"
     blog: # 37signals Dev Blog (https://dev.37signals.com)
       action-push-native:
         description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections
@@ -536,6 +511,42 @@ insights:
           description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
         ep10-jay-tennier-rainforest-qa-tests-itself:
           description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
+
+  37signals-rework:
+    description: "REWORK podcast: 185+ episodes on product development, shipping, hiring, communication, and culture"
+    index:
+      description: "REWORK podcast episode index — 185+ episodes with titles, dates, and thematic cross-references"
+    product-development:
+      description: Shape Up methodology, shipping discipline, product philosophy, decisions, and scope management
+    work-culture:
+      description: Sustainable pace, remote work, meetings, interruptions, and company culture practices
+    hiring:
+      description: When to hire, who to hire, evaluation process, team structure, and onboarding
+    communication:
+      description: Async-first principles, cycle communication, customer outreach, and apologies
+    marketing:
+      description: Teaching as marketing, founder-led content, audience building, and free plan strategy
+    business-philosophy:
+      description: Profitable independence, anti-VC stance, ONCE pay-once model, and open source commitment
+    customer-support:
+      description: Support as a feature, everyone on front lines, community building, and customer segmentation
+    founder-leadership:
+      description: Stepping back, sabbaticals, co-founder partnerships, and lean org design
+    privacy-ethics:
+      description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
+    cloud-exit:
+      description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
+
+  37signals-recordables:
+    description: "Recordables: Short-form talks and snippets from 37signals covering product, work, and business topics"
+    1-behind-the-fizzy-infrastructure:
+      description: SQLite multi-tenancy with per-customer databases, Litestream backups, and production ops for Fizzy
+    2-rails-multi-tenancy:
+      description: Tenant isolation patterns, cross-tenant safety, and framework integration points for multi-tenant Rails
+    3-moving-mountains-of-data-off-s3:
+      description: Migrating S3 object storage to self-hosted Pure Storage — tooling, process, and $1M+ annual savings
+    4-rails-delegated-type-pattern:
+      description: Rails delegated_type — polymorphic associations with concrete tables, STI comparison, and real-world usage
 
   evilmartians:
     blog: # Martian Chronicles (https://evilmartians.com/chronicles)

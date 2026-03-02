@@ -15,9 +15,9 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 ```
 ├── .git-submodules/              # Upstream git submodules (auto-managed, not materialized in sparse checkout)
 ├── insights/                     # Curated knowledge from blogs, books, talks (manually authored)
-│   ├── 37signals/                #   Insights from 37signals blogs, books, talks, podcasts, etc.
-│   ├── evilmartians/             #   Insights from Evil Martians Chronicles blog
-│   └── podcasts/                 #   Insights from Rails, Lex Fridman, and other podcasts
+│   ├── 37signals/                #   37signals blog and thoughts
+│   ├── evilmartians/             #   Evil Martians Chronicles blog
+│   └── podcasts/                 #   37signals REWORK, Recordables, On Rails, Lex Fridman
 │
 ├── references/                   # Official docs (auto-extracted from .git-submodules/)
 │   ├── hotwire-native/
