@@ -620,10 +620,10 @@ insights:
     # Master Hotwire — chapter → insight file mapping:
     # Ch 3  Turbo Drive enhancements        → master-hotwire/turbo-drive
     # Ch 4  Link prefetching                → master-hotwire/turbo-drive
-    # Ch 5  Turbo Frames                    → master-hotwire/turbo-frames-advanced
-    # Ch 7  Turbo Streams                   → master-hotwire/turbo-streams-advanced
+    # Ch 5  Turbo Frames                    → master-hotwire/turbo-frames
+    # Ch 7  Turbo Streams                   → master-hotwire/turbo-streams
     # Ch 8  Turbo Morphing                  → master-hotwire/turbo-morphing
-    # Ch 9  ActionCable broadcasting        → master-hotwire/turbo-streams-advanced
+    # Ch 9  ActionCable broadcasting        → master-hotwire/turbo-streams
     # Ch 10 Stimulus UX basics              → master-hotwire/stimulus-reusability
     # Ch 14/15/16/17/18 Native setup        → master-hotwire/native
     # Ch 19 Path Configuration              → master-hotwire/native-path-configuration
@@ -656,11 +656,11 @@ insights:
         description: System testing Hotwire — flakiness root causes, broadcast debounce timing, multi-session patterns, WebSocket synchronisation
       turbo-drive:
         description: Turbo Drive internals, prefetching, form submission lifecycle, cache, visit actions, and legacy migration strategy
-      turbo-frames-advanced:
+      turbo-frames:
         description: Turbo Frames — scoped navigation, lazy loading, FrameElement API, inline edit/create patterns, per-context frame IDs
       turbo-morphing:
         description: Turbo Morphing with Idiomorph, Turbo Cache LRU, preview pages, flashing fix, and the Hotwire complexity ladder
-      turbo-streams-advanced:
+      turbo-streams:
         description: All 9 Turbo Stream actions, ActionCable broadcasting, broadcast debouncing, custom stream actions, and decision guide
 
 style-guide:
