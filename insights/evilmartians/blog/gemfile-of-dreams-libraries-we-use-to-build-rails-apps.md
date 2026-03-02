@@ -2,22 +2,12 @@
 title: "Gemfile of Dreams: The Libraries We Use to Build Rails Apps"
 description: "Evil Martians' curated 2024 Rails gem stack covering authentication, authorization, configuration, background jobs, real-time, testing, database, frontend, service objects, and monitoring"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/gemfile-of-dreams-libraries-we-use-to-build-rails-apps"
   date: '2024-05-28'
-tags:
-- rails
-- gems
-- ruby
-- architecture
-- testing
-- authentication
-- authorization
-- background-jobs
-- real-time
-- database
+tags: [rails, gems, ruby, architecture, testing, authentication, authorization, background-jobs, real-time, database]
 ---
 
 # Gemfile of Dreams: The Libraries We Use to Build Rails Apps

@@ -2,20 +2,12 @@
 title: "Rubanok: Carve Your Rails Controllers Like Papa Carlo"
 description: "Rubanok provides a params-based transformation DSL (Processor classes with map/match rules) to extract filtering, sorting, and pagination logic from Rails controllers into dedicated, testable objects"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/rubanok-carve-your-rails-controllers-like-papa-carlo"
   date: '2019-02-12'
-tags:
-- rails
-- controllers
-- params
-- filtering
-- sorting
-- pagination
-- dsl
-- ruby
+tags: [rails, controllers, params, filtering, sorting, pagination, dsl, ruby]
 ---
 
 # Rubanok: Carve Your Rails Controllers Like Papa Carlo

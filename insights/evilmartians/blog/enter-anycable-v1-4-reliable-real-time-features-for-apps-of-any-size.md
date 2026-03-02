@@ -2,20 +2,12 @@
 title: "Enter AnyCable v1.4: Reliable Real-Time Features for Apps of Any Size"
 description: "AnyCable v1.4 adds Reliable Streams, Resumable Sessions, long-polling fallback, HTTP RPC mode, enhanced Hotwire integration, and OCPP protocol support"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/enter-anycable-v1-4-reliable-real-time-features-for-apps-of-any-size"
   date: '2023-07-14'
-tags:
-- anycable
-- websockets
-- real-time
-- rails
-- hotwire
-- turbo-streams
-- action-cable
-- reliability
+tags: [anycable, websockets, real-time, rails, hotwire, turbo-streams, action-cable, reliability]
 ---
 
 # Enter AnyCable v1.4: Reliable Real-Time Features for Apps of Any Size

@@ -2,21 +2,12 @@
 title: "ViewComponent in the Wild II: Supercharging Your Components"
 description: "Production ViewComponent setup with view_component-contrib, dry-initializer, dry-effects, CSS scoping, Stimulus integration, runtime DB query linting, and Lookbook storybook"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Alexander Baygeldin"
   url: "https://evilmartians.com/chronicles/viewcomponent-in-the-wild-supercharging-your-components"
   date: '2022-10-18'
-tags:
-- viewcomponent
-- rails
-- ruby
-- view-component-contrib
-- dry-rb
-- stimulus
-- lookbook
-- css-modules
-- testing
+tags: [viewcomponent, rails, ruby, view-component-contrib, dry-rb, stimulus, lookbook, css-modules, testing]
 ---
 
 # ViewComponent in the Wild II: Supercharging Your Components

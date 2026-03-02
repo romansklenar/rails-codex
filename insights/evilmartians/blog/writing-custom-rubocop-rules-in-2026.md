@@ -2,19 +2,12 @@
 title: "Writing Custom RuboCop Rules in 2026"
 description: "Modern guide to authoring RuboCop cops using the new plugin system, requires_gem API, InternalAffairs linting, safe autocorrection patterns, and cop distribution"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Nikita Mishchenko"
   url: "https://evilmartians.com/chronicles/writing-custom-rubocop-rules-in-2026"
   date: '2026-02-18'
-tags:
-- ruby
-- rubocop
-- linting
-- static-analysis
-- code-style
-- autocorrection
-- plugins
+tags: [ruby, rubocop, linting, static-analysis, code-style, autocorrection, plugins]
 ---
 
 # Writing Custom RuboCop Rules in 2026
@@ -69,7 +62,7 @@ A comprehensive guide to writing and shipping modern custom RuboCop cops with th
 - Mark a cop as safe-autocorrect with `self.autocorrect_incompatible_with = []` and `restrict_on_send`
 - Use `corrector.replace(node.source_range, new_code)` for simple replacements
 - `corrector.insert_before`, `corrector.insert_after`, `corrector.remove` for surgical edits
-- **Safe autocorrection**: semantics-preserving changes (e.g., `Array.new` → `[]`) — set `self.corrector_incompatible_with = []`
+- **Safe autocorrection**: semantics-preserving changes (e.g., `Array.new` → `[]`) — set `self.autocorrect_incompatible_with = []`
 - **Unsafe autocorrection**: may change behavior (e.g., reordering method calls) — set `self.autocorrect_incompatible_with = [:some_cop]` and use `--autocorrect-all` flag
 
 ## Testing Cops with RuboCop::RSpec

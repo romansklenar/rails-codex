@@ -2,20 +2,12 @@
 title: "It Deserved Its Own Tome: Layered Design and the Extended Rails Way"
 description: "Vladimir Dementyev's book 'Layered Design for Ruby on Rails Applications' introduces the Extended Rails Way — an experience-driven methodology using abstraction layers to keep growing Rails codebases maintainable"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/it-deserved-its-own-tome-layered-design-and-the-extended-rails-way"
   date: '2023-08-29'
-tags:
-- rails
-- architecture
-- layered-design
-- service-objects
-- form-objects
-- query-objects
-- abstraction
-- maintainability
+tags: [rails, architecture, layered-design, service-objects, form-objects, query-objects, abstraction, maintainability]
 ---
 
 # It Deserved Its Own Tome: Layered Design and the Extended Rails Way

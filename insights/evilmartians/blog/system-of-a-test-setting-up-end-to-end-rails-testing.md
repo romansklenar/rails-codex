@@ -2,21 +2,12 @@
 title: "System of a Test: Proper Browser Testing in Ruby on Rails"
 description: "End-to-end Rails system test setup using Cuprite, Ferrum, and Capybara with Chrome DevTools Protocol, replacing Selenium for faster and simpler browser testing"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/system-of-a-test-setting-up-end-to-end-rails-testing"
   date: '2020-07-14'
-tags:
-- rails
-- testing
-- system-tests
-- capybara
-- cuprite
-- ferrum
-- rspec
-- browser-testing
-- chrome-devtools-protocol
+tags: [rails, testing, system-tests, capybara, cuprite, ferrum, rspec, browser-testing, chrome-devtools-protocol]
 ---
 
 # System of a Test: Proper Browser Testing in Ruby on Rails

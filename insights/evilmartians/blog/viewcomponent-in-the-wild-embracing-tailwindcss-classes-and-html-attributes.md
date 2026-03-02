@@ -2,20 +2,12 @@
 title: "ViewComponent in the Wild III: TailwindCSS Classes and HTML Attributes"
 description: "Style Variants DSL for managing Tailwind class combinations in ViewComponent, HTML attribute bags with tag.attributes, and inline system test helpers with rails-intest-views"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/viewcomponent-in-the-wild-embracing-tailwindcss-classes-and-html-attributes"
   date: '2024-01-23'
-tags:
-- viewcomponent
-- tailwindcss
-- rails
-- ruby
-- view-component-contrib
-- css
-- testing
-- html-attributes
+tags: [viewcomponent, tailwindcss, rails, ruby, view-component-contrib, css, testing, html-attributes]
 ---
 
 # ViewComponent in the Wild III: TailwindCSS Classes and HTML Attributes

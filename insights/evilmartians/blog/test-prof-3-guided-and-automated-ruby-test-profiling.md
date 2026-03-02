@@ -2,24 +2,12 @@
 title: "TestProf III: Guided and Automated Ruby Test Profiling"
 description: "Updated TestProf profiling playbook, TestProf Autopilot CLI for scripted multi-run profiling, MemoryProf for RSS/allocation tracking, and Vernier integration for next-generation flamegraph analysis"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev, Travis Turner"
   url: "https://evilmartians.com/chronicles/test-prof-3-guided-and-automated-ruby-test-profiling"
   date: '2024-08-13'
-tags:
-- ruby
-- rails
-- testing
-- rspec
-- test-performance
-- testprof
-- profiling
-- ci
-- automation
-- memory-profiling
-- vernier
-- stackprof
+tags: [ruby, rails, testing, rspec, test-performance, testprof, profiling, ci, automation, memory-profiling, vernier, stackprof]
 ---
 
 # TestProf III: Guided and Automated Ruby Test Profiling

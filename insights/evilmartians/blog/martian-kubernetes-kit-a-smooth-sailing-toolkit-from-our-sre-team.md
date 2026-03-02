@@ -2,22 +2,12 @@
 title: "Martian Kubernetes Kit: A Smooth-Sailing Toolkit from Our SRE Team"
 description: "Evil Martians' turnkey Kubernetes configuration package built on Terragrunt/Terraform, Argo CD, Prometheus, Grafana Loki, and GitOps principles to reduce adoption complexity for client projects"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Kirill Kuznetsov"
   url: "https://evilmartians.com/chronicles/martian-kubernetes-kit-a-smooth-sailing-toolkit-from-our-sre-team"
   date: '2023-12-20'
-tags:
-- kubernetes
-- infrastructure
-- devops
-- terraform
-- argo-cd
-- prometheus
-- grafana
-- gitops
-- preview-apps
-- helm
+tags: [kubernetes, infrastructure, devops, terraform, argo-cd, prometheus, grafana, gitops, preview-apps, helm]
 ---
 
 # Martian Kubernetes Kit: A Smooth-Sailing Toolkit from Our SRE Team

@@ -2,20 +2,12 @@
 title: "Taking Off the Heroku Training Wheels: The Rails Preflight Checklist"
 description: "A comprehensive deployment checklist for Rails teams going live on Heroku, covering pipelines, Procfiles, slugs, review apps, CDN configuration, and production-readiness"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/taking-off-the-heroku-training-wheels-the-rails-preflight-checklist"
   date: '2022-08-09'
-tags:
-- heroku
-- rails
-- deployment
-- infrastructure
-- review-apps
-- cdn
-- sidekiq
-- active-storage
+tags: [heroku, rails, deployment, infrastructure, review-apps, cdn, sidekiq, active-storage]
 ---
 
 # Taking Off the Heroku Training Wheels: The Rails Preflight Checklist

@@ -2,21 +2,12 @@
 title: "Ruby on Rails on WebAssembly: A Guide to Full-Stack In-Browser Action"
 description: "Complete guide to compiling and running a full Rails application in the browser using ruby.wasm, wasmify-rails, SQLite Wasm, and virtual filesystem packaging with wasi-vfs"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/ruby-on-rails-on-webassembly-a-guide-to-full-stack-in-browser-action"
   date: '2025-02-18'
-tags:
-- webassembly
-- wasm
-- ruby
-- rails
-- ruby-wasm
-- wasi
-- sqlite
-- in-browser
-- full-stack
+tags: [webassembly, wasm, ruby, rails, ruby-wasm, wasi, sqlite, in-browser, full-stack]
 ---
 
 # Ruby on Rails on WebAssembly: A Guide to Full-Stack In-Browser Action

@@ -2,21 +2,12 @@
 title: "OKLCH in CSS: Why We Moved from RGB and HSL"
 description: "Comprehensive guide to the OKLCH color space in CSS Color 4: perceptual uniformity, P3 wide-gamut support, gamut mapping, color modification syntax, migration tooling with PostCSS and Stylelint"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Andrey Sitnik"
   url: "https://evilmartians.com/chronicles/oklch-in-css-why-quit-rgb-hsl"
   date: '2025-09-17'
-tags:
-- css
-- oklch
-- color
-- design-systems
-- postcss
-- stylelint
-- p3
-- frontend
-- accessibility
+tags: [css, oklch, color, design-systems, postcss, stylelint, p3, frontend, accessibility]
 ---
 
 # OKLCH in CSS: Why We Moved from RGB and HSL

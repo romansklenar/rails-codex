@@ -2,19 +2,12 @@
 title: "ViewComponent in the Wild I: Building Modern Rails Frontends"
 description: "Why and how to adopt the ViewComponent library in Rails MVC apps, covering component principles, testing, context patterns, slots, and design best practices"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Alexander Baygeldin"
   url: "https://evilmartians.com/chronicles/viewcomponent-in-the-wild-building-modern-rails-frontends"
   date: '2022-10-12'
-tags:
-- viewcomponent
-- rails
-- ruby
-- frontend
-- components
-- testing
-- hotwire
+tags: [viewcomponent, rails, ruby, frontend, components, testing, hotwire]
 ---
 
 # ViewComponent in the Wild I: Building Modern Rails Frontends

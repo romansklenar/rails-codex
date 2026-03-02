@@ -2,21 +2,12 @@
 title: "The Whop Chop: How We Cut a Rails Test Suite and CI Time in Half"
 description: "Case study of halving a large Rails CI test suite using TestProf profiling, factory optimization, SQL logging fixes, and migration from parallel_tests to test-queue"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/the-whop-chop-how-we-cut-a-rails-test-suite-and-ci-time-in-half"
   date: '2025-09-03'
-tags:
-- rails
-- testing
-- performance
-- ci
-- testprof
-- rspec
-- factory-bot
-- parallelization
-- profiling
+tags: [rails, testing, performance, ci, testprof, rspec, factory-bot, parallelization, profiling]
 ---
 
 # The Whop Chop: How We Cut a Rails Test Suite and CI Time in Half

@@ -2,24 +2,12 @@
 title: "Railing Against Time: Tools and Techniques That Got Us 5X Faster Tests"
 description: "Case study of a 5x test suite speedup (53 min to 11 min) at Power Home Remodeling using StackProf, TestProf, callback disabling patterns, factory trait refactoring, AnyFixture, and let_it_be"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vitalii Yulieff, Travis Turner"
   url: "https://evilmartians.com/chronicles/railing-against-time-tools-and-techniques-that-got-us-5x-faster-results"
   date: '2024-08-14'
-tags:
-- ruby
-- rails
-- testing
-- rspec
-- test-performance
-- testprof
-- factory-bot
-- stackprof
-- profiling
-- case-study
-- ci
-- active-record
+tags: [ruby, rails, testing, rspec, test-performance, testprof, factory-bot, stackprof, profiling, case-study, ci, active-record]
 ---
 
 # Railing Against Time: Tools and Techniques That Got Us 5X Faster Tests

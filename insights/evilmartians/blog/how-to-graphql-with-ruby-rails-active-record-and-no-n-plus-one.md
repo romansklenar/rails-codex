@@ -2,20 +2,12 @@
 title: "How to GraphQL with Ruby, Rails, Active Record, and No N+1"
 description: "Six techniques to eliminate N+1 queries in graphql-ruby: preloading, Lookahead, ar_lazy_preload gem, field extensions, graphql-ruby lazy resolvers, graphql-batch (Shopify), and Dataloader"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Dmitry Tsepelev"
   url: "https://evilmartians.com/chronicles/how-to-graphql-with-ruby-rails-active-record-and-no-n-plus-one"
   date: '2020-11-09'
-tags:
-- graphql
-- rails
-- ruby
-- active-record
-- n-plus-one
-- performance
-- graphql-ruby
-- ar-lazy-preload
+tags: [graphql, rails, ruby, active-record, n-plus-one, performance, graphql-ruby, ar-lazy-preload]
 ---
 
 # How to GraphQL with Ruby, Rails, Active Record, and No N+1

@@ -2,20 +2,12 @@
 title: "Flying Free: A Tale of Partitioning with Canaries in PostgreSQL"
 description: "Canary-based PostgreSQL partitioning strategy for a 140GB, 60M-row table — combining gradual user rollout with bidirectional table synchronization, query linting via ActiveSupport Notifications, and Sidekiq job routing"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Denis Lifanov, Alexander Baygeldin"
   url: "https://evilmartians.com/chronicles/flying-free-a-tale-of-partitioning-with-canaries-in-postgresql"
   date: '2024-07-23'
-tags:
-- postgresql
-- rails
-- partitioning
-- canary-deployment
-- performance
-- sidekiq
-- activerecord
-- database-migrations
+tags: [postgresql, rails, partitioning, canary-deployment, performance, sidekiq, activerecord, database-migrations]
 ---
 
 # Flying Free: A Tale of Partitioning with Canaries in PostgreSQL

@@ -2,20 +2,12 @@
 title: "Ruby Bytes, or Generating Standalone Generators"
 description: "Introduction to ruby-bytes (rbytes), a toolkit for building composable, testable, standalone Ruby and Rails application templates that work with or without Rails"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/ruby-bytes-or-generating-standalone-generators"
   date: '2023-04-04'
-tags:
-- ruby
-- rails
-- generators
-- application-templates
-- thor
-- rbytes
-- railsbytes
-- tooling
+tags: [ruby, rails, generators, application-templates, thor, rbytes, railsbytes, tooling]
 ---
 
 # Ruby Bytes, or Generating Standalone Generators

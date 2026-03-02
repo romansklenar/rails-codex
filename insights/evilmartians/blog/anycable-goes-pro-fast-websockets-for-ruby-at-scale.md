@@ -2,21 +2,12 @@
 title: "AnyCable Goes Pro: Fast WebSockets for Ruby, at Scale"
 description: "AnyCable Pro introduces binary protocol support (Msgpack, Protobuf), Apollo GraphQL compatibility, O(1) memory per connection via epoll/kqueue, JWT authentication, and signed streams"
 source:
-- type: blog
+  type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/anycable-goes-pro-fast-websockets-for-ruby-at-scale"
   date: '2021-06-16'
-tags:
-- anycable
-- websockets
-- ruby
-- rails
-- performance
-- binary-protocols
-- graphql
-- jwt
-- go
+tags: [anycable, websockets, ruby, rails, performance, binary-protocols, graphql, jwt, go]
 ---
 
 # AnyCable Goes Pro: Fast WebSockets for Ruby, at Scale
