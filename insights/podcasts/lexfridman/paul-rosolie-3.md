@@ -36,7 +36,7 @@ tags: [nature, amazon, uncontacted-tribes, conservation, jungle, exploration, na
 - The October clan was one that Romel had never contacted before; he stated this was first contact for this particular group, with members ranging from approximately 12 to 40 years old.
 - The clan numbered around 50 visible warriors, and the Jungle Keepers group of 26 was completely surrounded: warriors approached along the beach while women silently raided the community's farm from behind, pulling up yucca and banana plants.
 - Paul estimates they were outnumbered at least five to one and could have been massacred easily.
-- The tribe sent a canoe piled with plantains back as a peace offering was sent to them; rather than dividing food communally, each warrior grabbed individual bananas, fighting others for them.
+- A canoe piled with plantains was sent to the tribe as a peace offering; rather than dividing food communally, each warrior grabbed individual bananas, fighting others for them.
 - As tension eased, Ignacio danced a little and they danced back — a brief moment of cross-cultural joking.
 - The anthropologist gave the tribe his shirt and pants and ended up in his underwear; Ignacio then threw his Jungle Keepers polo to the anthropologist, who passed it to the tribe — an uncontacted warrior walked away wearing a Jungle Keepers logo shirt.
 - Romel told Paul the tribe had asked specifically about him, describing him as looking like a warrior; Paul walked to the beach, raised his palms, and the tribe raised their hands and sang back to him.
