@@ -388,9 +388,9 @@ references:
 insights:
   blogs:
     37signals: # manifesto (37signals.com), thoughts (37signals.com/thoughts), dev blog (dev.37signals.com)
-      manifesto:
+      _manifesto:
         description: 37 principles on product development, work culture, business philosophy, and decision-making from 37signals.com
-      thoughts:
+      _thoughts:
         description: Long-form essays on shipping, decisions, profit, communication, and influences from 37signals.com/thoughts
       action-push-native:
         description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections
