@@ -514,7 +514,8 @@ insights:
 
   rails-official:
     podcasts:
-      rails-official: # On Rails podcast (https://podcast.rubyonrails.org)
+      rails-official:
+        description: "Official Ruby on Rails podcast hosted by Robby Russell — production Rails architecture, scaling, testing, and engineering culture from teams running Rails at scale"
         ep01-rosa-gutierrez-solid-queue:
           description: "How 37signals built and migrated to Solid Queue — a database-backed ActiveJob backend replacing 7 Resque gems — running 20M+ daily jobs in production on Hey and Basecamp."
         ep02-jean-boussier-io-bound-misconceptions:
