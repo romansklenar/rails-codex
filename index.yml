@@ -386,12 +386,12 @@ references:
         description: Release notes for Rails 8.1
 
 insights:
-  37signals:
-    manifesto:
-      description: 37 principles on product development, work culture, business philosophy, and decision-making from 37signals.com
-    thoughts:
-      description: Long-form essays on shipping, decisions, profit, communication, and influences from 37signals.com/thoughts
-    blog: # 37signals Dev Blog (https://dev.37signals.com)
+  blogs:
+    37signals: # manifesto (37signals.com), thoughts (37signals.com/thoughts), dev blog (dev.37signals.com)
+      manifesto:
+        description: 37 principles on product development, work culture, business philosophy, and decision-making from 37signals.com
+      thoughts:
+        description: Long-form essays on shipping, decisions, profit, communication, and influences from 37signals.com/thoughts
       action-push-native:
         description: Push notifications to APNs/FCM via Rails gem with HTTP/2 persistent connections
       better-navigation:
@@ -487,69 +487,7 @@ insights:
       yjit-performance:
         description: Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold
 
-  rails-official:
-    podcasts:
-      rails-official:
-        description: "Official Ruby on Rails podcast hosted by Robby Russell — production Rails architecture, scaling, testing, and engineering culture from teams running Rails at scale"
-        ep01-rosa-gutierrez-solid-queue:
-          description: "How 37signals built and migrated to Solid Queue — a database-backed ActiveJob backend replacing 7 Resque gems — running 20M+ daily jobs in production on Hey and Basecamp."
-        ep02-jean-boussier-io-bound-misconceptions:
-          description: "Jean Boussier challenges the assumption that Rails apps are always IO-bound, explaining how to properly measure GVL contention, reason about latency vs. throughput, and use instrumentation before reaching for concurrency solutions."
-        ep03-nadia-odunayo-scaling-rails-for-millions-of-users:
-          description: "How one developer built and scaled The StoryGraph to four million users using Rails, Turbo Native, Sidekiq, YugabyteDB, and a deliberate choice to stay solo."
-        ep04-ryan-stawarz-austin-story-doximity-rails-monolith:
-          description: "How Doximity scaled a single Rails monolith to 100–150 engineers by adopting GraphQL Federation for mobile-safe API evolution, Packwerk for domain isolation, and pragmatic service extraction over premature microservices."
-        ep05-hilary-stohs-krause-scaling-rails-with-small-wins:
-          description: "How incremental, developer-level performance habits — choosing the right ActiveRecord method, eliminating flaky tests, standardizing code conventions — compound into meaningful system-wide improvements in a large Rails monolith."
-        ep06-florent-beaurain-optimizing-rails-tests-at-doctolib-scale:
-          description: "How Doctolib cut a 7-minute engine test run to under 1 minute by returning to Rails defaults — transactional tests, fixtures over factories, and parallel minitest."
-        ep07-alexander-stathis-scaling-modular-rails-monolith-angellist:
-          description: "How AngelList evolved a Rails monolith into a modular engine structure using Packwerk, Sorbet, and explicit service-layer patterns to manage a deeply interconnected financial domain."
-        ep08-miguel-conde-peter-compernolle-gusto-rails-biolith:
-          description: "How Gusto runs two Rails monoliths — a 'biolith' — at 600+ engineer scale, using Packwerk, Sorbet, and service-layer patterns to enforce domain boundaries without going full microservices."
-        ep09-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you:
-          description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
-        ep10-jay-tennier-rainforest-qa-tests-itself:
-          description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
-
-  37signals-rework:
-    description: "REWORK podcast: 185+ episodes on product development, shipping, hiring, communication, and culture"
-    index:
-      description: "REWORK podcast episode index — 185+ episodes with titles, dates, and thematic cross-references"
-    product-development:
-      description: Shape Up methodology, shipping discipline, product philosophy, decisions, and scope management
-    work-culture:
-      description: Sustainable pace, remote work, meetings, interruptions, and company culture practices
-    hiring:
-      description: When to hire, who to hire, evaluation process, team structure, and onboarding
-    communication:
-      description: Async-first principles, cycle communication, customer outreach, and apologies
-    marketing:
-      description: Teaching as marketing, founder-led content, audience building, and free plan strategy
-    business-philosophy:
-      description: Profitable independence, anti-VC stance, ONCE pay-once model, and open source commitment
-    customer-support:
-      description: Support as a feature, everyone on front lines, community building, and customer segmentation
-    founder-leadership:
-      description: Stepping back, sabbaticals, co-founder partnerships, and lean org design
-    privacy-ethics:
-      description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
-    cloud-exit:
-      description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
-
-  37signals-recordables:
-    description: "Recordables: Short-form talks and snippets from 37signals covering product, work, and business topics"
-    1-behind-the-fizzy-infrastructure:
-      description: SQLite multi-tenancy with per-customer databases, Litestream backups, and production ops for Fizzy
-    2-rails-multi-tenancy:
-      description: Tenant isolation patterns, cross-tenant safety, and framework integration points for multi-tenant Rails
-    3-moving-mountains-of-data-off-s3:
-      description: Migrating S3 object storage to self-hosted Pure Storage — tooling, process, and $1M+ annual savings
-    4-rails-delegated-type-pattern:
-      description: Rails delegated_type — polymorphic associations with concrete tables, STI comparison, and real-world usage
-
-  evilmartians:
-    blog: # Martian Chronicles (https://evilmartians.com/chronicles)
+    evilmartians: # Martian Chronicles (https://evilmartians.com/chronicles)
       5-tips-for-activerecord-dashboards:
         description: Explicit view data structures, N+1 guards with includes, column restriction, and materialized views for dashboard queries
       anycable-goes-pro-fast-websockets-for-ruby-at-scale:
@@ -579,41 +517,41 @@ insights:
       martian-kubernetes-kit-a-smooth-sailing-toolkit-from-our-sre-team:
         description: Production K8s toolkit — Terragrunt, Argo CD GitOps, Prometheus/Grafana, Loki, and automated PR preview apps
       mrsk-hot-deployment-tool-or-total-game-changer:
-        description: Kamal deployment review — destinations, health checks, rollback, version history, limitations, and decision matrix
+        description: MRSK/Kamal history, Kamal 2 kamal-proxy architecture, zero-downtime deploys, and multi-app hosting
       oklch-in-css-why-quit-rgb-hsl:
-        description: OKLCH color space — P3 wide-gamut, relative color syntax, gamut mapping, and migration tooling from RGB/HSL
+        description: OKLCH perceptual color model, P3 gamut, CSS Color Level 4 syntax, and migration from HSL/HEX
       partition-and-conquer:
-        description: View-based PostgreSQL table partitioning with PL/pgSQL INSTEAD OF INSERT triggers and zero-downtime switchover
+        description: PostgreSQL declarative partitioning — range/hash/list strategies, maintenance, and Rails integration
       postgresql-and-rails-sitting-in-a-tree:
-        description: Hierarchical data patterns in PostgreSQL — Nested Set, Materialized Path, Closure Table, and pg_closure_tree_rebuild
+        description: Rails-first PostgreSQL patterns — uuid, jsonb, arrays, generated columns, and advisory locks
       railing-against-time-tools-and-techniques-that-got-us-5x-faster-results:
-        description: 53min→11min test suite optimization with StackProf, AnyFixture, before_all, let_it_be, and create_default
+        description: Rails test profiling with TestProf — factory_prof, FactoryDefault, let_it_be, event_prof, and 5x speedups
       rubanok-carve-your-rails-controllers-like-papa-carlo:
-        description: Rubanok gem — declarative parameter-to-scope mapping for skinny controllers via ruleset objects
+        description: Rubanok parameter processors — Rails controller param extraction with rule-based pipelines
       ruby-bytes-or-generating-standalone-generators:
-        description: rbytes toolkit for composable Rails app templates — partial includes, conditional injection, and CLI distribution
+        description: ruby-next transpiler, Thor CLI generators, and distributing standalone Ruby scripts with zero dependencies
       ruby-on-rails-on-webassembly-a-guide-to-full-stack-in-browser-action:
-        description: wasmify-rails gem — WASM build pipeline, SQLite Wasm with OPFS persistence, in-browser Rails apps
+        description: Full Rails stack in the browser via ruby.wasm — Rack, SQLite WASM, Hotwire, and limitations
       ruby-on-whales-docker-for-ruby-rails-development:
-        description: Dockerized Ruby/Rails dev — dip CLI, multi-stage Dockerfile, gem/node volume caching, remote Chrome for tests
+        description: Docker-based local Rails dev with dip, PostgreSQL/Redis services, and multi-stage production Dockerfiles
       simple-declarative-presence-for-hotwire-apps-with-anycable:
-        description: Declarative user presence with turbo-cable-presence-source custom element, AnyCable Streams, and join/leave templates
+        description: AnyCable presence channels — join/leave tracking, occupancy counts, and Hotwire integration
       system-of-a-test-setting-up-end-to-end-rails-testing:
-        description: Cuprite/Ferrum as CDP-based Capybara driver replacing Selenium — BetterRailsSystemTests module, Docker/CI setup
+        description: Rails system test setup — Playwright vs Capybara, CI configuration, and flakiness prevention patterns
       taking-off-the-heroku-training-wheels-the-rails-preflight-checklist:
-        description: Heroku production checklist — Pipelines, Procfile, CDN, review apps, anyway_config, rack-timeout, and Preboot
+        description: Pre-production Rails checklist — asset pipeline, database, background jobs, secrets, monitoring
       test-prof-3-guided-and-automated-ruby-test-profiling:
-        description: TestProf Autopilot CLI — scenario DSL, MemoryProf, Vernier/Firefox Profiler integration, and AI roadmap
+        description: TestProf 3.0 — AI-assisted profiling, sampling mode, and integration with RuboCop for test optimization
       testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest:
-        description: Factory cascade elimination with FactoryProf flamegraphs, FactoryDefault, and AnyFixture suite-level fixtures
+        description: FactoryDefault, FactoryAllStub, and let_it_be for reducing factory overhead in RSpec and Minitest
       testprof-a-good-doctor-for-slow-ruby-tests:
-        description: TestProf profiler suite — TagProf, StackProf, EventProf, FactoryDoctor, RubyProf, and before_all
+        description: TestProf tooling — TagProf, EventProf, StackProf integration, and factory profiling for slow Ruby test suites
       the-art-of-turbo-mount-hotwire-meets-modern-js-frameworks:
-        description: Turbo Mount gem — embedding React/Vue/Svelte components in Hotwire via registerComponent and Stimulus extension
+        description: turbo-mount gem — mounting React/Vue/Svelte/Stimulus components in Rails views with Hotwire
       the-future-of-full-stack-rails-turbo-morph-drive:
-        description: Pre-Turbo-8 Idiomorph integration, scroll fix, data-morph-permanent attribute, and StreamActions.refresh pattern
+        description: Turbo Morph Drive — page-level morphing, scoped updates, and the future of server-rendered interactivity
       the-whop-chop-how-we-cut-a-rails-test-suite-and-ci-time-in-half:
-        description: TestProf + StackProf profiling, let_it_be, create_default, parallel_tests to test-queue migration at Whop
+        description: CI parallelization with Knapsack Pro, test ordering, Docker layer caching, and 50% CI time reduction
       time-series-data-using-timescaledb-with-ruby-on-rails:
         description: TimescaleDB hypertables, continuous aggregates with refresh policies, data retention, and timescaledb-ruby gem
       viewcomponent-in-the-wild-building-modern-rails-frontends:
@@ -626,6 +564,287 @@ insights:
         description: vite_rails gem setup, import.meta.glob for Stimulus auto-loading, HMR plugins, and Docker hybrid configuration
       writing-custom-rubocop-rules-in-2026:
         description: Custom RuboCop cop authoring — NodePattern DSL, plugin system, requires_gem API, autocorrect safety, and distribution
+
+  podcasts:
+    37signals-recordables:
+      description: "Recordables: Short-form talks and snippets from 37signals covering product, work, and business topics"
+      1-behind-the-fizzy-infrastructure:
+        description: SQLite multi-tenancy with per-customer databases, Litestream backups, and production ops for Fizzy
+      2-rails-multi-tenancy:
+        description: Tenant isolation patterns, cross-tenant safety, and framework integration points for multi-tenant Rails
+      3-moving-mountains-of-data-off-s3:
+        description: Migrating S3 object storage to self-hosted Pure Storage — tooling, process, and $1M+ annual savings
+      4-rails-delegated-type-pattern:
+        description: Rails delegated_type — polymorphic associations with concrete tables, STI comparison, and real-world usage
+
+    37signals-rework:
+      description: "REWORK podcast: Episodes on product development, shipping, hiring, communication, and culture"
+      index:
+        description: "REWORK podcast episode index — episodes with titles, dates, and thematic cross-references"
+      product-development:
+        description: Shape Up methodology, shipping discipline, product philosophy, decisions, and scope management
+      work-culture:
+        description: Sustainable pace, remote work, meetings, interruptions, and company culture practices
+      hiring:
+        description: When to hire, who to hire, evaluation process, team structure, and onboarding
+      communication:
+        description: Async-first principles, cycle communication, customer outreach, and apologies
+      marketing:
+        description: Teaching as marketing, founder-led content, audience building, and free plan strategy
+      business-philosophy:
+        description: Profitable independence, anti-VC stance, ONCE pay-once model, and open source commitment
+      customer-support:
+        description: Support as a feature, everyone on front lines, community building, and customer segmentation
+      founder-leadership:
+        description: Stepping back, sabbaticals, co-founder partnerships, and lean org design
+      privacy-ethics:
+        description: Email tracking, anti-surveillance stance, school monitoring, and Big Tech accountability
+      cloud-exit:
+        description: Cloud-to-owned-hardware migration rationale, process, tooling, and $7M savings outcome
+
+    lexfridman:
+      description: "Lex Fridman Podcast: long-form conversations with scientists, engineers, philosophers, and public figures on AI, science, history, and the human condition"
+      adam-frank:
+        description: Astrophysicist Adam Frank explores the probability of alien civilizations, the emerging science of technosignatures, ...
+      ai-sota-2026:
+        description: Nathan Lambert (post-training lead at AI2) and Sebastian Raschka (author of Build a Large Language Model from Scratch...
+      andrew-callaghan:
+        description: Andrew Callaghan traces his path from a 9th-grade journalism class in Seattle — shaped by HPPD from early psilocybin ...
+      andrew-huberman-4:
+        description: Andrew Huberman and Lex Fridman explore the neuroscience and psychology of romantic relationships, betrayal, loyalty,...
+      andrew-huberman-5:
+        description: Andrew Huberman and Lex Fridman cover the neuroscience of deep focus, the mechanics of online scientific controversy,...
+      annie-jacobsen:
+        description: Investigative journalist Annie Jacobsen walks through the exact mechanics of nuclear war from satellite detection to ...
+      aravind-srinivas:
+        description: Aravind Srinivas explains how Perplexity reimagines search as a knowledge-discovery engine powered by retrieval-augme...
+      bassem-youssef:
+        description: Egyptian-American comedian and political satirist Bassem Youssef discusses the Gaza conflict, October 7th, and the as...
+      ben-shapiro-destiny-debate:
+        description: Ben Shapiro (conservative) and Destiny (liberal) debate across 2.5 hours with Lex Fridman moderating, covering the fo...
+      ben-shapiro:
+        description: Ben Shapiro, conservative commentator and co-founder of The Daily Wire, joins Lex Fridman for a wide-ranging conversa...
+      benjamin-netanyahu:
+        description: Benjamin Netanyahu, serving his sixth term as Prime Minister of Israel, speaks with Lex Fridman during a period of ma...
+      bernie-sanders:
+        description: Bernie Sanders, senator from Vermont and two-time presidential candidate, discusses the systemic corruption of Americ...
+      bill-ackman:
+        description: Bill Ackman traces his career from early activist investing battles through a near-catastrophic personal and financia...
+      cenk-uygur:
+        description: Cenk Uygur, host of The Young Turks and progressive political commentator, lays out his framework for understanding A...
+      charan-ranganath:
+        description: Charan Ranganath, a neuroscientist and psychologist at UC Davis, explains how memory works as a forward-looking predi...
+      craig-jones-2:
+        description: Australian submission grappling champion Craig Jones recounts two trips to the Ukrainian front lines, including a 0.7...
+      cursor-team:
+        description: The four founding members of Cursor — Michael Truell, Sualeh Asif, Arvid Lunnemark, and Aman Sanger — discuss how the...
+      dan-houser:
+        description: Dan Houser, co-founder of Rockstar Games and lead writer behind Grand Theft Auto and Red Dead Redemption, traces the ...
+      dana-white:
+        description: Dana White, president of the UFC, recounts how a childhood obsession with boxing and a $2 million acquisition of a ne...
+      dario-amodei:
+        description: Dario Amodei, Amanda Askell, and Chris Olah from Anthropic discuss scaling laws, AI safety levels, the Machines of Lo...
+      dave-hone:
+        description: Dave Hone, paleontologist and zoologist at Queen Mary University of London, walks through the biology, hunting strate...
+      dave-plummer:
+        description: Dave Plummer, creator of Windows Task Manager and author of Secrets of the Autistic Millionaire, recounts his path fr...
+      dave-smith:
+        description: Dave Smith, libertarian comedian and podcast host, makes an uncompromising anti-war case across the most contested ge...
+      david-kirtley:
+        description: David Kirtley, CEO of Helion Energy, explains how pulsed magneto-inertial fusion works, why the field-reversed config...
+      deepseek-dylan-patel-nathan-lambert:
+        description: Dylan Patel (SemiAnalysis) and Nathan Lambert (Allen Institute for AI) break down the DeepSeek moment — its technical...
+      demis-hassabis-2:
+        description: Demis Hassabis, DeepMind co-founder and Nobel Prize winner, explores his conjecture that any naturally occurring patt...
+      dhh-david-heinemeier-hansson:
+        description: DHH traces his journey from failed programming student to creator of Ruby on Rails, covering his philosophy of beauti...
+      donald-trump:
+        description: Donald Trump sits down with Lex Fridman weeks before the 2024 election, covering foreign policy, immigration, the 202...
+      douglas-murray-2:
+        description: Douglas Murray, author of On Democracies and Death Cults, delivers firsthand reporting from Ukrainian front lines and...
+      ed-barnhart:
+        description: Ed Barnhart, archaeologist and Maya expert, takes Lex Fridman through the full arc of civilizations in the Americas —...
+      edward-gibson:
+        description: Edward Gibson, psycholinguistics professor at MIT, explains why all human languages minimize dependency lengths, how ...
+      elon-musk-4:
+        description: Elon Musk covers the Israel-Hamas and Ukraine wars through a strategic lens of de-escalation and conspicuous kindness...
+      elon-musk-and-neuralink-team:
+        description: Elon Musk, DJ Seo, Matthew MacDougall, Bliss Chapman, and Noland Arbaugh — the Neuralink team plus its first human pa...
+      ezra-klein-and-derek-thompson:
+        description: Ezra Klein and Derek Thompson join Lex Fridman to discuss their book Abundance, a supply-side manifesto arguing that ...
+      george-hotz-3:
+        description: George Hotz covers his founding of tiny corp and the tinygrad neural network framework, his case for decentralized AI...
+      graham-hancock:
+        description: Graham Hancock makes the case that a sophisticated seafaring civilization existed before the Younger Dryas cataclysm ...
+      greg-lukianoff:
+        description: Greg Lukianoff, president of FIRE and First Amendment attorney, traces the rise of cancel culture from 2014 onward an...
+      gregory-aldrete:
+        description: Historian Gregory Aldrete walks through the full arc of Roman history — from its origins as a collection of mud huts ...
+      guillaume-verdon:
+        description: Guillaume Verdon, the physicist behind the pseudonymous @BasedBeffJezos account, explains the thermodynamic foundatio...
+      iran-war-debate:
+        description: A structured debate between libertarian anti-interventionist Scott Horton and Iran hawk Mark Dubowitz on whether Iran...
+      irving-finkel:
+        description: Irving Finkel, Assyriologist and 45-year British Museum curator, takes Lex Fridman through the origins of writing, th...
+      israel-palestine-debate:
+        description: Four figures with sharply opposed frameworks — a revisionist Israeli historian, a Palestinian affairs analyst, a Holo...
+      ivanka-trump:
+        description: Ivanka Trump traces her lifelong passion for building — from studying New York's Gothic and Art Deco skyline as a tee...
+      jack-weatherford:
+        description: Anthropologist and historian Jack Weatherford traces the full arc of Genghis Khan's life — from a kidnapped mother an...
+      james-holland:
+        description: Historian James Holland delivers a sweeping operational-level analysis of World War II, tracing how ideology, logisti...
+      james-sexton:
+        description: James Sexton, a divorce attorney with over two decades of high-conflict litigation experience, dissects why marriages...
+      janna-levin:
+        description: Theoretical physicist Janna Levin explores black holes as regions of spacetime rather than dense objects, walking thr...
+      jared-kushner:
+        description: Jared Kushner, former senior White House advisor to President Trump, reflects on the October 7, 2023 Hamas attack on ...
+      javier-milei:
+        description: Javier Milei, Argentina's libertarian president and economist, describes the radical free-market reforms he executed ...
+      jeff-bezos:
+        description: Jeff Bezos covers the vision and engineering behind Blue Origin's New Glenn rocket and lunar lander program, then tra...
+      jeffrey-wasserstrom:
+        description: Jeffrey Wasserstrom, historian of modern China, traces the ideological contradictions shaping contemporary China — fr...
+      jennifer-burns:
+        description: Jennifer Burns, a historian of ideas, traces the intellectual lives of Milton Friedman and Ayn Rand — their shared in...
+      jimmy-wales:
+        description: Jimmy Wales, founder of Wikipedia, discusses the origin and design of the world's largest encyclopedia, its editorial...
+      joel-david-hamkins:
+        description: Joel David Hamkins, the all-time top-ranked user on MathOverflow and a philosopher-mathematician at Notre Dame, walks...
+      john-mearsheimer:
+        description: John Mearsheimer, professor at the University of Chicago and originator of offensive realism, delivers a sweeping geo...
+      jordan-jonas:
+        description: Jordan Jonas, winner of Alone Season 6, recounts 77 days of solo Arctic survival using indigenous techniques learned ...
+      jordan-peterson-2:
+        description: Jordan Peterson covers Nietzsche's philosophy and its misappropriation by the Nazis, why the death of God produces co...
+      joscha-bach-3:
+        description: Joscha Bach explores the staged development of human consciousness from infancy to enlightenment, the nature of ident...
+      julia-shaw:
+        description: Julia Shaw, criminal psychologist and author, argues that evil is not a binary label but a continuum of dark personal...
+      kevin-spacey:
+        description: Kevin Spacey, two-time Oscar-winning actor, discusses his craft across landmark roles in Se7en, American Beauty, and ...
+      keyu-jin:
+        description: Keyu Jin, an LSE economist and author of The New China Playbook, dismantles Western misconceptions about China's hybr...
+      kimbal-musk:
+        description: Kimbal Musk traces his journey from apartheid-era South Africa through cooking school, a near-fatal spinal injury, an...
+      lee-cronin-3:
+        description: Lee Cronin presents assembly theory — published in Nature as a paper titled 'Assembly Theory Explains and Quantifies ...
+      lisa-randall:
+        description: Lisa Randall, theoretical physicist at Harvard, explains how dark matter drives galaxy formation, proposes that a den...
+      marc-andreessen-2:
+        description: Marc Andreessen argues that America is poised for a new 'Roaring 20s' as a decade-long soft-authoritarian censorship ...
+      marc-raibert:
+        description: Marc Raibert traces 40+ years of legged robotics research from his first pogo-stick hopping machine at Carnegie Mello...
+      mark-cuban:
+        description: Mark Cuban covers his journey from selling garbage bags at age 12 to building and selling Broadcast.com to Yahoo for ...
+      mark-zuckerberg-3:
+        description: Mark Zuckerberg and Lex Fridman conduct a podcast entirely inside the Metaverse using photorealistic Codec Avatars, d...
+      matthew-cox:
+        description: Matthew Cox, a former mortgage broker turned FBI Most Wanted fugitive, recounts how a single act of whiteout-based do...
+      michael-levin-2:
+        description: Michael Levin, biologist at Tufts University, argues that intelligence exists on a continuous spectrum from molecules...
+      michael-malice-7:
+        description: Michael Malice and Lex Fridman record a Thanksgiving special ranging from exotic animals and dark humor to geopolitic...
+      michael-saylor:
+        description: Michael Saylor, CEO of MicroStrategy, makes the case that inflation is a deeply misunderstood multi-dimensional pheno...
+      mohammed-el-kurd:
+        description: Mohammed El-Kurd, Palestinian poet and journalist from the Sheikh Jarrah neighborhood of East Jerusalem, describes th...
+      narendra-modi:
+        description: Narendra Modi, three-time Prime Minister of India and leader of the world's largest democracy, speaks with Lex Fridma...
+      neil-adams:
+        description: Neil Adams — world judo champion, five-time European champion, and two-time Olympic silver medalist — reflects on the...
+      neri-oxman:
+        description: Neri Oxman, founder of the Mediated Matter Group at MIT and company Oxman, explains her philosophy of material ecolog...
+      nick-lane:
+        description: Nick Lane, biochemist at University College London, argues that life originated in alkaline hydrothermal vents throug...
+      norman-ohler:
+        description: Norman Ohler, author of Blitzed and Tripped, reveals how systematic drug use — from methamphetamine distributed to mi...
+      oliver-anthony:
+        description: Oliver Anthony (legal name Christopher Lunsford) discusses the viral phenomenon of 'Rich Men North of Richmond,' his ...
+      omar-suleiman-2:
+        description: Imam Dr. Omar Suleiman, Palestinian-American scholar and president of the Yaqeen Institute for Islamic Research, give...
+      paul-rosolie-2:
+        description: Naturalist and explorer Paul Rosolie joins Lex Fridman deep in the Peruvian Amazon to discuss apex predators, the bio...
+      paul-rosolie-3:
+        description: Paul Rosolie describes a historic first contact with a previously unseen Mashco-Piro clan in October 2024, shares foo...
+      pavel-durov:
+        description: Pavel Durov, founder and CEO of Telegram, discusses the philosophy and engineering behind one of the world's largest ...
+      peter-steinberger:
+        description: Peter Steinberger, creator of OpenClaw, discusses how he built the fastest-growing GitHub repository in history as a ...
+      pieter-levels:
+        description: Pieter Levels shares how he built multiple profitable software products solo using minimal tools, why he prefers PHP ...
+      rick-beato:
+        description: Rick Beato — music educator, producer, and multi-instrumentalist — joins Lex Fridman to trace the lineage of great gu...
+      rick-spence:
+        description: Rick Spence, historian of intelligence agencies and secret societies, traces the continuous thread from the Tsarist O...
+      robert-f-kennedy-jr:
+        description: Robert F. Kennedy Jr, then a Democratic presidential candidate, covers geopolitics, historical memory, and public hea...
+      robert-rodriguez:
+        description: Robert Rodriguez, creator of El Mariachi, Sin City, Desperado, Spy Kids, and Alita: Battle Angel, shares the full arc...
+      roman-yampolskiy:
+        description: Roman Yampolskiy, AI safety researcher and author of AI: Unexplainable, Unpredictable, Uncontrollable, argues that cr...
+      saagar-enjeti-2:
+        description: Saagar Enjeti, co-host of Breaking Points and The Realignment, traces the historical and ideological forces behind Tr...
+      sam-altman-2:
+        description: Sam Altman reflects on the OpenAI board saga, the Elon Musk lawsuit, and the trajectory toward AGI, while sharing con...
+      sara-walker-3:
+        description: Sara Walker presents assembly theory as a new physics of life — arguing that life is defined by historically continge...
+      sean-carroll-3:
+        description: Sean Carroll, theoretical physicist at Johns Hopkins, explores general relativity, black holes, Hawking radiation, th...
+      serhii-plokhy:
+        description: Serhii Plokhy, Harvard historian and director of the Ukrainian Research Institute, traces the collapse of the Soviet ...
+      sundar-pichai:
+        description: Sundar Pichai discusses his childhood in Chennai without running water or a telephone, Google's AI-first transformati...
+      tal-wilkenfeld:
+        description: Tal Wilkenfeld — bassist, guitarist, and singer-songwriter who has performed with Jeff Beck, Prince, and Leonard Cohe...
+      teddy-atlas:
+        description: Teddy Atlas, legendary boxing trainer and commentator, traces the Shakespearean arc of his relationships with mentor ...
+      terence-tao:
+        description: Terence Tao explores the hardest unsolved problems in mathematics — from Navier-Stokes to the twin prime conjecture —...
+      theprimeagen:
+        description: ThePrimeagen (Michael Paulson) shares his full life story — from losing his father at 7, meth use, and porn addiction...
+      tim-sweeney:
+        description: Tim Sweeney, founder and CEO of Epic Games, traces his journey from a text editor that became ZZT to building Unreal ...
+      tucker-carlson:
+        description: Tucker Carlson reflects on his February 2024 trip to Moscow and his interview with Vladimir Putin, offering a blunt A...
+      tulsi-gabbard:
+        description: Tulsi Gabbard, a Lieutenant Colonel and former Democratic congresswoman, draws on her Iraq deployment and eight years...
+      vejas-liulevicius:
+        description: Historian Vejas Liulevicius traces the intellectual origins of Marxism through its catastrophic implementations in th...
+      vivek-ramaswamy:
+        description: Vivek Ramaswamy lays out his vision for dismantling the federal bureaucracy and the regulatory state as the defining ...
+      volodymyr-zelenskyy:
+        description: Volodymyr Zelenskyy, President of Ukraine, speaks from Kyiv in a wide-ranging conversation covering the origins and c...
+      walter-isaacson:
+        description: Walter Isaacson, biographer of Einstein, Steve Jobs, Leonardo da Vinci, Jennifer Doudna, Benjamin Franklin, and Elon ...
+      yann-lecun-3:
+        description: Yann LeCun argues that autoregressive LLMs are fundamentally insufficient for human-level AI and lays out an alternat...
+      yuval-noah-harari:
+        description: Yuval Noah Harari, historian and author of Sapiens and Homo Deus, argues that fictional stories are the primary engin...
+
+    rails-official:
+      description: "Official Ruby on Rails podcast hosted by Robby Russell — production Rails architecture, scaling, testing, and engineering culture from teams running Rails at scale"
+      ep01-rosa-gutierrez-solid-queue:
+        description: "How 37signals built and migrated to Solid Queue — a database-backed ActiveJob backend replacing 7 Resque gems — running 20M+ daily jobs in production on Hey and Basecamp."
+      ep02-jean-boussier-io-bound-misconceptions:
+        description: "Jean Boussier challenges the assumption that Rails apps are always IO-bound, explaining how to properly measure GVL contention, reason about latency vs. throughput, and use instrumentation before reaching for concurrency solutions."
+      ep03-nadia-odunayo-scaling-rails-for-millions-of-users:
+        description: "How one developer built and scaled The StoryGraph to four million users using Rails, Turbo Native, Sidekiq, YugabyteDB, and a deliberate choice to stay solo."
+      ep04-ryan-stawarz-austin-story-doximity-rails-monolith:
+        description: "How Doximity scaled a single Rails monolith to 100–150 engineers by adopting GraphQL Federation for mobile-safe API evolution, Packwerk for domain isolation, and pragmatic service extraction over premature microservices."
+      ep05-hilary-stohs-krause-scaling-rails-with-small-wins:
+        description: "How incremental, developer-level performance habits — choosing the right ActiveRecord method, eliminating flaky tests, standardizing code conventions — compound into meaningful system-wide improvements in a large Rails monolith."
+      ep06-florent-beaurain-optimizing-rails-tests-at-doctolib-scale:
+        description: "How Doctolib cut a 7-minute engine test run to under 1 minute by returning to Rails defaults — transactional tests, fixtures over factories, and parallel minitest."
+      ep07-alexander-stathis-scaling-modular-rails-monolith-angellist:
+        description: "How AngelList evolved a Rails monolith into a modular engine structure using Packwerk, Sorbet, and explicit service-layer patterns to manage a deeply interconnected financial domain."
+      ep08-miguel-conde-peter-compernolle-gusto-rails-biolith:
+        description: "How Gusto runs two Rails monoliths — a 'biolith' — at 600+ engineer scale, using Packwerk, Sorbet, and service-layer patterns to enforce domain boundaries without going full microservices."
+      ep09-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you:
+        description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
+      ep10-jay-tennier-rainforest-qa-tests-itself:
+        description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
 
 style-guide:
   ruby:
