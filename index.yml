@@ -649,7 +649,11 @@ insights:
       hotwire:
         description: Turbo Drive, Turbo Frames, Turbo Streams, Stimulus controllers — overview and common patterns
       native:
-        description: Native apps, navigation routing matrix, Bridge Component API, Path Configuration properties, route decision handlers, Rails helpers
+        description: Hotwire Native architecture, iOS/Android scaffolding, WebView internals, and web-driven enhancements without native code
+      native-bridge-components:
+        description: Bridge Component JS↔native protocol, iOS Swift and Android Kotlin implementations, CSS hiding patterns, App Store/Play Store publishing
+      native-path-configuration:
+        description: Path Configuration JSON structure, pattern matching, all presentation/context values, iOS/Android setup, remote vs bundled serving
       stimulus-actions:
         description: Action descriptors, keyboard filters, global events, action options, parameters with type casting
       stimulus-composition:

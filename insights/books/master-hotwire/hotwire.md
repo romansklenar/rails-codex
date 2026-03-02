@@ -1,287 +1,103 @@
 ---
-title: "Hotwire Standards (Turbo + Stimulus)"
-description: "Turbo Drive, Turbo Frames, Turbo Streams, Stimulus controllers — overview and common patterns"
+title: "Hotwire: Philosophy, Progressive Enhancement, and the HTML-over-the-Wire Approach"
+description: "Hotwire compresses web application complexity by returning to server-rendered HTML enhanced just enough for a modern UX, rather than reinventing browser behaviour inside the browser."
 source:
   type: book
   title: "Master Hotwire"
   author: "Andrea Fomera"
   url: "https://store.masterhotwire.com"
-tags: [hotwire, turbo, stimulus, turbo-frames, turbo-streams]
+tags: [hotwire, turbo, stimulus, progressive-enhancement, philosophy, architecture]
 ---
 
-# Hotwire Standards (Turbo + Stimulus)
+# Hotwire: Philosophy, Progressive Enhancement, and the HTML-over-the-Wire Approach
 
-## Philosophy
-Hotwire provides SPA-like interactivity while keeping most logic server-side. The golden rule: **HTML over the wire, not JSON.**
+Hotwire is not a single library — it is an umbrella term for Turbo, Stimulus, and Hotwire Native used together to deliver SPA-like experiences by enhancing server-rendered HTML rather than reinventing the browser from within itself.
 
-## Turbo Drive
-Turbo Drive intercepts link clicks and form submissions, replacing the `<body>` with the response.
+## What Hotwire Is
 
-```erb
-<%# Turbo Drive is enabled by default %>
-<%# Disable for specific links %>
-<%= link_to "External", "https://example.com", data: { turbo: false } %>
+- Hotwire has no single "Hotwire" library; it is a collection of mostly JavaScript libraries that fit together: Turbo, Stimulus, and Hotwire Native.
+- Turbo handles all server communication and browser enhancement; it is the most important and central piece of the stack.
+- Stimulus is a lightweight JS UI library for adding interactivity; it works alongside Turbo, not as a replacement for it.
+- Hotwire Native packages a Turbo-powered web app into iOS and Android native apps with minimal native code.
+- Turbo itself has three distinct sub-parts: Turbo Drive (browser enhancement), Turbo Frames (page composition building blocks), and Turbo Streams (fine-grained DOM control).
+- Each component can theoretically be used independently, but together they complement each other to form a coherent stack.
+- Hotwire is completely backend-agnostic; approximately 90% of Hotwire knowledge applies regardless of backend framework.
+- In Rails, Hotwire ships as two official gems included by default: `turbo-rails` and `stimulus-rails`; they are excluded only in API-only apps.
+- Server-side Turbo helpers live in the `turbo-rails` gem, not in the Rails core documentation — consult the gem docs specifically.
 
-<%# Disable for specific forms %>
-<%= form_with model: @user, data: { turbo: false } do |f| %>
-  <%# Full page reload on submit %>
-<% end %>
-```
+## The Core Philosophy: Enhance, Don't Reinvent
 
-## Turbo Frames
-Turbo Frames scope navigation to a specific portion of the page.
+- The central insight is: "Maybe we don't need to reinvent how browsers work from inside the browser itself."
+- Browsers represent decades of engineering effort and optimisation in HTML + CSS; modern browsers can do far more than most developers exploit.
+- Hotwire's question: "What if we go back to server-side HTML + CSS and enhance it just enough to get a modern user experience?"
+- The guiding principle is "enhance, rather than reinvent" — this is what compresses complexity.
+- HTML-over-the-wire means the server sends rendered HTML fragments, not JSON that the client must transform into UI.
+- This approach allows backend developers to leverage existing skills fully without sacrificing user experience quality.
 
-## Basic Frame
-```erb
-<%# Wrap content that should update independently %>
-<turbo-frame id="user_profile">
-  <%= render @user %>
-</turbo-frame>
+## The Plain HTML Application as the Starting Point
 
-<%# Links within frame update only the frame %>
-<turbo-frame id="user_profile">
-  <%= link_to "Edit", edit_user_path(@user) %>
-  <%# Response must contain matching frame ID %>
-</turbo-frame>
-```
+- When starting a Hotwire application, always begin by designing the plain, JavaScript-free version first.
+- Imagine every user action as a full-page server round-trip — a true web 1.0 application with no JS at all.
+- Rails scaffold generates exactly this plain HTML starting point: full-page interactions, separate pages for each action.
+- Starting from plain HTML is not a limitation — it is a deliberate architectural foundation that makes Hotwire enhancements coherent.
+- A plain HTML application is easy to maintain because each server endpoint does one specific thing and each view renders one specific aspect of the UI.
+- Complexity cannot creep in when everything is sliced into separate, simple pages.
 
-## Lazy Loading
-```erb
-<%# Load content asynchronously %>
-<turbo-frame id="comments" src="<%= post_comments_path(@post) %>" loading="lazy">
-  <p>Loading comments...</p>
-</turbo-frame>
-```
+## Progressive Enhancement as Both Technique and Mental Model
 
-## Breaking Out of Frames
-```erb
-<%# Target different frame %>
-<%= link_to "View All", users_path, data: { turbo_frame: "main_content" } %>
+- Progressive enhancement originated in the early 2000s as a response to JS-only sites that broke without JavaScript support.
+- The original principle: the application must work without JS and enhance the UX only when JS is present.
+- Today, Hotwire is an excellent technical vehicle for implementing progressive enhancement.
+- More importantly, "progressive enhancement thinking" is an excellent mental model for building maintainable Hotwire applications, regardless of browser JS support.
+- Hotwire works by taking separate plain-HTML pages and composing them into an integrated UI — it does not replace pages, it brings them together.
+- Thinking of every part as a separate page that is composed into the final UI naturally tends toward simpler, independently maintainable concepts.
+- Building complex software by composing simple pieces is the same principle as the Unix Philosophy applied to web UI.
+- Eager-loaded Turbo Frames with `src` attributes are the practical tool for applying progressive enhancement to complex pages: render the main content, load everything else from dedicated endpoints.
 
-<%# Break out to full page %>
-<%= link_to "Home", root_path, data: { turbo_frame: "_top" } %>
-```
+## Stimulus vs. Frontend Frameworks
 
-## Frame IDs with dom_id
-```erb
-<%# Use dom_id helper for consistent IDs %>
-<turbo-frame id="<%= dom_id(@post) %>">
-  <%= render @post %>
-</turbo-frame>
+- Stimulus is deliberately different from React, Vue, and similar frameworks — it has more in common with jQuery than with modern component frameworks.
+- In Stimulus, state lives in the HTML, not in a JavaScript component tree.
+- The best Stimulus controllers are small, focused, and reusable — their small surface area is what makes them composable.
+- Behaviour composition happens in the HTML, controlled by server-side logic — not inside JS component hierarchies.
+- Stimulus encourages doing as little as possible in JavaScript, only resorting to it when truly necessary.
+- This apparent limitation is a strength: it keeps UI decoupled, and coupling is the primary source of maintenance cost in large applications.
+- The complexity that Stimulus avoids in the frontend gets pushed to the backend, where Rails developers have superior tools for managing it.
 
-<%# In controller response %>
-<turbo-frame id="<%= dom_id(@post) %>">
-  <%= render @post %>
-</turbo-frame>
-```
+## Managing Complexity as Applications Grow
 
-## Turbo Streams
-Turbo Streams allow multiple DOM updates from a single response.
+- Whenever you reach for JavaScript, first ask: can this logic be pushed to the backend and delivered via a Turbo Frame or a tiny reusable Stimulus controller?
+- Pushing logic to the backend keeps the UI decoupled; decoupling is the single most important factor in long-term maintainability.
+- Splitting UI logic between initial backend rendering and frontend JS creates tight coupling and makes the codebase harder to reason about over time.
+- The practical pattern for dynamic forms: a generic Stimulus controller serialises and re-submits the form to the `new` endpoint on any input change; all variation logic lives in the backend partial.
+- This approach centralises all form logic in one place (the backend partial) and creates a reusable, assumption-free Stimulus controller applicable to any dynamic form in the application.
+- Reducing variation and pushing logic to one server-side location creates a standard pattern across the whole application — standardisation is a multiplier on maintainability.
+- The highest-leverage Stimulus controllers are those with so few assumptions that they can be reused across many contexts.
 
-## Stream Actions
-```erb
-<%# app/views/posts/create.turbo_stream.erb %>
+## Hotwire Native Philosophy
 
-<%# Append to end of container %>
-<%= turbo_stream.append "posts", @post %>
+- Hotwire Native extends the same philosophy to mobile: enhance the web app for native platforms rather than rebuilding from scratch.
+- Most complexity in a Hotwire Native app lives on the web side; the native layer is minimal by design.
+- Many Hotwire Native apps go years without changes to native code — the web layer handles the bulk of the product.
+- The recommended path: start with web, add Bridge components for native enhancements where needed, only learn native development if the app's appetite for custom native UI demands it.
+- Open-source Bridge component libraries (e.g., Joe Masilotti's bridge-components) can satisfy most native enhancement needs without writing Swift or Kotlin.
+- Path Configuration allows specific URL paths to be routed to native screens instead of the embedded browser, enabling selective native UI without full rebuilds.
 
-<%# Prepend to beginning %>
-<%= turbo_stream.prepend "posts", @post %>
+## Learning and Mental Model Development
 
-<%# Replace specific element %>
-<%= turbo_stream.replace dom_id(@post), @post %>
+- Official Hotwire documentation is excellent for looking up specific features once you are already experienced, but poor at building a high-level mental model.
+- Being experienced with a technology means being comfortable implementing solutions and finding information quickly — not memorising every feature.
+- "Under the hood" sections are worth reading even when time is short: deeper understanding accelerates application of concepts significantly.
+- Part I (web application) is the most important; Part II (Hotwire Native) and Part III (advanced topics) build on it but are independently useful.
+- Part III chapters are self-contained and can be read in any order; they cover topics most needed after an app is already in production.
+- The recommended learning path: build Part I alongside the book, then immediately build or improve a real application before returning for advanced chapters.
+- Practical wisdom: start with the book's example app before applying concepts to your own project — structured learning first, application second.
 
-<%# Update inner HTML %>
-<%= turbo_stream.replace "flash", partial: "shared/flash" %>
+## Key References
 
-<%# Remove element %>
-<%= turbo_stream.remove dom_id(@post) %>
-
-<%# Before/after specific element %>
-<%= turbo_stream.before dom_id(@post), partial: "posts/divider" %>
-<%= turbo_stream.after dom_id(@post), partial: "posts/divider" %>
-```
-
-## Controller Response
-```ruby
-class PostsController < ApplicationController
-  def create
-    @post = Post.new(post_params)
-
-    respond_to do |format|
-      if @post.save
-        format.turbo_stream  # Renders create.turbo_stream.erb
-        format.html { redirect_to @post }
-      else
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.replace(
-            "post_form",
-            partial: "posts/form",
-            locals: { post: @post }
-          )
-        end
-        format.html { render :new, status: :unprocessable_content }
-      end
-    end
-  end
-end
-```
-
-## Real-time Updates (Solid Cable)
-```ruby
-# app/models/post.rb
-class Post < ApplicationRecord
-  after_create_commit -> { broadcast_prepend_to "posts" }
-  after_update_commit -> { broadcast_replace_to "posts" }
-  after_destroy_commit -> { broadcast_remove_to "posts" }
-end
-```
-
-```erb
-<%# Subscribe to stream in view %>
-<%= turbo_stream_from "posts" %>
-
-<div id="posts">
-  <%= render @posts %>
-</div>
-```
-
-## Stimulus Controllers
-
-## Controller Structure
-```javascript
-// app/javascript/controllers/toggle_controller.js
-import { Controller } from "@hotwired/stimulus"
-
-export default class extends Controller {
-  // Declare targets
-  static targets = ["content", "button"]
-
-  // Declare values (with types)
-  static values = {
-    open: { type: Boolean, default: false },
-    url: String
-  }
-
-  // Declare CSS classes
-  static classes = ["hidden", "active"]
-
-  // Lifecycle callbacks
-  connect() {
-    // Called when controller connects to DOM
-  }
-
-  disconnect() {
-    // Called when controller disconnects
-  }
-
-  // Actions
-  toggle() {
-    this.openValue = !this.openValue
-  }
-
-  // Value change callbacks
-  openValueChanged(value, previousValue) {
-    this.contentTarget.classList.toggle(this.hiddenClass, !value)
-    this.buttonTarget.classList.toggle(this.activeClass, value)
-  }
-}
-```
-
-## HTML Integration
-```erb
-<div data-controller="toggle"
-     data-toggle-open-value="false"
-     data-toggle-hidden-class="hidden"
-     data-toggle-active-class="active">
-
-  <button data-toggle-target="button"
-          data-action="toggle#toggle">
-    Toggle Content
-  </button>
-
-  <div data-toggle-target="content" class="hidden">
-    Hidden content here
-  </div>
-</div>
-```
-
-## Actions
-```erb
-<%# Click event (default for buttons) %>
-<button data-action="controller#method">Click</button>
-
-<%# Explicit event %>
-<input data-action="input->search#filter">
-<input data-action="change->form#validate">
-
-<%# Multiple actions %>
-<button data-action="click->menu#open keydown.enter->menu#open">
-
-<%# Prevent default %>
-<a href="#" data-action="click->modal#open:prevent">
-```
-
-## Targets
-```erb
-<%# Single target %>
-<input data-controller-target="input">
-
-<%# Multiple targets %>
-<li data-items-target="item">Item 1</li>
-<li data-items-target="item">Item 2</li>
-```
-
-```javascript
-// Access single target
-this.inputTarget       // First matching target
-this.hasInputTarget    // Boolean check
-
-// Access multiple targets
-this.itemTargets       // Array of all matching
-this.itemTargetCount   // Count
-```
-
-## Common Patterns
-
-## Form Submission with Turbo
-```erb
-<%= form_with model: @post, id: "post_form", data: { turbo_frame: "_top" } do |f| %>
-  <%= f.text_field :title %>
-  <%= f.submit "Save", data: { turbo_submits_with: "Saving..." } %>
-<% end %>
-```
-
-## Confirmation Dialogs
-```erb
-<%= button_to "Delete", post_path(@post),
-    method: :delete,
-    data: { turbo_confirm: "Are you sure?" } %>
-```
-
-## Disable During Submit
-```erb
-<%= f.submit "Save", data: {
-  turbo_submits_with: "Saving...",
-  disable_with: "Saving..."  # Fallback for non-Turbo
-} %>
-```
-
-## Flash Messages with Turbo
-```erb
-<%# layouts/application.html.erb %>
-<div id="flash">
-  <%= render "shared/flash" %>
-</div>
-
-<%# In turbo_stream responses %>
-<%= turbo_stream.replace "flash", partial: "shared/flash" %>
-```
-
-## Best Practices
-- **Progressive enhancement:** Pages should work without JavaScript
-- **Keep controllers small:** Single responsibility, compose multiple controllers
-- **Use targets, not querySelector:** Maintainable and explicit
-- **Name actions clearly:** verb + noun (e.g., `toggle`, `submit`, `filter`)
-- **Avoid inline JavaScript:** Keep all JS in Stimulus controllers
-- **Test with Turbo disabled:** Ensure graceful degradation
+- Official Hotwire website: https://hotwired.dev/
+- Turbo Rails gem README: https://github.com/hotwired/turbo-rails
+- Turbo Rails gem API docs: https://rubydoc.info/github/hotwired/turbo-rails
+- Hotwire community hub: https://hotwire.io/
+- Hotwire Native deep-dive resource: https://masilotti.com/ (Joe Masilotti)
+- Example application (MIT licensed): https://github.com/radanskoric/hotboard/
