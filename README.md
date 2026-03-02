@@ -16,15 +16,8 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 ├── .git-submodules/              # Upstream git submodules (auto-managed, not materialized in sparse checkout)
 ├── insights/                     # Curated knowledge from blogs, books, talks (manually authored)
 │   ├── 37signals/                #   Insights from 37signals blogs, books, talks, podcasts, etc.
-│   ├── architecture/             #   Cross-cutting architecture topics
-│   ├── deployment/               #   Deployment and operations
-│   ├── hotwire/                  #   Cross-project Hotwire topics
-│   ├── kamal/                    #   Kamal-specific insights
-│   ├── performance/              #   Performance optimization
-│   ├── rails/                    #   Rails-specific insights
-│   ├── stimulus/                 #   Stimulus-specific insights
-│   ├── testing/                  #   Testing strategies & patterns
-│   └── turbo/                    #   Turbo-specific insights
+│   ├── evilmartians/             #   Insights from Evil Martians Chronicles blog
+│   └── podcasts/                 #   Insights from Rails, Lex Fridman, and other podcasts
 │
 ├── references/                   # Official docs (auto-extracted from .git-submodules/)
 │   ├── hotwire-native/
