@@ -1,28 +1,13 @@
 ---
 title: "Israel-Palestine Debate: Finkelstein, Destiny, M. Rabbani & Benny Morris | Lex Fridman Podcast #418"
-description: >
-  Four figures with sharply opposed frameworks — a revisionist Israeli historian, a Palestinian affairs analyst, a Holocaust scholar turned critic of Israel, and a political commentator — debate 1948, October 7, and Gaza across four and a half hours. The exchange is distinguished by participants quoting each other's own published work back at them and by the absence of any agreed factual baseline.
+description: "Four figures with sharply opposed frameworks — a revisionist Israeli historian, a Palestinian affairs analyst, a Holocaust scholar turned critic of Israel, and a political commentator — debate 1948, October 7, and Gaza across four and a half hours. The exchange is distinguished by participants quoting each other's own published work back at them and by the absence of any agreed factual baseline."
 source:
   type: podcast
   title: Lex Fridman Podcast
   author: Lex Fridman
   url: "https://lexfridman.com/israel-palestine-debate"
   date: 2024-03-14
-tags:
-  - israel-palestine
-  - 1948-nakba
-  - benny-morris
-  - norman-finkelstein
-  - mouin-rabbani
-  - steven-bonnell-destiny
-  - october-7
-  - hamas
-  - gaza
-  - icj-genocide-case
-  - camp-david-2000
-  - two-state-solution
-  - zionism
-  - partition-1947
+tags: [israel-palestine, 1948-nakba, benny-morris, norman-finkelstein, mouin-rabbani, steven-bonnell-destiny, october-7, hamas, gaza, icj-genocide-case, camp-david-2000, two-state-solution, zionism, partition-1947]
 ---
 
 # Israel-Palestine Debate: Finkelstein, Destiny, M. Rabbani & Benny Morris
