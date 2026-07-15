@@ -590,9 +590,9 @@ insights:
         description: Migrating S3 object storage to self-hosted Pure Storage — tooling, process, and $1M+ annual savings
       4-rails-delegated-type-pattern:
         description: Rails delegated_type — polymorphic associations with concrete tables, STI comparison, and real-world usage
-
       5-the-once-app-server:
         description: "How 37signals turned single-app self-hosted installs into a Nintendo-cartridge-style console that runs multiple Dockerized web apps on one machine with gapless deploys, SQLite storage, and near-zero configuration"
+
     37signals-rework:
       description: "REWORK podcast: Episodes on product development, shipping, hiring, communication, and culture"
       index:
