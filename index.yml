@@ -492,6 +492,8 @@ insights:
         description: Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold
 
     evilmartians: # Martian Chronicles (https://evilmartians.com/chronicles)
+      2-martians-greenfield-to-mvp-in-4-weeks-agentic-coding-on-rails:
+        description: "A two-person designer + engineer team shipped a production MVP in 4 weeks using Rails + Inertia + React in a single repo with Storybook, treating Rails conventions as architectural guardrails and open-source skills as project-specific constraints for AI agents"
       5-tips-for-activerecord-dashboards:
         description: Explicit view data structures, N+1 guards with includes, column restriction, and materialized views for dashboard queries
       anycable-goes-pro-fast-websockets-for-ruby-at-scale:
@@ -522,6 +524,8 @@ insights:
         description: Production K8s toolkit — Terragrunt, Argo CD GitOps, Prometheus/Grafana, Loki, and automated PR preview apps
       mrsk-hot-deployment-tool-or-total-game-changer:
         description: MRSK/Kamal history, Kamal 2 kamal-proxy architecture, zero-downtime deploys, and multi-app hosting
+      now-you-see-it-vite-on-rails-without-the-proxy:
+        description: "How rails_vite integrates the Vite dev server with Propshaft using a redirecting stub file instead of a Rack proxy, plus an optional gem mode that emits vite_tags from a JSON dev-server descriptor"
       oklch-in-css-why-quit-rgb-hsl:
         description: OKLCH perceptual color model, P3 gamut, CSS Color Level 4 syntax, and migration from HSL/HEX
       partition-and-conquer:
@@ -546,6 +550,8 @@ insights:
         description: Pre-production Rails checklist — asset pipeline, database, background jobs, secrets, monitoring
       test-prof-3-guided-and-automated-ruby-test-profiling:
         description: TestProf 3.0 — AI-assisted profiling, sampling mode, and integration with RuboCop for test optimization
+      test-prof-digest-2026-surprising-finds-from-30k-specs:
+        description: "Case study of a second 50% RSpec speedup at Whop (4m35s to ~2min across 30k examples) via GC-leak hunting, oneshot_line coverage, cheaper test-mode encryption, and the new TestProf v1.6.0 TPS profiler and GC memory-profiler mode"
       testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest:
         description: FactoryDefault, FactoryAllStub, and let_it_be for reducing factory overhead in RSpec and Minitest
       testprof-a-good-doctor-for-slow-ruby-tests:
@@ -554,6 +560,8 @@ insights:
         description: turbo-mount gem — mounting React/Vue/Svelte/Stimulus components in Rails views with Hotwire
       the-future-of-full-stack-rails-turbo-morph-drive:
         description: Turbo Morph Drive — page-level morphing, scoped updates, and the future of server-rendered interactivity
+      the-joy-of-inertia-rails-painting-your-own-with-50-happy-little-lines:
+        description: "Builds a working Inertia implementation from scratch — a ~50-line React client and 16-line Rails renderer — to show the entire wire format is one page object plus one header, and every feature is that same format applied again"
       the-whop-chop-how-we-cut-a-rails-test-suite-and-ci-time-in-half:
         description: CI parallelization with Knapsack Pro, test ordering, Docker layer caching, and 50% CI time reduction
       time-series-data-using-timescaledb-with-ruby-on-rails:
@@ -581,6 +589,8 @@ insights:
       4-rails-delegated-type-pattern:
         description: Rails delegated_type — polymorphic associations with concrete tables, STI comparison, and real-world usage
 
+      5-the-once-app-server:
+        description: "How 37signals turned single-app self-hosted installs into a Nintendo-cartridge-style console that runs multiple Dockerized web apps on one machine with gapless deploys, SQLite storage, and near-zero configuration"
     37signals-rework:
       description: "REWORK podcast: Episodes on product development, shipping, hiring, communication, and culture"
       index:
@@ -629,6 +639,20 @@ insights:
       ep10-jay-tennier-rainforest-qa-tests-itself:
         description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
 
+      ep11-simone-carletti-rails-at-the-center-of-dnsimple:
+        description: "Simone Carletti explains how a globally distributed DNS platform keeps a single long-lived Rails app at its core via an interactor/service layer, while Go and Erlang handle the edge, and how a 15-person team scaled with Shape Up, containerization, and interactor-driven testing"
+      ep12-brian-scanlan-building-ai-first-at-intercom:
+        description: "How Intercom turned Claude Code into a full-stack engineering platform on a 15-year-old Rails monolith — 100+ internal skills, hooks that enforce workflows, auto-approved PRs, and read-only production access for engineers and non-engineers alike"
+      ep13-jason-meller-rails-security-and-the-ai-advantage:
+        description: "Rails' concise, uniform code makes it uniquely token-efficient for AI-assisted development, while the same AI tools rummaging through developer machines turn developers into prime targets for cheap, scalable attacks"
+      ep14-tom-rossi-staying-as-rails-as-possible:
+        description: "Buzzsprout co-founder Tom Rossi on how a small team hosting 472,000 podcasts stays deliberately close to vanilla Rails — minimizing dependencies, monkey-patching Active Storage for public assets, and adopting ClickHouse — treating framework defaults as a business advantage"
+      ep15-dhh-basecamp-5-vibe-coding-and-the-future-of-rails:
+        description: "DHH on how modern Rails shaped Basecamp 5, why the backend has stayed stable for 20 years, the coming ActionText/Passkey extractions, and how agentic AI is compressing the software process from prompt to IPO"
+      ep16-nikky-southerland-lessons-from-13-years-of-rails-at-the-auto-shop:
+        description: "How Shop-Ware's small team maintains a 13-year-old, couple-hundred-thousand-line Rails monolith for auto-shop management — migrating Backbone to React, unwinding a regretted two-codebase API split, shifting to daily deploys, and rethinking Postgres and hosting off Heroku"
+      ep17-bryce-harlan-a-decade-of-rails-in-healthcare:
+        description: "Jaan Health's Bryce Harlan on a decade of running a HIPAA-regulated between-visit care-management platform on Rails, from a Rails 4-to-6 rewrite to SLA-named Sidekiq queues, a bespoke ActionResponder API layer, and AI-assisted feature pipelines"
   rails: # curated highlights from official Rails release notes (guides.rubyonrails.org)
     8_0_highlights:
       description: "No-PaaS deployment stack — Kamal 2, Thruster, the Solid trio (Cable/Cache/Queue), Propshaft by default, and a built-in authentication generator"
