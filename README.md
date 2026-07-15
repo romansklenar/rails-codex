@@ -18,7 +18,8 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 ├── insights/                     # Curated knowledge from blogs, books, talks (manually authored)
 │   ├── blogs/                    #   Blog posts (37signals manifesto, Dev Blog, Evil Martians Chronicles)
 │   ├── books/                    #   Books (TBA)
-│   └── podcasts/                 #   Podcasts (37signals REWORK, Recordables, On Rails, Lex Fridman)
+│   ├── podcasts/                 #   Podcasts (37signals REWORK, Recordables, On Rails, Lex Fridman)
+│   └── rails/                    #   Rails release highlights (8.0, 8.1, 8.2) curated from official notes
 │
 ├── references/                   # Official docs (auto-extracted from .git-submodules/)
 │   ├── hotwire-native/

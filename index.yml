@@ -325,6 +325,8 @@ references:
         description: Supported Ruby on Rails versions and release schedule
       plugins:
         description: Building plugins to extend Rails functionality
+      product_reviews:
+        description: Adding product reviews to an e-commerce app — ratings, average calculation, and filtering
       rails_on_rack:
         description: Rails integration with Rack and interfacing with Rack components
       routing:
@@ -384,6 +386,8 @@ references:
         description: Release notes for Rails 8.0
       8_1_release_notes:
         description: Release notes for Rails 8.1
+      8_2_release_notes:
+        description: Release notes for Rails 8.2 (in development)
 
 insights:
   blogs:
@@ -624,6 +628,14 @@ insights:
         description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
       ep10-jay-tennier-rainforest-qa-tests-itself:
         description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
+
+  rails: # curated highlights from official Rails release notes (guides.rubyonrails.org)
+    8_0_highlights:
+      description: "No-PaaS deployment stack — Kamal 2, Thruster, the Solid trio (Cable/Cache/Queue), Propshaft by default, and a built-in authentication generator"
+    8_1_highlights:
+      description: "Resumable jobs (Active Job Continuations), structured Event Reporting, local CI via bin/ci, Markdown rendering, credentials-fetch for Kamal, deprecatable associations"
+    8_2_highlights:
+      description: "In-development — header-based CSRF via Sec-Fetch-Site, Rails.app + creds/revision, Argon2 for has_secure_password, has_json schemas, attachment analysis before validation"
 
 style-guide:
   ruby:
