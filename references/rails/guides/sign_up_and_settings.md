@@ -390,6 +390,15 @@ browser to bypass this validation. To prevent this and ensure the validation
 always runs, we use `.with_defaults(password_challenge: "")` to set a default
 value even if the `password_challenge` parameter is missing.
 
+Now let's add the route to redirect the user once the password is updated.
+
+```ruby#3
+namespace :settings do
+  resource :password, only: [ :show, :update ]
+  resource :profile, only: [ :show ]
+end
+```
+
 You can now visit http://localhost:3000/settings/password to update your
 password.
 
@@ -425,7 +434,7 @@ first and last name.
 
 ### Profile Routes & Controller
 
-In `config/routes.rb`, add a profile resource under the settings namespace. We
+In `config/routes.rb`, add an `update` action on the profile resource under the settings namespace. We
 can also add a root to the namespace to handle any visits to `/settings` and
 redirect them to profile settings.
 
@@ -1879,7 +1888,7 @@ class SettingsTest < ActionDispatch::IntegrationTest
     sign_in_as users(:one)
     get settings_profile_path
     assert_dom "h4", "Account Settings"
-    assert_not_dom "a", "Store Settings"
+    assert_not_dom "h4", "Store Settings"
   end
 
   test "admin settings nav" do
@@ -1991,7 +2000,7 @@ your account.
 
 ```bash
 $ bin/kamal dbc
-UPDATE users SET admin=true WHERE users.email='you@example.org';
+UPDATE users SET admin=true WHERE users.email_address='you@example.org';
 .quit
 ```
 
@@ -1999,7 +2008,7 @@ Otherwise, you can use the Rails console to update your account.
 
 ```bash
 $ bin/kamal console
-irb> User.find_by(email: "you@example.org").update(admin: true)
+irb> User.find_by(email_address: "you@example.org").update(admin: true)
 ```
 
 You can now access the Store settings in production with your account.

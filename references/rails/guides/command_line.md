@@ -181,12 +181,12 @@ The main difference is the content of the `config/database.yml` file. With the
 PostgreSQL option, it looks like this:
 
 ```yaml
-# PostgreSQL. Versions 9.3 and up are supported.
+# PostgreSQL. Versions 10.0 and up are supported.
 #
 # Install the pg driver:
 #   gem install pg
 # On macOS with Homebrew:
-#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+#   gem install pg -- --with-pg-config=/opt/homebrew/bin/pg_config
 # On Windows:
 #   gem install pg
 #       Choose the win32 build.
@@ -200,7 +200,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 3 } %>
+  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 
 development:
@@ -248,7 +248,7 @@ a web browser.
 $ cd my_app
 $ bin/rails server
 => Booting Puma
-=> Rails 8.1.0 application starting in development
+=> Rails 8.2.0 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
 * Puma version: 6.4.0 (ruby 3.1.3-p185) ("The Eagle of Durango")
@@ -584,7 +584,7 @@ in a transaction that rolls back when you exit:
 
 ```bash
 $ bin/rails console --sandbox
-Loading development environment in sandbox (Rails 8.1.0)
+Loading development environment in sandbox (Rails 8.2.0)
 Any modifications you make will be rolled back on exit
 my-app(dev):001:0>
 ```
@@ -626,8 +626,8 @@ my-app(dev)> app.response.status
 ```
 
 NOTE: You have to pass the "Host" header with the `app.get` request above,
-because the Rack client used under-the-hood defaults to "www.example.com" if not
-"Host" is specified. You can modify your application to always use `localhost`
+because the Rack client used under-the-hood defaults to "www.example.com" if
+"Host" is not specified. You can modify your application to always use `localhost`
 using a configuration or an initializer.
 
 The reason you can "make requests" like above is because the `app` object is the
@@ -739,6 +739,57 @@ primary database by default. You can specify which database to connect to using
 
 ```bash
 $ bin/rails dbconsole --database=animals
+```
+
+### `bin/rails query`
+
+`query` runs read-only database queries and returns structured JSON output. It connects to the reading replica role by default and prevents database writes. The `--sql` flag restricts execution to SQL only. ActiveRecord expressions are evaluated as Ruby, with the same trust model as `bin/rails runner` and `bin/rails console`.
+
+```bash
+$ bin/rails query "Account.where(plan: 'premium').limit(10)"
+```
+
+You can run raw SQL with the `--sql` flag:
+
+```bash
+$ bin/rails query --sql "SELECT * FROM accounts LIMIT 10"
+```
+
+Results are paginated. Use `--page` and `--per` to navigate:
+
+```bash
+$ bin/rails query "Account.all" --page 2 --per 50
+```
+
+Pipe through `jq` for human-readable formatting:
+
+```bash
+$ bin/rails query "Account.first" | jq
+```
+
+The `schema` subcommand lists tables or shows detail for a specific table, including columns, indexes, enums, and associations:
+
+```bash
+$ bin/rails query schema
+$ bin/rails query schema accounts
+```
+
+The `models` subcommand lists all ActiveRecord models with their table names and associations:
+
+```bash
+$ bin/rails query models
+```
+
+The `explain` subcommand shows the query plan for an expression:
+
+```bash
+$ bin/rails query explain "Account.where(plan: 'premium')"
+```
+
+If you are using multiple databases, you can specify which database configuration to use with `--database` or `--db`:
+
+```bash
+$ bin/rails query "Account.count" --database primary_replica
 ```
 
 ### `bin/rails runner`
@@ -881,7 +932,7 @@ might affect you.
 ```bash
 $ bin/rails about
 About your application's environment
-Rails version             8.1.0
+Rails version             8.2.0
 Ruby version              3.2.0 (x86_64-linux)
 RubyGems version          3.3.7
 Rack version              3.0.8
@@ -968,7 +1019,7 @@ $ bin/rails stats
 
 ### `bin/rails time:zones:all`
 
-The`bin/rails time:zones:all` command prints the complete list of time zones
+The `bin/rails time:zones:all` command prints the complete list of time zones
 that Active Support knows about, along with their UTC offsets followed by the
 Rails timezone identifiers.
 
@@ -1018,7 +1069,6 @@ You can remove older compiled assets using `bin/rails assets:clean`. The
 an old asset while the new assets are being built.
 
 If you want to clear `public/assets` completely, you can use `bin/rails assets:clobber`.
-assets:clobber`.
 
 Managing the Database
 ---------------------
@@ -1368,7 +1418,7 @@ Custom Rake Tasks
 -----------------
 
 You may want to create custom rake tasks in your application, to delete old
-records from the database for example. You can do this with the the `bin/rails
+records from the database for example. You can do this with the `bin/rails
 generate task` command. Custom rake tasks have a `.rake` extension and are
 placed in the `lib/tasks` folder in your Rails application. For example:
 

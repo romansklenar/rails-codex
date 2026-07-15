@@ -1421,11 +1421,57 @@ result =
 
 Use `when x then ...` for one-line cases.
 
+[source,ruby]
+----
+# bad
+case year
+when 1850..1889
+  'Blues'
+when 1890..1909
+  'Ragtime'
+when 1910..1929
+  'New Orleans Jazz'
+when 1930..1939
+  'Swing'
+when 1940..1950
+  'Bebop'
+else
+  'Jazz'
+end
+
+# good
+case year
+when 1850..1889 then 'Blues'
+when 1890..1909 then 'Ragtime'
+when 1910..1929 then 'New Orleans Jazz'
+when 1930..1939 then 'Swing'
+when 1940..1950 then 'Bebop'
+else                  'Jazz'
+end
+----
+
 NOTE: The alternative syntax `when x: ...` has been removed as of Ruby 1.9.
 
 === Semicolon in `when` [[no-when-semicolons]]
 
 Do not use `when x; ...`. See the previous rule.
+
+[source,ruby]
+----
+# bad
+case year
+when 1850..1889; 'Blues'
+when 1890..1909; 'Ragtime'
+else; 'Jazz'
+end
+
+# good
+case year
+when 1850..1889 then 'Blues'
+when 1890..1909 then 'Ragtime'
+else                  'Jazz'
+end
+----
 
 === Semicolon in `in` [[no-in-pattern-semicolons]]
 
@@ -1565,7 +1611,7 @@ foo = true and false # results in foo being equal to true. Equivalent to (foo = 
 bar = false or true  # results in bar being equal to false. Equivalent to (bar = false) or true
 ----
 
-Also `&&` has higher precedence than `||`, where as `and` and `or` have the same one. Funny enough, even though `and` and `or`
+Also `&&` has higher precedence than `||`, whereas `and` and `or` have the same one. Funny enough, even though `and` and `or`
 were inspired by Perl, they don't have different precedence in Perl.
 
 [source,ruby]
@@ -1580,6 +1626,22 @@ false || true && false # => false (it's effectively false || (true && false))
 === Multi-line Ternary Operator [[no-multiline-ternary]]
 
 Avoid multi-line `?:` (the ternary operator); use `if`/`unless` instead.
+
+[source,ruby]
+----
+# bad
+result = some_condition ?
+  something :
+  something_else
+
+# good
+result =
+  if some_condition
+    something
+  else
+    something_else
+  end
+----
 
 === `if` as a Modifier [[if-as-a-modifier]]
 
@@ -1891,6 +1953,17 @@ end
 === `BEGIN` Blocks [[no-BEGIN-blocks]]
 
 Avoid the use of `BEGIN` blocks.
+
+[source,ruby]
+----
+# bad
+puts 'Hello!'
+BEGIN { puts 'Initializing...' }
+
+# good
+puts 'Initializing...'
+puts 'Hello!'
+----
 
 === `END` Blocks [[no-END-blocks]]
 
@@ -2521,7 +2594,7 @@ foo.object_id == bar.object_id
 foo.equal?(bar)
 ----
 
-Similarly, prefer using `Hash#compare_by_identity` than using `object_id` for keys:
+Similarly, prefer using `Hash#compare_by_identity` over using `object_id` for keys:
 
 [source,ruby]
 ----
@@ -2955,7 +3028,7 @@ def print_foo = puts("foo")
 
 Keywords with lower precedence than `=` can appear ambiguous when used after an endless method definition. This includes `and`, `or`, and the modifier forms of `if`, `unless`, `while`, and `until`. In these cases, the code may appear to include these keywords as part of the method body, but instead they actually modify the method definition itself.
 
-In this cases, prefer using a normal method over an endless method.
+In these cases, prefer using a normal method over an endless method.
 
 [source,ruby]
 ----
@@ -3129,6 +3202,18 @@ IMPORTANT: When calling `super` without arguments, `super` and `super()` mean di
 
 Avoid parameter lists longer than three or four parameters.
 
+[source,ruby]
+----
+# bad
+def create_user(first_name, last_name, email, phone, address, age)
+  # ...
+end
+
+# good
+def create_user(first_name, last_name, email:, phone: nil, address: nil, age: nil)
+  # ...
+end
+----
 
 === Optional Arguments [[optional-arguments]]
 
@@ -3299,6 +3384,23 @@ end
 === Private Global Methods [[private-global-methods]]
 
 If you really need "global" methods, add them to Kernel and make them private.
+
+[source,ruby]
+----
+# bad
+def global_helper
+  # ...
+end
+
+# good
+module Kernel
+  private
+
+  def global_helper
+    # ...
+  end
+end
+----
 
 == Classes & Modules
 
@@ -4018,6 +4120,15 @@ Write comments in English.
 
 Use one space between the leading `#` character of the comment and the text of the comment.
 
+[source,ruby]
+----
+# bad
+#some comment
+
+# good
+# some comment
+----
+
 === English Syntax [[english-syntax]]
 
 Comments longer than a word are capitalized and use punctuation.
@@ -4338,6 +4449,18 @@ hash = { one: 1, two: 2, three: 3 }
 
 Avoid the use of mutable objects as hash keys.
 
+[source,ruby]
+----
+# bad
+hash = { 'name' => 'John' }
+
+# good
+hash = { name: 'John' }
+
+# good - frozen string key when symbols won't do
+hash = { 'name'.freeze => 'John' }
+----
+
 === No Mutable Defaults [[no-mutable-defaults]]
 
 Avoid the use of shared mutable objects as hash default values.
@@ -4571,6 +4694,17 @@ Rely on the fact that as of Ruby 1.9 hashes are ordered.
 
 Do not modify a collection while traversing it.
 
+[source,ruby]
+----
+# bad
+numbers = [1, 2, 3, 4, 5]
+numbers.each { |n| numbers.delete(n) if n.even? }
+
+# good
+numbers = [1, 2, 3, 4, 5]
+odd_numbers = numbers.reject(&:even?)
+----
+
 === Accessing Elements Directly [[accessing-elements-directly]]
 
 When accessing elements of a collection, avoid direct access via `[n]` by using an alternate form of the reader method if it is supplied.
@@ -4612,6 +4746,25 @@ Prefer `map` over `collect`, `find` over `detect`, `select` over `find_all`, `re
 This is not a hard requirement; if the use of the alias enhances readability, it's ok to use it.
 The rhyming methods are inherited from Smalltalk and are not common in other programming languages.
 The reason the use of `select` is encouraged over `find_all` is that it goes together nicely with `reject` and its name is pretty self-explanatory.
+
+[source,ruby]
+----
+# bad
+items.collect { |item| item.name }
+items.detect(&:active?)
+items.find_all(&:valid?)
+items.inject(0) { |sum, i| sum + i }
+items.member?(value)
+items.length
+
+# good
+items.map { |item| item.name }
+items.find(&:active?)
+items.select(&:valid?)
+items.reduce(0) { |sum, i| sum + i }
+items.include?(value)
+items.size
+----
 
 === `count` vs `size` [[count-vs-size]]
 
@@ -4833,7 +4986,7 @@ rand(1..6)
 
 === Float Division [[float-division]]
 
-When performing float-division on two integers, either use `fdiv` or convert one-side integer to float.
+When performing float-division on two integers, either use `fdiv` or convert one of the integers to float.
 
 [source,ruby]
 ----
@@ -5270,6 +5423,15 @@ SQL
 
 Prefer `Time.now` over `Time.new` when retrieving the current system time.
 
+[source,ruby]
+----
+# bad
+Time.new
+
+# good
+Time.now
+----
+
 === No `DateTime` [[no-datetime]]
 
 Don't use `DateTime` unless you need to account for historical calendar reform - and if you do, explicitly specify the `start` argument to clearly state your intentions.
@@ -5564,6 +5726,15 @@ echo = %x(echo `date`)
 Avoid the use of `%s`.
 It seems that the community has decided `:"some string"` is the preferred way to create a symbol with spaces in it.
 
+[source,ruby]
+----
+# bad
+%s(some symbol)
+
+# good
+:"some symbol"
+----
+
 === Percent Literal Braces [[percent-literal-braces]]
 
 Use the braces that are the most appropriate for the various kinds of percent literals.
@@ -5604,9 +5775,43 @@ Use the braces that are the most appropriate for the various kinds of percent li
 
 Avoid needless metaprogramming.
 
+[source,ruby]
+----
+# bad
+class Person
+  %i[name age email].each do |attr|
+    define_method(attr) { instance_variable_get("@#{attr}") }
+  end
+end
+
+# good
+class Person
+  attr_reader :name, :age, :email
+end
+----
+
 === No Monkey Patching [[no-monkey-patching]]
 
 Do not mess around in core classes when writing libraries (do not monkey-patch them).
+
+[source,ruby]
+----
+# bad
+class String
+  def to_hierarchical_date
+    split('-').map(&:to_i)
+  end
+end
+
+# good - use refinements instead
+module DateParsing
+  refine String do
+    def to_hierarchical_date
+      split('-').map(&:to_i)
+    end
+  end
+end
+----
 
 === Block `class_eval` [[block-class-eval]]
 
@@ -5654,7 +5859,7 @@ Avoid using `method_missing` for metaprogramming because backtraces become messy
 Consider using delegation, proxy, or `define_method` instead.
 If you must use `method_missing`:
 
- * Be sure to https://blog.marc-andre.ca/2010/11/15/methodmissing-politely/[also define `respond_to_missing?`]
+ * Be sure to https://thoughtbot.com/blog/always-define-respond-to-missing-when-overriding[also define `respond_to_missing?`]
  * Only catch methods with a well-defined prefix, such as `find_by_*`--make your code as assertive as possible.
  * Call `super` at the end of your statement
  * Delegate to assertive, non-magical methods:
@@ -5679,7 +5884,7 @@ def method_missing(meth, *params, &block)
   end
 end
 
-# best of all, though, would to define_method as each findable attribute is declared
+# best of all, though, would be to define_method as each findable attribute is declared
 ----
 
 === Prefer `public_send` [[prefer-public-send]]
@@ -6056,6 +6261,21 @@ Write `ruby -w` safe code.
 Avoid hashes as optional parameters.
 Does the method do too much? (Object initializers are exceptions for this rule).
 
+[source,ruby]
+----
+# bad
+def send_email(subject, opts = {})
+  to = opts[:to]
+  cc = opts[:cc]
+  # ...
+end
+
+# good
+def send_email(subject, to:, cc: nil)
+  # ...
+end
+----
+
 === Instance Vars [[instance-vars]]
 
 Use module instance variables instead of global variables.
@@ -6083,9 +6303,50 @@ Use `OptionParser` for parsing complex command line options and `ruby -s` for tr
 
 Do not mutate parameters unless that is the purpose of the method.
 
+[source,ruby]
+----
+# bad
+def clean(users)
+  users.reject!(&:disabled?)
+  users
+end
+
+# good
+def clean(users)
+  users.reject(&:disabled?)
+end
+----
+
 === Three is the Number Thou Shalt Count [[three-is-the-number-thou-shalt-count]]
 
 Avoid more than three levels of block nesting.
+
+[source,ruby]
+----
+# bad
+def process(items)
+  items.each do |item|
+    item.widgets.each do |widget|
+      widget.parts.each do |part|
+        part.update!
+      end
+    end
+  end
+end
+
+# good
+def process(items)
+  items.each do |item|
+    process_widgets(item.widgets)
+  end
+end
+
+def process_widgets(widgets)
+  widgets.each do |widget|
+    widget.parts.each(&:update!)
+  end
+end
+----
 
 === Functional Code [[functional-code]]
 
@@ -6160,7 +6421,7 @@ https://www.jetbrains.com/ruby/[RubyMine]'s code inspections are https://conflue
 == History
 
 This guide started its life in 2011 as an internal company Ruby coding guidelines (written by https://github.com/bbatsov[Bozhidar Batsov]).
-Bozhidar had always been bothered as a Ruby developer about one thing  - Python developers had a great programming style reference (https://www.python.org/dev/peps/pep-0008/[PEP-8]) and Rubyists never got an official guide, documenting Ruby coding style and best practices.
+Bozhidar had always been bothered as a Ruby developer about one thing - Python developers had a great programming style reference (https://www.python.org/dev/peps/pep-0008/[PEP-8]) and Rubyists never got an official guide, documenting Ruby coding style and best practices.
 Bozhidar firmly believed that style matters.
 He also believed that a great hacker community, such as Ruby has, should be quite capable of producing this coveted document.
 The rest is history...
@@ -6186,7 +6447,7 @@ Many people, books, presentations, articles and other style guides influenced th
 == Contributing
 
 The guide is still a work in progress - some guidelines are lacking examples, some guidelines don't have examples that illustrate them clearly enough.
-Improving such guidelines is a great (and simple way) to help the Ruby community!
+Improving such guidelines is a great (and simple) way to help the Ruby community!
 
 In due time these issues will (hopefully) be addressed - just keep them in mind for now.
 

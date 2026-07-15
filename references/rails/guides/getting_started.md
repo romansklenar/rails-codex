@@ -72,8 +72,8 @@ TIP: Any commands prefaced with a dollar sign `$` should be run in the terminal.
 
 For this project, you will need:
 
-* Ruby 3.2 or newer
-* Rails 8.1.0 or newer
+* Ruby 3.4 or newer
+* Rails 8.2.0 or newer
 * A code editor
 
 Follow the [Install Ruby on Rails Guide](install_ruby_on_rails.html) if you need
@@ -85,10 +85,10 @@ printed out:
 
 ```bash
 $ rails --version
-Rails 8.1.0
+Rails 8.2.0
 ```
 
-The version shown should be Rails 8.1.0 or higher.
+The version shown should be Rails 8.2.0 or higher.
 
 ### Creating Your First Rails App
 
@@ -119,33 +119,33 @@ Let's take a quick glance at the files and directories that are included in a
 new Rails application. You can open this folder in your code editor or run
 `ls -la` in your terminal to see the files and directories.
 
-| File/Folder | Purpose |
-| ----------- | ------- |
-|app/|Contains the controllers, models, views, helpers, mailers, jobs, and assets for your application. **You'll focus mostly on this folder for the remainder of this guide.**|
-|bin/|Contains the `rails` script that starts your app and can contain other scripts you use to set up, update, deploy, or run your application.|
-|config/|Contains configuration for your application's routes, database, and more. This is covered in more detail in [Configuring Rails Applications](configuring.html).|
-|config.ru|[Rack](https://rack.github.io) configuration for Rack-based servers used to start the application.|
-|db/|Contains your current database schema, as well as the database migrations.|
-|Dockerfile|Configuration file for Docker.|
-|Gemfile<br>Gemfile.lock|These files allow you to specify what gem dependencies are needed for your Rails application. These files are used by the [Bundler](https://bundler.io) gem.|
-|lib/|Extended modules for your application.|
-|log/|Application log files.|
-|public/|Contains static files and compiled assets. When your app is running, this directory will be exposed as-is.|
-|Rakefile|This file locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than changing `Rakefile`, you should add your own tasks by adding files to the `lib/tasks` directory of your application.|
-|README.md|This is a brief instruction manual for your application. You should edit this file to tell others what your application does, how to set it up, and so on.|
-|script/|Contains one-off or general purpose [scripts](https://github.com/rails/rails/blob/main/railties/lib/rails/generators/rails/script/USAGE) and [benchmarks](https://github.com/rails/rails/blob/main/railties/lib/rails/generators/rails/benchmark/USAGE).|
-|storage/|Contains SQLite databases and Active Storage files for Disk Service. This is covered in [Active Storage Overview](active_storage_overview.html).|
-|test/|Unit tests, fixtures, and other test apparatus. These are covered in [Testing Rails Applications](testing.html).|
-|tmp/|Temporary files (like cache and pid files).|
-|vendor/|A place for all third-party code. In a typical Rails application this includes vendored gems.|
-|.dockerignore|This file tells Docker which files it should not copy into the container.|
-|.gitattributes|This file defines metadata for specific paths in a Git repository. This metadata can be used by Git and other tools to enhance their behavior. See the [gitattributes documentation](https://git-scm.com/docs/gitattributes) for more information.|
-|.git/|Contains Git repository files.|
-|.github/|Contains GitHub specific files.|
-|.gitignore|This file tells Git which files (or patterns) it should ignore. See [GitHub - Ignoring files](https://help.github.com/articles/ignoring-files) for more information about ignoring files.|
-|.kamal/|Contains Kamal secrets and deployment hooks.|
-|.rubocop.yml|This file contains the configuration for RuboCop.|
-|.ruby-version|This file contains the default Ruby version.|
+| File/Folder             | Purpose                                                                                                                                                                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| app/                    | Contains the controllers, models, views, helpers, mailers, jobs, and assets for your application. **You'll focus mostly on this folder for the remainder of this guide.**                                                                                                      |
+| bin/                    | Contains the `rails` script that starts your app and can contain other scripts you use to set up, update, deploy, or run your application.                                                                                                                                     |
+| config/                 | Contains configuration for your application's routes, database, and more. This is covered in more detail in [Configuring Rails Applications](configuring.html).                                                                                                                |
+| config.ru               | [Rack](https://rack.github.io) configuration for Rack-based servers used to start the application.                                                                                                                                                                             |
+| db/                     | Contains your current database schema, as well as the database migrations.                                                                                                                                                                                                     |
+| Dockerfile              | Configuration file for Docker.                                                                                                                                                                                                                                                 |
+| Gemfile<br>Gemfile.lock | These files allow you to specify what gem dependencies are needed for your Rails application. These files are used by the [Bundler](https://bundler.io) gem.                                                                                                                   |
+| lib/                    | Extended modules for your application.                                                                                                                                                                                                                                         |
+| log/                    | Application log files.                                                                                                                                                                                                                                                         |
+| public/                 | Contains static files and compiled assets. When your app is running, this directory will be exposed as-is.                                                                                                                                                                     |
+| Rakefile                | This file locates and loads tasks that can be run from the command line. The task definitions are defined throughout the components of Rails. Rather than changing `Rakefile`, you should add your own tasks by adding files to the `lib/tasks` directory of your application. |
+| README.md               | This is a brief instruction manual for your application. You should edit this file to tell others what your application does, how to set it up, and so on.                                                                                                                     |
+| script/                 | Contains one-off or general purpose [scripts](https://github.com/rails/rails/blob/main/railties/lib/rails/generators/rails/script/USAGE) and [benchmarks](https://github.com/rails/rails/blob/main/railties/lib/rails/generators/rails/benchmark/USAGE).                       |
+| storage/                | Contains SQLite databases and Active Storage files for Disk Service. This is covered in [Active Storage Overview](active_storage_overview.html).                                                                                                                               |
+| test/                   | Unit tests, fixtures, and other test apparatus. These are covered in [Testing Rails Applications](testing.html).                                                                                                                                                               |
+| tmp/                    | Temporary files (like cache and pid files).                                                                                                                                                                                                                                    |
+| vendor/                 | A place for all third-party code. In a typical Rails application this includes vendored gems.                                                                                                                                                                                  |
+| .dockerignore           | This file tells Docker which files it should not copy into the container.                                                                                                                                                                                                      |
+| .gitattributes          | This file defines metadata for specific paths in a Git repository. This metadata can be used by Git and other tools to enhance their behavior. See the [gitattributes documentation](https://git-scm.com/docs/gitattributes) for more information.                             |
+| .git/                   | Contains Git repository files.                                                                                                                                                                                                                                                 |
+| .github/                | Contains GitHub specific files.                                                                                                                                                                                                                                                |
+| .gitignore              | This file tells Git which files (or patterns) it should ignore. See [GitHub - Ignoring files](https://help.github.com/articles/ignoring-files) for more information about ignoring files.                                                                                      |
+| .kamal/                 | Contains Kamal secrets and deployment hooks.                                                                                                                                                                                                                                   |
+| .rubocop.yml            | This file contains the configuration for RuboCop.                                                                                                                                                                                                                              |
+| .ruby-version           | This file contains the default Ruby version.                                                                                                                                                                                                                                   |
 
 ### Model-View-Controller Basics
 
@@ -190,7 +190,7 @@ your Rails application:
 
 ```bash
 => Booting Puma
-=> Rails 8.1.0 application starting in development
+=> Rails 8.2.0 application starting in development
 => Run `bin/rails server --help` for more startup options
 Puma starting in single mode...
 * Puma version: 6.4.3 (ruby 3.3.5-p100) ("The Eagle of Durango")
@@ -291,7 +291,7 @@ NOTE: As convention we'll state the filepath as a comment on top of each file
 
 ```ruby
 # db/migrate/<timestamp>_create_products.rb
-class CreateProducts < ActiveRecord::Migration[8.1]
+class CreateProducts < ActiveRecord::Migration[8.2]
   def change
     create_table :products do |t|
       t.string :name
@@ -357,7 +357,7 @@ $ bin/rails console
 You will be presented with a prompt like the following:
 
 ```irb
-Loading development environment (Rails 8.1.0)
+Loading development environment (Rails 8.2.0)
 store(dev)>
 ```
 
@@ -366,7 +366,7 @@ printing out the Rails version:
 
 ```irb
 store(dev)> Rails.version
-=> "8.1.0"
+=> "8.2.0"
 ```
 
 It works!
@@ -1237,7 +1237,7 @@ will look like this:
 
 ```html
 <form action="/products" accept-charset="UTF-8" method="post">
-  <input type="hidden" name="authenticity_token" value="UHQSKXCaFqy_aoK760zpSMUPy6TMnsLNgbPMABwN1zpW-Jx6k-2mISiF0ulZOINmfxPdg5xMyZqdxSW1UK-H-Q" autocomplete="off">
+  <input type="hidden" name="authenticity_token" value="UHQSKXCaFqy_aoK760zpSMUPy6TMnsLNgbPMABwN1zpW-Jx6k-2mISiF0ulZOINmfxPdg5xMyZqdxSW1UK-H-Q">
 
   <div>
     <label for="product_name">Name</label>
@@ -1299,7 +1299,7 @@ filtered for security. That's where the `product_params` method comes into play.
 
 In `product_params`, we tell Rails to inspect the params and ensure there is a
 key named `:product` with an array of parameters as the value. The only
-permitted parameters for products is `:name` and Rails will ignore any other
+permitted parameters for products are `:name` and Rails will ignore any other
 parameters. This protects our application from malicious users who might try to
 hack our application.
 
@@ -1714,9 +1714,13 @@ http://localhost:3000/session/new and you'll see the New link on the index page.
 Optionally, you can include a link to this route in the navbar to add a Login
 link if not authenticated.
 
-```erb
-<%# app/views/products/index.html.erb %>
-<%= link_to "Login", new_session_path unless authenticated? %>
+```erb#5
+<%# app/views/layouts/application.html.erb %>
+<nav>
+  <%= link_to "Home", root_path %>
+  <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+  <%= link_to "Login", new_session_path unless authenticated? %>
+</nav>
 ```
 
 You can also update the Edit and Delete links on the
@@ -1850,7 +1854,7 @@ submitted, so we'll update the permitted params to include description in
 We also need to update the show view to display the description in
 `app/views/products/show.html.erb`:
 
-```erb#3
+```erb#4
 <%# app/views/products/show.html.erb%>
 <% cache @product do %>
   <h1><%= @product.name %></h1>
@@ -1892,7 +1896,7 @@ end
 Then we can add a file upload field to our product form before the submit
 button:
 
-```erb#4-7
+```erb#5-8
 <%# app/views/products/_form.html.erb %>
 <%= form_with model: product do |form| %>
   <%# ... %>
@@ -2038,7 +2042,7 @@ es:
 You'll now see "Products" when viewing the English locale and "Productos" when
 viewing the Spanish locale.
 
-Learn more about the [Rails Internationalization (I18n) API](i18n.html).
+Learn more about [Internationalization (I18n)](i18n.html).
 
 Action Mailer and Email Notifications
 -----------------------------
@@ -2067,7 +2071,7 @@ ensure `inventory_count` is never `nil`:
 
 ```ruby
 # db/migrate/<timestamp>_add_inventory_count_to_products.rb
-class AddInventoryCountToProducts < ActiveRecord::Migration[8.1]
+class AddInventoryCountToProducts < ActiveRecord::Migration[8.2]
   def change
     add_column :products, :inventory_count, :integer, default: 0
   end
@@ -2083,7 +2087,7 @@ $ bin/rails db:migrate
 We'll need to add the inventory count to the product form in
 `app/views/products/_form.html.erb`.
 
-```erb#4-7
+```erb#5-8
 <%# app/views/products/_form.html.erb %>
 <%= form_with model: product do |form| %>
   <%# ... %>
@@ -2145,7 +2149,7 @@ Next, open the generated migration (`db/migrate/<timestamp>_create_subscribers.r
 
 ```ruby#5-6
 # db/migrate/<timestamp>_create_subscribers.rb
-class CreateSubscribers < ActiveRecord::Migration[8.1]
+class CreateSubscribers < ActiveRecord::Migration[8.2]
   def change
     create_table :subscribers do |t|
       t.belongs_to :product, null: false, foreign_key: true
@@ -2170,7 +2174,7 @@ A Product, however, can have many subscribers, so we then add
 second part of this association between the two models. This tells Rails how to
 join queries between the two database tables.
 
-```ruby#2
+```ruby#3
 # app/models/product.rb
 class Product < ApplicationRecord
   has_many :subscribers, dependent: :destroy
@@ -2281,7 +2285,11 @@ Then update `app/views/products/show.html.erb` to render this partial after the
 ### In Stock Email Notifications
 
 Action Mailer is a feature of Rails that allows you to send emails. We'll use it
-to notify subscribers when a product is back in stock.
+to notify subscribers when a product is back in stock. Mailers are a lot like Controllers, but for email instead of web pages. While there's no request/response cycle, mailers work in a familiar way:
+
+* loading models from the database
+* applying business logic
+* passing data into templated views that generate the email content
 
 We can generate a mailer with the following command:
 
@@ -2294,7 +2302,7 @@ method.
 
 Update this method to mail to a subscriber's email address.
 
-```ruby#7-10
+```ruby#8-11
 # app/mailers/product_mailer.rb
 class ProductMailer < ApplicationMailer
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -2509,7 +2517,7 @@ A subscriber may want to unsubscribe at some point, so let's build that next.
 First, we need a route for unsubscribing that will be the URL we include in
 emails.
 
-```ruby#6
+```ruby#7
 # config/routes.rb
 Rails.application.routes.draw do
   # ...
@@ -2818,7 +2826,7 @@ the Active Record object for that record. Each fixture generates a helper in the
 test suite to make it easy to reference fixtures by name since their database
 IDs may be different each run.
 
-Then we ensure the tshirt is out of stock by updating it's inventory to 0.
+Then we ensure the tshirt is out of stock by updating its inventory to 0.
 
 Next, we use `assert_emails` to ensure 2 emails were generated by the code
 inside the block. To trigger the emails, we update the product's inventory count
@@ -2939,16 +2947,119 @@ No warnings found
 
 Learn more about [Securing Rails Applications](security.html)
 
-Continuous Integration with GitHub Actions
+Continuous Integration with `bin/ci`
 ------------------------------------------
 
-Rails apps generate a `.github` folder that includes a prewritten GitHub Actions
-configuration that runs rubocop, brakeman, and our test suite.
+Rails applications include a `bin/ci` script that runs all essential checks for
+your app: setup, code style (RuboCop), security audits, and tests. The steps
+are defined in `config/ci.rb` and can be customized for your project.
 
-When we push our code to a GitHub repository with GitHub Actions enabled, it
-will automatically run these steps and report back success or failure for each.
-This allows us to monitor our code changes for defects and issues and ensure
-consistent quality for our work.
+This script prints each step as it runs, showing ✅ for success and ❌ for
+failures. If any step fails, `bin/ci` exits with a nonzero status.
+
+To use a CI Provider, point your pipeline to `bin/ci`. This ensures consistent
+checks locally and in CI.
+
+To run it locally, call the script from your command line:
+
+```bash
+$ bin/ci
+Continuous Integration
+Running tests, style checks, and security audits
+
+
+Setup
+bin/setup --skip-server
+
+== Installing dependencies ==
+The Gemfile's dependencies are satisfied
+
+== Preparing database ==
+
+== Removing old logs and tempfiles ==
+
+✅ Setup passed in 2.11s
+
+
+Style: Ruby
+bin/rubocop
+
+Inspecting 25 files
+.........................
+
+25 files inspected, no offenses detected
+
+✅ Style: Ruby passed in 1.17s
+# ...
+✅ Continuous Integration passed in 8.91s
+```
+
+### CI Steps DSL
+
+The file is written in a DSL that makes it straightforward to manage steps, here
+we add another step to check to make sure we don't leave any TODOs behind in
+the code in `config/ci.rb`:
+
+```ruby#6-7
+# config/ci.rb
+CI.run do
+  step "Setup", "bin/setup --skip-server"
+
+  step "Style: Ruby", "bin/rubocop"
+  step "Check: No TODOs",
+        "if grep -r TODO app/; then exit 1; fi"
+  # ...
+end
+```
+
+To test this out, I added a todo comment at the start of a random file, here
+the `ApplicationController`:
+
+```ruby
+# app/controllers/application_controller.rb
+# TODO: Remove this todo
+class ApplicationController < ActionController::Base
+# ...
+```
+
+Now when I run it on the CI:
+
+```bash
+$ bin/ci
+# ...
+Check: No TODOs
+if grep -r TODO app/; then exit 1; fi
+
+app/controllers/application_controller.rb:# TODO: Remove this todo
+
+❌ Check: No TODOs failed in 0.01s
+# ...
+❌ Continuous Integration failed in 9.09s
+```
+
+To verify, remove the comment:
+
+```ruby
+# app/controllers/application_controller.rb
+class ApplicationController < ActionController::Base
+# ...
+```
+
+and `bin/ci` should now pass:
+
+```bash
+$ bin/ci
+# ...
+Check: No TODOs
+if grep -r TODO app/; then exit 1; fi
+
+
+✅ Check: No TODOs passed in 0.01s
+# ...
+✅ Continuous Integration passed in 8.91s
+```
+
+To learn more about the DSL, read the documentation for [ActiveSupport::ContinuousIntegration](https://www.rubydoc.info/github/rails/rails/main/ActiveSupport/ContinuousIntegration).
 
 Deploying to Production
 -----------------------

@@ -77,6 +77,40 @@ The new Rails version might have different configuration defaults than the previ
 
 To allow you to upgrade to new defaults one by one, the update task has created a file `config/initializers/new_framework_defaults_X_Y.rb` (with the desired Rails version in the filename). You should enable the new configuration defaults by uncommenting them in the file; this can be done gradually over several deployments. Once your application is ready to run with new defaults, you can remove this file and flip the `config.load_defaults` value.
 
+Upgrading from Rails 8.1 to Rails 8.2
+-------------------------------------
+
+For more information on changes made to Rails 8.2 please see the [release notes](8_2_release_notes.html).
+
+### The old Active Record 6.1 marshalling format was removed.
+
+If your application still sets `active_record.marshalling_format_version = 6.1`, which may
+be done by not calling `config.load_defaults` or calling it with a version older or equal to `6.1`,
+you MUST opt-in to the newer `7.1` marshal format before upgrading, and ensure all caches were
+either flushed or upgraded.
+
+### The negative scopes for enums now include records with `nil` values.
+
+Active Record negative scopes for enums now include records with `nil` values.
+
+```ruby
+class Book < ApplicationRecord
+  enum :status, [:proposed, :written, :published]
+end
+
+book1 = Book.create!(status: :published)
+book2 = Book.create!(status: :written)
+book3 = Book.create!(status: nil)
+
+# Before
+
+Book.not_published # => [book2]
+
+# After
+
+Book.not_published # => [book2, book3]
+```
+
 Upgrading from Rails 8.0 to Rails 8.1
 -------------------------------------
 
@@ -617,7 +651,7 @@ In order to be able to read messages using the old digest class it is necessary
 to register a rotator. Failing to do so may result in users having their sessions
 invalidated during the upgrade.
 
-The following is an example for rotator for the encrypted and the signed cookies.
+The following is an example of a rotator for encrypted and signed cookies.
 
 ```ruby
 # config/initializers/cookie_rotator.rb
