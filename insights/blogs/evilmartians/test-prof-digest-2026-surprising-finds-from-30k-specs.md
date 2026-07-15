@@ -7,19 +7,7 @@ source:
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/test-prof-digest-2026-surprising-finds-from-30k-specs"
   date: '2026-04-06'
-tags:
-- ruby
-- rails
-- testing
-- rspec
-- test-performance
-- testprof
-- profiling
-- garbage-collection
-- code-coverage
-- encryption
-- case-study
-- ci
+tags: [ruby, rails, testing, rspec, test-performance, testprof, profiling, garbage-collection, code-coverage, encryption, case-study, ci]
 ---
 
 # TestProf Digest 2026.4: Surprising Finds from 30k Specs

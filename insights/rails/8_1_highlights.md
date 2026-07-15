@@ -23,7 +23,7 @@ Rails 8.1 leans into operability: jobs that survive restarts, machine-readable e
 
 ### Active Job Continuations
 - Break a long job into discrete `step`s; after a restart execution resumes from the last completed step instead of the beginning.
-- Directly motivated by Kamal deploys, which give job containers ~30s to shut down by default → complements [[reliable-export-jobs]] and [[solid-queue]].
+- Directly motivated by Kamal deploys, which give job containers ~30s to shut down by default.
 - Steps support a **cursor** saved on interruption: `step.advance! from: record.id` inside `find_each(start: step.cursor)`.
 - `include ActiveJob::Continuable`; steps can be block form or method form.
 
@@ -51,7 +51,7 @@ end
 ```
 
 ### Structured Event Reporting
-- `Rails.event` — unified interface for machine-readable structured events, complementing the human-readable logger → see [[prometheus-monitoring]].
+- `Rails.event` — unified interface for machine-readable structured events, complementing the human-readable logger.
 - Emit: `Rails.event.notify("user.signup", user_id: 123, email: "...")`.
 - **Tags**: `Rails.event.tagged("graphql") { ... }` adds `tags: { graphql: true }`.
 - **Context**: `Rails.event.set_context(request_id: "abc123", shop_id: 456)` attaches to all events.

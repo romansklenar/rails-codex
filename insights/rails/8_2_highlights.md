@@ -56,7 +56,7 @@ tags:
 
 - **`enqueue_after_transaction_commit` un-deprecated** and now defaults to `true` for new apps — jobs enqueue after commit, fixing jobs that ran against uncommitted/rolled-back records. (Deprecated in 8.0, non-functional in 8.1, now a working boolean config.)
 - **Removed** — built-in `sidekiq` adapter (use the `sidekiq` gem).
-- **Deprecated** — built-in `queue_classic`, `resque`, `delayed_job`, `backburner`, `sneakers` adapters (move to each gem's own adapter). Relates to the DB-backed default → see [[solid-queue]].
+- **Deprecated** — built-in `queue_classic`, `resque`, `delayed_job`, `backburner`, `sneakers` adapters (move to each gem's own adapter).
 
 ## Active Support / Testing
 

@@ -7,19 +7,7 @@ source:
   author: "Svyatoslav Kryukov"
   url: "https://evilmartians.com/chronicles/the-joy-of-inertia-rails-painting-your-own-with-50-happy-little-lines"
   date: '2026-07-14'
-tags:
-- inertia
-- rails
-- react
-- spa
-- turbolinks
-- turbo-drive
-- hotwire
-- wire-format
-- csrf
-- action-controller
-- vue
-- svelte
+tags: [inertia, rails, react, spa, turbolinks, turbo-drive, hotwire, wire-format, csrf, action-controller, vue, svelte]
 ---
 
 # The Joy of Inertia Rails: Painting Your Own with 50 Happy Little Lines

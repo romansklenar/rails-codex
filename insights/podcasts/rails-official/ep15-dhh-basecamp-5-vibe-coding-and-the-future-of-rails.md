@@ -61,7 +61,7 @@ David Heinemeier Hansson, creator of Ruby on Rails and co-owner of 37signals, on
 - **Big workflow change at 37signals**: designers and project managers can now write Rails/Ruby code and see ideas become working software "without going through the mediation of a programmer."
 - This answers "the hardest parts in software" much earlier — *how should this work, is it good, does it feel right* — validating intuition before wasting a programmer's weeks or months.
 - **Caveat: literally vibe-coded output is mostly not merged** — in most cases code that isn't understood or reviewed in detail does not ship. Jason cannot vibe-code all of Basecamp "at least not yet."
-- **Shape Up's 6-week cycle now feels "archaic"** — DHH has a hard time imagining almost any Basecamp feature still requiring 6 weeks; implementation cost has been massively compressed across Basecamp, Omarchi, and everything else he touches.
+- **Shape Up's 6-week cycle now feels "archaic"** — DHH has a hard time imagining almost any Basecamp feature still requiring 6 weeks; implementation cost has been massively compressed across Basecamp, Omarchy, and everything else he touches.
 - Personal history: cites years of writing code Jason rejected ("it doesn't work, it's got to work this way instead") after weeks of investment — being relieved of that "coding in vain" is a huge step forward.
 
 ## The Agentic Development Swing: Excitement vs. Danger
@@ -104,5 +104,3 @@ David Heinemeier Hansson, creator of Ruby on Rails and co-owner of 37signals, on
 - **Worry less about doom** — climate hysteria or AI killing us all: "if any of those things are gonna happen, they're gonna happen whether you worry about them or not."
 - Focus on progress, the love of computers, the beauty of Ruby, the productivity of Rails — "we live in the best of times on 500 different axes."
 - Dwelling on what's wrong will "poison your mind" — "too precious of an organ to poison like that." Keep a slight concern in reserve, but don't let it dominate; embrace the future.
-
-→ Episode: [DHH: Basecamp 5, Vibe Coding, and the Future of Rails](https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-coding-and-the-future-of-rails)

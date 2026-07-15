@@ -7,19 +7,7 @@ source:
   author: "Gleb Stroganov"
   url: "https://evilmartians.com/chronicles/2-martians-greenfield-to-mvp-in-4-weeks-agentic-coding-on-rails"
   date: '2026-06-09'
-tags:
-- rails
-- inertia
-- react
-- agentic-coding
-- ai-assisted-development
-- claude-code
-- storybook
-- skills
-- greenfield
-- mvp
-- stripe-connect
-- layered-design
+tags: [rails, inertia, react, agentic-coding, ai-assisted-development, claude-code, storybook, skills, greenfield, mvp, stripe-connect, layered-design]
 ---
 
 # 2 Martians, Greenfield to MVP in 4 Weeks: Agentic Coding on Rails

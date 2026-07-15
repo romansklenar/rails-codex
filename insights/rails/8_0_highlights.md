@@ -21,11 +21,11 @@ Rails 8.0 makes "one person can ship and run a production app" the default — n
 
 ## Headline Features
 
-- **Kamal 2** — ships preconfigured for deployment. `kamal setup` turns a fresh Linux box into an app/accessory server. Bundled **Kamal Proxy** replaces the launch-era Traefik option → see [[kamal-deployment]].
-- **Thruster** — proxy in the default Dockerfile, sits in front of Puma for X-Sendfile acceleration, asset caching, and asset compression → see [[thruster]].
+- **Kamal 2** — ships preconfigured for deployment. `kamal setup` turns a fresh Linux box into an app/accessory server. Bundled **Kamal Proxy** replaces the launch-era Traefik option.
+- **Thruster** — proxy in the default Dockerfile, sits in front of Puma for X-Sendfile acceleration, asset caching, and asset compression.
 - **Solid Cable** — DB-backed pub/sub for Action Cable, replaces Redis. Retains messages ~1 day by default.
-- **Solid Cache** — DB-backed HTML fragment cache store, replaces Redis/Memcached → see [[solid-cache]].
-- **Solid Queue** — DB-backed jobs, replaces Redis + Resque/DelayedJob/Sidekiq. Built on `FOR UPDATE SKIP LOCKED` (PostgreSQL 9.5+, MySQL 8.0+, SQLite) → see [[solid-queue]].
+- **Solid Cache** — DB-backed HTML fragment cache store, replaces Redis/Memcached.
+- **Solid Queue** — DB-backed jobs, replaces Redis + Resque/DelayedJob/Sidekiq. Built on `FOR UPDATE SKIP LOCKED` (PostgreSQL 9.5+, MySQL 8.0+, SQLite).
 - **Propshaft is the default asset pipeline**, replacing Sprockets.
 - **Authentication generator** — scaffolds a session-based, password-resettable, metadata-tracking auth system (PR #52328). Starting point, not a gem.
 

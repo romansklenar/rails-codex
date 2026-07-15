@@ -7,19 +7,7 @@ source:
   author: "Svyatoslav Kryukov"
   url: "https://evilmartians.com/chronicles/now-you-see-it-vite-on-rails-without-the-proxy"
   date: '2026-04-14'
-tags:
-- rails
-- vite
-- propshaft
-- asset-pipeline
-- hmr
-- jsbundling
-- tailwind
-- frontend
-- build-tools
-- javascript
-- css
-- stimulus
+tags: [rails, vite, propshaft, asset-pipeline, hmr, jsbundling, tailwind, frontend, build-tools, javascript, css, stimulus]
 ---
 
 # Vite on Rails Without the Proxy
