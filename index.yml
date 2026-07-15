@@ -442,6 +442,8 @@ insights:
         description: Unicode homograph attack detection for domains and emails via basecamp/homographic_spoofing gem
       hotwire-minimal-js:
         description: Layer Stimulus on existing behavior, server-rendered state, minimal client-side JS
+      hotwire-native-v1-2:
+        description: Hotwire Native v1.2 — RouteDecisionHandlers, server-driven historical location commands, and official native bottom tabs for iOS and Android
       hotwire-spark:
         description: Live reloading for Rails dev — morphs HTML, swaps CSS, hot-reloads Stimulus controllers
       imperative-infrastructure:
