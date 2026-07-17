@@ -118,7 +118,7 @@ Transcripts with real content that was assessed by agents and found to duplicate
 
 - **a-matter-of-ambition-part-2** — continues the ambition series; Part 1 and the core ideas are already in [product development](product-development.md)
 - **before-basecamp** — VC/dot-com era history; no new marketing tactics beyond what's in thematic files
-- **better-product-adam-stoddard** — brand and marketing design critique (messaging-first, SVG assets, Lighthouse scores); relevant to a brand/design file that doesn't yet exist, not to [founder leadership](founder-leadership.md)
+- **better-product-adam-stoddard** — brand and marketing design critique (messaging-first, SVG assets, Lighthouse scores); relevant to a brand/design file that doesn't yet exist, not to `founder-leadership.md`
 - **breaking-the-black-box** — DHH's Apple Card credit-limit Twitter controversy and algorithmic bias in fintech; no applicable insight for existing thematic files
 - **dan-miller** — finance/operations model for a direct-response business; not marketing
 - **know-your-team** — origin story of the Know Your Team spinoff (now Canopy); already captured in [business philosophy](business-philosophy.md) via the spinoff section
