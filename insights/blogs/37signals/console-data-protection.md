@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Console Data Protection"
 description: "Active Record Encryption, Console1984 audit logging, mandatory justification for data access"
+resource: "https://dev.37signals.com/navigating-personal-information-with-care/"
+tags: [rails, security]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Navigating personal information with care"
   author: "Jorge Manrubia"
   url: "https://dev.37signals.com/navigating-personal-information-with-care/"
   date: "2023-09-24"
-tags: [rails, security]
 ---
 
 # Console Data Protection

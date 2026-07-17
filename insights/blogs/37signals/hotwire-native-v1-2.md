@@ -1,12 +1,8 @@
 ---
+type: insight
 title: "Hotwire Native v1.2"
 description: "The biggest Hotwire Native update since launch — RouteDecisionHandlers, built-in server-driven historical location commands, and official native bottom tabs for iOS and Android"
-source:
-  type: blog
-  title: "Announcing Hotwire Native v1.2"
-  author: "Jay Ohms"
-  url: "https://dev.37signals.com/announcing-hotwire-native-v1-2/"
-  date: '2025-04-23'
+resource: "https://dev.37signals.com/announcing-hotwire-native-v1-2/"
 tags:
 - hotwire
 - hotwire-native
@@ -16,6 +12,13 @@ tags:
 - navigation
 - turbo-rails
 - routing
+timestamp: "2026-07-17"
+source:
+  type: blog
+  title: "Announcing Hotwire Native v1.2"
+  author: "Jay Ohms"
+  url: "https://dev.37signals.com/announcing-hotwire-native-v1-2/"
+  date: '2025-04-23'
 ---
 
 # Hotwire Native v1.2

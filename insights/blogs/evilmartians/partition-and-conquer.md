@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Partition and Conquer"
 description: "Migrating a multi-million-row PostgreSQL table to a view-based partitioned schema in production using PL/pgSQL triggers, country-and-month child tables, and a strict deployment methodology"
+resource: "https://evilmartians.com/chronicles/partition-and-conquer"
+tags: [postgresql, rails, performance, partitioning, database, migrations, production, plpgsql]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Sara Dolgan, Denis Lifanov"
   url: "https://evilmartians.com/chronicles/partition-and-conquer"
   date: '2017-11-07'
-tags: [postgresql, rails, performance, partitioning, database, migrations, production, plpgsql]
 ---
 
 # Partition and Conquer

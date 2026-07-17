@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Fractal Code Quality
 description: "Four qualities at every abstraction level — domain-driven, encapsulated, cohesive, symmetric"
+resource: "https://dev.37signals.com/fractal-journeys/"
+tags:
+- process
+- code-quality
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Fractal journeys
   author: Jorge Manrubia
   url: https://dev.37signals.com/fractal-journeys/
   date: '2022-09-18'
-tags:
-- process
-- code-quality
 ---
 
 # Fractal Code Quality

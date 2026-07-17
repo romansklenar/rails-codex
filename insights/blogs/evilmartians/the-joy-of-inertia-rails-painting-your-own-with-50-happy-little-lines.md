@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "The Joy of Inertia Rails: Painting Your Own with 50 Happy Little Lines"
 description: "Builds a working Inertia implementation from scratch — a ~50-line React client and 16-line Rails renderer — to show the entire wire format is one page object, one header, and every feature is that same format applied again."
+resource: "https://evilmartians.com/chronicles/the-joy-of-inertia-rails-painting-your-own-with-50-happy-little-lines"
+tags: [inertia, rails, react, spa, turbolinks, turbo-drive, hotwire, wire-format, csrf, action-controller, vue, svelte]
+timestamp: "2026-07-17"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Svyatoslav Kryukov"
   url: "https://evilmartians.com/chronicles/the-joy-of-inertia-rails-painting-your-own-with-50-happy-little-lines"
   date: '2026-07-14'
-tags: [inertia, rails, react, spa, turbolinks, turbo-drive, hotwire, wire-format, csrf, action-controller, vue, svelte]
 ---
 
 # The Joy of Inertia Rails: Painting Your Own with 50 Happy Little Lines

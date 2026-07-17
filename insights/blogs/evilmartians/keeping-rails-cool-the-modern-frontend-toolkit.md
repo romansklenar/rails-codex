@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Keeping Rails Cool: The Modern Frontend Toolkit"
 description: "Evil Martians' silver toolbox for Rails frontend in 2025: Hotwire for CRUD, Turbo Mount for isolated components, Inertia for SPAs, and Vite Ruby as the unifying build layer"
+resource: "https://evilmartians.com/chronicles/keeping-rails-cool-the-modern-frontend-toolkit"
+tags: [rails, hotwire, turbo-mount, inertia, vite, react, svelte, vue, frontend, architecture]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Irina Nazarova"
   url: "https://evilmartians.com/chronicles/keeping-rails-cool-the-modern-frontend-toolkit"
   date: '2024-12-10'
-tags: [rails, hotwire, turbo-mount, inertia, vite, react, svelte, vue, frontend, architecture]
 ---
 
 # Keeping Rails Cool: The Modern Frontend Toolkit

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Vite-lizing Rails: Get Live Reload and Hot Replacement with Vite Ruby"
 description: "Migrating a Rails app from jsbundling/esbuild to Vite Ruby for live reload, Stimulus HMR, and full-reload on ERB changes, including Dockerized and hybrid dev setups"
+resource: "https://evilmartians.com/chronicles/vite-lizing-rails-get-live-reload-and-hot-replacement-with-vite-ruby"
+tags: [vite, rails, hmr, live-reload, stimulus, docker, webpack, javascript, dx]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/vite-lizing-rails-get-live-reload-and-hot-replacement-with-vite-ruby"
   date: '2022-06-28'
-tags: [vite, rails, hmr, live-reload, stimulus, docker, webpack, javascript, dx]
 ---
 
 # Vite-lizing Rails: Get Live Reload and Hot Replacement with Vite Ruby

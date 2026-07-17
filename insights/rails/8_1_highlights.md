@@ -1,18 +1,21 @@
 ---
+type: insight
 title: Rails 8.1 Highlights
 description: "Resumable jobs (Continuations), structured Event Reporting, local CI via bin/ci, Markdown rendering, credentials-fetch for Kamal, deprecatable associations"
-source:
-  type: guide
-  title: Ruby on Rails 8.1 Release Notes
-  author: Rails Core Team
-  url: https://guides.rubyonrails.org/8_1_release_notes.html
-  date: 2025-10-22
+resource: "https://guides.rubyonrails.org/8_1_release_notes.html"
 tags:
 - rails
 - release-notes
 - active-job
 - observability
 - ci
+timestamp: "2026-07-17"
+source:
+  type: guide
+  title: Ruby on Rails 8.1 Release Notes
+  author: Rails Core Team
+  url: https://guides.rubyonrails.org/8_1_release_notes.html
+  date: 2025-10-22
 ---
 
 # Rails 8.1 Highlights

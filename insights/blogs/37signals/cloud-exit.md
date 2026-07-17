@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Cloud Exit
 description: "Cloud-to-on-prem migration strategy, cost analysis, Kamal deployment, datacenter overview"
+resource: "https://dev.37signals.com/bringing-our-apps-back-home/"
+tags:
+- infrastructure
+- devops
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: De-cloud and de-k8s -- bringing our apps back home
@@ -17,9 +23,6 @@ source:
   author: Eron Nicholson
   url: https://dev.37signals.com/37signals-datacenter-overview/
   date: '2023-08-10'
-tags:
-- infrastructure
-- devops
 ---
 
 # Cloud Exit

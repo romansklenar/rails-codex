@@ -1,16 +1,19 @@
 ---
+type: insight
 title: Product Development & Shipping
 description: "37signals' approach to building software: Shape Up methodology, shipping discipline, product philosophy, and decision-making"
-source:
-  type: podcast
-  title: REWORK
-  author: 37signals
-  url: https://37signals.com/podcast
+resource: "https://37signals.com/podcast"
 tags:
 - product
 - shipping
 - shape-up
 - planning
+timestamp: "2026-03-02"
+source:
+  type: podcast
+  title: REWORK
+  author: 37signals
+  url: https://37signals.com/podcast
 ---
 
 # Product Development & Shipping

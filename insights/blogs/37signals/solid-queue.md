@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Solid Queue
 description: "Database-backed background jobs with FOR UPDATE SKIP LOCKED polling, bulk enqueue, lifecycle hooks, monitoring"
+resource: "https://dev.37signals.com/introducing-solid-queue/"
+tags:
+- rails
+- jobs
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Introducing Solid Queue
@@ -12,9 +18,6 @@ source:
   author: Rosa Gutierrez
   url: https://dev.37signals.com/solid-queue-v1-0/
   date: '2024-09-26'
-tags:
-- rails
-- jobs
 ---
 
 # Solid Queue

@@ -1,18 +1,21 @@
 ---
+type: insight
 title: Rails 8.0 Highlights
 description: "No-PaaS deployment stack — Kamal 2, Thruster, the Solid trio, Propshaft by default, and a built-in authentication generator"
-source:
-  type: guide
-  title: Ruby on Rails 8.0 Release Notes
-  author: Rails Core Team
-  url: https://guides.rubyonrails.org/8_0_release_notes.html
-  date: 2024-11-07
+resource: "https://guides.rubyonrails.org/8_0_release_notes.html"
 tags:
 - rails
 - release-notes
 - deployment
 - kamal
 - solid
+timestamp: "2026-07-17"
+source:
+  type: guide
+  title: Ruby on Rails 8.0 Release Notes
+  author: Rails Core Team
+  url: https://guides.rubyonrails.org/8_0_release_notes.html
+  date: 2024-11-07
 ---
 
 # Rails 8.0 Highlights

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Rosa Gutiérrez: Solid Queue"
 description: "How 37signals built and migrated to Solid Queue — a database-backed ActiveJob backend replacing 7 Resque gems — running 20M+ daily jobs in production on Hey and Basecamp."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17305252-rosa-gutierrez-solid-queue"
+tags: [solid-queue, background-jobs, activejob, resque, migration, database, kamal, rails-8]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17305252-rosa-gutierrez-solid-queue"
   date: 2025-06-24
-tags: [solid-queue, background-jobs, activejob, resque, migration, database, kamal, rails-8]
 ---
 
 # Rosa Gutiérrez: Solid Queue

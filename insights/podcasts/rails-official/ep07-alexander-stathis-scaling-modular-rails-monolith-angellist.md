@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Alexander Stathis: Scaling a Modular Rails Monolith at AngelList"
 description: "How AngelList evolved a Rails monolith into a modular engine structure using Packwerk, Sorbet, and explicit service-layer patterns to manage a deeply interconnected financial domain."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17978596-alexander-stathis-scaling-a-modular-rails-monolith-at-angellist"
+tags: [rails-engines, packwerk, sorbet, modular-monolith, background-jobs, graphql, service-objects, angellist]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17978596-alexander-stathis-scaling-a-modular-rails-monolith-at-angellist"
   date: 2025-10-21
-tags: [rails-engines, packwerk, sorbet, modular-monolith, background-jobs, graphql, service-objects, angellist]
 ---
 
 # Alexander Stathis: Scaling a Modular Rails Monolith at AngelList

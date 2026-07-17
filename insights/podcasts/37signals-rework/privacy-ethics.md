@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Privacy & Ethics
 description: "37signals' stance on surveillance, tracking pixels, employee monitoring, Big Tech accountability, environmental responsibility, platform monopolies, and business ethics"
+resource: "https://37signals.com/podcast"
+tags:
+- privacy
+- ethics
+- surveillance
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- privacy
-- ethics
-- surveillance
 ---
 
 # Privacy & Ethics

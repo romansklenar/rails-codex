@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Logidze 1.0: Active Record, PostgreSQL, Rails, and Time Travel"
 description: "Logidze 1.0 release overview: PostgreSQL-trigger-based versioning for ActiveRecord models storing change history as JSONB in a log_data column, with at/diff_from/responsible_id APIs"
+resource: "https://evilmartians.com/chronicles/logidze-1-0-active-record-postgresql-rails-and-time-travel"
+tags: [rails, postgresql, active-record, versioning, audit-log, logidze, time-travel, database]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/logidze-1-0-active-record-postgresql-rails-and-time-travel"
   date: '2021-01-27'
-tags: [rails, postgresql, active-record, versioning, audit-log, logidze, time-travel, database]
 ---
 
 # Logidze 1.0: Active Record, PostgreSQL, Rails, and Time Travel

@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Skipped Episodes
 description: "REWORK podcast episodes excluded from thematic analysis and the reason each was skipped — to avoid re-analysing in future passes"
+resource: "https://37signals.com/podcast"
+tags:
+- meta
+- rework
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK

@@ -1,12 +1,8 @@
 ---
+type: insight
 title: Moving Mountains of Data off S3
 description: "How 37signals migrated 5 petabytes and 5 billion objects out of S3 in under 10 days using a custom Rails app, DuckDB, rclone, and Pure Storage FlashBlade"
-source:
-  type: talk
-  title: "Moving Mountains of Data off S3"
-  author: Jeremy Daer
-  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
-  date: '2026-01-08'
+resource: "https://dev.37signals.com/moving-mountains-of-data-off-s3/"
 tags:
 - rails
 - s3
@@ -20,6 +16,13 @@ tags:
 - solid-queue
 - active-job
 - flash-storage
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: "Moving Mountains of Data off S3"
+  author: Jeremy Daer
+  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
+  date: '2026-01-08'
 ---
 
 # Moving Mountains of Data off S3

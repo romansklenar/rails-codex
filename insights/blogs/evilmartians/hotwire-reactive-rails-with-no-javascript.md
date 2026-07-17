@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Hotwire: Reactive Rails with No JavaScript?"
 description: "Step-by-step migration of a Rails 6 app from Turbolinks and custom JS to Turbo Drive, Turbo Frames, Turbo Streams, Stimulus, and Custom Elements for real-time reactivity"
+resource: "https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript"
+tags: [hotwire, turbo, stimulus, rails, websockets, action-cable, turbo-streams, turbo-frames]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/hotwire-reactive-rails-with-no-javascript"
   date: '2021-04-12'
-tags: [hotwire, turbo, stimulus, rails, websockets, action-cable, turbo-streams, turbo-frames]
 ---
 
 # Hotwire: Reactive Rails with No JavaScript?

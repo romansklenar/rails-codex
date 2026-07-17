@@ -4,6 +4,8 @@ A structured collection of official documentation, handbooks, style guides, refe
 
 Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Agent OS](https://buildermethods.com/agent-os/concepts)), food for your [Second Brain](https://petermeglis.com/blog/unlock-your-brains-potential-a-beginners-guide-to-obsidian-and-building-a-second-brain/), or just for offline access.
 
+The curated insights under [`insights/`](insights/) form an **[Open Knowledge Format (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 bundle**: a directory tree of Markdown files with YAML frontmatter, one concept per file (`type: insight`), cross-linked and enumerated by `index.md` files — designed to be read by both humans and LLM/agent consumers. Start at [`/index.md`](index.md) (the bundle root) → a category/collection `index.md` → the individual insight files. The `references/` and `style-guide/` trees are mechanically extracted upstream docs and sit outside the OKF bundle.
+
 ## Why?
 - **Comprehensive**: Combines official documentation, handbooks, style guides, and curated insights in one place.
 - **Structured**: Clear separation between official references and manually curated insights.
@@ -15,11 +17,15 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 ```
 ├── .git-submodules/              # Upstream git submodules (auto-managed, not materialized in sparse checkout)
 │
-├── insights/                     # Curated knowledge from blogs, books, talks (manually authored)
-│   ├── blogs/                    #   Blog posts (37signals manifesto, Dev Blog, Evil Martians Chronicles)
-│   ├── books/                    #   Books (TBA)
-│   ├── podcasts/                 #   Podcasts (37signals REWORK, Recordables, On Rails)
-│   └── rails/                    #   Rails release highlights (8.0, 8.1, 8.2) curated from official notes
+├── index.md                      # OKF bundle root (declares okf_version) — start here
+├── log.md                        # OKF bundle-level change history
+│
+├── insights/                     # OKF bundle — curated knowledge, one concept per file
+│   ├── _template.md              #   canonical OKF frontmatter for a new insight
+│   ├── blogs/                    #   37signals (manifesto, Dev Blog), Evil Martians Chronicles
+│   ├── podcasts/                 #   37signals REWORK & RECORDABLES, On Rails
+│   └── rails/                    #   Rails release highlights (8.0, 8.1, 8.2) from official notes
+│                                 #   (each collection carries its own index.md + log.md)
 │
 ├── references/                   # Official docs (auto-extracted from .git-submodules/)
 │   ├── hotwire-native/
@@ -39,7 +45,6 @@ Useful as an input source of knowledge for AI coding agents (e.g. [Claude Code](
 │       └── reference/            #   Attributes, drive, events, frames, streams
 │
 ├── style-guide/                  # Community conventions (auto-extracted)
-├── index.yml                     # Unified index across all sections
 ├── Makefile
 └── README.md
 ```
@@ -67,11 +72,36 @@ Stored as git submodules under `.git-submodules/` to keep the official source re
 
 Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory.
 
-### Insights
+### Insights (OKF bundle)
 
-The `insights/` directory contains curated knowledge extracted from blogs, books, talks, podcasts, and courses. Unlike `references/`, this content is manually authored and committed directly.
+The `insights/` directory is an **[OKF](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 bundle** of curated knowledge distilled from blogs, podcasts, and official release notes. Unlike `references/`, this content is manually authored and committed directly.
 
-Each insight file should use YAML frontmatter for metadata. To add a new insight, copy `insights/_template.md` into the appropriate subdirectory.
+**Insight file format (OKF-conformant).** Every insight file is one OKF **concept**: parseable YAML frontmatter with a non-empty `type`, followed by a dense Markdown body. Copy [`insights/_template.md`](insights/_template.md) to start a new one.
+
+```yaml
+---
+type: insight                       # OKF required — the concept type
+title: "..."                        # OKF recommended — display name (equals the H1)
+description: "..."                  # OKF recommended — one-sentence summary
+resource: "https://..."             # OKF recommended — URI of the underlying asset (the source)
+tags: [rails, hotwire]              # OKF recommended — cross-cutting categorization
+timestamp: "2026-07-17"             # OKF recommended — ISO 8601 date of last meaningful change
+source:                             # OKF extension (producer-defined) — provenance
+  type: blog                        # blog | book | talk | podcast | course | guide
+  title: "..."
+  author: "..."
+  url: "https://..."
+  date: "2025-06-01"                # publication date (distinct from OKF timestamp)
+---
+```
+
+Body conventions (house style): **H1** equal to `title`, immediately followed by the `description` sentence; **H2** sections of **dense bullet points** (no prose paragraphs); comparison tables for trade-offs; short language-tagged fenced code for essential examples. Content faithfully mirrors the source.
+
+**Cross-links.** Concepts link to one another with **standard Markdown relative links** — `[text](other-file.md)` or `[text](../other-collection/file.md)` — which OKF reads as an (untyped) relationship whose meaning comes from the surrounding prose (OKF §5). Plain Markdown links render on GitHub and in Obsidian alike.
+
+**`index.md` and `log.md` (OKF §6–7).** The bundle root [`/index.md`](index.md) declares `okf_version: "0.1"` (the only place frontmatter is allowed in an index) and links the top categories. Each category and collection directory has an `index.md` (no frontmatter) listing its concepts as `* [Title](file.md) - description`. A `log.md` (bundle root + per collection) records change history, newest first, with `# YYYY-MM-DD` headings — populated from git history. Index and log files are (re)generated from the files + git history; don't hand-edit them.
+
+Before adding book insights (public repo), check the publisher's Terms of Service.
 
 ### Style Guides
 
@@ -122,7 +152,7 @@ git sparse-checkout init --cone
 git sparse-checkout set references insights style-guide
 ```
 
-This tells git to only materialize the `references/`, `insights/`, and `style-guide/` directories (plus root files like `README.md` and `index.yml`). The `.git-submodules/` directory won't appear in your working tree at all.
+This tells git to only materialize the `references/`, `insights/`, and `style-guide/` directories (plus root files like `README.md`, `index.md`, and `log.md`). The `.git-submodules/` directory won't appear in your working tree at all.
 
 ### Update the submodule later
 

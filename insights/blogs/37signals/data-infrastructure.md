@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Data Infrastructure
 description: "S3 migration, Harbor registry, Pure Storage monitoring — Rails as orchestration layer"
+resource: "https://dev.37signals.com/moving-mountains-of-data-off-s3/"
+tags:
+- infrastructure
+- devops
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Moving Mountains of Data off S3
@@ -17,9 +23,6 @@ source:
   author: Victor Bogo
   url: https://dev.37signals.com/pure-storage-monitoring/
   date: '2025-01-02'
-tags:
-- infrastructure
-- devops
 ---
 
 # Data Infrastructure

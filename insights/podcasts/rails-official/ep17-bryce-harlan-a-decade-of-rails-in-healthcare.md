@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Bryce Harlan: A Decade of Rails in Healthcare"
 description: "Jaan Health senior principal engineer Bryce Harlan on a decade of running a HIPAA-regulated between-visit care-management platform on Rails, from a Rails 4-to-6 rewrite to SLA-named Sidekiq queues, a bespoke ActionResponder API layer, and AI-assisted feature pipelines."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19436980-bryce-harlan-a-decade-of-rails-in-healthcare"
+tags: [rails, healthcare, hipaa, sidekiq, background-jobs, api, activerecord, twilio, testing, ai-assisted-development, architecture, upgrades]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19436980-bryce-harlan-a-decade-of-rails-in-healthcare"
   date: 2026-07-08
-tags: [rails, healthcare, hipaa, sidekiq, background-jobs, api, activerecord, twilio, testing, ai-assisted-development, architecture, upgrades]
 ---
 
 # Bryce Harlan: A Decade of Rails in Healthcare

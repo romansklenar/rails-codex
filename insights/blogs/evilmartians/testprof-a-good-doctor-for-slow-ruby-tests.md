@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "TestProf: A Good Doctor for Slow Ruby Tests"
 description: "Introduction to the TestProf gem toolbox for profiling and optimizing slow Ruby/Rails test suites using tag profiling, event profiling, factory analysis, and automated tagging"
+resource: "https://evilmartians.com/chronicles/testprof-a-good-doctor-for-slow-ruby-tests"
+tags: [ruby, rails, testing, rspec, minitest, test-performance, testprof, factory-bot, profiling, ci]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/testprof-a-good-doctor-for-slow-ruby-tests"
   date: '2024-08-11'
-tags: [ruby, rails, testing, rspec, minitest, test-performance, testprof, factory-bot, profiling, ci]
 ---
 
 # TestProf: A Good Doctor for Slow Ruby Tests

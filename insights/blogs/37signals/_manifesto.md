@@ -1,15 +1,18 @@
 ---
+type: insight
 title: 37signals Manifesto
 description: "37 principles on product development, work culture, business philosophy, and decision-making"
+resource: "https://37signals.com"
+tags:
+- philosophy
+- culture
+- product
+timestamp: "2026-03-02"
 source:
   type: blog
   title: 37signals Manifesto
   author: 37signals
   url: https://37signals.com
-tags:
-- philosophy
-- culture
-- product
 ---
 
 # 37signals Manifesto

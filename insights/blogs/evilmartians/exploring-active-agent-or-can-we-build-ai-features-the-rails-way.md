@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Exploring Active Agent: Can We Build AI Features the Rails Way?"
 description: "Active Agent brings Rails conventions to LLM-backed logic via agent classes, Action View prompt templates, tool/function calling, and callback hooks — mirroring the controller/mailer pattern for AI generations"
+resource: "https://evilmartians.com/chronicles/exploring-active-agent-or-can-we-build-ai-features-the-rails-way"
+tags: [rails, ai, llm, active-agent, agents, ruby, tool-calling, prompt-templates]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Evil Martians"
   url: "https://evilmartians.com/chronicles/exploring-active-agent-or-can-we-build-ai-features-the-rails-way"
   date: '2025-09-10'
-tags: [rails, ai, llm, active-agent, agents, ruby, tool-calling, prompt-templates]
 ---
 
 # Exploring Active Agent: Can We Build AI Features the Rails Way?

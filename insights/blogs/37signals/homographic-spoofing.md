@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Homographic Spoofing Detection
 description: "Unicode homograph attack detection for domains and emails via basecamp/homographic_spoofing gem"
+resource: "https://dev.37signals.com/homographic-spoofing/"
+tags:
+- security
+- ruby
+timestamp: "2026-03-02"
 source:
   type: blog
   title: 'Homographic Spoofing: a new Ruby toolkit'
   author: Jacopo Beschi
   url: https://dev.37signals.com/homographic-spoofing/
   date: '2024-06-25'
-tags:
-- security
-- ruby
 ---
 
 # Homographic Spoofing Detection

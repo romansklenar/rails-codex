@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Tom Rossi: Staying as Rails as Possible"
 description: "Tom Rossi, co-founder of Buzzsprout, explains how a small team hosting 472,000 podcasts stays deliberately close to vanilla Rails — minimizing dependencies, monkey-patching Active Storage for public assets, and adopting ClickHouse — treating framework defaults as a pragmatic business advantage rather than a purity exercise."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19156473-tom-rossi-staying-as-rails-as-possible"
+tags: [active-storage, olap, clickhouse, caching, cdn, hotwire, dependencies, payments, multiple-databases, small-teams]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19156473-tom-rossi-staying-as-rails-as-possible"
   date: 2026-05-15
-tags: [active-storage, olap, clickhouse, caching, cdn, hotwire, dependencies, payments, multiple-databases, small-teams]
 ---
 
 # Tom Rossi: Staying as Rails as Possible

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Nikky Southerland: Lessons from 13 Years of Rails at the Auto Shop"
 description: "How Shop-Ware's small team maintains and evolves a 13-year-old, couple-hundred-thousand-line Rails monolith for auto-shop management — migrating Backbone to React, unwinding a regretted two-codebase API split, shifting from biweekly to daily deploys, and rethinking Postgres connection and hosting strategy off Heroku."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19319172-nikky-southerland-lessons-from-13-years-of-rails-at-the-auto-shop"
+tags: [monolith, legacy-rails, backbone, react, frontend-migration, api-design, rest, deployment, continuous-deployment, feature-flags, postgres, connection-pooling, heroku, multi-tenancy, observability, llm, activerecord, seed-data, websockets]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19319172-nikky-southerland-lessons-from-13-years-of-rails-at-the-auto-shop"
   date: 2026-06-30
-tags: [monolith, legacy-rails, backbone, react, frontend-migration, api-design, rest, deployment, continuous-deployment, feature-flags, postgres, connection-pooling, heroku, multi-tenancy, observability, llm, activerecord, seed-data, websockets]
 ---
 
 # Nikky Southerland: Lessons from 13 Years of Rails at the Auto Shop

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "DHH: Basecamp 5, Vibe Coding, and the Future of Rails"
 description: "DHH on how modern Rails shaped Basecamp 5, why the backend has stayed stable for 20 years, the coming ActionText/Passkey extractions, and how agentic AI is compressing the software process from prompt to IPO."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-coding-and-the-future-of-rails"
+tags: [rails, basecamp, ai-agents, vibe-coding, hotwire, actiontext, passkeys, shape-up, framework-philosophy, 37signals]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-coding-and-the-future-of-rails"
   date: 2026-06-12
-tags: [rails, basecamp, ai-agents, vibe-coding, hotwire, actiontext, passkeys, shape-up, framework-philosophy, 37signals]
 ---
 
 # DHH: Basecamp 5, Vibe Coding, and the Future of Rails

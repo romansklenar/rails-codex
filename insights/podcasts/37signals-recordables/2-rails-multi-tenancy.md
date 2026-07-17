@@ -1,12 +1,8 @@
 ---
+type: insight
 title: Rails Multi-Tenancy
 description: "How 37signals built the active_record_tenanted gem to make Rails multi-tenancy safe, efficient, and framework-wide"
-source:
-  type: talk
-  title: Rails Multi-Tenancy
-  author: Mike Dalessio
-  url: https://dev.37signals.com/rails-multi-tenancy/
-  date: '2026-02-13'
+resource: "https://dev.37signals.com/rails-multi-tenancy/"
 tags:
 - rails
 - multi-tenancy
@@ -16,6 +12,13 @@ tags:
 - architecture
 - fizzy
 - once
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: Rails Multi-Tenancy
+  author: Mike Dalessio
+  url: https://dev.37signals.com/rails-multi-tenancy/
+  date: '2026-02-13'
 ---
 
 # Rails Multi-Tenancy

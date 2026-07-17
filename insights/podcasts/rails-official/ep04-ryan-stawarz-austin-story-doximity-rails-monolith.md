@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Ryan Stawarz & Austin Story: Inside Doximity's 15-Year Rails Monolith"
 description: "How Doximity scaled a single Rails monolith to 100–150 engineers by adopting GraphQL Federation for mobile-safe API evolution, Packwerk for domain isolation, and pragmatic service extraction over premature microservices."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17653501-ryan-stawarz-austin-story-inside-doximity-s-15-year-rails-monolith"
+tags: [rails-monolith, graphql, graphql-federation, packwerk, actioncable, database-migrations, scaling, healthcare]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17653501-ryan-stawarz-austin-story-inside-doximity-s-15-year-rails-monolith"
   date: 2025-08-12
-tags: [rails-monolith, graphql, graphql-federation, packwerk, actioncable, database-migrations, scaling, healthcare]
 ---
 
 # Ryan Stawarz & Austin Story: Inside Doximity's 15-Year Rails Monolith

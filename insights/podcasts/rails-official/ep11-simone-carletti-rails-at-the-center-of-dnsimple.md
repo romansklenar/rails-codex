@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Simone Carletti: Rails at the Center of DNSimple"
 description: "Simone Carletti explains how a globally distributed DNS platform keeps a single long-lived Rails app at its core — orchestrating domain and DNS registration through an interactor/service layer — while Go and Erlang handle the edge, and how a 15-person team scaled operations with Shape Up, containerization, and an interactor-driven testing strategy."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18999348-simone-carletti-rails-at-the-center-of-dnsimple"
+tags: [architecture, service-objects, dns, polyglot, containerization, docker, testing, shape-up, ai-tooling, structured-logging]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18999348-simone-carletti-rails-at-the-center-of-dnsimple"
   date: 2026-04-13
-tags: [architecture, service-objects, dns, polyglot, containerization, docker, testing, shape-up, ai-tooling, structured-logging]
 ---
 
 # Simone Carletti: Rails at the Center of DNSimple

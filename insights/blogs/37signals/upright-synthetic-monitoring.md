@@ -1,15 +1,18 @@
 ---
+type: insight
 title: 'Upright: Synthetic Monitoring'
 description: "Open-source Rails-based synthetic monitoring — Playwright/HTTP/SMTP probes, multi-location"
+resource: "https://dev.37signals.com/introducing-upright/"
+tags:
+- monitoring
+- devops
+timestamp: "2026-03-02"
 source:
   type: blog
   title: 'Introducing Upright: An Open Source Synthetic Monitoring System'
   author: Lewis Buckley
   url: https://dev.37signals.com/introducing-upright/
   date: '2026-02-16'
-tags:
-- monitoring
-- devops
 ---
 
 # Upright: Synthetic Monitoring

@@ -1,15 +1,18 @@
 ---
+type: insight
 title: 'Hotwire: Minimal JavaScript'
 description: "Layer Stimulus on existing behavior, server-rendered state, minimal client-side JS"
+resource: "https://dev.37signals.com/building-basecamp-project-stacks-with-hotwire/"
+tags:
+- hotwire
+- stimulus
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Building Basecamp project stacks with Hotwire
   author: Nicklas Ramhoj Holtryd
   url: https://dev.37signals.com/building-basecamp-project-stacks-with-hotwire/
   date: '2023-11-07'
-tags:
-- hotwire
-- stimulus
 ---
 
 # Hotwire: Minimal JavaScript

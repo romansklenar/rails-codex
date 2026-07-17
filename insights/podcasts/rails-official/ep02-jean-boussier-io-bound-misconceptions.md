@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jean Boussier: IO-Bound Misconceptions"
 description: "Jean Boussier (Shopify Rails infrastructure, Rails Core) dismantles the assumption that Rails apps are IO-bound, explains how Pitchfork and copy-on-write work under the hood, how to measure GVL contention properly, and why treating gems as your own code is a career-defining skill."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17496711-jean-boussier-io-bound-misconceptions"
+tags: [performance, concurrency, gvl, threading, ruby-internals, instrumentation, background-jobs, rails-core, pitchfork, gems]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17496711-jean-boussier-io-bound-misconceptions"
   date: 2025-07-14
-tags: [performance, concurrency, gvl, threading, ruby-internals, instrumentation, background-jobs, rails-core, pitchfork, gems]
 ---
 
 # Jean Boussier: IO-Bound Misconceptions

@@ -1,18 +1,21 @@
 ---
+type: insight
 title: Rails 8.2 Highlights
 description: "In-development: header-based CSRF via Sec-Fetch-Site, Rails.app + creds/revision, Argon2 for has_secure_password, has_json schemas, attachment analysis before validation"
-source:
-  type: guide
-  title: Ruby on Rails 8.2 Release Notes (in development)
-  author: Rails Core Team
-  url: https://edgeguides.rubyonrails.org/8_2_release_notes.html
-  date: 2026-07-15
+resource: "https://edgeguides.rubyonrails.org/8_2_release_notes.html"
 tags:
 - rails
 - release-notes
 - security
 - csrf
 - edge
+timestamp: "2026-07-17"
+source:
+  type: guide
+  title: Ruby on Rails 8.2 Release Notes (in development)
+  author: Rails Core Team
+  url: https://edgeguides.rubyonrails.org/8_2_release_notes.html
+  date: 2026-07-15
 ---
 
 # Rails 8.2 Highlights

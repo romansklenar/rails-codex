@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jason Meller: Rails, Security, and the AI Advantage"
 description: "Rails' concise, uniform code makes it uniquely token-efficient for AI-assisted development, while the same AI tools rummaging through developer machines are turning developers into prime targets for cheap, scalable attacks."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19128572-jason-meller-rails-security-and-the-ai-advantage"
+tags: [security, ai, llm, phishing, rails, multi-tenancy, secrets-management, developer-tooling, 1password, token-efficiency]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19128572-jason-meller-rails-security-and-the-ai-advantage"
   date: 2026-05-06
-tags: [security, ai, llm, phishing, rails, multi-tenancy, secrets-management, developer-tooling, 1password, token-efficiency]
 ---
 
 # Jason Meller: Rails, Security, and the AI Advantage

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "2 Martians, Greenfield to MVP in 4 Weeks: Agentic Coding on Rails"
 description: "A two-person designer + engineer team shipped a production MVP in 4 weeks using Rails + Inertia + React in a single repo with Storybook as the design environment, treating Rails conventions as architectural guardrails and open-source skills as project-specific constraints for AI agents"
+resource: "https://evilmartians.com/chronicles/2-martians-greenfield-to-mvp-in-4-weeks-agentic-coding-on-rails"
+tags: [rails, inertia, react, agentic-coding, ai-assisted-development, claude-code, storybook, skills, greenfield, mvp, stripe-connect, layered-design]
+timestamp: "2026-07-17"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Gleb Stroganov"
   url: "https://evilmartians.com/chronicles/2-martians-greenfield-to-mvp-in-4-weeks-agentic-coding-on-rails"
   date: '2026-06-09'
-tags: [rails, inertia, react, agentic-coding, ai-assisted-development, claude-code, storybook, skills, greenfield, mvp, stripe-connect, layered-design]
 ---
 
 # 2 Martians, Greenfield to MVP in 4 Weeks: Agentic Coding on Rails

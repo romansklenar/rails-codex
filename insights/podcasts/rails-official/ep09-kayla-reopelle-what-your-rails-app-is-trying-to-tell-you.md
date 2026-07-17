@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Kayla Reopelle: What Your Rails App Is Trying To Tell You"
 description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18215229-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you"
+tags: [observability, opentelemetry, tracing, metrics, logging, rails, instrumentation, active-support-notifications, ruby-agent]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18215229-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you"
   date: 2025-11-19
-tags: [observability, opentelemetry, tracing, metrics, logging, rails, instrumentation, active-support-notifications, ruby-agent]
 ---
 
 # Kayla Reopelle: What Your Rails App Is Trying To Tell You

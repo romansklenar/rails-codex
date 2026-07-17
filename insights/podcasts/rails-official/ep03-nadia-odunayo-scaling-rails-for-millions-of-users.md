@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Nadia Odunayo: Scaling Rails for Millions of Users as a Solo Dev"
 description: "How Nadia Odunayo built and scaled The StoryGraph — a Goodreads alternative with 4M+ registered users and 1M+ daily unique visitors — entirely solo on Rails, covering the PWA failure, Turbo Native adoption, in-app purchase complexity, the Heroku exit, the YugabyteDB migration, and the philosophy of deliberate solo operation."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17575580-nadia-odunayo-scaling-rails-for-millions-of-users-as-a-solo-dev"
+tags: [scaling, solo-developer, turbo-native, database, background-jobs, mobile, infrastructure, yugabytedb, in-app-purchases, performance]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17575580-nadia-odunayo-scaling-rails-for-millions-of-users-as-a-solo-dev"
   date: 2025-07-28
-tags: [scaling, solo-developer, turbo-native, database, background-jobs, mobile, infrastructure, yugabytedb, in-app-purchases, performance]
 ---
 
 # Nadia Odunayo: Scaling Rails for Millions of Users as a Solo Dev

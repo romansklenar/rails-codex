@@ -1,15 +1,18 @@
 ---
+type: insight
 title: 'Lexxy: Rich Text Editor for Rails'
 description: "Lexical-based Action Text editor with proper HTML semantics, Markdown support, configurable editor interface"
+resource: "https://dev.37signals.com/announcing-lexxy-a-new-rich-text-editor-for-rails/"
+tags:
+- rails
+- rich-text
+timestamp: "2026-03-02"
 source:
   type: blog
   title: 'Lexxy: A new rich text editor for Rails'
   author: Jorge Manrubia
   url: https://dev.37signals.com/announcing-lexxy-a-new-rich-text-editor-for-rails/
   date: '2025-09-04'
-tags:
-- rails
-- rich-text
 ---
 
 # Lexxy: Rich Text Editor for Rails

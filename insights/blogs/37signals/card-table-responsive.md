@@ -1,15 +1,18 @@
 ---
+type: insight
 title: 'Card Table Responsive: Native Mobile Adaptation'
 description: "Native mobile adaptation patterns, triage toggle UX, constraint-driven scope"
+resource: "https://dev.37signals.com/bringing-card-table-to-the-small-screen/"
+tags:
+- native
+- responsive
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Bringing Card Table to the small screen
   author: Jirka Hutarek
   url: https://dev.37signals.com/bringing-card-table-to-the-small-screen/
   date: '2023-02-15'
-tags:
-- native
-- responsive
 ---
 
 # Card Table Responsive: Native Mobile Adaptation

@@ -1,12 +1,8 @@
 ---
+type: insight
 title: The Rails Delegated Type Pattern
 description: "How 37signals uses delegated types, immutable recordables, and a tree of recordings to build a content system that scales without rewrites"
-source:
-  type: talk
-  title: "The Rails Delegated Type Pattern"
-  author: Jeffrey Hardy
-  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
-  date: '2025-12-19'
+resource: "https://dev.37signals.com/the-rails-delegated-type-pattern/"
 tags:
 - rails
 - active-record
@@ -15,6 +11,13 @@ tags:
 - patterns
 - basecamp
 - architecture
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: "The Rails Delegated Type Pattern"
+  author: Jeffrey Hardy
+  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
+  date: '2025-12-19'
 ---
 
 # The Rails Delegated Type Pattern

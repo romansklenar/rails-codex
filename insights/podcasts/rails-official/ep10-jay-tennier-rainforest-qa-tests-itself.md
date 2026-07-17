@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jay Tennier: How Testing Platform Rainforest QA Tests Itself"
 description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18317355-jay-tennier-how-testing-platform-rainforest-qa-tests-itself"
+tags: [testing, monolith, background-jobs, data-management, api-design, third-party-integration, team-scaling, activerecord]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18317355-jay-tennier-how-testing-platform-rainforest-qa-tests-itself"
   date: 2025-12-09
-tags: [testing, monolith, background-jobs, data-management, api-design, third-party-integration, team-scaling, activerecord]
 ---
 
 # Jay Tennier: How Testing Platform Rainforest QA Tests Itself

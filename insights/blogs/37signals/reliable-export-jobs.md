@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Reliable Export Jobs
 description: "Interruptible long-running jobs with waypoint progress, server affinity, bounded execution"
+resource: "https://dev.37signals.com/making-export-jobs-more-reliable/"
+tags:
+- rails
+- jobs
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Making export jobs more reliable
   author: Jamis Buck
   url: https://dev.37signals.com/making-export-jobs-more-reliable/
   date: '2022-11-15'
-tags:
-- rails
-- jobs
 ---
 
 # Reliable Export Jobs

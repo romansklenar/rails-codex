@@ -1,12 +1,8 @@
 ---
+type: insight
 title: The ONCE App Server
 description: "How 37signals turned single-app self-hosted installs into a Nintendo-cartridge-style console that runs multiple Dockerized web apps on one machine with gapless deploys, SQLite storage, and near-zero configuration."
-source:
-  type: talk
-  title: The ONCE App Server
-  author: David Heinemeier Hansson & Kevin McConnell
-  url: https://dev.37signals.com/once-app-server/
-  date: '2026-04-17'
+resource: "https://dev.37signals.com/once-app-server/"
 tags:
 - once
 - self-hosting
@@ -20,6 +16,13 @@ tags:
 - data-ownership
 - rails
 - tui
+timestamp: "2026-07-17"
+source:
+  type: talk
+  title: The ONCE App Server
+  author: David Heinemeier Hansson & Kevin McConnell
+  url: https://dev.37signals.com/once-app-server/
+  date: '2026-04-17'
 ---
 
 # The ONCE App Server

@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Vanilla Rails Stack
 description: "Minimize dependencies, use what Rails provides, nobuild philosophy"
+resource: "https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/"
+tags:
+- rails
+- architecture
+timestamp: "2026-03-02"
 source:
   type: blog
   title: A vanilla Rails stack is plenty
   author: Jorge Manrubia
   url: https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/
   date: '2024-12-12'
-tags:
-- rails
-- architecture
 ---
 
 # Vanilla Rails Stack

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "5 Tips for Dealing with Heavy ActiveRecord Dashboards in Rails"
 description: "Performance techniques for Rails dashboard views: building explicit data structures, restricting view API to prevent N+1 queries, eager loading with association load guards, selective column loading, and denormalization via PostgreSQL materialized views"
+resource: "https://evilmartians.com/chronicles/5-tips-for-activerecord-dashboards"
+tags: [rails, activerecord, performance, postgresql, n-plus-one, dashboards, optimization]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Kir Shatrov"
   url: "https://evilmartians.com/chronicles/5-tips-for-activerecord-dashboards"
   date: '2016-01-12'
-tags: [rails, activerecord, performance, postgresql, n-plus-one, dashboards, optimization]
 ---
 
 # 5 Tips for Dealing with Heavy ActiveRecord Dashboards in Rails

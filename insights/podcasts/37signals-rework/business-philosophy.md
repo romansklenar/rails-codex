@@ -1,11 +1,8 @@
 ---
+type: insight
 title: Business Philosophy
 description: "37signals' business principles: profitable independence, anti-VC stance, ONCE pay-once model, product longevity commitment, and open source as foundational obligation"
-source:
-  type: podcast
-  title: REWORK
-  author: 37signals
-  url: https://37signals.com/podcast
+resource: "https://37signals.com/podcast"
 tags:
 - business
 - profit
@@ -13,6 +10,12 @@ tags:
 - open-source
 - once
 - bootstrapping
+timestamp: "2026-03-02"
+source:
+  type: podcast
+  title: REWORK
+  author: 37signals
+  url: https://37signals.com/podcast
 ---
 
 # Business Philosophy

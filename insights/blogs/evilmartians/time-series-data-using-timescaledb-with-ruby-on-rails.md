@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "TimescaleDB: Integrating Time-Series Data with Ruby on Rails"
 description: "Practical guide to using TimescaleDB with Rails via the timescaledb-ruby gem, covering hypertables, continuous aggregates, data retention policies, and 10-100x query speedups over plain PostgreSQL"
+resource: "https://evilmartians.com/chronicles/time-series-data-using-timescaledb-with-ruby-on-rails"
+tags: [rails, postgresql, timescaledb, time-series, database, performance, active-record, analytics]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Iana Ivanisevych"
   url: "https://evilmartians.com/chronicles/time-series-data-using-timescaledb-with-ruby-on-rails"
   date: '2021-11-16'
-tags: [rails, postgresql, timescaledb, time-series, database, performance, active-record, analytics]
 ---
 
 # TimescaleDB: Integrating Time-Series Data with Ruby on Rails

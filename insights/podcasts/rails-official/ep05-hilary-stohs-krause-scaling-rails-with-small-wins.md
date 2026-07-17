@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Hilary Stohs-Krause: Scaling Rails with Small Wins"
 description: "How incremental, developer-level performance habits — choosing the right ActiveRecord method, eliminating flaky tests, standardizing code conventions — compound into meaningful system-wide improvements in a large Rails monolith."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17742159-hilary-stohs-krause-scaling-rails-with-small-wins"
+tags: [performance, activerecord, testing, flaky-tests, hotwire, turbo, stimulus, rubocop, engineering-culture, monolith]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17742159-hilary-stohs-krause-scaling-rails-with-small-wins"
   date: 2025-09-01
-tags: [performance, activerecord, testing, flaky-tests, hotwire, turbo, stimulus, rubocop, engineering-culture, monolith]
 ---
 
 # Hilary Stohs-Krause: Scaling Rails with Small Wins

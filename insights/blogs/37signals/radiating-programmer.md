@@ -1,15 +1,18 @@
 ---
+type: insight
 title: The Radiating Programmer
 description: "Proactive async communication, non-blocking decisions, push information outward"
+resource: "https://dev.37signals.com/the-radiating-programmer/"
+tags:
+- process
+- communication
+timestamp: "2026-03-02"
 source:
   type: blog
   title: The radiating programmer
   author: Jorge Manrubia
   url: https://dev.37signals.com/the-radiating-programmer/
   date: '2023-11-19'
-tags:
-- process
-- communication
 ---
 
 # The Radiating Programmer

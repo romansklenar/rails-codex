@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Writing Custom RuboCop Rules in 2026"
 description: "Modern guide to authoring RuboCop cops using the new plugin system, requires_gem API, InternalAffairs linting, safe autocorrection patterns, and cop distribution"
+resource: "https://evilmartians.com/chronicles/writing-custom-rubocop-rules-in-2026"
+tags: [ruby, rubocop, linting, static-analysis, code-style, autocorrection, plugins]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Nikita Mishchenko"
   url: "https://evilmartians.com/chronicles/writing-custom-rubocop-rules-in-2026"
   date: '2026-02-18'
-tags: [ruby, rubocop, linting, static-analysis, code-style, autocorrection, plugins]
 ---
 
 # Writing Custom RuboCop Rules in 2026
