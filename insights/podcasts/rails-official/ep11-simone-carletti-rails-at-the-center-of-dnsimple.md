@@ -86,7 +86,7 @@ Simone Carletti (CTO of DNSimple) walks through how a 15-engineer team anchors a
 
 ## Shape Up, the Rotating Bench, and On-Call Ownership
 
-- Adopted **Shape Up** ~3–4 years ago, but customized it — Shape Up was built at 37signals for **feature** work, while DNSimple is an **operational** company facing daily ops challenges
+- Adopted **Shape Up** ~3–4 years ago, but customized it — [Shape Up](../37signals-rework/product-development.md) was built at 37signals for **feature** work, while DNSimple is an **operational** company facing daily ops challenges
 - The **bench**: a rotating group not booked into the main build cycle, working a special queue of small (1–3 day), non-time-sensitive items; they can drop work anytime for incidents, remediation tasks, or cross-team requests, then return
 - The bench doubles as a **knowledge-distribution** mechanism — exposes rotating members to components they haven't touched, without the deadline pressure of a build cycle (being refined again in 2026)
 - **Categories of risk are codified**: anything putting a customer asset at risk (e.g. a domain about to expire) is a "stop the world" event — which is why bench work must be interruptible without derailing the build cycle
@@ -101,7 +101,7 @@ Simone Carletti (CTO of DNSimple) walks through how a 15-engineer team anchors a
 - Key shift: **migrating highly technical docs back into the repository as markdown** (e.g. how to emit an event, write an audit-log entry, use the internal metrics/telemetry abstraction) so AI coding/review tools can follow those conventions as local context — moving from human reviewers catching hardcoded strings to agentic workflows enforcing conventions
 - Ran a workshop at the company retreat on using AI tools locally
 - Switched wikis from GitHub Wiki (usable only by engineers, no WYSIWYG) to a classic word-processor-style wiki so non-technical staff would actually contribute
-- **Structured logging** is a pivotal architectural moment: **lograge** (Mathias Meyer, ex-Travis CI) formats Rails logs into structured JSON; learned about it ~2014–2015 and rolled JSON structured logging across the entire ecosystem, feeding aggregation tools (Papertrail then, OpenTelemetry-style stacks now) — Rails historically lacked structured logging (some event logging arriving in Rails 8.1)
+- **Structured logging** is a pivotal architectural moment: **lograge** (Mathias Meyer, ex-Travis CI) formats Rails logs into structured JSON; learned about it ~2014–2015 and rolled JSON structured logging across the entire ecosystem, feeding aggregation tools (Papertrail then, OpenTelemetry-style stacks now) — Rails historically lacked structured logging (some [event logging arriving in Rails 8.1](../../rails/8_1_highlights.md))
 - Other key gems: **Sidekiq** (Enterprise, paid for years) for async jobs
 
 ## Scale, Rails Philosophy, and Lessons

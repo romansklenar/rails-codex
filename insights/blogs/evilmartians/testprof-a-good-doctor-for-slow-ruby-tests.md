@@ -79,7 +79,7 @@ TestProf is a Ruby test profiling toolbox that bundles tips and tools for identi
 
 - Factory cascades = nested factory associations creating excess database records uncontrollably
 - A single `create(:user)` may trigger cascading `create` calls for associated models (address, profile, organization, etc.)
-- TestProf's factory profiling tools (covered in TestProf II) detect and quantify cascade waste
+- TestProf's factory profiling tools (covered in [TestProf II](testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest.md)) detect and quantify cascade waste
 - Cascade problems are a leading cause of test suite slowdowns in Rails apps with complex models
 
 ## Background Job Profiling
@@ -108,4 +108,4 @@ TestProf is a Ruby test profiling toolbox that bundles tips and tools for identi
 - Works with both RSpec and Minitest
 - All profilers activated via environment variables — zero code changes required for basic profiling
 - Reports output to `tmp/test_prof/` directory by default
-- Part one of a three-part series: Part II covers factory optimization; Part III covers guided and automated profiling
+- Part one of a three-part series: Part II covers factory optimization; [Part III](test-prof-3-guided-and-automated-ruby-test-profiling.md) covers guided and automated profiling

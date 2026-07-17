@@ -37,7 +37,7 @@ Doximity grew from ~20 Rails engineers in 2016 to 100–150 today on a single 15
 ## Why GraphQL: Mobile Safety and Type Contracts
 
 - Primary driver was preventing accidental breaking changes to iOS/Android clients — REST APIs made it too easy to iterate on the backend and crash mobile without warning
-- GraphQL-Ruby gem powers the implementation; graphql-batch (Shopify's batch_loader gem) is used server-side to resolve N+1 queries that arise because GraphQL field resolution order is not predetermined
+- GraphQL-Ruby gem powers the implementation; graphql-batch (Shopify's batch_loader gem) is used server-side to resolve [N+1 queries](../../blogs/evilmartians/how-to-graphql-with-ruby-rails-active-record-and-no-n-plus-one.md) that arise because GraphQL field resolution order is not predetermined
 - `batch_loader` defers DB queries by accumulating IDs across the resolver tree, then fires a single batched query when the result is actually accessed during JSON rendering
 - REST is still used where it's the right fit; mobile developers actively prefer GraphQL because request/response types, error codes, and field contracts are explicit and validated
 - GraphQL sat inside the monolith initially; teams mapped external microservice data into monolith types via gems — this required up to 4 coordinated deploys per small change
@@ -62,7 +62,7 @@ Doximity grew from ~20 Rails engineers in 2016 to 100–150 today on a single 15
 ## Realtime Features: ActionCable and AnyCable
 
 - ActionCable (with Redis pub/sub adapter) is used for admin apps and lower-scale realtime needs
-- AnyCable is used for the Dialer product (Doximity's video/voice platform) where WebSocket connection continuity across Rails deploys is critical; they self-host the AnyCable Go service within their container infrastructure
+- [AnyCable](../../blogs/evilmartians/enter-anycable-v1-4-reliable-real-time-features-for-apps-of-any-size.md) is used for the Dialer product (Doximity's video/voice platform) where WebSocket connection continuity across Rails deploys is critical; they self-host the AnyCable Go service within their container infrastructure
 - AnyCable's Go service keeps WebSocket connections open during Rails app restarts/deploys; Rails still communicates via the standard ActionCable API — the Go service is transparent to developers
 - Push notifications for mobile use Firebase; most messaging features (clinical messaging) do not require true realtime because physicians send and check asynchronously — polling was tried and abandoned as too expensive
 - Most of the platform deliberately does not implement realtime; product decisions are driven by actual clinician behavior patterns, not assumed requirements

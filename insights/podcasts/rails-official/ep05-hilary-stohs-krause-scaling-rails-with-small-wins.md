@@ -64,8 +64,8 @@ Senior Software Engineer Hilary Stohs-Krause (Red Canary) makes the case that ev
 - The migration rationale was primarily developer familiarity: most engineers at Red Canary were hired for Ruby/Rails skills, and React code slowed down changes because few engineers had deep React experience
 - Performance in React-heavy areas of the product was a contributing (not primary) factor — those areas were the ones most often associated with loading bottlenecks
 - Migration strategy: convert a page only when it is already scheduled for a larger redesign/feature overhaul, not as a standalone refactor; this avoids one-to-one parity work and lets the team build what is actually needed
-- A shared ViewComponent library built by designer-engineers dramatically reduced conversion effort — one engineer converted a large React table to a ViewComponent in far less time than expected because he could instantiate an existing component rather than rewrite JavaScript from scratch
-- CoffeeScript files lingered in the repository until a deliberate cleanup effort was championed; a custom RuboCop cop now prevents new CoffeeScript files from being added
+- A shared [ViewComponent](../../blogs/evilmartians/viewcomponent-in-the-wild-building-modern-rails-frontends.md) library built by designer-engineers dramatically reduced conversion effort — one engineer converted a large React table to a ViewComponent in far less time than expected because he could instantiate an existing component rather than rewrite JavaScript from scratch
+- CoffeeScript files lingered in the repository until a deliberate cleanup effort was championed; a [custom RuboCop cop](../../blogs/evilmartians/writing-custom-rubocop-rules-in-2026.md) now prevents new CoffeeScript files from being added
 - React code still exists in the repo and is being maintained in parallel during the transition; engineers writing new React code during this period accept that it will need conversion later
 - SitePrism made new system specs for Turbo/Stimulus-backed pages easier to write and less brittle than the equivalent React system specs had been
 

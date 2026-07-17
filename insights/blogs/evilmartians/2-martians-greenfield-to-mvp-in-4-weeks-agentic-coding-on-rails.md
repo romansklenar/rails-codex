@@ -86,7 +86,7 @@ A designer and a backend engineer shipped a full production MVP in four weeks on
   ```
 - Bug emerged when a new sortable field was added on the frontend but not reflected on the backend — needed sorting via an **associated (joined) table**, which the existing pattern couldn't handle
 - Patching alone wouldn't fix it: a human had to recognize the pattern and introduce the right abstraction to prevent recurrence *and gate AI generation*
-- **Vladimir Dementyev** (backend principal, author of *Layered Design for Ruby on Rails Applications*) added a `Filter` concept: a type-safe abstraction syncing backend and frontend in one pattern, keeping controllers slim:
+- **Vladimir Dementyev** (backend principal, author of *[Layered Design for Ruby on Rails Applications](it-deserved-its-own-tome-layered-design-and-the-extended-rails-way.md)*) added a `Filter` concept: a type-safe abstraction syncing backend and frontend in one pattern, keeping controllers slim:
   ```ruby
   def index
     @courses, @current_filter = filtery(

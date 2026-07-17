@@ -24,8 +24,8 @@ Minimize dependencies. Use what Rails provides.
 - **Frontend:** Hotwire (Turbo + Stimulus), no React/Vue/Angular
 - **CSS:** Vanilla CSS/SASS, no Tailwind/Bootstrap
 - **JS bundling:** Importmaps + Propshaft (#nobuild)
-- **Background jobs:** Solid Queue (database-backed, no Redis)
-- **Caching:** Solid Cache (SQL-backed)
+- **Background jobs:** [Solid Queue](solid-queue.md) (database-backed, no Redis)
+- **Caching:** [Solid Cache](solid-cache.md) (SQL-backed)
 - **WebSockets:** Solid Cable (database-backed)
 - **Models:** Rich ActiveRecord with concerns, not anemic + services
 

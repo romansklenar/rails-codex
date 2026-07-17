@@ -23,7 +23,7 @@ Rosa Gutiérrez, principal programmer at 37signals and author of Solid Queue, ex
 - Complexity had become unmanageable — David Heinemeier Hansson saw the list and said "what is this, this cannot be so complicated"
 - Resque is very old, supports any Ruby app (not just Rails), so it reimplements things ActiveJob already provides: retries, error handling, serialization
 - Redis data structures (lists) make it hard to filter jobs by class within a queue — e.g. fetching all jobs of a specific type for cleanup requires awkward workarounds
-- Solid Cache (database-backed Rails cache) had already proven the database-as-backend concept in production — David wanted to apply the same idea to jobs
+- [Solid Cache](../../blogs/37signals/solid-cache.md) (database-backed Rails cache) had already proven the database-as-backend concept in production — David wanted to apply the same idea to jobs
 
 ## Why Not GoodJob or Sidekiq
 
@@ -40,7 +40,7 @@ Rosa Gutiérrez, principal programmer at 37signals and author of Solid Queue, ex
 - ActiveJob's per-job queue adapter setting (`:queue_adapter` can be set per class) allowed moving individual job classes one at a time
 - Started with zero-user-impact jobs: "incineration" (permanent deletion after soft-delete periods — 25 days for emails, 60 days for accounts after cancellation)
 - Those early jobs required only two features: enqueue and schedule-in-future — formed the initial implementation target
-- Migration overlapped with the Hey → Kamal cloud exit; paused Solid Queue work entirely for several months until Kamal migration settled, then resumed
+- Migration overlapped with the Hey → [Kamal](../../blogs/37signals/kamal-deployment.md) cloud exit; paused Solid Queue work entirely for several months until Kamal migration settled, then resumed
 - For scheduled future jobs (including retry-delayed jobs), manually migrated anything scheduled more than 12 hours out by fetching from Resque and bulk-inserting into Solid Queue
 - Once a job class was fully moved to Solid Queue, removed that queue from the Resque config entirely
 
@@ -74,7 +74,7 @@ Rosa Gutiérrez, principal programmer at 37signals and author of Solid Queue, ex
 - Solid Queue stores job state explicitly in separate database tables: ready, scheduled, running, failed, blocked
 - Standard ActiveRecord queries replace Resque's awkward Redis API for inspection and cleanup
 - During migration at ~50% jobs moved, detected a self-DDOS from an automatic scanner creating a flood of jobs of one type — identified and cleaned up via SQL in minutes; same investigation in Resque would have been far harder
-- Mission Control Jobs (the 37signals job dashboard gem) needed to be updated to support Solid Queue before the migration could proceed — became a hard blocker; the team stopped all other Solid Queue work until Mission Control supported it
+- [Mission Control Jobs](../../blogs/37signals/mission-control-jobs.md) (the 37signals job dashboard gem) needed to be updated to support Solid Queue before the migration could proceed — became a hard blocker; the team stopped all other Solid Queue work until Mission Control supported it
 - Mission Control Jobs provides: queue inspection, in-progress jobs, job history, failed job retry/discard — essential for on-call intervention without console access
 - Alerts: simple check on the `solid_queue_failed_executions` table (count > 0 triggers notification); mirrors how Resque stored failures separately in Redis
 
@@ -93,4 +93,4 @@ Rosa Gutiérrez, principal programmer at 37signals and author of Solid Queue, ex
 - Solution: pin export jobs to a specific server/VM using the queue name — all export jobs enqueue into a named queue that runs only on one server with a mounted Docker volume
 - Progress stored as a file on that volume in a per-export directory; on restart, job reads the file, finds its last position, and resumes
 - Export record in the database tracks status: pending, resuming, interrupted, complete
-- This pattern works for any long-running job; database tracking is an equally valid alternative to file-based state
+- This pattern works for any [long-running job](../../blogs/37signals/reliable-export-jobs.md); database tracking is an equally valid alternative to file-based state

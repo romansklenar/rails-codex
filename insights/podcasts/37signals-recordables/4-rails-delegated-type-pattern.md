@@ -42,7 +42,7 @@ Recordable concern: defines all types and shared capabilities
 
 | Pattern | How | Problem |
 |---------|-----|---------|
-| STI | All types in one table | Table grows wider with each new type; slow migrations |
+| [STI](../../blogs/37signals/delegated-types-comparison.md) | All types in one table | Table grows wider with each new type; slow migrations |
 | Polymorphic | One record belongs to multiple types | Inverted — less efficient for content systems |
 | Delegated Type | Parent (recording) references one of many types | Lean recordings table, isolated type tables |
 
@@ -109,7 +109,7 @@ end
 ```
 
 - Generic controllers ask "Is this recording commentable?" before accepting comments — no type-specific controllers needed.
-- Adding a new capability to a type is often just one line.
+- Adding a new [capability](../../blogs/37signals/fragment-capabilities.md) to a type is often just one line.
 
 ## Generic Operations — One Controller for All Types
 

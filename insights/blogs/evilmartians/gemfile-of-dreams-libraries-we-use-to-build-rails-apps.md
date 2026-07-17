@@ -50,7 +50,7 @@ Evil Martians' regularly-updated opinionated gem stack for Rails apps — coveri
 - `dry-effects`: algebraic effects for managing side effects — advanced option for complex service pipelines
 - `retriable`: retry logic with exponential backoff for external API calls: `retriable(on: Faraday::Error) { ... }`
 - `nanoid`: generate URL-safe unique IDs (shorter than UUID) — useful for public-facing record identifiers
-- `rubanok`: params-based transformation DSL for filtering/sorting in controllers (see dedicated article)
+- `rubanok`: params-based transformation DSL for filtering/sorting in controllers ([see dedicated article](rubanok-carve-your-rails-controllers-like-papa-carlo.md))
 
 ## Background Jobs
 

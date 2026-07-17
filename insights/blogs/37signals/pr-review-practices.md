@@ -27,7 +27,7 @@ Names are the primary tool for code comprehension. Review them critically:
 
 - **Be specific** — rename generic actions to reflect actual behavior
 - **Use past tense for event handlers** — `linkClicked`, `linkFocused` (something happened, now react)
-- **Match the domain** — use business language, not implementation language (see `domain-driven-naming.md`)
+- **Match the domain** — use business language, not implementation language (see [domain-driven naming](domain-driven-naming.md))
 
 ```ruby
 # BEFORE — vague

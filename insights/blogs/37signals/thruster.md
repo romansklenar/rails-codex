@@ -54,5 +54,5 @@ gem "thruster"
 ## When to Use
 
 - Single-server or container deployments where you want TLS + caching without a separate Nginx/Caddy
-- Kamal deployments (Thruster is the default proxy in Rails 8 / Kamal 2)
+- [Kamal deployments](kamal-deployment.md) (Thruster is the default proxy in Rails 8 / Kamal 2)
 - Not needed behind an existing reverse proxy that already handles TLS and caching (but X-Sendfile + compression may still be useful)

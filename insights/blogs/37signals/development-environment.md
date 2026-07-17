@@ -33,7 +33,7 @@ Productivity comes from the environment, not the programmer.
 
 ## Technical Practices
 
-- Reuse existing patterns (concerns, delegated types) instead of reinventing
+- Reuse existing patterns ([concerns](concerns.md), [delegated types](delegated-types-comparison.md)) instead of reinventing
 - Maintain working legacy code; only rewrite when practical value justifies it
 - Use framework abstractions (Hotwire) over custom solutions
 

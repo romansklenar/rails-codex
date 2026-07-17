@@ -26,7 +26,7 @@ Jason Meller (VP of Product at 1Password, Rails Foundation board member, founder
 
 ## Rails Choices That Held Up Under Acquisition Diligence
 
-- **Multi-tenancy strategy**: a ~30-line approach that went viral on dev.to, built on `Current` (uppercase-C) to assign the current tenant after sign-in, with model scopes enforcing tenant boundaries so queries auto-scope to the right customer
+- **[Multi-tenancy strategy](../../blogs/37signals/rails-multi-tenancy.md)**: a ~30-line approach that went viral on dev.to, built on `Current` (uppercase-C) to assign the current tenant after sign-in, with model scopes enforcing tenant boundaries so queries auto-scope to the right customer
 - Deliberately rejects heavier alternatives: gems that rewrite ActiveRecord, or Postgres schemas (which Meller argues don't scale well) — instead just puts an account/organization ID on every relevant row and scopes rigorously
 - Cited as an example of where model scopes are exactly the right tool despite community skepticism; 1Password's diligence team specifically dug into this "easy to get wrong" area and was satisfied
 - **Horizontal scaling**: adopted Eileen Uchitelle's multi-database support (reader/writer, sharding) right as GitHub contributed it back ~2019 — got it into production in a single weekend, still the backbone of scaling today

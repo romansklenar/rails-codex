@@ -30,7 +30,7 @@ Prefer explicit, step-by-step infrastructure over declarative "desired state" ab
 
 | Prefer | Over | Why |
 |--------|------|-----|
-| Kamal | Kubernetes | Simpler deployment without control plane overhead |
+| [Kamal](kamal-deployment.md) | Kubernetes | Simpler deployment without control plane overhead |
 | Chef (thin recipes) | Complex declarative manifests | Readable, single-screen configurations |
 | KVM + cloud-init | Managed container orchestration | Direct VM control with fast provisioning |
 | Docker (for apps) | Docker (for everything) | Containers for app complexity, not infrastructure |

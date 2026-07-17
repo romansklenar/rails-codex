@@ -34,5 +34,5 @@ Summary of 37signals' open-source synthetic monitoring tool. Reference for monit
 ## Relevance
 
 - Available as MIT-licensed gem (`upright`) if synthetic monitoring is needed
-- Demonstrates the "Rails for everything" pattern: even monitoring infrastructure runs as a Rails app with Solid Queue
+- Demonstrates the "Rails for everything" pattern: even monitoring infrastructure runs as a Rails app with [Solid Queue](solid-queue.md)
 - Low cost: 5 global sites for ~$110/month using affordable VPS providers

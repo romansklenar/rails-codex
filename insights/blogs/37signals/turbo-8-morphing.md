@@ -28,7 +28,7 @@ source:
 # Turbo 8: Morphing & Page Refreshes
 
 Turbo 8 introduced three major features. This standard captures the decision rationale;
-for implementation details see `hotwire/turbo-morphing` and `turbo-progressive-enhancement`.
+for implementation details see `hotwire/turbo-morphing` and [turbo-progressive-enhancement](turbo-progressive-enhancement.md).
 
 ## Turbo 8 Feature Overview
 

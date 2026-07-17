@@ -61,7 +61,7 @@ source:
 - One writer app server + multiple read replicas per region, replication over the network
 - **Transaction-aware read routing**: tracks the last transaction ID the user wrote; optimistically serves from replica, falls back to writer only if replica hasn't caught up yet — avoids pessimistic N-second writer pinning
 - **CloudFlare** for geo-routing: directs traffic to the nearest data centre
-- Custom load balancing features built into **Kamal Proxy** for dynamic per-customer request routing
+- Custom load balancing features built into [**Kamal Proxy**](../../blogs/37signals/kamal-deployment.md) for dynamic per-customer request routing
 
 ## SQLite Write Lock Lesson (from Campfire)
 

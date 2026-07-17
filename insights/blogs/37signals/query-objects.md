@@ -51,7 +51,7 @@ Case::ActivityFeed.new(@case, since: 2.days.ago).entries
 
 ## File Location
 
-Follow the model-namespaced pattern from the concerns standard:
+Follow the model-namespaced pattern from the [concerns](concerns.md) standard:
 - `app/models/case/activity_feed.rb` for Case-specific queries
 - `app/models/queries/` for cross-model queries
 

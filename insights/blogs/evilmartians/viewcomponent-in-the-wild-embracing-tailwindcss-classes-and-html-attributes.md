@@ -22,7 +22,7 @@ Practical patterns for managing TailwindCSS class combinations with the Style Va
 - Components with multiple variants accumulate complex conditional logic: `if primary? then %w[bg-blue-600 text-white] elsif outline? ...`
 - Conflicting Tailwind classes (e.g., `bg-blue-600` and `bg-slate-50`) cause silent styling bugs — later classes don't always win
 - Scattered string arrays across ERB templates are hard to review, test, and maintain
-- The naive `class_for` approach from Part II doesn't compose well with utility-first CSS
+- The naive `class_for` approach from [Part II](viewcomponent-in-the-wild-supercharging-your-components.md) doesn't compose well with utility-first CSS
 
 ## Style Variants DSL
 

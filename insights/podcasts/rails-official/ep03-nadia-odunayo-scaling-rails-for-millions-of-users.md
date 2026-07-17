@@ -46,7 +46,7 @@ One developer built The StoryGraph — a Goodreads alternative with over four mi
 
 ## Turbo Native: The Decision That Made Solo Mobile Possible
 
-- The push to actually try Turbo Native came from **Rob**, not Nadia — he was the one managing the PWA social media responses and did the research one night; spun up a demo Android app and pitched her: "I know this is still in beta but look — I, who am not a developer, was able to spin up the demo app. Imagine what you could do with this."
+- The push to actually try [Turbo Native](../../blogs/37signals/turbo-mobile.md) came from **Rob**, not Nadia — he was the one managing the PWA social media responses and did the research one night; spun up a demo Android app and pitched her: "I know this is still in beta but look — I, who am not a developer, was able to spin up the demo app. Imagine what you could do with this."
 - Nadia was nervous; the confidence signal was that **Hey** was already built on it — "if Hey is built on this thing even though it's in beta, surely it's going to stick around. Let's go for it."
 - Adopted Turbo Native **while it was still in beta**
 - Result: she runs the website, iOS app, and Android app as a single developer — "that is the thing that means that I am running a website, an iOS app and an Android app"

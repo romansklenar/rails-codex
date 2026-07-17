@@ -116,15 +116,15 @@ These episodes are grab-bag listener questions. Anything substantive from them h
 
 Transcripts with real content that was assessed by agents and found to duplicate material already in thematic files.
 
-- **a-matter-of-ambition-part-2** — continues the ambition series; Part 1 and the core ideas are already in `product-development.md`
+- **a-matter-of-ambition-part-2** — continues the ambition series; Part 1 and the core ideas are already in [product development](product-development.md)
 - **before-basecamp** — VC/dot-com era history; no new marketing tactics beyond what's in thematic files
-- **better-product-adam-stoddard** — brand and marketing design critique (messaging-first, SVG assets, Lighthouse scores); relevant to a brand/design file that doesn't yet exist, not to `founder-leadership.md`
+- **better-product-adam-stoddard** — brand and marketing design critique (messaging-first, SVG assets, Lighthouse scores); relevant to a brand/design file that doesn't yet exist, not to [founder leadership](founder-leadership.md)
 - **breaking-the-black-box** — DHH's Apple Card credit-limit Twitter controversy and algorithmic bias in fintech; no applicable insight for existing thematic files
 - **dan-miller** — finance/operations model for a direct-response business; not marketing
-- **know-your-team** — origin story of the Know Your Team spinoff (now Canopy); already captured in `business-philosophy.md` via the spinoff section
-- **poetry-at-work** — the parallel between support writing and poetry is already in `communication.md`; the rest is a literary/cultural episode
+- **know-your-team** — origin story of the Know Your Team spinoff (now Canopy); already captured in [business philosophy](business-philosophy.md) via the spinoff section
+- **poetry-at-work** — the parallel between support writing and poetry is already in [communication](communication.md); the rest is a literary/cultural episode
 - **start-making-something-season-2** — Season 2 version; overlaps with `start-making-something` (already cited)
 - **the-new-reality** — Jason and David reflecting on the REWORK book and Rails history during COVID; meta-commentary, not new tactics
 - **this-time-its-personal** — DHH discussing his personal situation during the political controversy period; situational, not tactical
-- **truss-the-process** — salary transparency experiment at an external company (Wildbit); the 37signals-specific compensation model is already in `hiring.md`
+- **truss-the-process** — salary transparency experiment at an external company (Wildbit); the 37signals-specific compensation model is already in [hiring](hiring.md)
 - **work-out-from-home** — COVID small business pivots; no new remote-work tactics for existing sections

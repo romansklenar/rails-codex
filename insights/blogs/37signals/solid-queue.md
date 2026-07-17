@@ -46,7 +46,7 @@ Database-backed background jobs. No Redis required.
 - Numeric priorities
 - Recurring tasks (cron-like)
 - **Bulk enqueueing** via `enqueue_all` / Active Job `perform_all_later`
-- **Batch operations** -- atomic discard, retry, and unblock (integrated with Mission Control -- Jobs)
+- **Batch operations** -- atomic discard, retry, and unblock (integrated with [Mission Control -- Jobs](mission-control-jobs.md))
 - **Lifecycle hooks** -- supervisor and worker lifecycle callbacks (e.g., start metrics server on boot)
 - **Proper logging and instrumentation** -- structured logging built in
 

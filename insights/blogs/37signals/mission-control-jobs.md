@@ -22,7 +22,7 @@ source:
 
 # Mission Control -- Jobs
 
-Dashboard and operational tooling for background jobs. Works with Solid Queue and Resque.
+Dashboard and operational tooling for background jobs. Works with [Solid Queue](solid-queue.md) and Resque.
 
 ## Core Features
 

@@ -37,7 +37,7 @@ source:
 
 ## Migration Strategy
 
-- **Kamal** (originally MRSK) for containerized deployment without Kubernetes
+- **[Kamal](kamal-deployment.md)** (originally MRSK) for containerized deployment without Kubernetes
 - **Incremental migration**: start with low-risk legacy apps, move critical apps last
 - **Zero downtime**: dual-write periods, permission-based cutover enforcement
 - Deploy times dropped from minutes to ~1 minute

@@ -82,5 +82,5 @@ Evil Martians' recommended frontend stack for Rails startups in 2025: a layered 
 - Turbo Mount: built and maintained by Evil Martians
 - Inertia: Evil Martians contribute to the Rails adapter
 - Vite Ruby: actively promoted and used across client projects
-- Rails Community Survey 2024: Evil Martians' book "Layered Design for Rails Applications" ranked top-3 recommended
+- Rails Community Survey 2024: Evil Martians' book "[Layered Design for Rails Applications](it-deserved-its-own-tome-layered-design-and-the-extended-rails-way.md)" ranked top-3 recommended
 - Tools are production-tested through client engagements from Seed stage to IPO

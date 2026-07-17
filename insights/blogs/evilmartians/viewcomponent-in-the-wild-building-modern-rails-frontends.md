@@ -91,5 +91,5 @@ ViewComponent brings the component-based architecture of frontend frameworks to 
 
 - Views are for rendering data, not fetching it — fetch in controllers, preload associations eagerly
 - DB queries in views lead to N+1 problems that arise reliably and are difficult to track down
-- As a proactive measure, consider prohibiting components from making DB queries entirely during development (setup shown in Part II)
+- As a proactive measure, consider prohibiting components from making DB queries entirely during development (setup shown in [Part II](viewcomponent-in-the-wild-supercharging-your-components.md))
 - Separation of concerns makes testing easier: components that receive plain data are trivial to unit test

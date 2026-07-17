@@ -62,7 +62,7 @@ ONCE is an open source app server that turns self-hosted web apps into interchan
 
 ## Architecture: Docker Network + Kamal Proxy
 
-- **Kamal lineage**: ONCE reuses underpinnings from Kamal, 37signals' deployment tool built to move Basecamp/HEY off the cloud (out of Kubernetes) onto their own machines.
+- **Kamal lineage**: ONCE reuses underpinnings from Kamal, 37signals' deployment tool built to move Basecamp/HEY [off the cloud](../../blogs/37signals/cloud-exit.md) (out of Kubernetes) onto their own machines.
 - **Kamal Proxy for gapless deploys**: the same proxy that gives Kamal no-downtime deploys — deploy a new version without taking the app down and without dropping in-flight requests — is embedded into ONCE.
 - **Evolution of the container model**: v1 ran a single container holding the app and everything, one per machine; the new tool creates its own Docker network and installs a proxy alongside one or more apps, managing the group together.
 - **Automatic routing**: multiple apps run side by side, each with a distinct name; traffic routes automatically to the correct app.
@@ -76,7 +76,7 @@ ONCE is an open source app server that turns self-hosted web apps into interchan
 - **Environment variables & SMTP**: a settings screen lets you set special env vars; Fizzy, for example, needs SMTP configured because it uses email for Magic Link login.
 - **Live logs**: watch running app logs in a scrolling screen with text filtering, for inspecting traffic or diagnosing problems.
 - **Fork-and-customize workflow**: built-in apps are open source on GitHub; create a private fork, commit changes, and the repo's existing CI builds an image; point your installed app at your fork's image path to run a customized version with all your data — a low-friction path for hand or AI-driven customizations.
-- **Traffic & visitor metrics**: the dashboard shows request rate and error percentage (from Prometheus metrics exported by Kamal Proxy) plus unique visitors — a process scans proxy logs for client IPs and uses HyperLogLog to count uniques over daily/weekly ranges in fixed memory regardless of volume.
+- **Traffic & visitor metrics**: the dashboard shows request rate and error percentage (from [Prometheus](../../blogs/37signals/prometheus-monitoring.md) metrics exported by Kamal Proxy) plus unique visitors — a process scans proxy logs for client IPs and uses HyperLogLog to count uniques over daily/weekly ranges in fixed memory regardless of volume.
 
 ## Why Single-Machine Deployments Work Now
 
@@ -94,7 +94,7 @@ ONCE is an open source app server that turns self-hosted web apps into interchan
 
 ## ONCE vs Kamal: When to Use Which
 
-- **Kamal**: for deploying your own private applications in a more involved way — dozens of machines, heavy coordination, auxiliary services (MySQL, Redis), scaling up to Basecamp/HEY or bigger. Ideal for bespoke internal SaaS operations.
+- [**Kamal**](../../blogs/37signals/kamal-deployment.md): for deploying your own private applications in a more involved way — dozens of machines, heavy coordination, auxiliary services (MySQL, Redis), scaling up to Basecamp/HEY or bigger. Ideal for bespoke internal SaaS operations.
 - **ONCE**: the "console stage" — one dedicated machine, run as many apps as fit on a single box, constrained to one box and each app to one `/storage` directory (hence SQLite). Meant for apps that are open, public, and shared rather than private.
 - **Symbiotic relationship**: ONCE is an open source experimentation ground whose lessons feed back into making Kamal simpler; experiments "all go into the mixer."
 - **Design philosophy — trenches vs possibility**: plenty of self-hostable open source exists but ships with pages of dependencies and config; most people don't want to "dig the trenches themselves." As with Rails, the magic isn't making things possible (everything is possible — "it's just software") but making them accessible, easy, fun, and aesthetically pleasing.

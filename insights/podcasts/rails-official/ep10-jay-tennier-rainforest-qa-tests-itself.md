@@ -30,7 +30,7 @@ Jay Tennier (Engineering Manager at Rainforest QA) explains how a platform that 
 
 - Most services have migrated to GoodJob; the main monolith is split approximately 50/50 between GoodJob and Q Classic
 - Q Classic is a database-backed job processor created at Rainforest and open-sourced when no mature database-backed alternative existed; it is now unmaintained — the org no longer actively maintains it, so Rainforest forks and versions it privately via Q Classic Plus (a wrapper adding transactional semantics)
-- The team is evaluating Solid Queue (Rails 8) as a path to consolidate onto a single maintained job backend rather than completing a partial migration to GoodJob
+- The team is evaluating [Solid Queue](ep01-rosa-gutierrez-solid-queue.md) (Rails 8) as a path to consolidate onto a single maintained job backend rather than completing a partial migration to GoodJob
 - Lesson: building an internal gem for infrastructure needs works in the short term but creates orphaned dependencies when the team that built it shrinks or leaves
 
 ## How Rainforest Tests Rainforest

@@ -61,7 +61,7 @@ Tom Rossi (co-founder of Buzzsprout, one of several SaaS products under the High
 - Deliberately few gems; asked which they'd install on a fresh project, the main answer was VCR (record/replay of external API interactions for tests)
 - Guiding principle: don't be beholden to a vendor for anything mission-critical, and be able to switch. Gems that die burn you — an FFmpeg wrapper gem lost support, prompting a move to calling FFmpeg themselves
 - Payments: they use the Stripe gem to talk to Stripe but wrote their own subscription/billing logic (declines, reprocessing) — this predates Stripe's existence (they launched on Authorize.net) and predates Active Merchant
-- Coupling contrast between codebases: **Buzzsprout** (2008/2009) has Stripe-specific columns (`stripe_id`) scattered through the schema — swapping processors "would be painful." **Donor Tools** (2015) isolated processor columns into a **delegated-type table**, making merchant swaps easy — validated when WePay (chosen specifically to avoid Stripe) was bought by Chase and shut down, forcing a migration to Stripe that the abstraction made straightforward
+- Coupling contrast between codebases: **Buzzsprout** (2008/2009) has Stripe-specific columns (`stripe_id`) scattered through the schema — swapping processors "would be painful." **Donor Tools** (2015) isolated processor columns into a **[delegated-type table](../../blogs/37signals/delegated-types-comparison.md)**, making merchant swaps easy — validated when WePay (chosen specifically to avoid Stripe) was bought by Chase and shut down, forcing a migration to Stripe that the abstraction made straightforward
 - Advice framing: think not just about swapping vendors but adding them (ACH, PayPal for markets without credit cards); real payment coupling gets "really complicated when you become really reliant on taking money"
 
 ## ETags and Serving Machine Traffic Cheaply
@@ -84,9 +84,9 @@ Tom Rossi (co-founder of Buzzsprout, one of several SaaS products under the High
 
 ## Hotwire, Caching, and Staying Deliberately Small
 
-- Hotwire let a web-first team ship the iOS Buzzsprout app in ~6 months and the Android app in ~3 months, reusing existing design work; the apps feel native where needed via Stimulus while sharing the Rails backend
+- [Hotwire](../../blogs/37signals/turbo-mobile.md) let a web-first team ship the iOS Buzzsprout app in ~6 months and the Android app in ~3 months, reusing existing design work; the apps feel native where needed via Stimulus while sharing the Rails backend
 - Payments are deliberately excluded from the mobile apps ("companion app" model) to sidestep Apple/Google in-app-purchase cuts; approval was contested at launch despite prior approvals, and they've avoided adding payment features since to stay safe
-- Solid Cache plus fragment caching means very little cache "ejection" — much content is served straight from cache, another capability adopted for free by staying current with Rails
+- [Solid Cache](../../blogs/37signals/solid-cache.md) plus fragment caching means very little cache "ejection" — much content is served straight from cache, another capability adopted for free by staying current with Rails
 - Guiding maxim "don't solve problems you don't have" (attributed to DHH/Jason Fried) — the 2020 surge forced them into exactly the scaling problems they'd previously deferred
 - Build-vs-buy ethos: keep mission-critical capabilities (subscriptions) in-house to avoid vendor lock-in, but "you can always build it later" — a new SaaS today should use Stripe subscriptions and bring billing in-house only once it matters. Their AI features (auto-generating titles, descriptions, chapter markers, social posts, blog drafts from uploaded audio) started with a third-party vendor, then were brought in-house for control, quality, and lower pricing
 - Downside of staying small: hard to match Basecamp-style around-the-clock support in-region without spreading staff across time zones — and an excellent support team is itself "a massive feature with no code involved"

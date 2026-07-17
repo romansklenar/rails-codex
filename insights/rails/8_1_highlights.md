@@ -26,7 +26,7 @@ Rails 8.1 leans into operability: jobs that survive restarts, machine-readable e
 
 ### Active Job Continuations
 - Break a long job into discrete `step`s; after a restart execution resumes from the last completed step instead of the beginning.
-- Directly motivated by Kamal deploys, which give job containers ~30s to shut down by default.
+- Directly motivated by [Kamal](../blogs/37signals/kamal-deployment.md) deploys, which give job containers ~30s to shut down by default.
 - Steps support a **cursor** saved on interruption: `step.advance! from: record.id` inside `find_each(start: step.cursor)`.
 - `include ActiveJob::Continuable`; steps can be block form or method form.
 
@@ -93,7 +93,7 @@ end
 
 ## Upgrade Notes
 
-- Upgrade to **Rails 8.0 first**, confirm the app runs, then move to 8.1.
+- Upgrade to **[Rails 8.0](8_0_highlights.md) first**, confirm the app runs, then move to 8.1.
 - `to_time` now always preserves the receiver's timezone (system-local behavior removed) — audit any `to_time` relying on the old semantics.
 
 → Full details: [Rails 8.1 Release Notes](https://guides.rubyonrails.org/8_1_release_notes.html)

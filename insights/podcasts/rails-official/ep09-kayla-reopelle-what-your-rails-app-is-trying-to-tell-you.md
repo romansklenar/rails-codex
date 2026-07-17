@@ -50,7 +50,7 @@ Kayla Reopelle (lead engineer at New Relic, working on the Ruby Agent and OpenTe
 - Custom notifications work too: `opentelemetry-instrumentation-active_support` accepts user-defined notification names and creates spans for them
 - Good candidates for custom notifications: service objects, anything outside Rails' built-in sub-gems
 - Monkey patching (module prepend, alias method chaining) is still used for cases where notifications don't reach; covered in depth in _Metaprogramming Ruby 2_
-- Rails' upcoming structured logging (event reporter) adds attributes to logs — making them filterable by fields like `user_id` or controller name without regex parsing of message strings
+- Rails' upcoming [structured logging (event reporter)](../../rails/8_1_highlights.md) adds attributes to logs — making them filterable by fields like `user_id` or controller name without regex parsing of message strings
 
 ## Practical Starting Points for Rails Developers
 

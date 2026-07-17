@@ -33,7 +33,7 @@ Summary of 37signals' large-scale data migration and storage operations. Infrast
 
 - **Tools**: Rclone (transfer), DuckDB (inventory partitioning), Rails app "Nostos" for orchestration
 - **Key pattern**: Verification requires as much effort as copying -- reconcile with inventory reports + live sync + permission locks + checksum sampling
-- **Lesson**: Use Rails (Solid Queue) for job orchestration even in infrastructure tasks -- conventions for state tracking, retries, and credential management (Active Record Encryption) beat custom scripts
+- **Lesson**: Use Rails ([Solid Queue](solid-queue.md)) for job orchestration even in infrastructure tasks -- conventions for state tracking, retries, and credential management (Active Record Encryption) beat custom scripts
 
 ## Docker Registry (Harbor)
 

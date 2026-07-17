@@ -73,7 +73,7 @@ source:
 
 ## Upgrade Notes
 
-- Upgrade to **Rails 8.1 first**, confirm the app runs, then move to 8.2.
+- Upgrade to **[Rails 8.1](8_1_highlights.md) first**, confirm the app runs, then move to 8.2.
 - Set `config.action_controller.default_protect_from_forgery_with = :exception` (or pass an explicit strategy) to clear the new `protect_from_forgery` deprecation warning.
 
 → Full details: [Rails 8.2 Release Notes (edge)](https://edgeguides.rubyonrails.org/8_2_release_notes.html)
