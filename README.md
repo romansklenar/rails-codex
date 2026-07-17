@@ -70,7 +70,7 @@ Stored as git submodules under `.git-submodules/` to keep the official source re
 
 ### References
 
-Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory.
+Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory and generates a navigation index at [`references/index.md`](references/index.md) (via `bin/generate_indexes.py`; run `make references-index` to regenerate it alone). These files are extracted upstream docs, not OKF concepts.
 
 ### Insights (OKF bundle)
 
@@ -105,7 +105,7 @@ Before adding book insights (public repo), check the publisher's Terms of Servic
 
 ### Style Guides
 
-Running `make style-guide` extracts community style guides from RuboCop into the `style-guide/` directory.
+Running `make style-guide` extracts community style guides from RuboCop into the `style-guide/` directory and generates a navigation index at [`style-guide/index.md`](style-guide/index.md) (run `make style-guide-index` to regenerate it alone).
 
 ## Setup
 
