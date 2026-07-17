@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Ruby Bytes, or Generating Standalone Generators"
 description: "Introduction to ruby-bytes (rbytes), a toolkit for building composable, testable, standalone Ruby and Rails application templates that work with or without Rails"
+resource: "https://evilmartians.com/chronicles/ruby-bytes-or-generating-standalone-generators"
+tags: [ruby, rails, generators, application-templates, thor, rbytes, railsbytes, tooling]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/ruby-bytes-or-generating-standalone-generators"
   date: '2023-04-04'
-tags: [ruby, rails, generators, application-templates, thor, rbytes, railsbytes, tooling]
 ---
 
 # Ruby Bytes, or Generating Standalone Generators
@@ -39,7 +42,7 @@ Ruby Bytes (`rbytes`) is a toolkit for building, testing, and distributing compo
 - Partials can themselves include other partials — arbitrary nesting supported
 - `#if_option?(:option_name)` and `#unless_option?` provide conditional inclusion based on user choices
 - Options are declared with `option :name, default: 'value'` and collected via interactive prompts
-- Composed templates allow a "meta-template" (like Ruby on Whales) to include separate Docker, RuboCop, and CI partials
+- Composed templates allow a "meta-template" (like [Ruby on Whales](ruby-on-whales-docker-for-ruby-rails-development.md)) to include separate Docker, RuboCop, and CI partials
 
 ## Thor and Rails Integration
 

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "The Art of Turbo Mount: Hotwire Meets Modern JS Frameworks"
 description: "How to integrate React, Vue, or Svelte components into Hotwire Rails apps using the turbo-mount gem, with importmaps or Vite, and custom Stimulus controllers"
+resource: "https://evilmartians.com/chronicles/the-art-of-turbo-mount-hotwire-meets-modern-js-frameworks"
+tags: [hotwire, turbo, stimulus, react, vue, svelte, importmaps, vite, rails]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Svyatoslav Kryukov"
   url: "https://evilmartians.com/chronicles/the-art-of-turbo-mount-hotwire-meets-modern-js-frameworks"
   date: '2024-06-11'
-tags: [hotwire, turbo, stimulus, react, vue, svelte, importmaps, vite, rails]
 ---
 
 # The Art of Turbo Mount: Hotwire Meets Modern JS Frameworks

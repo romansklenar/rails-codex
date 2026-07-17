@@ -1,16 +1,19 @@
 ---
+type: insight
 title: 37signals Thoughts
 description: "Long-form essays on shipping, decisions, profit, communication, and influences"
-source:
-  type: blog
-  title: 37signals Thoughts
-  author: 37signals
-  url: https://37signals.com/thoughts
+resource: "https://37signals.com/thoughts"
 tags:
 - philosophy
 - process
 - culture
 - communication
+timestamp: "2026-03-02"
+source:
+  type: blog
+  title: 37signals Thoughts
+  author: 37signals
+  url: https://37signals.com/thoughts
 ---
 
 # 37signals Thoughts

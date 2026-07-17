@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Communication
 description: "37signals' internal and external communication principles: async-first, direct, written"
+resource: "https://37signals.com/podcast"
+tags:
+- communication
+- async
+- writing
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- communication
-- async
-- writing
 ---
 
 # Communication

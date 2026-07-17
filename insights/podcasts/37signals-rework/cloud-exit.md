@@ -1,11 +1,8 @@
 ---
+type: insight
 title: Cloud Exit
 description: "37signals' migration from cloud to owned hardware: rationale, process, outcomes, cost savings, ops culture, Linux transition, and vendor independence philosophy"
-source:
-  type: podcast
-  title: REWORK
-  author: 37signals
-  url: https://37signals.com/podcast
+resource: "https://37signals.com/podcast"
 tags:
 - infrastructure
 - cloud
@@ -13,6 +10,12 @@ tags:
 - costs
 - linux
 - ops
+timestamp: "2026-03-02"
+source:
+  type: podcast
+  title: REWORK
+  author: 37signals
+  url: https://37signals.com/podcast
 ---
 
 # Cloud Exit

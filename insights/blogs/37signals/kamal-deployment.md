@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Kamal Deployment
 description: "Kamal 2 container deployment with kamal-proxy, zero-downtime deploys, SSL, multi-app hosting"
+resource: "https://dev.37signals.com/kamal-2/"
+tags:
+- deployment
+- devops
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Kamal 2.0 released
   author: Donal McBreen
   url: https://dev.37signals.com/kamal-2/
   date: '2024-09-26'
-tags:
-- deployment
-- devops
 ---
 
 # Kamal Deployment

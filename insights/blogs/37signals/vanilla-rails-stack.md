@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Vanilla Rails Stack
 description: "Minimize dependencies, use what Rails provides, nobuild philosophy"
+resource: "https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/"
+tags:
+- rails
+- architecture
+timestamp: "2026-03-02"
 source:
   type: blog
   title: A vanilla Rails stack is plenty
   author: Jorge Manrubia
   url: https://dev.37signals.com/a-vanilla-rails-stack-is-plenty/
   date: '2024-12-12'
-tags:
-- rails
-- architecture
 ---
 
 # Vanilla Rails Stack
@@ -21,8 +24,8 @@ Minimize dependencies. Use what Rails provides.
 - **Frontend:** Hotwire (Turbo + Stimulus), no React/Vue/Angular
 - **CSS:** Vanilla CSS/SASS, no Tailwind/Bootstrap
 - **JS bundling:** Importmaps + Propshaft (#nobuild)
-- **Background jobs:** Solid Queue (database-backed, no Redis)
-- **Caching:** Solid Cache (SQL-backed)
+- **Background jobs:** [Solid Queue](solid-queue.md) (database-backed, no Redis)
+- **Caching:** [Solid Cache](solid-cache.md) (SQL-backed)
 - **WebSockets:** Solid Cable (database-backed)
 - **Models:** Rich ActiveRecord with concerns, not anemic + services
 

@@ -1,6 +1,12 @@
 ---
+type: insight
 title: 'Turbo 8: Morphing & Page Refreshes'
 description: "Turbo 8 feature overview, morphing vs streams decision guide, why client-side morphing over server-side diffing"
+resource: "https://dev.37signals.com/turbo-8-released/"
+tags:
+- hotwire
+- turbo
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Turbo 8 released
@@ -17,15 +23,12 @@ source:
   author: Jorge Manrubia
   url: https://dev.37signals.com/exploring-server-side-diffing-in-turbo/
   date: '2023-10-24'
-tags:
-- hotwire
-- turbo
 ---
 
 # Turbo 8: Morphing & Page Refreshes
 
 Turbo 8 introduced three major features. This standard captures the decision rationale;
-for implementation details see `hotwire/turbo-morphing` and `turbo-progressive-enhancement`.
+for implementation details see `hotwire/turbo-morphing` and [turbo-progressive-enhancement](turbo-progressive-enhancement.md).
 
 ## Turbo 8 Feature Overview
 

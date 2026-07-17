@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "TestProf II: Factory Therapy for Your Ruby Tests"
 description: "Deep dive into diagnosing and eliminating factory cascades in Ruby/Rails test suites using FactoryProf flame graphs, FactoryDefault, and AnyFixture to achieve fixture-like performance from factories"
+resource: "https://evilmartians.com/chronicles/testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest"
+tags: [ruby, rails, testing, rspec, minitest, test-performance, testprof, factory-bot, factories, profiling, fixtures]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/testprof-2-factory-therapy-for-your-ruby-tests-rspec-minitest"
   date: '2024-08-12'
-tags: [ruby, rails, testing, rspec, minitest, test-performance, testprof, factory-bot, factories, profiling, fixtures]
 ---
 
 # TestProf II: Factory Therapy for Your Ruby Tests

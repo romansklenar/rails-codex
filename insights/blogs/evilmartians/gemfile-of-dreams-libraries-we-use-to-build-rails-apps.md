@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Gemfile of Dreams: The Libraries We Use to Build Rails Apps"
 description: "Evil Martians' curated 2024 Rails gem stack covering authentication, authorization, configuration, background jobs, real-time, testing, database, frontend, service objects, and monitoring"
+resource: "https://evilmartians.com/chronicles/gemfile-of-dreams-libraries-we-use-to-build-rails-apps"
+tags: [rails, gems, ruby, architecture, testing, authentication, authorization, background-jobs, real-time, database]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/gemfile-of-dreams-libraries-we-use-to-build-rails-apps"
   date: '2024-05-28'
-tags: [rails, gems, ruby, architecture, testing, authentication, authorization, background-jobs, real-time, database]
 ---
 
 # Gemfile of Dreams: The Libraries We Use to Build Rails Apps
@@ -47,7 +50,7 @@ Evil Martians' regularly-updated opinionated gem stack for Rails apps — coveri
 - `dry-effects`: algebraic effects for managing side effects — advanced option for complex service pipelines
 - `retriable`: retry logic with exponential backoff for external API calls: `retriable(on: Faraday::Error) { ... }`
 - `nanoid`: generate URL-safe unique IDs (shorter than UUID) — useful for public-facing record identifiers
-- `rubanok`: params-based transformation DSL for filtering/sorting in controllers (see dedicated article)
+- `rubanok`: params-based transformation DSL for filtering/sorting in controllers ([see dedicated article](rubanok-carve-your-rails-controllers-like-papa-carlo.md))
 
 ## Background Jobs
 

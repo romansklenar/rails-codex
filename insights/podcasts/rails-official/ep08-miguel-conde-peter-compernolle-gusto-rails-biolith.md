@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Miguel Conde & Peter Compernolle: Inside Gusto's Rails Biolith"
 description: "How Gusto runs two Rails monoliths — a 'biolith' — at 600+ engineer scale, using Packwerk, Sorbet, and service-layer patterns to enforce domain boundaries without going full microservices."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18061147-miguel-conde-peter-compernolle-inside-gusto-s-rails-biolith"
+tags: [architecture, monolith, packwerk, sorbet, domain-boundaries, event-driven, rails-at-scale, service-layer, hipaa, graphql]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18061147-miguel-conde-peter-compernolle-inside-gusto-s-rails-biolith"
   date: 2025-11-03
-tags: [architecture, monolith, packwerk, sorbet, domain-boundaries, event-driven, rails-at-scale, service-layer, hipaa, graphql]
 ---
 
 # Miguel Conde & Peter Compernolle: Inside Gusto's Rails Biolith

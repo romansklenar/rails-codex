@@ -1,12 +1,8 @@
 ---
+type: insight
 title: Rails Multi-Tenancy
 description: "How 37signals built the active_record_tenanted gem to make Rails multi-tenancy safe, efficient, and framework-wide"
-source:
-  type: talk
-  title: Rails Multi-Tenancy
-  author: Mike Dalessio
-  url: https://dev.37signals.com/rails-multi-tenancy/
-  date: '2026-02-13'
+resource: "https://dev.37signals.com/rails-multi-tenancy/"
 tags:
 - rails
 - multi-tenancy
@@ -16,6 +12,13 @@ tags:
 - architecture
 - fizzy
 - once
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: Rails Multi-Tenancy
+  author: Mike Dalessio
+  url: https://dev.37signals.com/rails-multi-tenancy/
+  date: '2026-02-13'
 ---
 
 # Rails Multi-Tenancy
@@ -86,7 +89,7 @@ Mike Dalessio (Security Infrastructure and Performance team, previously at Shopi
 ## Multi-Dimensional Tenancy
 
 - Model-scoped API (not a global singleton) enables multiple tenancy axes in one process simultaneously
-- Example: `ApplicationRecord` tenanted by customer `account_id`, Solid Queue databases tenanted by geographic region (`us-east`, etc.)
+- Example: `ApplicationRecord` tenanted by customer `account_id`, [Solid Queue](../../blogs/37signals/solid-queue.md) databases tenanted by geographic region (`us-east`, etc.)
 - Both dimensions active at the same time with no conflicts
 
 ## Live Demo: Converting Writebook to Multi-Tenant
@@ -110,7 +113,7 @@ System automatically creates separate database files and organises static assets
 
 - Emergent complexities arose during replication + failover implementation
 - Unexpected combinations from coupling SQLite + Rails tenanting + global replication + network routing + automatic failover produced edge cases approximately weekly
-- Time constraints → launched with MySQL instead; SQLite multi-tenancy was not discarded, it was not finished in time
+- Time constraints → [launched with MySQL instead](1-behind-the-fizzy-infrastructure.md); SQLite multi-tenancy was not discarded, it was not finished in time
 
 ## API Design
 
@@ -119,7 +122,7 @@ System automatically creates separate database files and organises static assets
 
 ## Path to Rails Core
 
-- Plan: use ONCE products (Writebook, Campfire, etc.) to accumulate production experience with multi-tenant SQLite
+- Plan: use [ONCE](5-the-once-app-server.md) products (Writebook, Campfire, etc.) to accumulate production experience with multi-tenant SQLite
 - Missing Rails primitive: "primary versus backup mode" for failover/replication — currently reimplemented separately in Hey, Solid Queue fork, and Beamer
 - Upstream into Rails core once production-proven
 

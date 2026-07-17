@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Marketing & Growth
 description: "37signals' unconventional marketing: teaching, blogging, word-of-mouth over paid ads"
+resource: "https://37signals.com/podcast"
+tags:
+- marketing
+- growth
+- content
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- marketing
-- growth
-- content
 ---
 
 # Marketing & Growth

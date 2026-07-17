@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Solid Queue
 description: "Database-backed background jobs with FOR UPDATE SKIP LOCKED polling, bulk enqueue, lifecycle hooks, monitoring"
+resource: "https://dev.37signals.com/introducing-solid-queue/"
+tags:
+- rails
+- jobs
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Introducing Solid Queue
@@ -12,9 +18,6 @@ source:
   author: Rosa Gutierrez
   url: https://dev.37signals.com/solid-queue-v1-0/
   date: '2024-09-26'
-tags:
-- rails
-- jobs
 ---
 
 # Solid Queue
@@ -43,7 +46,7 @@ Database-backed background jobs. No Redis required.
 - Numeric priorities
 - Recurring tasks (cron-like)
 - **Bulk enqueueing** via `enqueue_all` / Active Job `perform_all_later`
-- **Batch operations** -- atomic discard, retry, and unblock (integrated with Mission Control -- Jobs)
+- **Batch operations** -- atomic discard, retry, and unblock (integrated with [Mission Control -- Jobs](mission-control-jobs.md))
 - **Lifecycle hooks** -- supervisor and worker lifecycle callbacks (e.g., start metrics server on boot)
 - **Proper logging and instrumentation** -- structured logging built in
 

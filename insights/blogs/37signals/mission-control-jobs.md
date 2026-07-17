@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Mission Control -- Jobs
 description: "Dashboard for background job monitoring, queue management, bulk retry/discard, recurring tasks"
+resource: "https://dev.37signals.com/mission-control-jobs/"
+tags:
+- rails
+- jobs
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Mission Control -- Jobs
@@ -12,14 +18,11 @@ source:
   author: Rosa Gutierrez
   url: https://dev.37signals.com/mission-control-jobs-v1-0/
   date: '2024-12-04'
-tags:
-- rails
-- jobs
 ---
 
 # Mission Control -- Jobs
 
-Dashboard and operational tooling for background jobs. Works with Solid Queue and Resque.
+Dashboard and operational tooling for background jobs. Works with [Solid Queue](solid-queue.md) and Resque.
 
 ## Core Features
 

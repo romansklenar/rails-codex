@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Founder & Leadership
 description: "37signals' founder practices: stepping back, partnerships, sabbaticals, building without you"
+resource: "https://37signals.com/podcast"
+tags:
+- founder
+- leadership
+- management
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- founder
-- leadership
-- management
 ---
 
 # Founder & Leadership

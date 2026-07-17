@@ -1,12 +1,8 @@
 ---
+type: insight
 title: The Rails Delegated Type Pattern
 description: "How 37signals uses delegated types, immutable recordables, and a tree of recordings to build a content system that scales without rewrites"
-source:
-  type: talk
-  title: "The Rails Delegated Type Pattern"
-  author: Jeffrey Hardy
-  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
-  date: '2025-12-19'
+resource: "https://dev.37signals.com/the-rails-delegated-type-pattern/"
 tags:
 - rails
 - active-record
@@ -15,6 +11,13 @@ tags:
 - patterns
 - basecamp
 - architecture
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: "The Rails Delegated Type Pattern"
+  author: Jeffrey Hardy
+  url: https://dev.37signals.com/the-rails-delegated-type-pattern/
+  date: '2025-12-19'
 ---
 
 # The Rails Delegated Type Pattern
@@ -39,7 +42,7 @@ Recordable concern: defines all types and shared capabilities
 
 | Pattern | How | Problem |
 |---------|-----|---------|
-| STI | All types in one table | Table grows wider with each new type; slow migrations |
+| [STI](../../blogs/37signals/delegated-types-comparison.md) | All types in one table | Table grows wider with each new type; slow migrations |
 | Polymorphic | One record belongs to multiple types | Inverted — less efficient for content systems |
 | Delegated Type | Parent (recording) references one of many types | Lean recordings table, isolated type tables |
 
@@ -106,7 +109,7 @@ end
 ```
 
 - Generic controllers ask "Is this recording commentable?" before accepting comments — no type-specific controllers needed.
-- Adding a new capability to a type is often just one line.
+- Adding a new [capability](../../blogs/37signals/fragment-capabilities.md) to a type is often just one line.
 
 ## Generic Operations — One Controller for All Types
 

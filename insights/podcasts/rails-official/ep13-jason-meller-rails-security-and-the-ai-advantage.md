@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jason Meller: Rails, Security, and the AI Advantage"
 description: "Rails' concise, uniform code makes it uniquely token-efficient for AI-assisted development, while the same AI tools rummaging through developer machines are turning developers into prime targets for cheap, scalable attacks."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19128572-jason-meller-rails-security-and-the-ai-advantage"
+tags: [security, ai, llm, phishing, rails, multi-tenancy, secrets-management, developer-tooling, 1password, token-efficiency]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19128572-jason-meller-rails-security-and-the-ai-advantage"
   date: 2026-05-06
-tags: [security, ai, llm, phishing, rails, multi-tenancy, secrets-management, developer-tooling, 1password, token-efficiency]
 ---
 
 # Jason Meller: Rails, Security, and the AI Advantage
@@ -23,7 +26,7 @@ Jason Meller (VP of Product at 1Password, Rails Foundation board member, founder
 
 ## Rails Choices That Held Up Under Acquisition Diligence
 
-- **Multi-tenancy strategy**: a ~30-line approach that went viral on dev.to, built on `Current` (uppercase-C) to assign the current tenant after sign-in, with model scopes enforcing tenant boundaries so queries auto-scope to the right customer
+- **[Multi-tenancy strategy](../../blogs/37signals/rails-multi-tenancy.md)**: a ~30-line approach that went viral on dev.to, built on `Current` (uppercase-C) to assign the current tenant after sign-in, with model scopes enforcing tenant boundaries so queries auto-scope to the right customer
 - Deliberately rejects heavier alternatives: gems that rewrite ActiveRecord, or Postgres schemas (which Meller argues don't scale well) — instead just puts an account/organization ID on every relevant row and scopes rigorously
 - Cited as an example of where model scopes are exactly the right tool despite community skepticism; 1Password's diligence team specifically dug into this "easy to get wrong" area and was satisfied
 - **Horizontal scaling**: adopted Eileen Uchitelle's multi-database support (reader/writer, sharding) right as GitHub contributed it back ~2019 — got it into production in a single weekend, still the backbone of scaling today

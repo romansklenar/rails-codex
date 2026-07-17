@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jay Tennier: How Testing Platform Rainforest QA Tests Itself"
 description: "Jay Tennier walks through how Rainforest QA — a browser-based test execution platform — applies its own product to test itself, and the hard-won architectural lessons from running a long-lived Rails monolith through multiple team contractions."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18317355-jay-tennier-how-testing-platform-rainforest-qa-tests-itself"
+tags: [testing, monolith, background-jobs, data-management, api-design, third-party-integration, team-scaling, activerecord]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18317355-jay-tennier-how-testing-platform-rainforest-qa-tests-itself"
   date: 2025-12-09
-tags: [testing, monolith, background-jobs, data-management, api-design, third-party-integration, team-scaling, activerecord]
 ---
 
 # Jay Tennier: How Testing Platform Rainforest QA Tests Itself
@@ -27,7 +30,7 @@ Jay Tennier (Engineering Manager at Rainforest QA) explains how a platform that 
 
 - Most services have migrated to GoodJob; the main monolith is split approximately 50/50 between GoodJob and Q Classic
 - Q Classic is a database-backed job processor created at Rainforest and open-sourced when no mature database-backed alternative existed; it is now unmaintained — the org no longer actively maintains it, so Rainforest forks and versions it privately via Q Classic Plus (a wrapper adding transactional semantics)
-- The team is evaluating Solid Queue (Rails 8) as a path to consolidate onto a single maintained job backend rather than completing a partial migration to GoodJob
+- The team is evaluating [Solid Queue](ep01-rosa-gutierrez-solid-queue.md) (Rails 8) as a path to consolidate onto a single maintained job backend rather than completing a partial migration to GoodJob
 - Lesson: building an internal gem for infrastructure needs works in the short term but creates orphaned dependencies when the team that built it shrinks or leaves
 
 ## How Rainforest Tests Rainforest

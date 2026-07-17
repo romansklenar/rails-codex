@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Brian Scanlan: Building AI-First at Intercom"
 description: "How Intercom turned Claude Code into a full-stack engineering platform on top of a 15-year-old Rails monolith — 100+ internal skills, hooks that enforce workflows, auto-approved PRs, and read-only production access for engineers and non-engineers alike."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19060786-brian-scanlan-building-ai-first-at-intercom"
+tags: [ai, claude-code, agents, rails-monolith, ci, code-review, developer-productivity, skills, hooks, mcp, rails-console, observability, security]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19060786-brian-scanlan-building-ai-first-at-intercom"
   date: 2026-04-22
-tags: [ai, claude-code, agents, rails-monolith, ci, code-review, developer-productivity, skills, hooks, mcp, rails-console, observability, security]
 ---
 
 # Brian Scanlan: Building AI-First at Intercom

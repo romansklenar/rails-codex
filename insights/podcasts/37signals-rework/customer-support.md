@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Customer & Support
 description: "37signals' customer support philosophy: everyone does support, community, and knowing when to let go"
+resource: "https://37signals.com/podcast"
+tags:
+- customer
+- support
+- community
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- customer
-- support
-- community
 ---
 
 # Customer & Support

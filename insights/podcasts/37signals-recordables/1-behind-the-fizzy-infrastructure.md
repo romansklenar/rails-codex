@@ -1,12 +1,8 @@
 ---
+type: insight
 title: Behind the Fizzy Infrastructure
 description: "How 37signals explored a per-tenant SQLite + replication architecture for Fizzy, pivoted to MySQL two days before launch, and kept the best parts"
-source:
-  type: talk
-  title: Behind the Fizzy Infrastructure
-  author: Kevin McConnell
-  url: https://dev.37signals.com/fizzy-infrastructure/
-  date: '2026-02-26'
+resource: "https://dev.37signals.com/fizzy-infrastructure/"
 tags:
 - rails
 - infrastructure
@@ -18,6 +14,13 @@ tags:
 - deployment
 - performance
 - architecture
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: Behind the Fizzy Infrastructure
+  author: Kevin McConnell
+  url: https://dev.37signals.com/fizzy-infrastructure/
+  date: '2026-02-26'
 ---
 
 # Behind the Fizzy Infrastructure
@@ -58,7 +61,7 @@ tags:
 - One writer app server + multiple read replicas per region, replication over the network
 - **Transaction-aware read routing**: tracks the last transaction ID the user wrote; optimistically serves from replica, falls back to writer only if replica hasn't caught up yet — avoids pessimistic N-second writer pinning
 - **CloudFlare** for geo-routing: directs traffic to the nearest data centre
-- Custom load balancing features built into **Kamal Proxy** for dynamic per-customer request routing
+- Custom load balancing features built into [**Kamal Proxy**](../../blogs/37signals/kamal-deployment.md) for dynamic per-customer request routing
 
 ## SQLite Write Lock Lesson (from Campfire)
 

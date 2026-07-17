@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Turbo Progressive Enhancement Hierarchy
 description: "Turbo hierarchy — Drive → Morphing → Frames → Streams — choose simplest"
+resource: "https://dev.37signals.com/a-happier-happy-path-in-turbo-with-morphing/"
+tags:
+- hotwire
+- turbo
+timestamp: "2026-03-02"
 source:
   type: blog
   title: A happier happy path in Turbo with morphing
   author: Jorge Manrubia
   url: https://dev.37signals.com/a-happier-happy-path-in-turbo-with-morphing/
   date: '2023-10-09'
-tags:
-- hotwire
-- turbo
 ---
 
 # Turbo Progressive Enhancement Hierarchy

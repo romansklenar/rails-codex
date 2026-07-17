@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "DHH: Basecamp 5, Vibe Coding, and the Future of Rails"
 description: "DHH on how modern Rails shaped Basecamp 5, why the backend has stayed stable for 20 years, the coming ActionText/Passkey extractions, and how agentic AI is compressing the software process from prompt to IPO."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-coding-and-the-future-of-rails"
+tags: [rails, basecamp, ai-agents, vibe-coding, hotwire, actiontext, passkeys, shape-up, framework-philosophy, 37signals]
+timestamp: "2026-07-17"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/19335416-dhh-basecamp-5-vibe-coding-and-the-future-of-rails"
   date: 2026-06-12
-tags: [rails, basecamp, ai-agents, vibe-coding, hotwire, actiontext, passkeys, shape-up, framework-philosophy, 37signals]
 ---
 
 # DHH: Basecamp 5, Vibe Coding, and the Future of Rails
@@ -33,7 +36,7 @@ David Heinemeier Hansson, creator of Ruby on Rails and co-owner of 37signals, on
 
 - **Basecamp predates Rails** — DHH started building it in 2003; Rails was extracted from it. Basecamp 5's backend is deeply similar to that first version.
 - **Almost no raw SQL left**: he doubts Basecamp 5 contains any complete SQL statements — ActiveRecord is now powerful enough that you never drop to that level.
-- **Recordables / delegated types** were the biggest internal-organization shift in how they build Basecamp — a Rails feature that "nudges a certain architectural style" without heavy plumbing or hard Rails dependency.
+- **[Recordables / delegated types](../37signals-recordables/4-rails-delegated-type-pattern.md)** were the biggest internal-organization shift in how they build Basecamp — a Rails feature that "nudges a certain architectural style" without heavy plumbing or hard Rails dependency.
 - **Built on the "chassis of Basecamp 3"** — a codebase started in 2013; Basecamp 5 is a major UI revamp riding on 2013-era code.
 - 37signals still maintains and runs the **original 2003 Basecamp** for thousands of customers, though it stopped selling it to new customers in 2010.
 - **Fizzy** is a fresh greenfield app (public codebase) built to today's best standards — yet its models look "not that different" from Basecamp's, proving Rails bridges the stable-legacy vs. greenfield chasm.
@@ -48,7 +51,7 @@ David Heinemeier Hansson, creator of Ruby on Rails and co-owner of 37signals, on
 
 ## Coming to Rails: ActionText + Lexical, and Passkeys
 
-- **New editor in Basecamp 5 built on Meta's Lexical framework** ("Lexi"), being built into ActionText — the underpinnings that run Facebook and WhatsApp.
+- **New editor in Basecamp 5 built on Meta's [Lexical framework](../../blogs/37signals/lexxy-rich-text.md)** ("Lexi"), being built into ActionText — the underpinnings that run Facebook and WhatsApp.
 - Replaces **Trix** (37signals' in-house editor), which was great for its box but couldn't be extended; **tables** in the WYSIWYG editor had been wanted "for literally almost a decade," and **Markdown support** was another glaring omission.
 - **ActionText upgrade plan**: Lexi becomes the default but stays Trix-compatible — you can run both and migrate. Rich text is "table stakes" for modern web apps.
 - **Passkeys → Rails**: an open PR aims to get end-to-end Passkey support in "fully native" form.
@@ -61,7 +64,7 @@ David Heinemeier Hansson, creator of Ruby on Rails and co-owner of 37signals, on
 - **Big workflow change at 37signals**: designers and project managers can now write Rails/Ruby code and see ideas become working software "without going through the mediation of a programmer."
 - This answers "the hardest parts in software" much earlier — *how should this work, is it good, does it feel right* — validating intuition before wasting a programmer's weeks or months.
 - **Caveat: literally vibe-coded output is mostly not merged** — in most cases code that isn't understood or reviewed in detail does not ship. Jason cannot vibe-code all of Basecamp "at least not yet."
-- **Shape Up's 6-week cycle now feels "archaic"** — DHH has a hard time imagining almost any Basecamp feature still requiring 6 weeks; implementation cost has been massively compressed across Basecamp, Omarchy, and everything else he touches.
+- **[Shape Up](../37signals-rework/product-development.md)'s 6-week cycle now feels "archaic"** — DHH has a hard time imagining almost any Basecamp feature still requiring 6 weeks; implementation cost has been massively compressed across Basecamp, Omarchy, and everything else he touches.
 - Personal history: cites years of writing code Jason rejected ("it doesn't work, it's got to work this way instead") after weeks of investment — being relieved of that "coding in vain" is a huge step forward.
 
 ## The Agentic Development Swing: Excitement vs. Danger

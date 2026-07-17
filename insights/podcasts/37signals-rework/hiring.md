@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Hiring & Team
 description: "37signals' approach to hiring: who to hire, how to evaluate candidates, onboarding, and team structure"
+resource: "https://37signals.com/podcast"
+tags:
+- hiring
+- team
+- management
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: REWORK
   author: 37signals
   url: https://37signals.com/podcast
-tags:
-- hiring
-- team
-- management
 ---
 
 # Hiring & Team

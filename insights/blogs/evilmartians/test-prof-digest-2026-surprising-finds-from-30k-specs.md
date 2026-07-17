@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "TestProf Digest 2026.4: Surprising Finds from 30k Specs"
 description: "Case study of a second 50% RSpec speedup at Whop (4m35s to ~2min across 30k examples) via GC-leak hunting, oneshot_line coverage, cheaper test-mode encryption, and the new TestProf v1.6.0 TPS profiler and GC memory-profiler mode"
+resource: "https://evilmartians.com/chronicles/test-prof-digest-2026-surprising-finds-from-30k-specs"
+tags: [ruby, rails, testing, rspec, test-performance, testprof, profiling, garbage-collection, code-coverage, encryption, case-study, ci]
+timestamp: "2026-07-17"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/test-prof-digest-2026-surprising-finds-from-30k-specs"
   date: '2026-04-06'
-tags: [ruby, rails, testing, rspec, test-performance, testprof, profiling, garbage-collection, code-coverage, encryption, case-study, ci]
 ---
 
 # TestProf Digest 2026.4: Surprising Finds from 30k Specs

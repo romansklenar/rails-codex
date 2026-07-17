@@ -1,6 +1,6 @@
 REPOS = rails/rails hotwired/hotwire-native-site hotwired/stimulus-site hotwired/strada-site basecamp/kamal-site rubocop/rails-style-guide rubocop/rspec-style-guide rubocop/ruby-style-guide rubocop/minitest-style-guide rubocop/capybara-style-guide rubocop/packaging-style-guide
 
-.PHONY: help init update fetch pull references clean
+.PHONY: help init update fetch pull references references-index style-guide style-guide-index clean
 
 all: init references style-guide
 
@@ -23,7 +23,10 @@ fetch: ## Fetch updates for all submodules
 pull: ## Pull latest changes for all submodules
 	@git submodule update --remote
 
-references: references-clean references-extract
+references: references-clean references-extract references-index
+
+references-index: ## Generate references/index.md navigation index
+	@ruby bin/generate_indexes.rb references
 
 references-extract: ## Copy handbook/reference/overview/docs into references directory
 	@mkdir -p references references/rails references/hotwire-native references/stimulus references/strada references/turbo references/kamal
@@ -48,7 +51,10 @@ references-clean: ## Clean up references directory
 	@find references -type d -empty -delete
 	@echo "References directory cleaned."
 
-style-guide: style-guide-clean style-guide-extract
+style-guide: style-guide-clean style-guide-extract style-guide-index
+
+style-guide-index: ## Generate style-guide/index.md navigation index
+	@ruby bin/generate_indexes.rb style-guide
 
 style-guide-extract: ## Copy style guides into style-guide directory
 	@mkdir -p style-guide

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Ruby on Whales: Dockerizing Ruby and Rails Development"
 description: "Complete Docker development environment setup for Ruby on Rails using .dockerdev directory structure, Docker Compose, and the dip CLI for simplified container interaction"
+resource: "https://evilmartians.com/chronicles/ruby-on-whales-docker-for-ruby-rails-development"
+tags: [docker, rails, ruby, development-environment, docker-compose, dip, devops, containers]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/ruby-on-whales-docker-for-ruby-rails-development"
   date: '2022-08-04'
-tags: [docker, rails, ruby, development-environment, docker-compose, dip, devops, containers]
 ---
 
 # Ruby on Whales: Dockerizing Ruby and Rails Development

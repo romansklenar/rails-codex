@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "AnyCable, Rails, and the Pitfalls of LLM Streaming"
 description: "Why Action Cable's at-most-once delivery fails for LLM streaming, and how AnyCable's at-least-once guarantees and Durable Streams protocol fix reliable chunk delivery"
+resource: "https://evilmartians.com/chronicles/anycable-rails-and-the-pitfalls-of-llm-streaming"
+tags: [anycable, llm, streaming, rails, action-cable, websockets, real-time, ai]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/anycable-rails-and-the-pitfalls-of-llm-streaming"
   date: '2025-12-18'
-tags: [anycable, llm, streaming, rails, action-cable, websockets, real-time, ai]
 ---
 
 # AnyCable, Rails, and the Pitfalls of LLM Streaming

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Florent Beaurain: Optimizing Rails Tests at Doctolib Scale"
 description: "How Doctolib cut a 7-minute engine test run to under 1 minute by returning to Rails defaults — transactional tests, fixtures over factories, and parallel minitest."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17891804-florent-beaurain-optimizing-rails-tests-at-doctolib-scale"
+tags: [testing, performance, factories, fixtures, minitest, ci, monolith, database, packwerk, flaky-tests]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17891804-florent-beaurain-optimizing-rails-tests-at-doctolib-scale"
   date: 2025-10-07
-tags: [testing, performance, factories, fixtures, minitest, ci, monolith, database, packwerk, flaky-tests]
 ---
 
 # Florent Beaurain: Optimizing Rails Tests at Doctolib Scale

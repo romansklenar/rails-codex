@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Better Navigation Patterns
 description: "Trusted referrer back navigation, hierarchical safety nets, simpler over clever"
+resource: "https://dev.37signals.com/better-navigation-in-hey/"
+tags:
+- hotwire
+- ux
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Better navigation in HEY
   author: Jason Zimdars
   url: https://dev.37signals.com/better-navigation-in-hey/
   date: '2022-12-01'
-tags:
-- hotwire
-- ux
 ---
 
 # Better Navigation Patterns

@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Alexander Stathis: Scaling a Modular Rails Monolith at AngelList"
 description: "How AngelList evolved a Rails monolith into a modular engine structure using Packwerk, Sorbet, and explicit service-layer patterns to manage a deeply interconnected financial domain."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17978596-alexander-stathis-scaling-a-modular-rails-monolith-at-angellist"
+tags: [rails-engines, packwerk, sorbet, modular-monolith, background-jobs, graphql, service-objects, angellist]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17978596-alexander-stathis-scaling-a-modular-rails-monolith-at-angellist"
   date: 2025-10-21
-tags: [rails-engines, packwerk, sorbet, modular-monolith, background-jobs, graphql, service-objects, angellist]
 ---
 
 # Alexander Stathis: Scaling a Modular Rails Monolith at AngelList
@@ -64,14 +67,14 @@ AngelList's principal software engineer Alexander Stathis explains how a ~40-per
 - GoodJob: Postgres-backed, provides queryable history and an admin dashboard; drawback is poor performance under high throughput of small jobs and occasional table-level lock contention that freezes the dashboard
 - Temporal (Temporal.io managed): used for complex, long-running workflows requiring guaranteed delivery, observability, and sequential activity execution; more expensive (billed per workflow run) and less ergonomic than Active Job
 - Currently on Ruby 3.4 and Rails 7.2.x; also adopted Falcon in one microservice
-- Would consider Solid Queue as a GoodJob replacement for fire-and-forget work after Rails 8 stabilization
+- Would consider [Solid Queue](ep01-rosa-gutierrez-solid-queue.md) as a GoodJob replacement for fire-and-forget work after Rails 8 stabilization
 - Ideal future state: Temporal for complex processing workflows, Solid Queue or Sidekiq for transient quick jobs — accepting that the right tool varies by job type
 
 ## GraphQL Ruby and N+1 Prevention
 
 - GraphQL Ruby is the primary API layer for Next.js frontends; internal inter-service APIs use RESTful/RPC controllers to avoid GraphQL parsing overhead
 - Key benefit: clients declare exactly what data they need, avoiding over-fetching on computationally expensive object graphs
-- N+1 prevention via `graphql-batch` gem (written by an ex-AngelList engineer); fields are wrapped in batch loaders that lazy-evaluate and load related records as a batch rather than per-record
+- [N+1 prevention](../../blogs/evilmartians/how-to-graphql-with-ruby-rails-active-record-and-no-n-plus-one.md) via `graphql-batch` gem (written by an ex-AngelList engineer); fields are wrapped in batch loaders that lazy-evaluate and load related records as a batch rather than per-record
 - Each GraphQL field has its own Datadog span via instrumentation — flame graphs make performance bottlenecks immediately visible as the longest bars in a sequential Rails execution chain
 - Custom internal field wrapper auto-detects `through` associations using Rails' own preloader reflection, reducing the need to manually specify preloads on every field
 

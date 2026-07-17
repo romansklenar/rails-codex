@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Concerns
 description: "Semantic test, file location rules, and PORO delegation for Rails concerns"
+resource: "https://dev.37signals.com/good-concerns/"
+tags:
+- rails
+- patterns
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Good concerns
   author: Jorge Manrubia
   url: https://dev.37signals.com/good-concerns/
   date: '2022-10-10'
-tags:
-- rails
-- patterns
 ---
 
 # Concerns

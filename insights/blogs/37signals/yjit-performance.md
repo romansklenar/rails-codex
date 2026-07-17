@@ -1,15 +1,18 @@
 ---
+type: insight
 title: YJIT Performance
 description: "Enable YJIT for 15-20% faster Rails responses — runtime enable, memory sizing, Ruby 3.3+ threshold"
+resource: "https://dev.37signals.com/yjit-is-fast/"
+tags:
+- ruby
+- performance
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Basecamp code runs 18% faster with YJIT
   author: Jacopo Beschi
   url: https://dev.37signals.com/yjit-is-fast/
   date: '2023-12-01'
-tags:
-- ruby
-- performance
 ---
 
 # YJIT Performance

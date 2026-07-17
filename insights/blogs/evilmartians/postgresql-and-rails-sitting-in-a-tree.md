@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "PostgreSQL and Rails, Sitting in a Tree"
 description: "Efficiently importing and storing 1M+ hierarchical records in PostgreSQL using COPY FROM with binary format, and choosing Closure Table over Nested Set or Materialized Path via closure_tree and pg_closure_tree_rebuild"
+resource: "https://evilmartians.com/chronicles/postgresql-and-rails-sitting-in-a-tree"
+tags: [postgresql, rails, ruby, activerecord, performance, hierarchical-data, closure-tree, bulk-import]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Viktor Sokolov"
   url: "https://evilmartians.com/chronicles/postgresql-and-rails-sitting-in-a-tree"
   date: '2016-03-09'
-tags: [postgresql, rails, ruby, activerecord, performance, hierarchical-data, closure-tree, bulk-import]
 ---
 
 # PostgreSQL and Rails, Sitting in a Tree

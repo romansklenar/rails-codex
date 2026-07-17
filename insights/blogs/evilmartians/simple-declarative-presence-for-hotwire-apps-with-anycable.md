@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Simple Declarative Presence for Hotwire Apps with AnyCable"
 description: "Adding real-time user presence tracking to Hotwire Rails apps using AnyCable's turbo-cable-presence-source custom element and the @anycable/turbo-stream package"
+resource: "https://evilmartians.com/chronicles/simple-declarative-presence-for-hotwire-apps-with-anycable"
+tags: [anycable, hotwire, websockets, real-time, presence, turbo, rails, action-cable]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Irina Nazarova, Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/simple-declarative-presence-for-hotwire-apps-with-anycable"
   date: '2025-03-18'
-tags: [anycable, hotwire, websockets, real-time, presence, turbo, rails, action-cable]
 ---
 
 # Simple Declarative Presence for Hotwire Apps with AnyCable

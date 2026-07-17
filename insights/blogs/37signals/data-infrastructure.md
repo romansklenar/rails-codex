@@ -1,6 +1,12 @@
 ---
+type: insight
 title: Data Infrastructure
 description: "S3 migration, Harbor registry, Pure Storage monitoring — Rails as orchestration layer"
+resource: "https://dev.37signals.com/moving-mountains-of-data-off-s3/"
+tags:
+- infrastructure
+- devops
+timestamp: "2026-03-02"
 source:
 - type: blog
   title: Moving Mountains of Data off S3
@@ -17,9 +23,6 @@ source:
   author: Victor Bogo
   url: https://dev.37signals.com/pure-storage-monitoring/
   date: '2025-01-02'
-tags:
-- infrastructure
-- devops
 ---
 
 # Data Infrastructure
@@ -30,7 +33,7 @@ Summary of 37signals' large-scale data migration and storage operations. Infrast
 
 - **Tools**: Rclone (transfer), DuckDB (inventory partitioning), Rails app "Nostos" for orchestration
 - **Key pattern**: Verification requires as much effort as copying -- reconcile with inventory reports + live sync + permission locks + checksum sampling
-- **Lesson**: Use Rails (Solid Queue) for job orchestration even in infrastructure tasks -- conventions for state tracking, retries, and credential management (Active Record Encryption) beat custom scripts
+- **Lesson**: Use Rails ([Solid Queue](solid-queue.md)) for job orchestration even in infrastructure tasks -- conventions for state tracking, retries, and credential management (Active Record Encryption) beat custom scripts
 
 ## Docker Registry (Harbor)
 

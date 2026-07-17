@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "ViewComponent in the Wild I: Building Modern Rails Frontends"
 description: "Why and how to adopt the ViewComponent library in Rails MVC apps, covering component principles, testing, context patterns, slots, and design best practices"
+resource: "https://evilmartians.com/chronicles/viewcomponent-in-the-wild-building-modern-rails-frontends"
+tags: [viewcomponent, rails, ruby, frontend, components, testing, hotwire]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Alexander Baygeldin"
   url: "https://evilmartians.com/chronicles/viewcomponent-in-the-wild-building-modern-rails-frontends"
   date: '2022-10-12'
-tags: [viewcomponent, rails, ruby, frontend, components, testing, hotwire]
 ---
 
 # ViewComponent in the Wild I: Building Modern Rails Frontends
@@ -88,5 +91,5 @@ ViewComponent brings the component-based architecture of frontend frameworks to 
 
 - Views are for rendering data, not fetching it — fetch in controllers, preload associations eagerly
 - DB queries in views lead to N+1 problems that arise reliably and are difficult to track down
-- As a proactive measure, consider prohibiting components from making DB queries entirely during development (setup shown in Part II)
+- As a proactive measure, consider prohibiting components from making DB queries entirely during development (setup shown in [Part II](viewcomponent-in-the-wild-supercharging-your-components.md))
 - Separation of concerns makes testing easier: components that receive plain data are trivial to unit test

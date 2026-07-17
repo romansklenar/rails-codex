@@ -1,11 +1,8 @@
 ---
+type: insight
 title: Work Culture & Time
 description: "37signals' practices on sustainable pace, remote work, meeting culture, company values, office design, burnout prevention, and in-person meetups"
-source:
-  type: podcast
-  title: REWORK
-  author: 37signals
-  url: https://37signals.com/podcast
+resource: "https://37signals.com/podcast"
 tags:
 - culture
 - remote
@@ -14,6 +11,12 @@ tags:
 - burnout
 - meetups
 - office
+timestamp: "2026-03-02"
+source:
+  type: podcast
+  title: REWORK
+  author: 37signals
+  url: https://37signals.com/podcast
 ---
 
 # Work Culture & Time

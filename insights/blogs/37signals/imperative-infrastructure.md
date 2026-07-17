@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Imperative Infrastructure
 description: "Prefer explicit step-by-step infra over declarative state magic, Kamal over K8s"
+resource: "https://dev.37signals.com/leaning-imperative/"
+tags:
+- infrastructure
+- devops
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Leaning imperative
   author: Arman Jindal
   url: https://dev.37signals.com/leaning-imperative/
   date: '2023-09-05'
-tags:
-- infrastructure
-- devops
 ---
 
 # Imperative Infrastructure
@@ -27,7 +30,7 @@ Prefer explicit, step-by-step infrastructure over declarative "desired state" ab
 
 | Prefer | Over | Why |
 |--------|------|-----|
-| Kamal | Kubernetes | Simpler deployment without control plane overhead |
+| [Kamal](kamal-deployment.md) | Kubernetes | Simpler deployment without control plane overhead |
 | Chef (thin recipes) | Complex declarative manifests | Readable, single-screen configurations |
 | KVM + cloud-init | Managed container orchestration | Direct VM control with fast provisioning |
 | Docker (for apps) | Docker (for everything) | Containers for app complexity, not infrastructure |

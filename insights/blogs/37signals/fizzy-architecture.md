@@ -1,14 +1,17 @@
 ---
+type: insight
 title: Fizzy Architecture Decisions
 description: "Per-customer SQLite multi-tenancy experiment — lessons on architectural pivots and operational readiness"
+resource: "https://dev.37signals.com/fizzy-infrastructure/"
+tags:
+- architecture
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Behind the Fizzy Infrastructure
   author: Kimberly Rhodes, Fernando Olivares, Kevin McConnell
   url: https://dev.37signals.com/fizzy-infrastructure/
   date: '2026-02-26'
-tags:
-- architecture
 ---
 
 # Fizzy Architecture Decisions

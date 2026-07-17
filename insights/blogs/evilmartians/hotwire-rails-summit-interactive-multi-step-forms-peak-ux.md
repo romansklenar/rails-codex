@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "The Hotwire-Rails Summit: Interactive Multi-Step Forms at Peak UX"
 description: "Building a sophisticated multi-step form wizard in Hotwire Rails using morphing, form objects, nested form tricks, and View Transitions for SPA-like UX without React"
+resource: "https://evilmartians.com/chronicles/hotwire-rails-summit-interactive-multi-step-forms-peak-ux"
+tags: [hotwire, turbo, rails, forms, morphing, stimulus, view-transitions, form-objects, state-machine]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/hotwire-rails-summit-interactive-multi-step-forms-peak-ux"
   date: '2025-06-24'
-tags: [hotwire, turbo, rails, forms, morphing, stimulus, view-transitions, form-objects, state-machine]
 ---
 
 # The Hotwire-Rails Summit: Interactive Multi-Step Forms at Peak UX

@@ -1,12 +1,8 @@
 ---
+type: insight
 title: Moving Mountains of Data off S3
 description: "How 37signals migrated 5 petabytes and 5 billion objects out of S3 in under 10 days using a custom Rails app, DuckDB, rclone, and Pure Storage FlashBlade"
-source:
-  type: talk
-  title: "Moving Mountains of Data off S3"
-  author: Jeremy Daer
-  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
-  date: '2026-01-08'
+resource: "https://dev.37signals.com/moving-mountains-of-data-off-s3/"
 tags:
 - rails
 - s3
@@ -20,6 +16,13 @@ tags:
 - solid-queue
 - active-job
 - flash-storage
+timestamp: "2026-03-02"
+source:
+  type: talk
+  title: "Moving Mountains of Data off S3"
+  author: Jeremy Daer
+  url: https://dev.37signals.com/moving-mountains-of-data-off-s3/
+  date: '2026-01-08'
 ---
 
 # Moving Mountains of Data off S3
@@ -42,12 +45,12 @@ Custom Rails app built instead of expensive third-party services. Five-stage pip
 
 1. **Inventory** — S3 Inventory Reports (CSV/Parquet) used as source manifest; generated daily, scheduled automatically
 2. **Partition** — DuckDB splits inventory into size-weighted 10 GB batches (cumulative sum on byte size, not object count); streams S3 Parquet glob → window function → writes to S3-compatible staging bucket; no local disk, minimal memory
-3. **Dispatch** — ActiveJob dispatches copy jobs to workers via Solid Queue; ActiveStorage wraps batch files
+3. **Dispatch** — ActiveJob dispatches copy jobs to workers via [Solid Queue](../../blogs/37signals/solid-queue.md); ActiveStorage wraps batch files
 4. **Copy** — Workers invoke `rclone` per batch; stdout/stderr captured and stored per job ID for live inspection
 5. **Reconcile** — S3 Inventory vs. FlashBlade listing compared; live sync run until zero objects remain
 6. **Cut over** — Dual-write mode disabled after complete verification; single-write to new destination
 
-Rails app responsibilities: credentials management (Active Record Encryption), job supervision, state tracking per bucket/inventory/batch, dashboard, and error visibility. Kamal deployed the app and accessories (database, OpenTelemetry, logging) to VMs as a single-developer operation.
+Rails app responsibilities: credentials management (Active Record Encryption), job supervision, state tracking per bucket/inventory/batch, dashboard, and error visibility. [Kamal](../../blogs/37signals/kamal-deployment.md) deployed the app and accessories (database, OpenTelemetry, logging) to VMs as a single-developer operation.
 
 ## Key Tools
 

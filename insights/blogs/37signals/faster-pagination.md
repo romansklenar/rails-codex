@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Faster Pagination via Index Strategy
 description: "Two-query pagination with covering indexes to reduce disk I/O on large datasets"
+resource: "https://dev.37signals.com/faster-paging-in-hey/"
+tags:
+- rails
+- performance
+timestamp: "2026-03-02"
 source:
   type: blog
   title: Faster pagination in HEY
   author: Donal McBreen
   url: https://dev.37signals.com/faster-paging-in-hey/
   date: '2022-11-07'
-tags:
-- rails
-- performance
 ---
 
 # Faster Pagination via Index Strategy

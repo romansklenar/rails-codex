@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Kayla Reopelle: What Your Rails App Is Trying To Tell You"
 description: "OpenTelemetry gives Rails developers a vendor-neutral way to collect traces, metrics, and logs that reveal what their app is doing in production — and how to act on those signals."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/18215229-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you"
+tags: [observability, opentelemetry, tracing, metrics, logging, rails, instrumentation, active-support-notifications, ruby-agent]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/18215229-kayla-reopelle-what-your-rails-app-is-trying-to-tell-you"
   date: 2025-11-19
-tags: [observability, opentelemetry, tracing, metrics, logging, rails, instrumentation, active-support-notifications, ruby-agent]
 ---
 
 # Kayla Reopelle: What Your Rails App Is Trying To Tell You
@@ -47,7 +50,7 @@ Kayla Reopelle (lead engineer at New Relic, working on the Ruby Agent and OpenTe
 - Custom notifications work too: `opentelemetry-instrumentation-active_support` accepts user-defined notification names and creates spans for them
 - Good candidates for custom notifications: service objects, anything outside Rails' built-in sub-gems
 - Monkey patching (module prepend, alias method chaining) is still used for cases where notifications don't reach; covered in depth in _Metaprogramming Ruby 2_
-- Rails' upcoming structured logging (event reporter) adds attributes to logs — making them filterable by fields like `user_id` or controller name without regex parsing of message strings
+- Rails' upcoming [structured logging (event reporter)](../../rails/8_1_highlights.md) adds attributes to logs — making them filterable by fields like `user_id` or controller name without regex parsing of message strings
 
 ## Practical Starting Points for Rails Developers
 

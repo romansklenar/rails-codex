@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Vite on Rails Without the Proxy"
 description: "How rails_vite integrates the Vite dev server with Propshaft using a redirecting stub file in app/assets/builds instead of a Rack proxy, plus an optional gem mode that emits vite_tags from a JSON dev-server descriptor."
+resource: "https://evilmartians.com/chronicles/now-you-see-it-vite-on-rails-without-the-proxy"
+tags: [rails, vite, propshaft, asset-pipeline, hmr, jsbundling, tailwind, frontend, build-tools, javascript, css, stimulus]
+timestamp: "2026-07-17"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Svyatoslav Kryukov"
   url: "https://evilmartians.com/chronicles/now-you-see-it-vite-on-rails-without-the-proxy"
   date: '2026-04-14'
-tags: [rails, vite, propshaft, asset-pipeline, hmr, jsbundling, tailwind, frontend, build-tools, javascript, css, stimulus]
 ---
 
 # Vite on Rails Without the Proxy

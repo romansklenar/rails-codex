@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "The Future of Full-Stack Rails: Turbo Morph Drive"
 description: "Implementing DOM morphing with Idiomorph in Turbo 7 to fix scroll, animation, and Stimulus lifecycle issues before Turbo 8's native Page Refresh feature"
+resource: "https://evilmartians.com/chronicles/the-future-of-full-stack-rails-turbo-morph-drive"
+tags: [turbo, hotwire, rails, morphing, idiomorph, stimulus, dom, websockets]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Vladimir Dementyev"
   url: "https://evilmartians.com/chronicles/the-future-of-full-stack-rails-turbo-morph-drive"
   date: '2023-10-16'
-tags: [turbo, hotwire, rails, morphing, idiomorph, stimulus, dom, websockets]
 ---
 
 # The Future of Full-Stack Rails: Turbo Morph Drive

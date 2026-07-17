@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Jean Boussier: IO-Bound Misconceptions"
 description: "Jean Boussier (Shopify Rails infrastructure, Rails Core) dismantles the assumption that Rails apps are IO-bound, explains how Pitchfork and copy-on-write work under the hood, how to measure GVL contention properly, and why treating gems as your own code is a career-defining skill."
+resource: "https://podcast.rubyonrails.org/2462975/episodes/17496711-jean-boussier-io-bound-misconceptions"
+tags: [performance, concurrency, gvl, threading, ruby-internals, instrumentation, background-jobs, rails-core, pitchfork, gems]
+timestamp: "2026-03-02"
 source:
   type: podcast
   title: "On Rails"
   author: "Robby Russell"
   url: "https://podcast.rubyonrails.org/2462975/episodes/17496711-jean-boussier-io-bound-misconceptions"
   date: 2025-07-14
-tags: [performance, concurrency, gvl, threading, ruby-internals, instrumentation, background-jobs, rails-core, pitchfork, gems]
 ---
 
 # Jean Boussier: IO-Bound Misconceptions
@@ -91,7 +94,7 @@ Jean Boussier (Senior Staff Engineer at Shopify, Rails Core member) dismantles t
 - Puma was built on the assumption that most Rails apps are mostly IO-bound — "just a small proxy to the database"
 - The default of 5 threads was actually a reduction from the historical default of ~30, advocated for by Nate Berkopec
 - Puma was also started by someone working on Rubinius (a Ruby implementation without a GVL) — "there was also a long-term view that eventually the GVL will be gone and we should write threaded code"
-- Jean's blog post argues that for the vast majority of apps, the IO-bound assumption is false: "If you recently enabled YJIT and saw a 20–25% improvement — YJIT doesn't speed up IO, it only speeds up Ruby code. So if YJIT improved your app that much, you're not doing that much IO"
+- Jean's blog post argues that for the vast majority of apps, the IO-bound assumption is false: "If you recently enabled [YJIT](../../blogs/37signals/yjit-performance.md) and saw a 20–25% improvement — YJIT doesn't speed up IO, it only speeds up Ruby code. So if YJIT improved your app that much, you're not doing that much IO"
 - YJIT also holds the GVL when executing (it's still executing Ruby), so fast YJIT speedups = significant CPU time in the Ruby runtime
 - True IO-bound apps exist but are rare: "I've discussed with a few people who have them — they're literally proxies. There's a Rails app that just takes a request, calls a weather API, does a bit of transformation, and sends it back. That's a genuine Puma or even Falcon use case"
 - The math on 5 Puma threads: "If only one thread can execute at a time and you have 5 threads, a request is only allowed to use the CPU 20% of the time. That assumes 80% IO — and in the best case, because requests might want their 20% CPU at the same time, causing contention. To use 5 threads without contention you probably need ~85–90% IO, which is really hard to achieve unless you're a proxy or you have serious query problems"

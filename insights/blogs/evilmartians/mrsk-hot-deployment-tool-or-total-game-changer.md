@@ -1,13 +1,16 @@
 ---
+type: insight
 title: "Kamal: Hot Deployment Tool to Watch—or a Total Game Changer?"
 description: "Objective analysis of Kamal (formerly MRSK) as a Docker container deployment tool compared to Kubernetes, Heroku, and cloud-managed services, covering use cases, limitations, and decision criteria"
+resource: "https://evilmartians.com/chronicles/mrsk-hot-deployment-tool-or-total-game-changer"
+tags: [kamal, deployment, docker, kubernetes, infrastructure, devops, containers, capistrano]
+timestamp: "2026-03-02"
 source:
   type: blog
   title: "Martian Chronicles"
   author: "Kirill Kuznetsov"
   url: "https://evilmartians.com/chronicles/mrsk-hot-deployment-tool-or-total-game-changer"
   date: '2024-04-02'
-tags: [kamal, deployment, docker, kubernetes, infrastructure, devops, containers, capistrano]
 ---
 
 # Kamal: Hot Deployment Tool to Watch—or a Total Game Changer?

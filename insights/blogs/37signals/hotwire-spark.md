@@ -1,15 +1,18 @@
 ---
+type: insight
 title: Hotwire Spark
 description: "Live reloading for Rails dev — morphs HTML, swaps CSS, hot-reloads Stimulus controllers"
+resource: "https://dev.37signals.com/announcing-hotwire-spark-live-reloading-for-rails/"
+tags:
+- hotwire
+- devtools
+timestamp: "2026-03-02"
 source:
   type: blog
   title: 'Announcing Hotwire Spark: live reloading for Rails applications'
   author: Jorge Manrubia
   url: https://dev.37signals.com/announcing-hotwire-spark-live-reloading-for-rails/
   date: '2024-12-18'
-tags:
-- hotwire
-- devtools
 ---
 
 # Hotwire Spark
