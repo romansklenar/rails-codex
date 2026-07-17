@@ -551,7 +551,7 @@ document.head.querySelector("meta[name=csrf-token]")?.content
 It is common to use persistent cookies to store user information, with `cookies.permanent` for example. In this case, the cookies will not be cleared and the out of the box CSRF protection will not be effective. If you are using a different cookie store than the session for this information, you must handle what to do with it yourself:
 
 ```ruby
-rescue_from ActionController::InvalidAuthenticityToken do |exception|
+rescue_from ActionController::InvalidCrossOriginRequest do |exception|
   sign_out_user # Example method that will destroy the user cookies
 end
 ```
@@ -1307,12 +1307,6 @@ all domains.
 
 [`X-Frame-Options`]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
 
-#### `X-XSS-Protection`
-
-A [deprecated legacy
-header](https://owasp.org/www-project-secure-headers/#x-xss-protection), set to
-`0` in Rails by default to disable problematic legacy XSS auditors.
-
 #### `X-Content-Type-Options`
 
 The [`X-Content-Type-Options`][] header is set to `nosniff` in Rails by default.
@@ -1341,7 +1335,6 @@ These headers are configured by default as follows:
 ```ruby
 config.action_dispatch.default_headers = {
   "X-Frame-Options" => "SAMEORIGIN",
-  "X-XSS-Protection" => "0",
   "X-Content-Type-Options" => "nosniff",
   "X-Permitted-Cross-Domain-Policies" => "none",
   "Referrer-Policy" => "strict-origin-when-cross-origin"
@@ -1476,7 +1469,7 @@ Rails.application.config.content_security_policy_nonce_generator = -> request { 
 There are a few tradeoffs to consider when configuring the nonce generator.
 Using `SecureRandom.base64(16)` is a good default value, because it will
 generate a new random nonce for each request. However, this method is
-incompatible with [conditional GET caching](caching_with_rails.html#conditional-get-support)
+incompatible with [conditional GET caching](caching_with_rails.html#conditional-gets)
 because new nonces will result in new ETag values for every request. An
 alternative to per-request random nonces would be to use the session id:
 
