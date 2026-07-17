@@ -26,7 +26,7 @@ pull: ## Pull latest changes for all submodules
 references: references-clean references-extract references-index
 
 references-index: ## Generate references/index.md navigation index
-	@python3 bin/generate_indexes.py references
+	@ruby bin/generate_indexes.rb references
 
 references-extract: ## Copy handbook/reference/overview/docs into references directory
 	@mkdir -p references references/rails references/hotwire-native references/stimulus references/strada references/turbo references/kamal
@@ -54,7 +54,7 @@ references-clean: ## Clean up references directory
 style-guide: style-guide-clean style-guide-extract style-guide-index
 
 style-guide-index: ## Generate style-guide/index.md navigation index
-	@python3 bin/generate_indexes.py style-guide
+	@ruby bin/generate_indexes.rb style-guide
 
 style-guide-extract: ## Copy style guides into style-guide directory
 	@mkdir -p style-guide
