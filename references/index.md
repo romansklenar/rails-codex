@@ -149,7 +149,7 @@
 * [Commands: Config](kamal/docs/commands/config.md)
 * [Commands: Deploy](kamal/docs/commands/deploy.md)
 * [Commands: Details](kamal/docs/commands/details.md)
-* [Commands: Help](kamal/docs/commands/docs.md)
+* [Commands: Docs](kamal/docs/commands/docs.md)
 * [Commands: Help](kamal/docs/commands/help.md)
 * [Commands: Init](kamal/docs/commands/init.md)
 * [Commands: Lock](kamal/docs/commands/lock.md)

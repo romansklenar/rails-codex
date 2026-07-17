@@ -6,5 +6,5 @@
 * [Minitest Style Guide](minitest.adoc)
 * [Packaging Style Guide](packaging.adoc)
 * [Rails Style Guide](rails.adoc)
-* [Rspec Style Guide](rspec.adoc)
+* [RSpec Style Guide](rspec.adoc)
 * [Ruby Style Guide](ruby.adoc)

@@ -21,9 +21,20 @@ AREA_TITLES = {
   "kamal" => "Kamal"
 }.freeze
 
+# Whole-word fixups for names that simple capitalization gets wrong.
+ACRONYMS = {
+  "rspec" => "RSpec", "css" => "CSS", "html" => "HTML", "api" => "API",
+  "cli" => "CLI", "ssh" => "SSH", "ssl" => "SSL", "sql" => "SQL",
+  "url" => "URL", "io" => "IO", "http" => "HTTP", "yaml" => "YAML",
+  "json" => "JSON", "typescript" => "TypeScript"
+}.freeze
+
 def titleize(slug)
-  slug.sub(/\A\d+[_-]/, "").gsub(/[_-]+/, " ").strip
-      .split.map { |w| w.empty? ? w : w[0].upcase + w[1..] }.join(" ")
+  slug.sub(/\A\d+[_-]/, "").gsub(/[_-]+/, " ").strip.split.map do |w|
+    next w if w.empty?
+
+    ACRONYMS[w.downcase] || (w[0].upcase + w[1..])
+  end.join(" ")
 end
 
 def unquote(str)
@@ -83,13 +94,20 @@ def gen_references
     subsections = files.map { |f| f.parent.basename.to_s }.uniq
     prefix = subsections.length > 1
 
-    out << "\n## #{AREA_TITLES.fetch(area, titleize(area))}\n\n"
-    files.each do |f|
-      rel = f.relative_path_from(base)
-      title = doc_title(f)
-      title = "#{titleize(f.parent.basename.to_s)}: #{title}" if prefix
-      out << "* [#{title}](#{rel})\n"
+    label = lambda do |f, text|
+      prefix ? "#{titleize(f.parent.basename.to_s)}: #{text}" : text
     end
+    entries = files.map { |f| [f, label.call(f, doc_title(f))] }
+
+    # Disambiguate duplicate labels (e.g. Kamal's docs.md and help.md both
+    # carry `title: Help` upstream) by falling back to the titleized filename.
+    dup = entries.map { |_, t| t }.tally
+    entries = entries.map do |f, t|
+      dup[t] > 1 ? [f, label.call(f, titleize(File.basename(f, ".md")))] : [f, t]
+    end
+
+    out << "\n## #{AREA_TITLES.fetch(area, titleize(area))}\n\n"
+    entries.each { |f, t| out << "* [#{t}](#{f.relative_path_from(base)})\n" }
   end
   write(base.join("index.md"), out)
 end
