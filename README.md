@@ -70,7 +70,7 @@ Stored as git submodules under `.git-submodules/` to keep the official source re
 
 ### References
 
-Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory and generates a navigation index at [`references/index.md`](references/index.md) (via `bin/generate_indexes.py`; run `make references-index` to regenerate it alone). These files are extracted upstream docs, not OKF concepts.
+Running `make references` extracts handbook, reference, and overview documentation from each submodule into the `references/` directory and generates a navigation index at [`references/index.md`](references/index.md) (via `bin/generate_indexes.rb`; run `make references-index` to regenerate it alone). These files are extracted upstream docs, not OKF concepts.
 
 ### Insights (OKF bundle)
 
